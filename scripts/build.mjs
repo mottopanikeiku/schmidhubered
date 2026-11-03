@@ -224,14 +224,18 @@ function timeTag(d, opts) {
   return iso ? `<time datetime="${iso}">${esc(fmtDate(d, opts))}</time>` : `<span>${esc(fmtDate(d, opts))}</span>`;
 }
 
+// "89 recorded statements, 2020 to 2026". One long web page can hold several statements, so this
+// counts statements and not occasions.
+function statements(c) {
+  const n = c.claim.times_made;
+  return `${n.toLocaleString('en-US')} recorded ${n === 1 ? 'statement' : 'statements'}`;
+}
+
 function span(c) {
   const a = year(c.claim.first_made);
   const b = year(c.claim.last_made);
-  const n = c.claim.times_made;
-  const times = n === 1 ? 'once' : n === 2 ? 'twice' : `${n.toLocaleString('en-US')} times`;
-  if (!a) return `Made ${times}`;
-  if (!b || a === b) return `Made ${times} in ${a}`;
-  return `Made ${times}, ${a} to ${b}`;
+  if (!a) return '';
+  return !b || a === b ? `in ${a}` : `${a} to ${b}`;
 }
 
 function works(list) {
@@ -332,7 +336,7 @@ ${works(c.usual_credit.works)}
 <h2 id="claim">Schmidhuber’s claim</h2>
 <p>${inline(c.claim.summary)}</p>
 ${c.claim.prior_works.length ? `<h3>What he says came first</h3>${works(c.claim.prior_works)}` : ''}
-<p class="times"><a href="#every">${span(c)}</a></p>
+<p class="count-line"><a href="#every">${statements(c)}${span(c) ? `, ${span(c)}` : ''}</a></p>
 </section>
 </div>
 
@@ -388,14 +392,14 @@ function homePage() {
     return { c, v, votes: total(v.counts), contest: v.counts ? contest(v.counts) : -1 };
   }).sort((a, b) => b.votes - a.votes || b.c.claim.times_made - a.c.claim.times_made || a.c.title.localeCompare(b.c.title));
 
-  const row = ({ c, votes: n, contest: k }) => `<li class="row" id="case-${c.id}" data-votes="${n}" data-contest="${k.toFixed(5)}" data-times="${c.claim.times_made}" data-year="${minYear(c)}" data-title="${esc(c.title)}" data-credited="${esc(creditKeys(c).join(' '))}">
+  const row = ({ c, votes: n, contest: k }) => `<li class="row" id="case-${c.id}" data-votes="${n}" data-contest="${k.toFixed(5)}" data-statements="${c.claim.times_made}" data-year="${minYear(c)}" data-title="${esc(c.title)}" data-credited="${esc(creditKeys(c).join(' '))}">
 <div class="row-main">
 <h2 class="row-title"><a href="${r}cases/${c.id}/">${inline(c.title)}</a></h2>
 <p class="row-matchup">${inline(c.matchup)}</p>
 <p class="row-question">${inline(c.question)}</p>
 </div>
 <div class="row-side">
-<p class="row-times">${span(c)}</p>
+<p class="row-count">${statements(c)}${span(c) ? ` <span class="yrs">${span(c)}</span>` : ''}</p>
 ${tally(c)}
 </div>
 </li>`;
@@ -415,7 +419,7 @@ ${latestLine(r)}
 <select id="sort">
 <option value="votes">Most votes</option>
 <option value="contested">Most contested</option>
-<option value="times">Most often claimed</option>
+<option value="statements">Most statements</option>
 <option value="year">Date of the credited work</option>
 </select>
 <label for="credited">Credited to</label>
@@ -464,7 +468,7 @@ function aboutPage() {
 <h1>About</h1>
 <p class="lede">${SITE} collects the priority claims Jürgen Schmidhuber has made in public, groups them by the result in question and lays out each one so that a reader can weigh it without first reading thirty years of posts.</p>
 </header>
-${block('research', 'How the cases were researched', `<p>The cases start from a catalogue of ${CATALOGUE} public statements by Schmidhuber, gathered from his posts on X, his website at IDSIA, his papers, mailing lists such as Connectionists, Reddit, LinkedIn and published interviews, and dated from 1996 to 2026. Statements that dispute the same credit were grouped into one case, which was then written from primary sources: the credited papers, the earlier work he points to, and what the credited researchers, prize committees and historians have said in reply. Every quote links to the place it was published, and the full list of statements behind a case is at the bottom of its page.</p>`)}
+${block('research', 'How the cases were researched', `<p>The cases start from a catalogue of ${CATALOGUE} public statements by Schmidhuber, gathered from his posts on X, his website at IDSIA, his papers, mailing lists such as Connectionists, Reddit, LinkedIn and published interviews, and dated from 1996 to 2026. Each post, email, comment, interview answer or section of a web page counts as one statement, so a long report that he has revised over the years can contribute several. Statements that dispute the same credit were grouped into one case, which was then written from primary sources: the credited papers, the earlier work he points to, and what the credited researchers, prize committees and historians have said in reply. Every quote links to the place it was published, and the full list of statements behind a case is at the bottom of its page.</p>`)}
 
 ${block('neutrality', 'Neutrality', `<p>The site takes no side: each case gives both accounts in their own words, keeps the facts that both accept apart from the argument, and ends with the narrow point that actually separates them, without a verdict and without adjectives that carry one. Where nobody has answered a claim in public, the case says so instead of writing an answer on anyone’s behalf, and the name is the one place where the site allows itself a light touch.</p>`)}
 

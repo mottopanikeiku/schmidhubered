@@ -46,7 +46,7 @@ function issueBody(c) {
 
 ${summary}
 
-The full case, with both sides in their own words and every time the claim was made: ${SITE_URL}cases/${c.id}/
+The full case, with both sides in their own words and every recorded statement of the claim: ${SITE_URL}cases/${c.id}/
 
 ${VOTE_LINE}
 `;
@@ -82,7 +82,7 @@ for (let page = 1; ; page++) {
   if (list.length < 100) break;
 }
 
-// Most often claimed first, so the best-known cases get the lowest numbers.
+// Most recorded statements first, so the best-known cases get the lowest numbers.
 const todo = cases.filter((c) => !map[c.id]).sort((a, b) => b.claim.times_made - a.claim.times_made || a.id.localeCompare(b.id));
 console.log(`${repo}: ${cases.length} cases, ${cases.length - todo.length} with issues, ${todo.length} to create`);
 

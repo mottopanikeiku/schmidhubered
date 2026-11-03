@@ -42,7 +42,7 @@ if (tallies.length) {
   });
 }
 
-// "Made 17 times" links to the full list of statements, which is collapsed by default. A link that
+// "89 recorded statements" links to the full list of statements, which is collapsed by default. A link that
 // arrives with #every is handled by an inline script next to the list, before the page is painted.
 const every = document.getElementById('every-list');
 if (every) {
@@ -56,10 +56,10 @@ if (list) {
   const shown = document.getElementById('shown');
   const num = (el, k) => Number(el.dataset[k]);
   const orders = {
-    votes: (a, b) => num(b, 'votes') - num(a, 'votes') || num(b, 'times') - num(a, 'times'),
+    votes: (a, b) => num(b, 'votes') - num(a, 'votes') || num(b, 'statements') - num(a, 'statements'),
     contested: (a, b) => num(b, 'contest') - num(a, 'contest') || num(b, 'votes') - num(a, 'votes'),
-    times: (a, b) => num(b, 'times') - num(a, 'times'),
-    year: (a, b) => num(a, 'year') - num(b, 'year') || num(b, 'times') - num(a, 'times'),
+    statements: (a, b) => num(b, 'statements') - num(a, 'statements'),
+    year: (a, b) => num(a, 'year') - num(b, 'year') || num(b, 'statements') - num(a, 'statements'),
   };
 
   const params = new URLSearchParams(location.search);
