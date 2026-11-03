@@ -2,7 +2,7 @@
   "id": "ai-origins",
   "title": "The origins of artificial intelligence",
   "matchup": "McCarthy and the Dartmouth project (1955–1956) vs earlier automata, cybernetics and computation theory",
-  "question": "Is treating Dartmouth 1956 as the birth of AI historically misleading given the earlier work and meetings cited by Schmidhuber?",
+  "question": "Does the earlier work cited by Schmidhuber support describing Dartmouth's 1956 AI project as a renaming of cybernetics?",
   "usual_credit": {
     "summary": "John McCarthy is conventionally credited with the artificial-intelligence label and, with Marvin Minsky, Nathaniel Rochester and Claude Shannon, the Dartmouth research project that helped establish a named field. [Dartmouth's institutional history](https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth) calls the 1956 gathering the birth of the field, while the original proposal is dated 31 August 1955. That proposal itself discusses earlier neural-network research and existing computing work, so founding a research community need not mean inventing every technique that later falls within it.",
     "works": [
@@ -55,7 +55,7 @@
     "last_made": "2026-09"
   },
   "response": {
-    "summary": "No point-by-point public reply from Dartmouth's organizers to Schmidhuber's renaming claim was located in the sources reviewed. Historian David C. Brock's [account of the Paris meeting](https://spectrum.ieee.org/cybernetics-computer-design-and-a-meeting-of-the-minds) supports its importance but says calling it an AI birthplace depends on how the term is defined, rather than presenting one uncontested starting date. The original Dartmouth proposal also includes a section on neuron nets and acknowledges earlier researchers, which complicates a description of its organizers as merely renaming a single older field. In the public [Connectionists discussion](https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2023-January/039184.html), Gary Marcus and Andreas Wichert separately challenged Schmidhuber's history for giving too little attention to symbolic AI; that was a criticism of its balance, not a denial that earlier automata and cybernetics existed.",
+    "summary": "The original Dartmouth proposal includes neuron nets and earlier researchers, while historian David C. Brock's [account of the Paris meeting](https://spectrum.ieee.org/cybernetics-computer-design-and-a-meeting-of-the-minds) says its status as an AI birthplace depends on the definition of AI. These sources recognize antecedents without treating the formation of a named field as the invention of every underlying method. In the [Connectionists exchange](https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2023-January/039184.html), Gary Marcus and Andreas Wichert challenged the weight Schmidhuber gave to symbolic AI in his history, rather than denying that earlier automata and cybernetics existed.",
     "quotes": [
       {
         "who": "David C. Brock",
@@ -71,7 +71,7 @@
     "The Paris meeting on calculating machines and human thought took place in January 1951: https://www.computerhistory.org/collections/catalog/102805935",
     "Brock documents cybernetic machines and a Torres y Quevedo chess-machine demonstration at that Paris meeting: https://spectrum.ieee.org/cybernetics-computer-design-and-a-meeting-of-the-minds"
   ],
-  "crux": "The dispute turns on whether founding AI means the earliest machine behavior now classed as intelligent, mathematical foundations relevant to intelligence, or formation of the named research field. Earlier examples establish antecedents, but deciding whether Dartmouth was merely a renaming also requires examining the aims and boundaries of the communities involved.",
+  "crux": "The dispute turns on whether founding AI means the earliest machine behavior now classed as intelligent, mathematical foundations relevant to intelligence, or formation of the named research field. Earlier examples establish antecedents, but deciding whether Dartmouth was a renaming also requires examining the aims and boundaries of the communities involved.",
   "related": [
     "nn-origins",
     "turing-computation",

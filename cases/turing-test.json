@@ -2,7 +2,7 @@
   "id": "turing-test",
   "title": "The Turing test",
   "matchup": "Turing (1950) vs Descartes (1637)",
-  "question": "Should Descartes's earlier language test receive invention credit for what is now called the Turing test, as Schmidhuber suggests?",
+  "question": "Does Descartes's language criterion establish the invention priority for the Turing test that Schmidhuber proposes?",
   "usual_credit": {
     "summary": "Turing is credited with the imitation-game proposal in his 1950 paper Computing Machinery and Intelligence. The [Stanford Encyclopedia of Philosophy](https://plato.stanford.edu/archives/fall2024/entries/turing-test/) distinguishes this specific proposal from the broader idea of using behavior or language to judge intelligence. Its historical account already recognizes earlier anticipations, including Descartes and the Cartesian thinker Géraud de Cordemoy, without treating those antecedents as identical to every feature of Turing's game.",
     "works": [
@@ -49,7 +49,7 @@
     "last_made": "2025-12"
   },
   "response": {
-    "summary": "No direct public reply to Schmidhuber's renaming proposal was located in the sources reviewed. Graham Oppy and David Dowe's [standard reference account](https://plato.stanford.edu/archives/fall2024/entries/turing-test/) acknowledges Descartes's anticipation but reserves the most specific use of Turing test for Turing's 1950 proposal. Descartes's own [text](https://assets.donaldjenkins.com/documents/descartes-discourse-on-method-part-5.pdf) argues that machines could not use language flexibly as humans do, whereas Turing proposes a game for evaluating machine performance. Those differences leave a distinction between anticipating a criterion and originating the particular procedure named after Turing.",
+    "summary": "Oppy and Dowe's [Stanford reference account](https://plato.stanford.edu/archives/fall2024/entries/turing-test/) acknowledges Descartes's language criterion while distinguishing it from Turing's 1950 imitation game. Descartes's [text](https://assets.donaldjenkins.com/documents/descartes-discourse-on-method-part-5.pdf) argues that machines cannot use language flexibly as humans do, whereas Turing proposes an interaction for evaluating a machine's performance. Those accounts support separating an earlier criterion from the later testing arrangement. They are not direct replies to Schmidhuber's proposed name, and the presence of an antecedent does not settle how much of the particular game it anticipates.",
     "quotes": [
       {
         "who": "Graham Oppy and David Dowe",

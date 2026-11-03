@@ -2,24 +2,24 @@
   "id": "deeplearning-origins",
   "title": "Who started deep learning",
   "matchup": "Hinton, LeCun and Bengio and the 'deep learning revolution' of 2006 vs Ivakhnenko and Lapa (1965)",
-  "question": "Should deep learning be traced to the 1965 learning algorithm for multilayer networks of Ivakhnenko and Lapa, rather than to the neural-network revivals of the 1980s and 2006, as Schmidhuber says?",
+  "question": "Do the multilayer learning methods of Ivakhnenko, Lapa and Amari establish the deep-learning priority that Schmidhuber claims for the 1960s?",
   "usual_credit": {
     "summary": "Deep learning is usually presented as a revival of neural-network research led by Geoffrey Hinton, Yann LeCun and Yoshua Bengio, who shared the 2018 ACM Turing Award. The 2016 textbook by Goodfellow, Bengio and Courville describes three waves, namely deep learning under the name cybernetics in the 1940s to 1960s, under the name connectionism in the 1980s and 1990s, and the current resurgence beginning in 2006, while Sejnowski's 2020 PNAS survey says that after Minsky and Papert's 1969 book the field was abandoned until a new generation of researchers took a fresh look in the 1980s.",
     "works": [
       {
-        "who": "LeCun, Bengio, Hinton",
+        "who": "Yann LeCun, Yoshua Bengio, Geoffrey Hinton",
         "year": 2015,
         "title": "Deep learning",
         "url": "https://www.nature.com/articles/nature14539"
       },
       {
-        "who": "Hinton, Salakhutdinov",
+        "who": "Geoffrey Hinton, Salakhutdinov",
         "year": 2006,
         "title": "Reducing the dimensionality of data with neural networks",
         "url": "https://www.cs.toronto.edu/~rsalakhu/papers/science.pdf"
       },
       {
-        "who": "Sejnowski",
+        "who": "Terrence J. Sejnowski",
         "year": 2020,
         "title": "The unreasonable effectiveness of deep learning in artificial intelligence",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7720171/"
@@ -27,22 +27,22 @@
     ]
   },
   "claim": {
-    "summary": "Schmidhuber says that deep learning in feedforward networks began in Ukraine in 1965, when Alexey Ivakhnenko and Valentin Lapa published the first general working learning algorithm for multilayer perceptrons with arbitrarily many layers, and that a 1971 paper by Ivakhnenko described an eight-layer network trained layer by layer by regression and then pruned. He adds that Shun-Ichi Amari trained a five-layer network with two modifiable layers by stochastic gradient descent in 1967 and 1968. He argues that surveys and award citations by Hinton, LeCun and Bengio, and Sejnowski's account of the 1980s revival, leave these pioneers out, and that the techniques of the 1960s were renamed deep learning in the 2000s without correct attribution.",
+    "summary": "Schmidhuber says that deep learning in feedforward networks began in Ukraine in 1965, when Alexey Ivakhnenko and Valentin Lapa published the first general working learning algorithm for multilayer perceptrons with arbitrarily many layers, and that a 1971 paper by Ivakhnenko described an eight-layer network trained layer by layer by regression and then pruned. He adds that Shun'ichi Amari trained a five-layer network with two modifiable layers by stochastic gradient descent in 1967 and 1968. He argues that surveys and award citations by Hinton, LeCun and Bengio, and Sejnowski's account of the 1980s revival, leave these pioneers out, and that the techniques of the 1960s were renamed deep learning in the 2000s without correct attribution.",
     "prior_works": [
       {
-        "who": "Ivakhnenko, Lapa",
+        "who": "Alexey G. Ivakhnenko, Valentin Lapa",
         "year": 1965,
         "title": "Cybernetic predicting devices (English translation, 1966)",
         "url": "https://gwern.net/doc/ai/1966-ivakhnenko.pdf"
       },
       {
-        "who": "Ivakhnenko",
+        "who": "Alexey G. Ivakhnenko",
         "year": 1971,
         "title": "Polynomial theory of complex systems",
         "url": "https://doi.org/10.1109/TSMC.1971.4308320"
       },
       {
-        "who": "Amari",
+        "who": "Shun'ichi Amari",
         "year": 1967,
         "title": "A theory of adaptive pattern classifiers",
         "url": "https://people.idsia.ch/~juergen/amari1967.pdf"

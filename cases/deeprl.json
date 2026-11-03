@@ -2,9 +2,9 @@
   "id": "deeprl",
   "title": "Deep reinforcement learning from pixels",
   "matchup": "Mnih et al. at DeepMind (2013 arXiv, 2015 Nature) vs Koutník, Cuccu, Schmidhuber and Gomez at IDSIA (2013)",
-  "question": "Was the first deep learning system to learn control from high-dimensional input by reinforcement learning built at IDSIA in 2013, as Schmidhuber says, rather than the DeepMind system?",
+  "question": "Does the IDSIA work of July 2013 meet the first-from-pixels reinforcement-learning claim made in DeepMind's December 2013 abstract?",
   "usual_credit": {
-    "summary": "Mnih and colleagues at DeepMind posted \"Playing Atari with deep reinforcement learning\" to arXiv in December 2013 and published \"Human-level control through deep reinforcement learning\" in Nature on 26 February 2015. The Nature paper reports a deep Q-network that, receiving only the pixels and the game score, reached a level comparable to a professional human games tester across 49 Atari games using the same algorithm, network architecture and hyperparameters, and its abstract describes this as the first artificial agent able to excel at a diverse array of challenging tasks. The 2013 arXiv abstract calls the model the first deep learning model to learn control policies directly from high-dimensional sensory input using reinforcement learning.",
+    "summary": "Mnih and colleagues at DeepMind posted \"Playing Atari with deep reinforcement learning\" to arXiv in December 2013 and published \"Human-level control through deep reinforcement learning\" in Nature online on 25 February 2015. The Nature paper reports a deep Q-network that, receiving only the pixels and the game score, reached a level comparable to a professional human games tester across 49 Atari games using the same algorithm, network architecture and hyperparameters, and its abstract describes this as the first artificial agent able to excel at a diverse array of challenging tasks. The 2013 arXiv abstract calls the model the first deep learning model to learn control policies directly from high-dimensional sensory input using reinforcement learning.",
     "works": [
       {
         "who": "Volodymyr Mnih et al.",
@@ -21,7 +21,7 @@
     ]
   },
   "claim": {
-    "summary": "Schmidhuber says the first system of this kind was built at his institute IDSIA and not at DeepMind. He points to Koutník, Cuccu, Schmidhuber and Gomez (GECCO, July 2013), in which recurrent networks with over a million weights, encoded compactly and evolved by neuroevolution, learned to drive a simulated car in the TORCS game from video, without unsupervised pre-training. He objects to the claim in the 2013 arXiv abstract and to the Nature abstract's statements about bridging high-dimensional input and actions and about the first artificial agent to excel at a diverse array of tasks. He says the DeepMind system used more limited feedforward networks together with techniques that are over two decades old, namely convolutional networks, experience replay and temporal-difference learning. He wrote this on his site and on Google+ on 25 and 26 February 2015, repeated it in a Reddit question-and-answer session in March 2015, and noted in 2024 that a follow-up paper of 2014 received the ACM SIGEVO Impact Award.",
+    "summary": "Schmidhuber points to Koutník, Cuccu, Schmidhuber and Gomez's July 2013 work, where neuroevolution trained large recurrent networks to control a simulated TORCS car from video, without unsupervised pre-training. He argues that this meets the December 2013 DeepMind abstract's claim to learning control policies directly from high-dimensional sensory input by reinforcement learning. He also disputes the broader wording of the 2015 Nature abstract. His comparison concerns priority for pixel-based control, while DeepMind's papers emphasize one learning setup evaluated across many Atari games rather than a single driving environment.",
     "prior_works": [
       {
         "who": "Jan Koutník, Giuseppe Cuccu, Jürgen Schmidhuber and Faustino Gomez",
@@ -73,7 +73,7 @@
     "last_made": "2024-06"
   },
   "response": {
-    "summary": "I found no public reply from the authors of the DeepMind papers to the priority claim. The 2013 arXiv version cites Hausknecht et al.'s neuroevolution approach to Atari, the Nature paper does not, and neither cites Koutník et al. (2013). Thomas Dietterich of Oregon State University took part in the discussion under Schmidhuber's Google+ post and wrote, in reply to a commenter who asked about driving versus Atari, that the DeepMind-style methods learn many different games starting from a blank slate while a solution to any one game can be engineered; that comment concerns generality across tasks and not priority.",
+    "summary": "The 2013 DeepMind paper cites Hausknecht and colleagues' neuroevolution approach to Atari, but not Koutník and colleagues' driving work; the 2015 Nature paper cites neither. Both papers emphasize Q-learning from pixels, and the Nature result uses the same architecture and hyperparameters across 49 games, training separately for each game. In the discussion of Schmidhuber's critique, Thomas Dietterich argues that this breadth differs from engineering a solution to one task. His comment addresses generality rather than publication priority, and the linked sources contain no direct author reply to the earlier-driving comparison.",
     "quotes": [
       {
         "who": "Thomas Dietterich (Google+ comment, not about priority)",
@@ -86,7 +86,7 @@
   "agreed_facts": [
     "Koutník, Cuccu, Schmidhuber and Gomez presented a paper at GECCO in July 2013 in which networks with over one million weights were evolved to drive a car in TORCS using only video images from the driver's perspective, alongside a visual octopus arm task.",
     "Mnih et al. posted the arXiv paper on 19 December 2013, and its abstract says it presents the first deep learning model to successfully learn control policies directly from high-dimensional sensory input using reinforcement learning.",
-    "The Nature paper of 26 February 2015 reports results on 49 Atari 2600 games with a single algorithm, network architecture and set of hyperparameters.",
+    "The Nature paper published online on 25 February 2015 reports results on 49 Atari 2600 games with a single algorithm, network architecture and set of hyperparameters.",
     "The reference list of the 2013 arXiv version cites Hausknecht et al.'s neuroevolution approach to Atari, and neither it nor the Nature paper cites Koutník et al. (2013)."
   ],
   "crux": "The sources read \"the first deep learning model to learn control policies from high-dimensional sensory input\" differently: Schmidhuber reads it as covering any such system and points to a neuroevolved recurrent driver of 2013, while the DeepMind papers describe a convolutional network trained with Q-learning that played many Atari games from pixels with one architecture. They also differ on whether the DeepMind authors should have cited the 2013 paper.",

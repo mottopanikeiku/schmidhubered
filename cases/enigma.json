@@ -2,7 +2,7 @@
   "id": "enigma",
   "title": "Breaking Enigma",
   "matchup": "Turing and Welchman (1939–1940) vs Rejewski, Różycki and Zygalski’s earlier work",
-  "question": "Do accounts centered on Turing give insufficient invention credit to the Polish cryptanalysts who broke Enigma earlier, as Schmidhuber argues?",
+  "question": "Does the relationship between the Polish and British Enigma methods support Schmidhuber's claim about priority for their core algorithm?",
   "usual_credit": {
     "summary": "Turing and Gordon Welchman are credited with the British Bombe approach used against wartime Enigma, rather than with every earlier attack on the cipher. The [National Museum of Computing](https://www.tnmoc.org/bombe) explicitly credits the Polish cryptanalysts with earlier breakthroughs and information supplied before the war, while distinguishing Turing's crib-based approach and Welchman's diagonal board. Colossus was a different machine designed by Tommy Flowers for Lorenz-encrypted traffic, so its contribution should not be conflated with the Enigma Bombe.",
     "works": [
@@ -43,7 +43,7 @@
     "last_made": "2022"
   },
   "response": {
-    "summary": "No direct public reply specifically to Schmidhuber's Enigma passage was located in the sources reviewed. The [museum's historical account](https://www.tnmoc.org/bombe) recognizes Polish priority but says changes in German operating procedures made the earlier Bomba inadequate, and that the British Bombe used a different crib-based attack with Welchman's addition. That account supports shared historical credit without equating all the attacks as one unchanged algorithm. The museum also [distinguishes Colossus's Lorenz work](https://www.tnmoc.org/colossus), correcting a common source of confusion in broad accounts of wartime codebreaking.",
+    "summary": "The [National Museum of Computing](https://www.tnmoc.org/bombe) recognizes the Polish cryptanalysts' earlier breakthroughs and the information they passed to Britain before the war. It also says that changes in German procedures made the earlier Bomba inadequate and explains how the British Bombe used a crib-based attack with Welchman's diagonal board. That account supports shared historical credit without describing the Polish and British methods as one unchanged algorithm. Its [Colossus account](https://www.tnmoc.org/colossus) concerns Lorenz traffic, not Enigma; neither museum account is a direct answer to Schmidhuber's passage.",
     "quotes": [
       {
         "who": "The National Museum of Computing",

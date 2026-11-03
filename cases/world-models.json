@@ -2,18 +2,18 @@
   "id": "world-models",
   "title": "World models",
   "matchup": "LeCun (2022) and earlier neural control work (Werbos, Nguyen and Widrow) vs Schmidhuber (1990)",
-  "question": "Did Schmidhuber's 1990 recurrent world models and curiosity-driven planning anticipate the approach to world models that LeCun now promotes, and does LeCun's work owe him credit, as he says?",
+  "question": "Do the recurrent models and planning methods in Schmidhuber's 1990 work establish the priority he claims in relation to LeCun's later proposals?",
   "usual_credit": {
     "summary": "Learned world models for planning are currently associated with Yann LeCun's 2022 proposal and his 2025 company AMI Labs, with Ha and Schmidhuber's 2018 paper 'World Models', and with model-based reinforcement learning such as Sutton's Dyna. LeCun himself traces the concept to optimal control theory of the late 1950s and 1960s and to the neural-network system identification work of Werbos, Nguyen and Widrow in the late 1980s.",
     "works": [
       {
-        "who": "Y. LeCun",
+        "who": "Yann LeCun",
         "year": 2022,
         "title": "A Path Towards Autonomous Machine Intelligence (OpenReview)",
         "url": "https://openreview.net/forum?id=BZ5a1r-kVsf"
       },
       {
-        "who": "D. Ha, J. Schmidhuber",
+        "who": "D. Ha, Jürgen Schmidhuber",
         "year": 2018,
         "title": "World Models",
         "url": "https://arxiv.org/abs/1803.10122"
@@ -24,25 +24,25 @@
     "summary": "Schmidhuber says his February 1990 report 'Making the world differentiable' introduced a recurrent network that learns to predict all of an agent's sensory inputs, including reward and pain signals. A controller plans through this model and is intrinsically motivated to improve it, and he says the report was the first of its kind to call the predictor a 'world model'. He says LeCun's 2022 paper, 2015 slides and 2025 company repeat his 1990-1997 work on hierarchical world models, intrinsic motivation and planning without citation. He credits earlier feedforward-network work by Werbos, Munro and Nguyen and Widrow and calls the basic concept much older.",
     "prior_works": [
       {
-        "who": "J. Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 1990,
-        "title": "Making the world differentiable: On using fully recurrent self-supervised neural networks for dynamic reinforcement learning and planning in non-stationary environments (TR FKI-126-90)",
+        "title": "Making the world differentiable: On using self-supervised fully recurrent neural networks for dynamic reinforcement learning and planning in non-stationary environments (TR FKI-126-90)",
         "url": "https://people.idsia.ch/~juergen/FKI-126-90ocr.pdf"
       },
       {
-        "who": "J. Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 1991,
         "title": "A possibility for implementing curiosity and boredom in model-building neural controllers (SAB 1990 proceedings)",
         "url": "https://sferics.idsia.ch/pub/juergen/curiositysab.pdf"
       },
       {
-        "who": "J. Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 2015,
         "title": "On Learning to Think: Algorithmic Information Theory for Novel Combinations of Reinforcement Learning Controllers and Recurrent Neural World Models",
         "url": "https://arxiv.org/abs/1511.09249"
       },
       {
-        "who": "J. Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 2026,
         "title": "The Neural World Model Boom (Technical Note IDSIA-2-26)",
         "url": "https://people.idsia.ch/~juergen/world-model-boom.html"
@@ -79,7 +79,7 @@
     "last_made": "2026-10"
   },
   "response": {
-    "summary": "LeCun wrote on LinkedIn in April 2026 that he did not invent world models and neither did Schmidhuber, and that the concept of a world model for planning comes from optimal control theory. He says that using a differentiable neural network model of a system to train a controller by backpropagation goes back at least to a 1990 IJCNN paper by Nguyen and Widrow, which he says predates Schmidhuber's work on the topic. He calls the 2018 Ha and Schmidhuber paper fine but without a new concept beyond Nguyen and Widrow other than the name, and says that showing ideas work matters more than who proposed them. Schmidhuber replied that he has always cited the earlier feedforward-network work, which LeCun's 2022 paper did not, and the 2022 OpenReview exchange between the two is known here from Schmidhuber's page.",
+    "summary": "LeCun's April 2026 LinkedIn post traces world models for planning to optimal control and neural system identification, and points to Nguyen and Widrow's work as preceding Schmidhuber's. He argues that the value of later systems depends on what they demonstrate, not just who proposed a general idea. Schmidhuber agrees that the earlier feedforward-control work matters but claims a separate contribution for recurrent models, curiosity and hierarchical planning. LeCun's 2022 OpenReview remarks are reproduced on Schmidhuber's page, while the LinkedIn post is a direct source; neither should be read as a denial that the 1990 report exists.",
     "quotes": [
       {
         "who": "Yann LeCun, LinkedIn post",

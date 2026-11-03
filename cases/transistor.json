@@ -2,7 +2,7 @@
   "id": "transistor",
   "title": "The transistor",
   "matchup": "Bardeen, Brattain and Shockley (1947–1948) vs Lilienfeld (1925–1928)",
-  "question": "Should Lilienfeld's field-effect patents receive the invention credit commonly associated with the Bell Labs transistor, as Schmidhuber argues?",
+  "question": "Do Lilienfeld's patents and the evidence about working devices support Schmidhuber's proposed transistor invention credit?",
   "usual_credit": {
     "summary": "Standard accounts credit John Bardeen and Walter Brattain with the working point-contact transistor demonstrated at Bell Labs in December 1947, while William Shockley developed the junction-transistor approach. The [Computer History Museum](https://www.computerhistory.org/siliconengine/invention-of-the-point-contact-transistor/) describes their achievement as a successful semiconductor amplifier, rather than the first proposal to control semiconductor current with an electric field. The [1956 Nobel citation](https://www.nobelprize.org/prizes/physics/1956/summary/) recognizes semiconductor research and discovery of the transistor effect, and the museum separately credits Atalla and Kahng with the successful insulated-gate field-effect device developed in 1959 and demonstrated in 1960.",
     "works": [
@@ -55,7 +55,7 @@
     "last_made": "2025-12"
   },
   "response": {
-    "summary": "No public reply specifically addressing Schmidhuber's 2025 article was located in the sources reviewed. The [Computer History Museum's account](https://www.computerhistory.org/siliconengine/field-effect-semiconductor-device-concepts-patented/) acknowledges Lilienfeld's field-effect concept but says that records establishing functioning contemporary devices are absent, and it distinguishes those patents from the later point-contact breakthrough. Its [MOSFET history](https://www.computerhistory.org/siliconengine/metal-oxide-semiconductor-mos-transistor-demonstrated/) also credits Atalla and Kahng with overcoming semiconductor surface-state problems, so it does not treat an early patent as equivalent to the later practical technology. Schmidhuber reports contrary historical evidence from Arns and a Bardeen letter, but the original letter and Arns's full article were not opened, so those statements remain attributed reports here.",
+    "summary": "The [Computer History Museum](https://www.computerhistory.org/siliconengine/field-effect-semiconductor-device-concepts-patented/) acknowledges Lilienfeld's field-effect patents but says contemporary records establishing working devices are absent. It distinguishes those concepts from Bell Labs' working point-contact amplifier and from Atalla and Kahng's later practical MOS transistor, which addressed semiconductor surface-state problems. Schmidhuber cites reconstructions and historical reports as evidence for the earlier designs' feasibility. Those reports and the museum's requirement for contemporary evidence address different standards of proof; the linked material does not include the original Bardeen letter or Arns's full article, or a direct reply to Schmidhuber's 2025 argument.",
     "quotes": [
       {
         "who": "Computer History Museum",

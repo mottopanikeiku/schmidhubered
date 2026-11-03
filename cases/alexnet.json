@@ -1,13 +1,13 @@
 {
   "id": "alexnet",
   "title": "AlexNet",
-  "matchup": "Krizhevsky, Sutskever & Hinton (2012) vs Ciresan, Meier, Masci, Gambardella & Schmidhuber (2011)",
-  "question": "Should AlexNet's 2012 ImageNet win be seen as following the 2011 DanNet, which won four vision contests with a similar GPU-trained convolutional network, as Schmidhuber says?",
+  "matchup": "Krizhevsky, Sutskever & Hinton (2012) vs Cireșan, Meier, Masci, Gambardella & Schmidhuber (2011)",
+  "question": "Do the earlier IDSIA GPU networks establish the priority for AlexNet's approach that Schmidhuber claims?",
   "usual_credit": {
     "summary": "Alex Krizhevsky, Ilya Sutskever and Geoffrey Hinton trained a large convolutional network on two GPUs, using ReLU units and dropout, and won the ILSVRC 2012 ImageNet classification contest by a wide margin. The result is widely seen as the start of the deep learning boom in computer vision, and the ACM's 2019 Turing Award announcement says Hinton and his students almost halved the error rate for object recognition.",
     "works": [
       {
-        "who": "A. Krizhevsky, I. Sutskever, G. Hinton",
+        "who": "Alex Krizhevsky, Ilya Sutskever, Geoffrey Hinton",
         "year": 2012,
         "title": "ImageNet Classification with Deep Convolutional Neural Networks (NIPS 2012)",
         "url": "https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html"
@@ -15,22 +15,22 @@
     ]
   },
   "claim": {
-    "summary": "Schmidhuber says his group's DanNet, a max-pooling convolutional network trained on GPUs by Dan Ciresan and colleagues, won four image recognition contests between 2011 and 2012, including the IJCNN 2011 traffic sign contest with superhuman accuracy, before AlexNet won ImageNet, and that AlexNet is similar to DanNet. He adds that AlexNet used rectified linear units and a variant of the stochastic delta rule, later called dropout, without citing their earlier sources, Fukushima (1969) and Hanson (1990).",
+    "summary": "Schmidhuber says his group's DanNet, a max-pooling convolutional network trained on GPUs by Dan Cireșan and colleagues, won four image recognition contests between 2011 and 2012, including the IJCNN 2011 traffic sign contest with superhuman accuracy, before AlexNet won ImageNet, and that AlexNet is similar to DanNet. He adds that AlexNet used rectified linear units and a variant of the stochastic delta rule, later called dropout, without citing their earlier sources, Fukushima (1969) and Hanson (1990).",
     "prior_works": [
       {
-        "who": "D. Ciresan, U. Meier, J. Masci, L. M. Gambardella, J. Schmidhuber",
+        "who": "Dan Cireșan, U. Meier, J. Masci, L. M. Gambardella, Jürgen Schmidhuber",
         "year": 2011,
         "title": "Flexible, High Performance Convolutional Neural Networks for Image Classification (IJCAI 2011)",
         "url": "https://people.idsia.ch/~juergen/ijcai2011.pdf"
       },
       {
-        "who": "D. Ciresan, U. Meier, J. Masci, L. M. Gambardella, J. Schmidhuber",
+        "who": "Dan Cireșan, U. Meier, J. Masci, L. M. Gambardella, Jürgen Schmidhuber",
         "year": 2011,
         "title": "High-Performance Neural Networks for Visual Object Classification (arXiv)",
         "url": "https://arxiv.org/abs/1102.0183"
       },
       {
-        "who": "D. Ciresan, U. Meier, J. Schmidhuber",
+        "who": "Dan Cireșan, U. Meier, Jürgen Schmidhuber",
         "year": 2012,
         "title": "Multi-column Deep Neural Networks for Image Classification (CVPR 2012)",
         "url": "https://arxiv.org/abs/1202.2745"
@@ -73,7 +73,7 @@
     "last_made": "2026-08"
   },
   "response": {
-    "summary": "The AlexNet paper cites two IDSIA papers by Ciresan et al., one for the record MNIST result and one to call its two-GPU design somewhat similar to Ciresan's columnar CNN. It describes its own contributions as the size of the network, a fast GPU implementation and its regularization methods. The ACM's 2019 announcement credits Hinton and his students with almost halving the ImageNet error rate, and the English Wikipedia article on AlexNet records the earlier IDSIA GPU networks and their four contest wins while noting the authors' own 'somewhat similar'. No public reply from Krizhevsky, Sutskever or Hinton to the DanNet priority claim was found in the sources reviewed.",
+    "summary": "The AlexNet paper cites two IDSIA papers by Cireșan et al., one for the record MNIST result and one to call its two-GPU design somewhat similar to Cireșan's columnar CNN. It describes its own contributions as the size of the network, a fast GPU implementation and its regularization methods. The ACM's 2019 announcement credits Hinton and his students with almost halving the ImageNet error rate, and the English Wikipedia article on AlexNet records the earlier IDSIA GPU networks and their four contest wins while noting the authors' own 'somewhat similar'. The paper's acknowledgment is not a direct reply to the later DanNet priority complaint.",
     "quotes": [
       {
         "who": "Krizhevsky, Sutskever and Hinton, AlexNet paper",
@@ -97,14 +97,15 @@
   },
   "agreed_facts": [
     "The IDSIA paper 'Flexible, High Performance Convolutional Neural Networks for Image Classification' appeared at IJCAI 2011, and the AlexNet paper appeared at NIPS 2012.",
-    "Both DanNet and AlexNet were convolutional networks trained on GPUs, and the AlexNet paper calls its two-GPU design 'somewhat similar' to the columnar CNN of Ciresan et al.",
+    "Both DanNet and AlexNet were convolutional networks trained on GPUs, and the AlexNet paper calls its two-GPU design 'somewhat similar' to the columnar CNN of Cireșan et al.",
     "AlexNet won the ILSVRC 2012 ImageNet classification contest.",
-    "The AlexNet paper cites Ciresan, Meier and Schmidhuber (2012) and Ciresan et al. (2011), and it credits Nair and Hinton (2010) for rectified linear units, without citing Fukushima (1969) or Hanson (1990)."
+    "The AlexNet paper cites Cireșan, Meier and Schmidhuber (2012) and Cireșan et al. (2011), and it credits Nair and Hinton (2010) for rectified linear units, without citing Fukushima (1969) or Hanson (1990)."
   ],
   "crux": "Whether AlexNet's 2012 ImageNet result continues the 2011-12 IDSIA GPU network results, which it cites as 'somewhat similar', or is a distinct advance through a larger network, ImageNet-scale training, ReLUs and dropout. The sides also weigh differently the first contest wins at smaller scale against the first win on ImageNet.",
   "related": [
     "cnn",
-    "dropout-relu",
+    "dropout",
+    "relu",
     "resnet",
     "turingaward",
     "honda"

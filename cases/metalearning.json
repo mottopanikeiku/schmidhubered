@@ -2,7 +2,7 @@
   "id": "metalearning",
   "title": "Meta-learning and recursive self-improvement",
   "matchup": "Bengio et al. (1991) and current meta-learning and self-improvement research vs Schmidhuber (1987, 1992, 2003)",
-  "question": "Should meta-learning and recursive self-improvement be traced to Schmidhuber's 1987 diploma thesis, as he says, and does later work owe credit to it?",
+  "question": "Does Schmidhuber's 1987 thesis establish the priority he claims for algorithmic meta-learning and recursive self-improvement?",
   "usual_credit": {
     "summary": "Bengio said in a December 2019 IEEE Spectrum interview that he wrote an early paper on learning to learn in 1991, and Bengio, Bengio and Cloutier published \"Learning a synaptic learning rule\" at IJCNN that year. The idea that machines could improve themselves in an intelligence explosion is traced by Schmidhuber, and by commenters under his posts, to I. J. Good's \"Speculations concerning the first ultraintelligent machine\", published in Advances in Computers in 1966.",
     "works": [
@@ -21,12 +21,12 @@
     ]
   },
   "claim": {
-    "summary": "Schmidhuber says he began work on learning to learn in his 1987 diploma thesis, which applied genetic programming to itself so that better genetic programming methods evolved at a meta level, a meta-meta level and further levels, and that this thesis contains the first concrete algorithm for recursive self-improvement. He adds gradient-descent-based neural meta-learning from 1992, meta-reinforcement learning with self-modifying policies from 1994 and the mathematically optimal, self-referential Gödel Machine of 2003. He disputes Bengio's 2019 remark that Bengio had worked on the topic earlier, calling Bengio's 1991 paper much later than his thesis. Since 2025 he has linked the thesis in replies to posts about in-context learning, test-time training and recursive self-improvement at AI companies, and in September 2026 he published a technical note (IDSIA-9-26) arguing that recursive self-improvement is much older than the 2026 wave of interest in it.",
+    "summary": "Schmidhuber describes his 1987 diploma thesis as a concrete algorithm for recursive self-improvement: an evolutionary program improves learning procedures, including the procedure used to improve them, at successive meta levels. He contrasts this with Bengio's 1991 work and with earlier general predictions of an intelligence explosion. He also cites his later gradient-based meta-learning, self-modifying reinforcement learners and Gödel Machine as distinct developments. The priority he claims for the thesis is for an algorithmic formulation, not for originating every broad idea about machines improving themselves or every modern use of the term meta-learning.",
     "prior_works": [
       {
         "who": "Jürgen Schmidhuber",
         "year": 1987,
-        "title": "Evolutionary principles in self-referential learning, or on learning how to learn: the meta-meta-... hook (diploma thesis)",
+        "title": "Evolutionary Principles in Self-Referential Learning (diploma thesis)",
         "url": "https://people.idsia.ch/~juergen/diploma1987ocr.pdf"
       },
       {
@@ -79,7 +79,7 @@
     "last_made": "2026-10"
   },
   "response": {
-    "summary": "I found no public reply from Bengio, Hinton or the companies named in Schmidhuber's 2026 posts to the claim that his 1987 thesis began meta-learning or recursive self-improvement. Bengio's own account, given in an IEEE Spectrum interview on the eve of his NeurIPS 2019 keynote, is that he wrote an early paper on learning to learn in 1991. A Reddit discussion from December 2019 reports that a slide in that keynote cited \"Bengio et al 1991; Schmidhuber 1992\" for the topic; I read this in an archived copy of the thread and could not open the slide itself. Hinton wrote on X in October 2026 that the idea of an intelligence explosion through recursive self improvement has been around for a long time, and a user replying to Schmidhuber's September 2026 post pointed to I. J. Good (1965) and von Neumann (1956), to which Schmidhuber answered that Good had no concrete algorithms.",
+    "summary": "Bengio's 2019 IEEE Spectrum interview dates his early learning-to-learn paper to 1991, without addressing the 1987 thesis. An archived discussion reports a keynote slide citing Bengio et al. (1991) and Schmidhuber (1992), but the slide itself is not supplied with that account. Hinton's October 2026 post says recursive self-improvement and an intelligence explosion are old ideas, while Schmidhuber distinguishes Good's earlier speculation from a concrete algorithm. These sources document different conceptions of the contribution; they do not contain a direct technical rebuttal of the thesis's specific evolutionary procedure.",
     "quotes": [
       {
         "who": "Yoshua Bengio (IEEE Spectrum interview)",

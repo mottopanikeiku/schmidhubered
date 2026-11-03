@@ -2,7 +2,7 @@
   "id": "computers",
   "title": "The first programmable computers",
   "matchup": "ENIAC (1945–1946) and Turing-related accounts vs Zuse’s Z3 (1941) and Flowers’s Colossus (1943–1944)",
-  "question": "Should accounts of the first computer give Zuse's Z3 priority over ENIAC, while crediting Colossus with an earlier electronic milestone, as Schmidhuber argues?",
+  "question": "Do the documented capabilities of Z3, Colossus and ENIAC support Schmidhuber's proposed division of first-computer credit?",
   "usual_credit": {
     "summary": "Standard computing histories do not assign every first to one machine: they distinguish programmability, general-purpose operation, electronic construction and stored programs. The [Computer History Museum](https://www.computerhistory.org/revolution/birth-of-the-computer/4/78) credits the ENIAC project with a large-scale computer operating at electronic speed, while separately recording Zuse's earlier relay-based Z3. The [National Museum of Computing](https://www.tnmoc.org/colossus) credits Colossus with digital, programmable electronic operation but describes its purpose and programmability as limited; Turing's abstract machine is a separate theoretical contribution, not the same physical machine.",
     "works": [
@@ -61,7 +61,7 @@
     "last_made": "2026-06"
   },
   "response": {
-    "summary": "No public answer specifically to Schmidhuber's hardware-priority articles was located in the sources reviewed, but the institutional histories support a more qualified division of credit than a single first-computer label. The [German Patent and Trade Mark Office](https://dpma.de/english/our_office/publications/milestones/computerpioneers/konradzuse/index.html) credits Z3 as a functioning freely programmable binary computer while stressing that modern computers have several inventors. The [National Museum of Computing](https://www.tnmoc.org/colossus) distinguishes Colossus's limited programmability from a later stored-program machine, and the Computer History Museum places ENIAC's achievement specifically in large-scale electronic computation. These are historical comparisons rather than replies conceding or rejecting all of Schmidhuber's formulations.",
+    "summary": "The [German Patent and Trade Mark Office](https://dpma.de/english/our_office/publications/milestones/computerpioneers/konradzuse/index.html) credits Z3 as a functioning freely programmable binary computer while stressing that modern computers have several inventors. The [National Museum of Computing](https://www.tnmoc.org/colossus) distinguishes Colossus's limited programmability from later stored-program machines, and the Computer History Museum describes ENIAC's contribution in large-scale electronic computation. These institutional accounts divide credit by capability and construction rather than choosing one machine for every first. They are historical comparisons, not replies accepting or rejecting every claim in Schmidhuber's articles about Zuse or Turing.",
     "quotes": [
       {
         "who": "German Patent and Trade Mark Office",
@@ -80,8 +80,7 @@
   "agreed_facts": [
     "Zuse completed the relay-based Z3 in 1941: https://www.computerhistory.org/timeline/1941",
     "ENIAC was built between 1943 and 1945 and initially programmed through configurations of wires and switches: https://www.computerhistory.org/revolution/birth-of-the-computer/4/78",
-    "Flowers's Colossus was working at Bletchley Park in February 1944 and had limited programmability for a cryptanalytic task: https://www.tnmoc.org/colossus",
-    "Z3, Colossus and ENIAC did not have identical hardware or programming arrangements, so chronological priority depends on the category being compared: https://www.tnmoc.org/colossus"
+    "Flowers's Colossus was working at Bletchley Park in February 1944 and had limited programmability for a cryptanalytic task: https://www.tnmoc.org/colossus"
   ],
   "crux": "The question is which criteria a first-computer claim includes, rather than whether Z3 preceded ENIAC. A mathematical universality result for an idealized Z3, a working general-purpose calculator, an electronic special-purpose machine and a stored-program computer establish different kinds of priority.",
   "related": [

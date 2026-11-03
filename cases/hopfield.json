@@ -2,12 +2,12 @@
   "id": "hopfield",
   "title": "Hopfield networks",
   "matchup": "Hopfield (1982) vs Amari (1972)",
-  "question": "Should the network now called the Hopfield network be credited to Amari's 1972 adaptive network of threshold elements, whose basic equations Schmidhuber says Hopfield republished in 1982?",
+  "question": "Do Amari's 1972 model and Hopfield's 1982 additions support Schmidhuber's claim that the basic network should be credited to Amari?",
   "usual_credit": {
     "summary": "The Hopfield network, a recurrent network of binary threshold units with symmetric weights whose dynamics settle into stored patterns, is credited to John Hopfield's 1982 paper in the Proceedings of the National Academy of Sciences. Hopfield shared the 2024 Nobel Prize in Physics with Geoffrey Hinton, the committee's scientific background describes the 1982 paper as a dynamical model for an associative memory based on a simple recurrent neural network, and Hinton's Nobel lecture says Hopfield made the weights symmetric so that networks settle to a stable state.",
     "works": [
       {
-        "who": "Hopfield",
+        "who": "John Hopfield",
         "year": 1982,
         "title": "Neural networks and physical systems with emergent collective computational abilities",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC346238/"
@@ -15,22 +15,22 @@
     ]
   },
   "claim": {
-    "summary": "Schmidhuber says that Shun-Ichi Amari made the Lenz-Ising recurrent architecture adaptive in 1972, so that it could learn to associate input patterns with output patterns through weights that are correlations of the stored patterns, and that Hopfield republished the same basic equations in 1982 without citing that paper. He points out that Hopfield did cite two later Amari papers on self-organisation, that Kaoru Nakano (1972) and William Little (1974) had related models, and that Hopfield's own additions were an analysis of storage capacity and a Lyapunov function for sequential updates. He also says that Hopfield's 1984 analog version did not cite Cohen and Grossberg (1983).",
+    "summary": "Schmidhuber says that Shun'ichi Amari made the Lenz-Ising recurrent architecture adaptive in 1972, so that it could learn to associate input patterns with output patterns through weights that are correlations of the stored patterns, and that Hopfield republished the same basic equations in 1982 without citing that paper. He points out that Hopfield did cite two later Amari papers on self-organisation, that Kaoru Nakano (1972) and William Little (1974) had related models, and that Hopfield's own additions were an analysis of storage capacity and a Lyapunov function for sequential updates. He also says that Hopfield's 1984 analog version did not cite Cohen and Grossberg (1983).",
     "prior_works": [
       {
-        "who": "Amari",
+        "who": "Shun'ichi Amari",
         "year": 1972,
         "title": "Learning patterns and pattern sequences by self-organizing nets of threshold elements",
         "url": "https://people.idsia.ch/~juergen/amari1972hopfield.pdf"
       },
       {
-        "who": "Nakano",
+        "who": "Kaoru Nakano",
         "year": 1972,
         "title": "Associatron: a model of associative memory",
         "url": "https://doi.org/10.1109/TSMC.1972.4309133"
       },
       {
-        "who": "Little",
+        "who": "William A. Little",
         "year": 1974,
         "title": "The existence of persistent states in the brain",
         "url": "https://doi.org/10.1016/0025-5564(74)90031-5"
@@ -73,7 +73,7 @@
     "last_made": "2025-12"
   },
   "response": {
-    "summary": "Amari congratulated Hopfield and Hinton on 10 October 2024 and credited Hopfield with proposing the idea of associative memory in neural networks and assessing its capacity by computer simulation. In a March 2025 interview he said that Hopfield's paper cites a later paper of his on self-organisation but not his associative-memory paper, that he did not know why, and that an identical model had already been published in Japan. The Nobel committee's scientific background cites Nakano (1972), Amari (1972) and Little (1974) together as a parallel development inspired by magnetic systems. No public reply from Hopfield to Schmidhuber's claim was found, and Hopfield's Nobel lecture in Reviews of Modern Physics could not be opened.",
+    "summary": "Amari's 2024 congratulatory statement credits Hopfield's associative-memory work and capacity simulations. In a 2025 interview, he also says that an identical model had appeared in Japan and that Hopfield cited a later self-organization paper rather than his 1972 associative-memory paper. The Nobel Committee's background document acknowledges Amari, Nakano and Little as earlier contributors and explains the energy-based dynamics of Hopfield's model. These sources recognize both predecessors and later development, but do not contain a direct answer by Hopfield to Schmidhuber's allegation. The distinction at issue includes update rules, convergence analysis and capacity, not just the network diagram.",
     "quotes": [
       {
         "who": "Shun-ichi Amari (RIKEN statement)",

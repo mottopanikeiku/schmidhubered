@@ -2,7 +2,7 @@
   "id": "minsky",
   "title": "Perceptrons and the neural-network winter",
   "matchup": "Sejnowski’s account of Minsky and Papert (1969) vs Ivakhnenko, Lapa and Amari (1965–1968)",
-  "question": "Does the earlier work cited by Schmidhuber make the familiar account of Perceptrons ending multilayer-network research until the 1980s historically misleading?",
+  "question": "Does the earlier multilayer-network work support Schmidhuber's objection to the claim that this research was abandoned after Perceptrons?",
   "usual_credit": {
     "summary": "Marvin Minsky and Seymour Papert's Perceptrons is credited with mathematical analysis of the limitations of particular perceptron architectures, not with proving that every multilayer neural network is incapable of learning. In his [2020 PNAS survey](https://pmc.ncbi.nlm.nih.gov/articles/PMC7720171/), Terrence Sejnowski says their doubts about training multilayer systems discouraged research until the 1980s revival. The [publisher's account of the reissued book](https://doi.org/10.7551/mitpress/11301.001.0001) likewise describes a turn away from perceptrons, while presenting the mathematical work as an enduring contribution.",
     "works": [
@@ -30,7 +30,7 @@
         "url": "https://www.knowledgeminer.eu/pdf/Ivakhnenko_Polynomial.pdf"
       },
       {
-        "who": "Shun-Ichi Amari",
+        "who": "Shun'ichi Amari",
         "year": 1967,
         "title": "A Theory of Adaptive Pattern Classifiers",
         "url": "https://people.idsia.ch/~juergen/amari1967.pdf"
@@ -61,7 +61,7 @@
     "last_made": "2025-10"
   },
   "response": {
-    "summary": "In a [direct public reply](https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-February/037269.html), Barak Pearlmutter objected that Perceptrons explicitly treats fixed nonlinear preprocessing, so describing its results as merely about linear networks misrepresents the book. Schmidhuber [answered](https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-February/037270.html) that he should have said others interpreted it that way, while maintaining his objection to Sejnowski's abandonment narrative. Sejnowski's published account is the statement being criticized, rather than a later answer, and acknowledges that the book discussed multilayer extensions. The existence of earlier multilayer methods and the extent of a later decline in support are separate historical questions.",
+    "summary": "In a [direct public reply](https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-February/037269.html), Barak Pearlmutter objected that Perceptrons explicitly treats fixed nonlinear preprocessing, so describing its results as concerning only linear networks misrepresents the book. Schmidhuber [answered](https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-February/037270.html) that he should have said others interpreted it that way, while maintaining his objection to Sejnowski's abandonment narrative. Sejnowski's published account is the statement being criticized, rather than a later answer, and acknowledges that the book discussed multilayer extensions. The existence of earlier multilayer methods and the extent of a later decline in support are separate historical questions.",
     "quotes": [
       {
         "who": "Barak A. Pearlmutter",

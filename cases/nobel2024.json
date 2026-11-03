@@ -2,24 +2,24 @@
   "id": "nobel2024",
   "title": "2024 Nobel Prize in Physics",
   "matchup": "Hopfield and Hinton (2024 Nobel Prize in Physics) vs Amari (1972), Ivakhnenko and Lapa (1965) and others",
-  "question": "Does the 2024 Nobel Prize in Physics for Hopfield and Hinton reward work that republished earlier methods without credit, as Schmidhuber says?",
+  "question": "Do the earlier works and citation records support Schmidhuber's claim that the 2024 Physics Nobel rewarded methods republished without credit?",
   "usual_credit": {
     "summary": "The Royal Swedish Academy of Sciences awarded the 2024 Nobel Prize in Physics to John Hopfield and Geoffrey Hinton \"for foundational discoveries and inventions that enable machine learning with artificial neural networks\". The Nobel Committee credits Hopfield with the associative memory network of 1982, whose energy function ties neural networks to models from statistical physics, and it credits Hinton with the Boltzmann machine, developed with Terrence Sejnowski and other coworkers in 1983 to 1985, and with the restricted Boltzmann machines and layer-by-layer pre-training that helped make deep networks trainable in the 2000s.",
     "works": [
       {
-        "who": "John J. Hopfield",
+        "who": "John Hopfield",
         "year": 1982,
         "title": "Neural networks and physical systems with emergent collective computational abilities",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC346238/"
       },
       {
-        "who": "David H. Ackley, Geoffrey E. Hinton and Terrence J. Sejnowski",
+        "who": "David H. Ackley, Geoffrey Hinton and Terrence J. Sejnowski",
         "year": 1985,
         "title": "A learning algorithm for Boltzmann machines",
         "url": "https://www.cs.toronto.edu/~hinton/csc321/readings/boltz321.pdf"
       },
       {
-        "who": "Geoffrey E. Hinton, Simon Osindero and Yee-Whye Teh",
+        "who": "Geoffrey Hinton, Simon Osindero and Yee-Whye Teh",
         "year": 2006,
         "title": "A fast learning algorithm for deep belief nets",
         "url": "https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf"
@@ -33,7 +33,7 @@
     ]
   },
   "claim": {
-    "summary": "Schmidhuber says the prize rewards work that earlier researchers had published and that the laureates did not cite. He holds that Hopfield's 1982 network uses the same basic equations as Amari's adaptive recurrent network of 1972, that the 1985 Boltzmann machine paper did not cite Ivakhnenko and Lapa's deep networks of 1965, Amari's work on stochastic gradient descent for multilayer networks in 1967 and 1968, or the Sherrington-Kirkpatrick spin-glass model of 1975, and that later surveys and 2025 articles by the laureates still leave these sources out. He first made the argument on X on 9 October 2024, the day after the announcement, and set it out on 7 December 2024 in a technical report, \"A Nobel Prize for Plagiarism\" (IDSIA-24-24), which he revised in July and October 2025. The report allows that the omissions may have been unintentional at first and argues that continuing to omit the sources after the issue became known makes them deliberate.",
+    "summary": "Schmidhuber argues that the prize rewards methods whose relevant predecessors were not cited. He compares Hopfield's 1982 equations with Amari's adaptive recurrent network of 1972, and the Boltzmann machine with the 1975 Sherrington-Kirkpatrick spin glass. He also names the earlier multilayer learning of Ivakhnenko, Lapa and Amari when challenging accounts of hidden representations and deep learning. His report, A Nobel Prize for Plagiarism, allows that initial omissions may have been unintentional but argues that continuing to omit known predecessors changes the attribution issue. That allegation is his interpretation of the citation record, not an agreed fact about intent.",
     "prior_works": [
       {
         "who": "Shun'ichi Amari",
@@ -91,7 +91,7 @@
     "last_made": "2026-09"
   },
   "response": {
-    "summary": "As far as I could find, neither Hopfield nor Hinton has replied publicly to the plagiarism claim, and Schmidhuber says the awardees have not tried to defend themselves. The Nobel Committee's scientific background cites both Amari's and Nakano's papers of 1972 among earlier magnetically inspired network models, describes the Boltzmann machine as a stochastic extension of Hopfield's model, and states that Rumelhart, Hinton and Williams reinvented a scheme that others had applied before. Shun'ichi Amari congratulated both laureates and said that the origins of neural network theory lie in part in Japan; in a 2025 interview he said that an identical associative memory model had been published in Japan, that Hopfield cited a different paper of his, and that the laureates had rediscovered and advanced the ideas. Hansun Hsiung of Durham University, who leads an oral history project on Japanese neural network research, wrote in The Conversation that the Japanese and North American groups worked separately and reached their conclusions independently.",
+    "summary": "The Nobel Committee's background document cites Amari and Nakano (1972), describes the Boltzmann machine as a stochastic extension of Hopfield's model, and credits earlier gradient methods. Amari congratulated the laureates and later said an identical associative-memory model had appeared in Japan, while also crediting their rediscovery and development of the ideas. Historian Hansun Hsiung describes Japanese and North American groups as working independently. These sources support assessing the later contributions separately from priority alone, but neither the committee's document nor Amari's comments is a direct answer by Hopfield or Hinton to Schmidhuber's plagiarism allegation.",
     "quotes": [
       {
         "who": "Nobel Committee for Physics",

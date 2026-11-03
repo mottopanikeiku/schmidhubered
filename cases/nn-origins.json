@@ -2,7 +2,7 @@
   "id": "nn-origins",
   "title": "Artificial neural networks",
   "matchup": "McCulloch and Pitts (1943) and Rosenblatt (1958–1962) vs Gauss and Legendre (1795–1805)",
-  "question": "Should Gauss and Legendre's least-squares method count as the invention of a linear artificial neural network, as Schmidhuber argues?",
+  "question": "Does the mathematical equivalence between least-squares regression and a linear network support Schmidhuber's proposed neural-network invention credit?",
   "usual_credit": {
     "summary": "The [Computer History Museum](https://www.computerhistory.org/timeline/1943/) treats McCulloch and Pitts's 1943 logical model of nervous activity as a foundational neural-network paper, while histories of learning networks also credit Rosenblatt's perceptron. These are different contributions: McCulloch and Pitts modeled networks of simplified neurons, while Rosenblatt developed adaptive systems for learning classifications. Their original texts explicitly connect the models with brains, so the history includes neural modeling and learning rules as well as the algebra of linear prediction.",
     "works": [

@@ -2,7 +2,7 @@
   "id": "honda",
   "title": "2019 Honda Prize",
   "matchup": "Hinton (2019 Honda Prize) vs Linnainmaa (1970), Werbos (1982), Ivakhnenko (1965) and Hanson (1990)",
-  "question": "Did the Honda Foundation's 2019 press release credit Hinton with inventions that others made first, as Schmidhuber says?",
+  "question": "Does the Honda Foundation's 2019 press release attribute inventions to Hinton beyond the contributions supported by the cited work?",
   "usual_credit": {
     "summary": "On 20 September 2019 the Honda Foundation announced that the 2019 Honda Prize would go to Geoffrey Hinton for pioneering research in deep learning and its practical application. The press release says that Hinton created technologies that enabled broader use of AI, including the backpropagation algorithm, and that in 1986 he and his collaborators introduced backpropagation and showed that networks could learn distributed representations. It also credits him with a fast learning algorithm for restricted Boltzmann machines in 2002, with a speech recognition breakthrough in 2009 and a computer vision result in 2012 achieved with students, and with inventing dropout and t-SNE.",
     "works": [
@@ -13,13 +13,13 @@
         "url": "https://people.idsia.ch/~juergen/HondaPrize2019en.pdf"
       },
       {
-        "who": "David E. Rumelhart, Geoffrey E. Hinton and Ronald J. Williams",
+        "who": "David E. Rumelhart, Geoffrey Hinton and Ronald J. Williams",
         "year": 1986,
         "title": "Learning representations by back-propagating errors",
         "url": "https://www.nature.com/articles/323533a0"
       },
       {
-        "who": "Alex Krizhevsky, Ilya Sutskever and Geoffrey E. Hinton",
+        "who": "Alex Krizhevsky, Ilya Sutskever and Geoffrey Hinton",
         "year": 2012,
         "title": "ImageNet classification with deep convolutional neural networks",
         "url": "https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html"
@@ -33,7 +33,7 @@
     ]
   },
   "claim": {
-    "summary": "Schmidhuber published a critique of the press release on 21 April 2020 and added a reply to Hinton on 24 April. It lists six statements in the release that he calls wrong or misleading, and it says the prize credits Hinton for inventions of others whom he did not cite. His main points are that backpropagation was published by Linnainmaa in 1970 and applied to neural networks by Werbos in 1982, before the 1985 and 1986 papers of Rumelhart, Hinton and Williams, that Ivakhnenko and Lapa trained deep networks with hidden layers in 1965, that Hinton's pre-training with restricted Boltzmann machines was not what drove the deep learning boom of the early 2010s, and that dropout is a variant of Hanson's stochastic delta rule of 1990. He also disputes the credit given for the 2009 speech and 2012 vision results, pointing to earlier results from his own group, and he writes that the critique is an implicit critique of other awards to Hinton.",
+    "summary": "Schmidhuber argues that the Honda press release credits Hinton with inventions published earlier by others. He cites Linnainmaa's 1970 reverse-mode differentiation and Werbos's neural-network application for backpropagation, Ivakhnenko and Lapa's multilayer learning for deep networks, and Hanson's 1990 stochastic delta rule for dropout. He also disputes how the release divides credit for speech and vision advances, pointing to his group's LSTM, CTC and GPU-network work. His critique distinguishes those invention claims from Hinton's role in demonstrating useful systems, and asks why the award's account does not name the earlier authors.",
     "prior_works": [
       {
         "who": "Seppo Linnainmaa",
@@ -54,7 +54,7 @@
         "url": "https://doi.org/10.1109/TSMC.1971.4308320"
       },
       {
-        "who": "Stephen J. Hanson",
+        "who": "Stephen José Hanson",
         "year": 1990,
         "title": "A stochastic version of the delta rule",
         "url": "https://doi.org/10.1016/0167-2789(90)90081-Y"
@@ -97,7 +97,7 @@
     "last_made": "2021-09"
   },
   "response": {
-    "summary": "Hinton answered once on Reddit on 23 April 2020. He wrote that a public debate with Schmidhuber about credit was not advisable, that he had never claimed to have invented backpropagation, that Rumelhart invented it independently after people in other fields had done so, and that the authors did not know the history when they first published and so failed to cite earlier inventors. He said his own claim is that he showed backpropagation could learn interesting internal representations, which is what made it popular. Schmidhuber replied on 24 April that Hinton's comments do not challenge the facts in his six sections and that Hinton accepted the prize although he apparently agrees that its claims are false. Oriol Vinyals of Google DeepMind wrote on X that it would be great to credit ideas instead of people. I found no statement from the Honda Foundation responding to the critique.",
+    "summary": "In his April 2020 Reddit reply, Hinton says he has never claimed to have invented backpropagation and that Rumelhart independently rediscovered a method already known elsewhere. He acknowledges that the authors did not know the history and failed to cite earlier inventors, while identifying useful learned internal representations as their contribution. That reply separates his own claim from the Honda Foundation's wording and does not answer every section of Schmidhuber's critique. Schmidhuber's subsequent interpretation that Hinton accepted all six objections is his inference, rather than a concession contained in Hinton's statement.",
     "quotes": [
       {
         "who": "Geoffrey Hinton (Reddit)",
@@ -137,7 +137,8 @@
     "backprop",
     "pretraining",
     "alexnet",
-    "dropout-relu",
+    "dropout",
+    "relu",
     "speech-lstm",
     "turingaward",
     "nobel2024",

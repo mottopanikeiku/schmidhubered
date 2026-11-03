@@ -2,7 +2,7 @@
   "id": "chatgpt",
   "title": "ChatGPT and its \"G\", \"P\" and \"T\"",
   "matchup": "OpenAI (GPT and ChatGPT, 2018 to 2022) vs Schmidhuber's group at TU Munich (1990, 1991)",
-  "question": "Do the \"G\", \"P\" and \"T\" in ChatGPT have their roots in the 1990 and 1991 work of Schmidhuber's Munich group, as he says?",
+  "question": "Does the documented 1990-91 work support Schmidhuber's claim to the principles behind the G, P and T in ChatGPT?",
   "usual_credit": {
     "summary": "OpenAI introduced ChatGPT on 30 November 2022, trained with reinforcement learning from human feedback on top of a GPT language model. GPT stands for generative pre-trained Transformer: the 2018 paper by Radford, Narasimhan, Salimans and Sutskever showed that generative pre-training of a language model on unlabeled text, followed by fine-tuning on each task, improved results on many language understanding tasks, using the Transformer architecture of Vaswani et al. (2017). Its related-work section names Dai and Le (2015) and Howard and Ruder (2018) as the closest earlier line of work.",
     "works": [
@@ -27,12 +27,12 @@
     ]
   },
   "claim": {
-    "summary": "Schmidhuber says the current boom in generative AI has its roots in the early 1990s at the Technical University of Munich, especially the \"G\", the \"P\" and the \"T\" in ChatGPT. He ties the \"T\" to his report of 26 March 1991 on fast weight controllers, which he describes as the first kind of Transformer, now called the unnormalized linear Transformer. He ties the \"P\" to his report of April 1991 on neural sequence chunkers, which used unsupervised pre-training in a hierarchy of recurrent networks, and the \"G\" to his 1990 principle of adversarial artificial curiosity, which he sees as the basis of generative adversarial networks. In a 2023 interview he put it more mildly, saying that ChatGPT is driven by the Transformer that Google described in 2017 and that he had a particular Transformer variant in 1991. He has repeated the three-part claim since January 2025, including in a June 2026 timeline on his site that carries a preface by David Ha of Sakana AI.",
+    "summary": "Schmidhuber links the three letters in GPT to work from his Munich group: the T to fast weight controllers in March 1991, the P to unsupervised neural sequence chunkers in April 1991, and the G to adversarial artificial curiosity in 1990. He describes the fast weight system as an unnormalized linear Transformer and the curiosity system as a general principle containing GANs. His broader claim is about those principles rather than having built ChatGPT. The asserted connections involve different kinds of evidence, since the pre-training hierarchy, linear-attention equivalence and adversarial generator each concern a different part of the argument.",
     "prior_works": [
       {
         "who": "Jürgen Schmidhuber",
         "year": 1991,
-        "title": "Learning to control fast-weight memories: an alternative to recurrent nets (technical report FKI-147-91)",
+        "title": "Learning to Control Fast-Weight Memories: An Alternative to Dynamic Recurrent Networks (technical report FKI-147-91)",
         "url": "https://people.idsia.ch/~juergen/FKI-147-91ocr.pdf"
       },
       {
@@ -66,12 +66,6 @@
         "date": "2025-11-09",
         "venue": "website",
         "url": "https://people.idsia.ch/~juergen/who-invented-transformer-neural-networks.html"
-      },
-      {
-        "text": "in 1991, I had a particular Transformer variant",
-        "date": "2023-05-23",
-        "venue": "interview",
-        "url": "http://web.archive.org/web/20260925161613/https://www.forbes.com/sites/hessiejones/2023/05/23/juergen-schmidhuber-renowned-father-of-modern-ai-says-his-lifes-work-wont-lead-to-dystopia/"
       }
     ],
     "times_made": 23,
@@ -79,7 +73,7 @@
     "last_made": "2026-10"
   },
   "response": {
-    "summary": "I found no public reply from OpenAI to this claim. The 2018 GPT paper cites Hinton et al. (2006), Bengio et al. (2007) and others for unsupervised pre-training, names Dai and Le (2015) and Howard and Ruder (2018) as its closest line of work, adopts the Transformer of Vaswani et al., and has no reference to Schmidhuber's 1991 reports. It uses \"generative\" to describe pre-training of a language model, and it describes no adversarial training, which is the 1990 principle Schmidhuber links to that letter. Schlag, Irie and Schmidhuber (2021) showed a formal equivalence between linearised self-attention and the fast weight controllers of the early 1990s, after Katharopoulos et al. (2020) had published linear attention for Transformers; the Transformers used in GPT apply a softmax, which Schmidhuber's own account describes as the step from the linear to the quadratic variant.",
+    "summary": "The 2018 GPT paper names Dai and Le (2015) and Howard and Ruder (2018) as its closest pre-training predecessors and adopts Vaswani and colleagues' Transformer. Its word generative refers to language modelling rather than adversarial training, and its attention uses softmax. Schlag, Irie and Schmidhuber's 2021 equivalence result concerns linearized attention and fast weight programmers, not an identity between the complete 1991 system and GPT. The GPT paper does not cite the 1991 reports, but these architectural and objective differences are documented in the papers rather than offered as a direct reply from OpenAI.",
     "quotes": [
       {
         "who": "Radford et al. (OpenAI GPT paper)",

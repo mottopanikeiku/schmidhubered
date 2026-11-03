@@ -2,18 +2,18 @@
   "id": "gru",
   "title": "GRU",
   "matchup": "Cho et al. (2014) vs Gers, Schmidhuber & Cummins (2000)",
-  "question": "Is the gated recurrent unit of 2014 a variant of the LSTM with forget gates of 2000 that should have been credited to it, as Schmidhuber says?",
+  "question": "Do the GRU's relationship to LSTM and its citations support Schmidhuber's claim that the forget-gate work deserved explicit credit?",
   "usual_credit": {
     "summary": "Kyunghyun Cho and colleagues in Yoshua Bengio's group introduced the gated recurrent unit (GRU) in 2014 in a paper on encoder-decoder models for machine translation, as a simpler recurrent unit with a reset gate and an update gate. Chung et al. (2014) compared GRU and LSTM units empirically, and the GRU became a common alternative to the LSTM.",
     "works": [
       {
-        "who": "K. Cho, B. van Merriënboer, C. Gulcehre, D. Bahdanau, F. Bougares, H. Schwenk, Y. Bengio",
+        "who": "K. Cho, B. van Merriënboer, C. Gulcehre, D. Bahdanau, F. Bougares, H. Schwenk, Yoshua Bengio",
         "year": 2014,
         "title": "Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation",
         "url": "https://arxiv.org/abs/1406.1078"
       },
       {
-        "who": "J. Chung, C. Gulcehre, K. Cho, Y. Bengio",
+        "who": "J. Chung, C. Gulcehre, K. Cho, Yoshua Bengio",
         "year": 2014,
         "title": "Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling",
         "url": "https://arxiv.org/abs/1412.3555"
@@ -21,16 +21,16 @@
     ]
   },
   "claim": {
-    "summary": "Schmidhuber says the GRU is a variant of the vanilla LSTM architecture with forget gates, which Gers, Schmidhuber and Cummins introduced in 2000, and that the GRU papers cited only the 1997 LSTM paper, which did not yet have forget gates, while giving the variant a new name. He adds that GRU cells lack a gate and so cannot learn to count or learn some simple languages, and that Google Brain found them to work less well for challenging translation tasks.",
+    "summary": "Schmidhuber says the GRU is a variant of the vanilla LSTM architecture with forget gates, which Gers, Schmidhuber and Cummins introduced in 2000, and that the GRU papers cited only the 1997 LSTM paper, which did not yet have forget gates, while giving the variant a new name. He adds that under the finite-precision assumptions of the Weiss, Goldberg and Yahav study, GRUs lack the unbounded counting behavior available to LSTMs, and that Google Brain found them to work less well for challenging translation tasks.",
     "prior_works": [
       {
-        "who": "F. A. Gers, J. Schmidhuber, F. Cummins",
+        "who": "F. A. Gers, Jürgen Schmidhuber, F. Cummins",
         "year": 2000,
         "title": "Learning to Forget: Continual Prediction with LSTM (Neural Computation 12(10))",
         "url": "https://sferics.idsia.ch/pub/juergen/FgGates-NC.pdf"
       },
       {
-        "who": "S. Hochreiter, J. Schmidhuber",
+        "who": "Sepp Hochreiter, Jürgen Schmidhuber",
         "year": 1997,
         "title": "Long Short-Term Memory (Neural Computation 9(8))",
         "url": "https://sferics.idsia.ch/pub/juergen/lstm.pdf"
@@ -61,7 +61,7 @@
     "last_made": "2023-12"
   },
   "response": {
-    "summary": "In their paper Cho et al. call the new unit 'motivated by the LSTM unit but much simpler', cite the 1997 LSTM paper and Alex Graves's work for LSTM details, and do not cite the 2000 forget-gate paper, and Chung et al. describe LSTM as the earliest such unit before comparing it with the GRU. The English Wikipedia article on LSTM describes the GRU as a simplified variant of the forget-gate LSTM. Two independent studies that Schmidhuber also cites, by Britz et al. (2017) and by Weiss, Goldberg and Yahav (2018), report differences between the two units in translation quality and in counting ability. No public reply from Cho, Bengio or Chung to the citation point was found.",
+    "summary": "Cho and colleagues describe their unit as motivated by LSTM but simpler to compute and implement, and Chung and colleagues compare the two units empirically rather than claiming to have invented gated recurrence. Their citations include the 1997 LSTM paper and Graves's account, but not the forget-gate paper. Independent studies by Britz and colleagues and by Weiss, Goldberg and Yahav examine translation quality and counting under specified conditions, which should not be read as a universal ranking on every task. The papers acknowledge an LSTM relationship, but do not directly answer Schmidhuber's complaint about the missing forget-gate citation.",
     "quotes": [
       {
         "who": "Cho et al., GRU paper",
@@ -95,7 +95,7 @@
     "Cho et al. describe the GRU as motivated by the LSTM unit, cite Hochreiter and Schmidhuber (1997), and do not cite Gers et al. (2000); Chung et al. cite the 1997 paper for LSTM and follow the implementation in Graves (2013).",
     "The GRU has a reset gate and an update gate and no separate output gate, while the LSTM unit with a forget gate has input, forget and output gates."
   ],
-  "crux": "Whether the GRU counts as a new architecture or as a simplification of the forget-gate LSTM whose source should have been cited, and whether citing the 1997 LSTM paper alone was an adequate acknowledgement when the gating idea appears in the 2000 paper. The sides agree on how the units are built and differ on whether the differences amount to a distinct invention.",
+  "crux": "Whether the GRU counts as a new architecture or as a simplification of the forget-gate LSTM whose source should have been cited, and whether citing the 1997 LSTM paper alone was an adequate acknowledgement when the gating idea appears in the 2000 paper. The architectural differences are documented; their significance for invention credit is the question.",
   "related": [
     "speech-lstm",
     "attention",

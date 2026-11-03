@@ -2,7 +2,7 @@
   "id": "resnet",
   "title": "ResNet",
   "matchup": "He et al. (December 2015) vs Srivastava, Greff & Schmidhuber (May 2015) and Hochreiter (1991)",
-  "question": "Should ResNet be seen as an open-gated Highway Network, and as a descendant of the residual connections in Hochreiter's 1991 thesis and in LSTM, as Schmidhuber says?",
+  "question": "Do the earlier Highway Networks and recurrent connections establish the residual-network priority that Schmidhuber claims?",
   "usual_credit": {
     "summary": "Kaiming He, Xiangyu Zhang, Shaoqing Ren and Jian Sun at Microsoft Research introduced deep residual learning in December 2015, using identity shortcut connections so that layers learn residual functions, and won the ILSVRC 2015 ImageNet classification contest with networks of up to 152 layers. Residual connections have since become a standard component of convolutional networks and Transformers.",
     "works": [
@@ -24,37 +24,31 @@
     "summary": "Schmidhuber says the ResNet is a Highway Network, introduced seven months earlier by Srivastava, Greff and himself, whose gates are always open, and that Highway Networks were the first working feedforward networks with hundreds of layers. He adds that residual connections with weight 1.0 go back to Hochreiter's 1991 diploma thesis and to the constant error flow of LSTM, that the ResNet paper calls the Highway Network 'concurrent' although it appeared first, and that it cites Bengio et al. (1994) for vanishing gradients but not Hochreiter (1991).",
     "prior_works": [
       {
-        "who": "S. Hochreiter",
+        "who": "Sepp Hochreiter",
         "year": 1991,
         "title": "Untersuchungen zu dynamischen neuronalen Netzen (diploma thesis, TU Munich, advisor J. Schmidhuber)",
         "url": "https://people.idsia.ch/~juergen/SeppHochreiter1991ThesisAdvisorSchmidhuber.pdf"
       },
       {
-        "who": "S. Hochreiter, J. Schmidhuber",
+        "who": "Sepp Hochreiter, Jürgen Schmidhuber",
         "year": 1997,
         "title": "Long Short-Term Memory (Neural Computation 9(8))",
         "url": "https://sferics.idsia.ch/pub/juergen/lstm.pdf"
       },
       {
-        "who": "R. K. Srivastava, K. Greff, J. Schmidhuber",
+        "who": "R. K. Srivastava, K. Greff, Jürgen Schmidhuber",
         "year": 2015,
         "title": "Highway Networks (arXiv, 3 May 2015)",
         "url": "https://arxiv.org/abs/1505.00387"
       },
       {
-        "who": "R. K. Srivastava, K. Greff, J. Schmidhuber",
+        "who": "R. K. Srivastava, K. Greff, Jürgen Schmidhuber",
         "year": 2015,
         "title": "Training Very Deep Networks (NIPS 2015)",
         "url": "https://arxiv.org/abs/1507.06228"
       }
     ],
     "quotes": [
-      {
-        "text": "Their CNN layers compute G(F(x)+x), which is essentially a feedforward Long Short-Term Memory (LSTM) [3] without gates!",
-        "date": "2015-12",
-        "venue": "website",
-        "url": "http://web.archive.org/web/20151226062433/http://people.idsia.ch:80/~juergen/microsoft-wins-imagenet-through-feedforward-LSTM-without-gates.html#:~:text=Their%20CNN%20layers%20compute%20G%28F%28x%29%2Bx%29%2C%20which%20is%20essentially%20a"
-      },
       {
         "text": "Setting all Highway NN gates to 1.0 effectively gives us the ResNet published 7 months later.",
         "date": "2025",
@@ -80,12 +74,12 @@
         "url": "https://people.idsia.ch/~juergen/who-invented-residual-neural-networks.html#dec2015:~:text=A%20follow%2Dup%20paper%20by%20the%20ResNet%20authors%20suffered%20from%20design%20flaws"
       }
     ],
-    "times_made": 57,
+    "times_made": 53,
     "first_made": "2015-12",
     "last_made": "2026-08"
   },
   "response": {
-    "summary": "The ResNet paper cites both Highway Network papers, calls them concurrent with its own work, and gives three differences: the gates are data-dependent and have parameters, a closed gate yields non-residual functions, and highway networks had not shown accuracy gains beyond 100 layers. The same authors' 2016 follow-up reports experiments in which gating and other multiplicative shortcuts hurt optimization in very deep networks, a comparison that Highway Network co-author Rupesh Srivastava disputed in a January 2025 blog post on the grounds of design mistakes. Lucas Beyer, who was not involved in either paper, wrote that calling the May 2015 paper concurrent work was borderline, while also describing the follow-up as showing that plain identity shortcuts work best in very deep networks. No public reply from He et al. to the claim about Hochreiter's 1991 thesis was found.",
+    "summary": "He and colleagues cite both Highway Network papers but distinguish their ungated identity shortcuts from data-dependent, parameterized gates. Their 2016 follow-up reports that several multiplicative shortcut designs hamper optimization in very deep networks. Highway Network co-author Rupesh Srivastava [disputes that comparison](https://rupeshks.cc/blog/skip.html), arguing that its highway implementation has design mistakes. Lucas Beyer, an outside commentator, questions the word concurrent while regarding the ungated result as useful evidence. These positions separate a mathematical open-gate limit from the empirical question of which network trains well; the papers do not answer the separate 1991-thesis citation complaint.",
     "quotes": [
       {
         "who": "He et al., ResNet paper",
@@ -106,7 +100,7 @@
         "url": "https://arxiv.org/pdf/1603.05027"
       },
       {
-        "who": "Lucas Beyer, 'History of Residuals and a Word of Caution' (page is undated; written between 2024-12-18 and 2025-01-11)",
+        "who": "Lucas Beyer, History of Residuals and a Word of Caution (undated)",
         "text": "it was a little bit borderline to call the May 2015 HighwayNets paper \"concurrent work\"",
         "date": "2024-12-18/2025-01-11",
         "url": "https://lucasb.eyer.be/snips/residuals.html"
@@ -161,12 +155,8 @@
     "https://people.idsia.ch/~juergen/blog.html#:~:text=%E2%98%85%20Sept%202025.%20The%20most%20cited%20scientific%20article%20of%20the%2021st%20century%20is",
     "https://x.com/SchmidhuberAI/status/1972300268550369631",
     "https://arxiv.org/pdf/2509.24732v1#page=1",
-    "https://arxiv.org/pdf/2509.24732v1#page=1",
     "https://arxiv.org/pdf/2509.24732v1#page=3",
     "https://arxiv.org/pdf/2509.24732v1#page=4",
-    "https://arxiv.org/pdf/2509.24732v1#page=5",
-    "https://arxiv.org/pdf/2509.24732v1#page=5",
-    "https://arxiv.org/pdf/2509.24732v1#page=5",
     "https://arxiv.org/pdf/2509.24732v1#page=5",
     "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_the-most-cited-paper-of-the-21st-century-activity-7379059922359193600-MhPS",
     "https://people.idsia.ch/~juergen/deep-learning-history.html#cnn:~:text=ResNet%2C%20the%20ImageNet%202015%20winner",

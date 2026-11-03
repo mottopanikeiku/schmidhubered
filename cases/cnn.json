@@ -2,18 +2,18 @@
   "id": "cnn",
   "title": "Convolutional neural networks",
   "matchup": "LeCun et al. (1989) vs Fukushima (1979-80), Waibel et al. (1987-89) and Zhang et al. (1988)",
-  "question": "Should the invention of the convolutional neural network be credited to Fukushima's neocognitron and to the backpropagation-trained networks of Waibel and Zhang, rather than to LeCun's 1989 network, as Schmidhuber says?",
+  "question": "Do the earlier networks of Fukushima, Waibel and Zhang support Schmidhuber's objection to crediting LeCun with inventing convolutional neural networks?",
   "usual_credit": {
-    "summary": "Yann LeCun and colleagues at Bell Labs are usually credited with convolutional neural networks. Their 1989 paper trained a network with shared convolutional weights by backpropagation to read handwritten zip code digits, and the 1998 LeNet-5 paper spread the approach widely. The ACM's 2019 Turing Award announcement says LeCun developed convolutional networks in the 1980s and was the first to train one on images of handwritten digits.",
+    "summary": "Yann LeCun and colleagues are widely credited with developing backpropagation-trained convolutional networks for handwritten digit recognition and later document reading. Their 1989 system combined learned local filters and shared weights, while LeNet-5's 1998 account helped spread that approach. The ACM's 2019 award announcement describes LeCun as developing convolutional networks in the 1980s and as the first to train such a system on handwritten-digit images. Those are specific historical claims, distinct from priority for every convolutional architecture or every use of weight sharing, which are the subjects of Schmidhuber's objection.",
     "works": [
       {
-        "who": "Y. LeCun, B. Boser, J. S. Denker, D. Henderson, R. E. Howard, W. Hubbard, L. D. Jackel",
+        "who": "Yann LeCun, B. Boser, J. S. Denker, D. Henderson, R. E. Howard, W. Hubbard, L. D. Jackel",
         "year": 1989,
         "title": "Backpropagation Applied to Handwritten Zip Code Recognition (Neural Computation 1(4))",
         "url": "http://yann.lecun.com/exdb/publis/pdf/lecun-89e.pdf"
       },
       {
-        "who": "Y. LeCun, L. Bottou, Y. Bengio, P. Haffner",
+        "who": "Yann LeCun, L. Bottou, Yoshua Bengio, P. Haffner",
         "year": 1998,
         "title": "Gradient-based learning applied to document recognition (Proceedings of the IEEE)",
         "url": "http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf"
@@ -30,7 +30,7 @@
         "url": "https://www.cs.princeton.edu/courses/archive/spr08/cos598B/Readings/Fukushima1980.pdf"
       },
       {
-        "who": "A. Waibel, T. Hanazawa, G. Hinton, K. Shikano, K. J. Lang",
+        "who": "A. Waibel, T. Hanazawa, Geoffrey Hinton, K. Shikano, K. J. Lang",
         "year": 1989,
         "title": "Phoneme recognition using time-delay neural networks (IEEE Trans. ASSP 37(3); based on a 1987 report)",
         "url": "https://www.cs.toronto.edu/~hinton/absps/waibelTDNN.pdf"
@@ -75,9 +75,9 @@
       },
       {
         "text": "Fukushima's video (1986) shows a CNN that recognises handwritten digits [3], three years before LeCun's video (1989).",
-        "date": "2026-10-08",
+        "date": "2025-12-02",
         "venue": "X",
-        "url": "https://x.com/SchmidhuberAI/status/2108116820700053713"
+        "url": "https://x.com/SchmidhuberAI/status/1995875626092315116"
       }
     ],
     "times_made": 41,
@@ -126,12 +126,13 @@
     "LeCun et al. published 'Backpropagation Applied to Handwritten Zip Code Recognition' in Neural Computation 1(4) in 1989.",
     "The ACM's 2019 Turing Award announcement says LeCun 'was the first to train a convolutional neural network system on images of handwritten digits'."
   ],
-  "crux": "Whether the 1989 LeCun et al. network counts as the invention of the CNN, or as the next step after Fukushima's architecture, Waibel's backpropagation-trained one-dimensional convolutions and Zhang et al.'s two-dimensional network, which the two sides weigh differently. A further question is whether LeCun knew of the Japanese work in 1988-89, which the sources reviewed do not establish.",
+  "crux": "Whether the 1989 LeCun et al. network counts as the invention of the CNN, or as the next step after Fukushima's architecture, Waibel's backpropagation-trained one-dimensional convolutions and Zhang et al.'s two-dimensional network, which the two sides weigh differently. A further question is whether LeCun knew of the Japanese work in 1988-89, which the linked sources do not establish.",
   "related": [
     "backprop",
     "alexnet",
     "deeplearning-origins",
-    "dropout-relu",
+    "dropout",
+    "relu",
     "turingaward",
     "honda"
   ],

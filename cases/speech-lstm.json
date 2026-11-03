@@ -2,18 +2,18 @@
   "id": "speech-lstm",
   "title": "LSTM, speech recognition and machine translation",
   "matchup": "Hinton et al. (2012) and the Turing Award citation vs Hochreiter & Schmidhuber (1997) and Graves et al. (2006-07)",
-  "question": "Should the 2010s advances in speech recognition and machine translation be credited mainly to LSTM and CTC from Schmidhuber's group, rather than to the deep networks of Hinton's and Bengio's groups, as he says?",
+  "question": "Does the role of LSTM and CTC in speech recognition and translation support Schmidhuber's objection to the credit given in the ACM announcement?",
   "usual_credit": {
     "summary": "Geoffrey Hinton and colleagues at Toronto, Microsoft, Google and IBM described in 2012 how deep neural networks had improved acoustic modelling for speech recognition. The ACM's 2019 Turing Award announcement credits Hinton, Bengio and LeCun with foundations for the advances in speech recognition and machine translation, and it names Bengio's group's attention mechanism for machine translation. Sutskever, Vinyals and Le's 2014 sequence-to-sequence model, which used LSTM networks, is also widely credited for neural machine translation and shared the NeurIPS 2024 Test of Time Award.",
     "works": [
       {
-        "who": "G. Hinton, L. Deng, D. Yu, G. E. Dahl, A. Mohamed, N. Jaitly, A. Senior, V. Vanhoucke, P. Nguyen, T. N. Sainath, B. Kingsbury",
+        "who": "Geoffrey Hinton, L. Deng, D. Yu, G. E. Dahl, A. Mohamed, N. Jaitly, A. Senior, V. Vanhoucke, P. Nguyen, T. N. Sainath, B. Kingsbury",
         "year": 2012,
         "title": "Deep neural networks for acoustic modeling in speech recognition: The shared views of four research groups (IEEE Signal Processing Magazine)",
         "url": "https://www.cs.toronto.edu/~hinton/absps/DNN-2012-proof.pdf"
       },
       {
-        "who": "I. Sutskever, O. Vinyals, Q. V. Le",
+        "who": "Ilya Sutskever, O. Vinyals, Q. V. Le",
         "year": 2014,
         "title": "Sequence to Sequence Learning with Neural Networks",
         "url": "https://arxiv.org/abs/1409.3215"
@@ -24,13 +24,13 @@
     "summary": "Schmidhuber says the speech and translation advances that the ACM attributes to Hinton's and Bengio's groups came mainly through LSTM recurrent networks and connectionist temporal classification (CTC) from his group. He says the 2012 speech review by Hinton and colleagues still described hybrid neural network and hidden Markov model systems and did not cite or compare CTC-trained LSTM from 2006-07. He adds that Google's later speech recognition and Google Translate relied on LSTM, and that a New York Times article and a Bloomberg video credited Hinton for such systems without mentioning LSTM.",
     "prior_works": [
       {
-        "who": "S. Hochreiter, J. Schmidhuber",
+        "who": "Sepp Hochreiter, Jürgen Schmidhuber",
         "year": 1997,
         "title": "Long Short-Term Memory (Neural Computation 9(8))",
         "url": "https://sferics.idsia.ch/pub/juergen/lstm.pdf"
       },
       {
-        "who": "A. Graves, S. Fernández, F. Gomez, J. Schmidhuber",
+        "who": "A. Graves, S. Fernández, F. Gomez, Jürgen Schmidhuber",
         "year": 2006,
         "title": "Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks (ICML 2006)",
         "url": "https://sferics.idsia.ch/pub/juergen/icml2006.pdf"
@@ -67,7 +67,7 @@
     "last_made": "2025-02"
   },
   "response": {
-    "summary": "No public reply from Hinton or Bengio to these specific claims was found. The 2012 paper presents itself as a review of the shared views of four research groups using deep networks, and the ACM announcement credits Bengio's group's attention mechanism rather than LSTM for machine translation. Independent evidence on the role of LSTM comes from Google itself, whose September 2015 voice search post says its new acoustic models used CTC-trained LSTM recurrent networks, and from the 2013 paper by Graves, Mohamed and Hinton, which used deep LSTM networks for speech.",
+    "summary": "The 2012 speech paper concerns deep acoustic models used by four research groups, while the ACM announcement separately credits Bengio's attention mechanism for translation. Those accounts do not claim that LSTM or CTC were invented by those groups. Google's 2015 voice-search post explicitly describes CTC-trained LSTM acoustic models, and Graves, Mohamed and Hinton's 2013 paper studies deep LSTM speech recognition. These sources document contributions from both research lines, although the 2012 review does not cite LSTM or CTC. They provide evidence for allocating credit rather than a direct reply to Schmidhuber's specific criticism of the award and press coverage.",
     "quotes": [
       {
         "who": "ACM announcement of the 2018 Turing Award",
@@ -79,7 +79,7 @@
         "who": "Google Research blog, 'Google voice search: faster and more accurate'",
         "text": "The type of RNN used here is a Long Short-Term Memory (LSTM) RNN",
         "date": "2015-09-24",
-        "url": "https://research.googleblog.com/2015/09/google-voice-search-faster-and-more.html"
+        "url": "https://research.google/blog/google-voice-search-faster-and-more-accurate/"
       },
       {
         "who": "A. Graves, A. Mohamed, G. Hinton, 'Speech recognition with deep recurrent neural networks'",
@@ -96,7 +96,7 @@
     "Sutskever, Vinyals and Le's 2014 sequence-to-sequence model used LSTM networks, and Google's 2016 neural machine translation system uses a deep LSTM network with attention and residual connections.",
     "Graves, Mohamed and Hinton's 2013 paper on speech recognition used deep bidirectional LSTM networks."
   ],
-  "crux": "Whether the speech and translation advances that the ACM and the press attribute to Hinton's and Bengio's groups should instead be credited to LSTM and CTC from Schmidhuber's group, or whether the credit is shared among deep feedforward acoustic models, recurrent networks and attention. Both sides agree that LSTM networks were central to Google's systems and differ on how the Turing Award citation and press coverage should have described this.",
+  "crux": "Whether the speech and translation advances that the ACM and the press attribute to Hinton's and Bengio's groups should instead be credited to LSTM and CTC from Schmidhuber's group, or whether the credit is shared among deep feedforward acoustic models, recurrent networks and attention. Google's sources document the use of LSTM; the question is how award citations and press coverage should divide the credit.",
   "related": [
     "gru",
     "attention",

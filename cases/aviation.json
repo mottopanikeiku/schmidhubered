@@ -2,7 +2,7 @@
   "id": "aviation",
   "title": "Powered flight",
   "matchup": "The Wright brothers (1903) vs Giffard (1852) and Ader (1890)",
-  "question": "Is Schmidhuber right that calling the Wrights' 1903 achievement the first powered flight omits earlier achievements that the description should include?",
+  "question": "Does Giffard's 1852 airship flight support Schmidhuber's objection to calling the Wrights' 1903 flights the first powered, controlled and sustained flights?",
   "usual_credit": {
     "summary": "The Wright brothers are conventionally credited with the first successful powered, controlled flight of a heavier-than-air machine, rather than the first ascent in any powered aircraft. The [Smithsonian National Air and Space Museum](https://airandspace.si.edu/stories/editorial/wright-brothers-made-history-kitty-hawk) uses that qualified description for their December 1903 flights and explains the glider experiments and control system behind them. This distinction matters because an airship obtains lift from buoyancy, whereas an airplane must generate aerodynamic lift.",
     "works": [
@@ -34,7 +34,7 @@
       {
         "text": "The first powered, controlled, sustained flight took place 50 years before the Wright brothers, in 1852",
         "date": "2003-11-24",
-        "venue": "letter",
+        "venue": "Newsweek letter, reproduced on the author’s website",
         "url": "https://people.idsia.ch/~juergen/planetruth.html#:~:text=The%20first%20powered%2C%20controlled%2C%20sustained%20flight%20took%20place%2050%20years"
       },
       {
@@ -49,7 +49,7 @@
     "last_made": "2019-02"
   },
   "response": {
-    "summary": "No public response specifically to these letters was located in the sources reviewed. Standard museum accounts already distinguish the categories: the Smithsonian credits the Wrights with powered, controlled heavier-than-air flight, while the [Science Museum](https://collection.sciencemuseumgroup.org.uk/objects/co29385/the-giffard-airship) calls Giffard's dirigible the first successful application of mechanical power to flight. The latter account also says Giffard could not navigate a circle against the wind and return, which qualifies what control meant in his machine. The Ader claim is presented here as Schmidhuber's claim, not as an independently established equivalent of the Wrights' controlled flight.",
+    "summary": "The [Smithsonian](https://airandspace.si.edu/stories/editorial/wright-brothers-made-history-kitty-hawk) credits the Wrights with powered, controlled heavier-than-air flight, while the [Science Museum](https://collection.sciencemuseumgroup.org.uk/objects/co29385/the-giffard-airship) credits Giffard with the first successful application of mechanical power to flight. The latter also says his airship could not navigate a circle against the wind and return, which qualifies its control. Schmidhuber's 2003 letter itself credits the Wrights with the conjunction of powered, manned, heavier-than-air and controlled flight. These accounts distinguish the milestones without establishing Ader's machine as an equivalent of the Wrights' controlled airplane, and do not constitute direct replies to his letters.",
     "quotes": [
       {
         "who": "National Air and Space Museum",

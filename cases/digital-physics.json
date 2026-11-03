@@ -2,9 +2,9 @@
   "id": "digital-physics",
   "title": "The computational universe",
   "matchup": "Wolfram (2002) vs Zuse (1967–1969)",
-  "question": "Does Wolfram's presentation of a computational universe give insufficient credit to Zuse's earlier proposal, as Schmidhuber argues?",
+  "question": "Does Wolfram's 2002 account give Zuse's computational-universe proposal the credit warranted by its relationship to Wolfram's work?",
   "usual_credit": {
-    "summary": "Stephen Wolfram's A New Kind of Science is associated with an extensive program studying simple computational rules and their possible relevance to fundamental physics. It should not be introduced as a standard historical consensus that Wolfram first proposed a computational universe, because his own historical notes mention both Zuse and Fredkin. [Independent commentary by Edwin Clark](http://shell.cas.usf.edu/~wclark/ANKOS_zuse_fredkin_thesis.html) also distinguishes the older cellular-automaton proposal from Wolfram's claimed approach. The credit disputed here concerns the novelty and presentation of the 2002 book, rather than an established physical discovery that the universe actually is a computer.",
+    "summary": "Stephen Wolfram's 2002 book A New Kind of Science studies simple computational rules and their possible relevance to fundamental physics. Its [historical notes](https://www.wolframscience.com/reference/notes/1026b/) name Zuse and Fredkin, so the disputed credit is not an unqualified claim that Wolfram first imagined a computational universe. Wolfram distinguishes literal cellular-automaton models from the more abstract models he proposes as an eventual account of physics. The book's scientific program and presentation of earlier work are at issue, not an experimentally established discovery that the universe is a computer.",
     "works": [
       {
         "who": "Stephen Wolfram",
@@ -49,14 +49,8 @@
     "last_made": "2025-11"
   },
   "response": {
-    "summary": "No direct public reply from Wolfram to this specific criticism was located in the sources reviewed. His [2002 historical note](https://www.wolframscience.com/reference/notes/1026b/) does acknowledge Zuse and Fredkin but argues that literal mechanistic models are not the ultimate approach developed in the book. In an [independent discussion](http://shell.cas.usf.edu/~wclark/ANKOS_zuse_fredkin_thesis.html), mathematician Edwin Clark agrees that the cellular-automaton-universe idea did not originate with Wolfram, while pointing out that Wolfram's proposed ultimate models need not be classical cellular automata. That is a substantive distinction about what is claimed as new, although it does not settle whether the description of Zuse is accurate.",
+    "summary": "Wolfram's [historical note](https://www.wolframscience.com/reference/notes/1026b/) explicitly acknowledges Zuse and Fredkin, but distinguishes their literal mechanistic proposals from the approach developed in his book. He argues that the ultimate models need not have the immediately recognizable structure of classical cellular automata. This gives a substantive reason for treating the book as a separate program despite earlier computational-universe proposals. The note is the 2002 position under criticism, rather than a later reply to Schmidhuber, and whether it accurately describes Zuse's model remains a separate attribution question.",
     "quotes": [
-      {
-        "who": "Edwin Clark",
-        "text": "The idea that the universe may be a cellular automaton did not originate with Wolfram.",
-        "date": "undated",
-        "url": "http://shell.cas.usf.edu/~wclark/ANKOS_zuse_fredkin_thesis.html"
-      },
       {
         "who": "Stephen Wolfram",
         "text": "no such literal mechanistic model can ever in the end realistically be expected to work.",
@@ -70,7 +64,7 @@
     "Wolfram's A New Kind of Science was published in 2002 and its historical note names Zuse and Fredkin: https://www.wolframscience.com/reference/notes/1026b/",
     "Schmidhuber's online criticism identifies itself as based on a CERN Courier letter from June 2003: https://people.idsia.ch/~juergen/wolfram.html"
   ],
-  "crux": "The issue is whether the computational-universe proposal and the scientific program presented by Wolfram are the same contribution, and whether his brief historical note fairly represents Zuse. An earlier speculation and a later program can share a broad idea without every model, method or novelty claim being identical.",
+  "crux": "The issue is whether the computational-universe proposal and the scientific program presented by Wolfram are the same contribution, and whether his historical note fairly represents Zuse. An earlier speculation and a later program can share a broad idea without every model, method or novelty claim being identical.",
   "related": [
     "computers",
     "turing-computation"

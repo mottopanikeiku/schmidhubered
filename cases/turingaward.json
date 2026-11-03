@@ -2,7 +2,7 @@
   "id": "turingaward",
   "title": "2018 Turing Award and 2021 Turing Lecture",
   "matchup": "Bengio, Hinton and LeCun (2018 ACM Turing Award, 2021 Turing Lecture) vs Ivakhnenko, Amari, Linnainmaa, Fukushima and Schmidhuber's own group",
-  "question": "Do ACM's 2018 Turing Award citation and the 2021 Turing Lecture credit Bengio, Hinton and LeCun for work that earlier researchers published first, as Schmidhuber says?",
+  "question": "Do the earlier works and citation records support Schmidhuber's objection to the invention credit in ACM's award announcement and the Turing Lecture?",
   "usual_credit": {
     "summary": "On 27 March 2019 ACM named Yoshua Bengio, Geoffrey Hinton and Yann LeCun recipients of the 2018 A.M. Turing Award for conceptual and engineering breakthroughs that have made deep neural networks an important component of computing. The announcement says that, working independently and together, the three developed conceptual foundations for the field, identified surprising phenomena through experiments, and contributed engineering advances, and it links their work to progress in computer vision, speech recognition and natural language processing. In 2021 the three gave a Turing Lecture on deep learning that was published in Communications of the ACM.",
     "works": [
@@ -27,7 +27,7 @@
     ]
   },
   "claim": {
-    "summary": "Schmidhuber argues that ACM's justification and the Turing Lecture credit the three laureates for methods first published by others, among them Ivakhnenko and Lapa's deep networks (1965), Amari's stochastic gradient descent for multilayer networks (1967 to 1968), Linnainmaa's backpropagation (1970), Fukushima's convolutional architecture and rectified linear units (1969 to 1979), and results from his own group on LSTM, attention, GANs and related methods. He says the laureates did not cite these works, even in later surveys, and that they credited each other instead. He published a critique of the ACM statement on 25 June 2020, expanded it on 24 September 2021 (IDSIA-77-21) after the lecture appeared, and collected more than a dozen concrete priority disputes in a report of 14 December 2023 (IDSIA-23-23).",
+    "summary": "Schmidhuber argues that ACM's justification and the Turing Lecture give the laureates invention credit for methods whose relevant predecessors are omitted. He names the multilayer learning of Ivakhnenko, Lapa and Amari, Linnainmaa's reverse-mode differentiation, Fukushima's convolutional architecture and rectifying units, and his group's work on LSTM, attention and adversarial learning. His complaint combines technical-priority questions with a criticism of the later citation record: even where a method was independently rediscovered, he argues that subsequent accounts should identify its earlier source. The allegation is broader than whether the laureates made useful experimental or engineering contributions.",
     "prior_works": [
       {
         "who": "Alexey G. Ivakhnenko",
@@ -92,12 +92,12 @@
         "url": "https://www.jazzyear.com/article_info.html?id=1352#:~:text=They%20should%20be%20stripped%20of%20their%20awards"
       }
     ],
-    "times_made": 89,
+    "times_made": 87,
     "first_made": "2020-06",
     "last_made": "2026-09"
   },
   "response": {
-    "summary": "I found no point-by-point reply from ACM or from the three laureates, so the statements below address parts of the dispute. Hinton's Reddit reply of April 2020, written about the Honda Prize, says he has not claimed to have invented backpropagation and that he and his co-authors did not know the history in 1986 and failed to cite earlier inventors. LeCun told Analytics India Magazine in December 2022 that Schmidhuber has an unusual idea of how credit should be attributed, namely that whoever has the germ of an idea gets all the credit for what follows, and that making ideas work at scale is a separate contribution. On the Connectionists mailing list in November 2021, Randall O'Reilly argued that plagiarism implies willful stealing and that many of the cases involve reinvention, while Stephen José Hanson, whose 1990 stochastic delta rule is one of the works Schmidhuber cites, wrote that to popularize is not to invent.",
+    "summary": "ACM's announcement credits conceptual and engineering advances as well as experiments, rather than making a single first-invention claim for all deep learning. Hinton's April 2020 Honda-prize reply denies claiming backpropagation's invention and acknowledges uncited predecessors. LeCun's December 2022 interview argues that making an idea work at scale is a distinct contribution. In the Connectionists discussion, Randall O'Reilly distinguishes reinvention from deliberate copying, while Stephen José Hanson distinguishes invention from popularization. These statements address parts of the disagreement, but are not a point-by-point answer from ACM or the laureates to every omission alleged in Schmidhuber's reports.",
     "quotes": [
       {
         "who": "Geoffrey Hinton (Reddit)",
@@ -134,7 +134,7 @@
   "agreed_facts": [
     "ACM announced the 2018 A.M. Turing Award for Bengio, Hinton and LeCun on 27 March 2019, and the three published a Turing Lecture on deep learning in Communications of the ACM in July 2021.",
     "Schmidhuber published his critique of the ACM statement on 25 June 2020, his report on the Turing Lecture (IDSIA-77-21) on 24 September 2021 and his report on more than a dozen priority disputes (IDSIA-23-23) on 14 December 2023.",
-    "Linnainmaa's 1970 thesis, Ivakhnenko's work of 1965 to 1971 and Fukushima's neocognitron of 1979 to 1980 were published before the laureates' papers on the same topics.",
+    "Linnainmaa's 1970 thesis, Ivakhnenko's work of 1965 to 1971 and Fukushima's neocognitron of 1979 to 1980 predate the 2018 award.",
     "Hinton wrote in 2020 that earlier inventors of backpropagation existed whom the authors of the 1986 paper did not cite.",
     "ACM's announcement dates the introduction of neural networks as a tool for pattern recognition to the 1980s, a statement that Schmidhuber's reports dispute."
   ],
@@ -155,7 +155,6 @@
     "gru"
   ],
   "instance_urls": [
-    "https://people.idsia.ch/~juergen/blog.html#:~:text=%E2%98%85%20Apr%2FJun%202020%3A%20Critique%20of%20ACM%27s%20justification%20of%20the%202018%20Turing",
     "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#I:~:text=However%2C%20the%20essential%20%22conceptual%20foundations%22%20of%20deep%20learning",
     "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#B:~:text=The%20first%20superior%20end%2Dto%2Dend%20neural%20machine%20translation%20was%20also",
     "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#II:~:text=Perhaps%20ACM%27s%20lack%20of%20knowledge%20about%20NN%20history%20is%20the%20reason%20why",

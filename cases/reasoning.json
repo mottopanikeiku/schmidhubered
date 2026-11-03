@@ -2,7 +2,7 @@
   "id": "reasoning",
   "title": "Reasoning models and chain of thought",
   "matchup": "Wei et al. (2022), OpenAI o1 (2024) and DeepSeek-R1 (2025) vs Schmidhuber's \"On Learning to Think\" (2015)",
-  "question": "Should chain-of-thought prompting and reasoning models such as DeepSeek-R1 be seen as building on Schmidhuber's 2015 \"reinforcement learning prompt engineer\", as he says?",
+  "question": "Does the 2015 controller-and-world-model proposal establish the priority Schmidhuber claims for chain-of-thought and reinforcement-learned reasoning?",
   "usual_credit": {
     "summary": "Chain-of-thought prompting is usually credited to Wei et al. (2022), who showed that large language models solve arithmetic, commonsense and symbolic problems better when they write out intermediate reasoning steps, with closely related work on scratchpads by Nye et al. (2021). Models trained with reinforcement learning to produce a long chain of thought before answering were introduced by OpenAI with o1 in September 2024, and DeepSeek reported in January 2025 that reasoning abilities of language models can be incentivized through pure reinforcement learning without human-labeled reasoning examples.",
     "works": [
@@ -33,7 +33,7 @@
     ]
   },
   "claim": {
-    "summary": "Schmidhuber says his 2015 report \"On Learning to Think\" described a reinforcement learning controller that acts as a \"prompt engineer\" for a recurrent world model: the controller feeds sequences of activations into the model and reads answers out of it, and uses them for abstract reasoning and planning, which he calls an adaptive chain of thought. He notes that the prompts and answers in his system are internal vectors that need not represent natural language. He says a 2018 paper then collapsed the controller and the world model into one network using neural network distillation, a technique he published in 1991, and that DeepSeek-R1 \"uses elements of\" the 2015 and 2018 work. He first tied the 2015 report to the rumored OpenAI Q* project in November 2023, made the DeepSeek claim on 31 January 2025 and followed it on 3 February with a post saying he was very impressed by DeepSeek's achievement, and applied it in September 2026 to a news report about an OpenAI model using \"recurrent depth\" reasoning.",
+    "summary": "Schmidhuber argues that his 2015 On Learning to Think report anticipated reinforcement-learned reasoning by training a controller to query a recurrent world model and use its answers for planning. He now calls the controller a prompt engineer and the interaction an adaptive chain of thought, while acknowledging that its prompts are internal vectors rather than necessarily natural-language text. He links the 2018 One Big Net for Everything proposal to combining controller and model through distillation, and says DeepSeek-R1 uses elements of these ideas. His priority claim concerns the control-and-query principle, rather than an earlier language model with DeepSeek-R1's reported results.",
     "prior_works": [
       {
         "who": "Jürgen Schmidhuber",
@@ -85,7 +85,7 @@
     "last_made": "2026-10"
   },
   "response": {
-    "summary": "I found no public reply to this claim from the authors of the chain-of-thought paper, from OpenAI or from DeepSeek. Neither the chain-of-thought paper of Wei et al. nor either arXiv version of the DeepSeek-R1 report cites \"On Learning to Think\", as far as I could check in their arXiv text. Yann LeCun's post of 20 September 2026, under which Schmidhuber replied that most of it rehashes the 2015 paper, describes current reasoning systems as searching in token space and does not mention Schmidhuber; it states LeCun's own view and is not a reply to the claim. The distinction that bears on the dispute is visible in the sources themselves, since the 2015 report trains a small controller that exchanges activations with a fixed recurrent world model, while chain-of-thought work has a language model write out its intermediate steps as text.",
+    "summary": "Wei and colleagues' chain-of-thought paper studies intermediate reasoning written by a language model, whereas the 2015 report studies a controller exchanging activations with a fixed recurrent world model. DeepSeek-R1 studies reinforcement learning for language-model reasoning, including training without human-labelled reasoning examples. Neither paper cites On Learning to Think. The linked sources do not include a direct reply from those authors or OpenAI, so the architectural and training differences provide a comparison rather than evidence that the later authors accepted or rejected Schmidhuber's proposed connection.",
     "quotes": [
       {
         "who": "Yann LeCun (X, not addressed to Schmidhuber's claim)",

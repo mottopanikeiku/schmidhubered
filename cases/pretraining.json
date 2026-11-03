@@ -2,24 +2,24 @@
   "id": "pretraining",
   "title": "Unsupervised pre-training of deep networks",
   "matchup": "Hinton, Osindero and Teh; Hinton and Salakhutdinov (2006) vs Schmidhuber (1991, 1992)",
-  "question": "Should the 2006 method of training deep networks by unsupervised layer-by-layer pre-training be seen as following Schmidhuber's 1991 neural history compressor, as he says?",
+  "question": "Does the 1991 history compressor establish the priority Schmidhuber claims for the layer-by-layer pre-training methods of 2006?",
   "usual_credit": {
     "summary": "Unsupervised layer-by-layer pre-training of deep networks is usually credited to Geoffrey Hinton and his collaborators, whose two 2006 papers trained a stack of restricted Boltzmann machines one layer at a time without labels and then fine-tuned the result with backpropagation, and to Yoshua Bengio's group, which generalised the method to other unsupervised learners in the same year. The 2015 Nature review by LeCun, Bengio and Hinton describes the Hinton paper as a new and effective way of training very deep networks, and the 2024 Nobel Prize in Physics background document notes that restricted Boltzmann machines can be used for layer-by-layer pre-training of deep networks.",
     "works": [
       {
-        "who": "Hinton, Osindero, Teh",
+        "who": "Geoffrey Hinton, Osindero, Teh",
         "year": 2006,
         "title": "A fast learning algorithm for deep belief nets",
         "url": "https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf"
       },
       {
-        "who": "Hinton, Salakhutdinov",
+        "who": "Geoffrey Hinton, Salakhutdinov",
         "year": 2006,
         "title": "Reducing the dimensionality of data with neural networks",
         "url": "https://www.cs.toronto.edu/~rsalakhu/papers/science.pdf"
       },
       {
-        "who": "Bengio, Lamblin, Popovici, Larochelle",
+        "who": "Yoshua Bengio, Lamblin, Popovici, Larochelle",
         "year": 2006,
         "title": "Greedy layer-wise training of deep networks",
         "url": "https://papers.nips.cc/paper_files/paper/2006/file/5da713a690c067105aeb2fae32403405-Paper.pdf"
@@ -30,13 +30,13 @@
     "summary": "Schmidhuber says that his 1991 neural sequence chunker, also called the neural history compressor, already trained a hierarchy of recurrent networks without labels, one level at a time, with each level predicting the unexpected inputs of the level below, and that this made supervised learning by backpropagation feasible on sequences more than a thousand steps deep by 1993. He describes the 2006 method for feedforward networks as a similar method with essentially the same justification, namely that each level tries to shorten the description of the data in the level below. He says that Hinton and Bengio did not mention the earlier work in 2006 or in later surveys, and he adds that unsupervised pre-training later proved unnecessary for many applications.",
     "prior_works": [
       {
-        "who": "Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 1991,
         "title": "Neural sequence chunkers (technical report FKI-148-91, TU Munich)",
         "url": "https://people.idsia.ch/~juergen/FKI-148-91ocr.pdf"
       },
       {
-        "who": "Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 1992,
         "title": "Learning complex, extended sequences using the principle of history compression",
         "url": "https://doi.org/10.1162/neco.1992.4.2.234"
@@ -79,7 +79,7 @@
     "last_made": "2026-02"
   },
   "response": {
-    "summary": "No public reply from Hinton, Salakhutdinov or Bengio to the 1991 claim was found. Their 2006 papers do not cite Schmidhuber's work, and the 2016 textbook by Goodfellow, Bengio and Courville dates the deep learning renaissance of 2006 to the discovery that greedy layer-wise training could initialise joint training, while noting that greedy layer-wise training based on unsupervised criteria goes back at least to Fukushima's neocognitron. Hinton's 2025 Nobel lecture calls stacked restricted Boltzmann machines a useful tool for initialising feedforward nets and says that simpler ways of initialising the weights have since been found.",
+    "summary": "The 2006 papers study unsupervised training of stacked feedforward models, including restricted Boltzmann machines, rather than hierarchies of recurrent predictors passing surprises upward. Their reference lists do not cite the 1991 chunker work. The 2016 Goodfellow, Bengio and Courville textbook traces unsupervised layer-wise learning at least to Fukushima and describes the 2006 contribution as initializing subsequent joint training. Hinton's Nobel lecture describes stacked restricted Boltzmann machines as a useful initialization tool whose role was later reduced by simpler methods. These accounts state the later method's purpose without directly answering the earlier-history citation complaint.",
     "quotes": [
       {
         "who": "Goodfellow, Bengio and Courville (textbook)",
@@ -104,11 +104,11 @@
   "agreed_facts": [
     "Schmidhuber's technical report 'Neural sequence chunkers' (FKI-148-91) appeared at TU Munich in April 1991, and his history-compression paper appeared in Neural Computation 4(2) in 1992.",
     "Hinton, Osindero and Teh published 'A fast learning algorithm for deep belief nets' in Neural Computation in 2006, and Hinton and Salakhutdinov published their autoencoder paper in Science on 28 July 2006.",
-    "Both sides describe the 2006 method as training a stack of unsupervised models one layer at a time and then fine-tuning with supervised backpropagation.",
+    "Hinton and Salakhutdinov's 2006 autoencoder uses unsupervised pre-training followed by backpropagation to reduce reconstruction error, rather than supervised classification.",
     "None of the three 2006 papers (Hinton and Salakhutdinov, Hinton, Osindero and Teh, and Bengio et al.) lists Schmidhuber's 1991 or 1992 work among its references.",
     "Schmidhuber's reports and the 2016 textbook both say that unsupervised pre-training is not required to train deep feedforward networks."
   ],
-  "crux": "The dispute is whether the 2006 method for stacks of restricted Boltzmann machines is a new method or a feedforward version of the 1991 history compressor, which stacks recurrent predictors and passes only unexpected inputs upward, and whether the 2006 papers owed a citation to the earlier work. The two methods share the idea of training a deep network level by level without labels before supervised learning, but they differ in architecture and in the unsupervised learning rule used at each level.",
+  "crux": "The dispute is whether the 2006 method for stacks of restricted Boltzmann machines is a new method or a feedforward version of the 1991 history compressor, which stacks recurrent predictors and passes only unexpected inputs upward, and whether the 2006 papers owed a citation to the earlier work. The two methods share the idea of training a deep network level by level without labels before later task training or fine-tuning, but they differ in architecture and in the unsupervised learning rule used at each level.",
   "related": [
     "distillation",
     "vanishing",

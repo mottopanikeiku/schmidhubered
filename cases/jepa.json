@@ -2,18 +2,18 @@
   "id": "jepa",
   "title": "JEPA",
   "matchup": "LeCun (2022) vs Schmidhuber and Prelinger (1992)",
-  "question": "Is the Joint Embedding Predictive Architecture of 2022 essentially the same as Schmidhuber's 1992 Predictability Maximization, as he says?",
+  "question": "Do the similarities and differences between PMAX and JEPA support Schmidhuber's claim that JEPA repeats the earlier method?",
   "usual_credit": {
     "summary": "Yann LeCun proposed the Joint Embedding Predictive Architecture (JEPA) in his 2022 position paper 'A Path Towards Autonomous Machine Intelligence', in which two encoders map related inputs to representations and a predictor learns to predict one representation from the other instead of predicting raw pixels. Meta's I-JEPA (2023) implements the idea for images, and LeCun's company AMI Labs is built around world models.",
     "works": [
       {
-        "who": "Y. LeCun",
+        "who": "Yann LeCun",
         "year": 2022,
         "title": "A Path Towards Autonomous Machine Intelligence (OpenReview, 27 June 2022)",
         "url": "https://openreview.net/forum?id=BZ5a1r-kVsf"
       },
       {
-        "who": "M. Assran, Q. Duval, I. Misra, P. Bojanowski, P. Vincent, M. Rabbat, Y. LeCun, N. Ballas",
+        "who": "M. Assran, Q. Duval, I. Misra, P. Bojanowski, P. Vincent, M. Rabbat, Yann LeCun, N. Ballas",
         "year": 2023,
         "title": "Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture (I-JEPA)",
         "url": "https://arxiv.org/abs/2301.08243"
@@ -24,13 +24,13 @@
     "summary": "Schmidhuber says JEPA is essentially identical to the Predictability Maximization (PMAX) family that he and his student Daniel Prelinger published in 1992-93. In PMAX, two non-generative networks interact so that one creates an informative latent representation of its input that the other network can predict from its own latent representation, with measures against what is now called collapse. He says the 1992 paper reported experiments, including a stereo task on which it outperformed Becker and Hinton's earlier IMAX, and that LeCun did not cite it. He adds that Michal Valko, who led the BYOL team, told him that later methods such as Barlow Twins and VICReg correspond to sections of the 1992 paper.",
     "prior_works": [
       {
-        "who": "J. Schmidhuber, D. Prelinger",
+        "who": "Jürgen Schmidhuber, D. Prelinger",
         "year": 1993,
         "title": "Discovering predictable classifications (Neural Computation 5(4); based on TR CU-CS-626-92, 1992)",
         "url": "https://people.idsia.ch/~juergen/predmax1992.pdf"
       },
       {
-        "who": "J. Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 1993,
         "title": "Network architectures, objective functions, and chain rule (habilitation thesis, TU Munich; Sec. 5.5 on Predictability Maximization)",
         "url": "https://sferics.idsia.ch/pub/juergen/habilitation.pdf"
@@ -67,7 +67,7 @@
     "last_made": "2026-09"
   },
   "response": {
-    "summary": "LeCun has answered in posts on X, Facebook and LinkedIn, saying that joint embedding architectures, including Siamese networks, were introduced decades ago, that no one is claiming they are new, and that for JEPA the question is how collapse is prevented. He also says Schmidhuber did not invent the idea either and traces it to a 1989 report by Becker and Hinton, which he describes in a comment quoted on Schmidhuber's page as the inspiration for PMAX. A Facebook post reported on the same page calls the experimental section of the PMAX paper essentially non-existent, and Schmidhuber replied point by point in an April 2026 addendum. LeCun's 6 April comment and his remark about the PMAX experiments are known here only from Schmidhuber's page, while his 17 April LinkedIn post and his X post were read at the source.",
+    "summary": "LeCun argues that joint-embedding architectures were introduced decades ago and that JEPA's contribution must be assessed through its prediction objective, collapse prevention and practical results, not the broad two-encoder pattern alone. He points to Becker and Hinton's work as an earlier source and disputes Schmidhuber's invention claim. His X and April 2026 LinkedIn posts state that position directly; the separate 6 April comment and criticism of PMAX's experiments are reproduced on Schmidhuber's page rather than linked to their originals. Those reproduced remarks and Schmidhuber's rebuttal should therefore be read with that provenance in mind.",
     "quotes": [
       {
         "who": "Yann LeCun, LinkedIn post",

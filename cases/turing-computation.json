@@ -2,7 +2,7 @@
   "id": "turing-computation",
   "title": "The foundations of computability",
   "matchup": "Turing (1936) vs Gödel (1931–1934) and Church (1935–1936)",
-  "question": "Was Turing's 1936 contribution essentially a reformulation of earlier work by Gödel and Church, as Schmidhuber argues, rather than a distinct foundation for computability?",
+  "question": "Do Gödel's and Church's earlier results support Schmidhuber's claim that Turing's 1936 work was a reformulation rather than a distinct contribution?",
   "usual_credit": {
     "summary": "Turing is credited with an explicit abstract model of mechanical computation, a universal machine, and an independent demonstration of limits on effective procedures. The [Stanford Encyclopedia of Philosophy](https://plato.stanford.edu/archives/win2023/entries/church-turing/) credits Church and Turing with independent formulations of effective computability and explains their relationship to the earlier recursive-function work. This standard account recognizes Gödel's incompleteness results as foundational while distinguishing them from an analysis of what any mechanical calculation can do.",
     "works": [
@@ -55,7 +55,7 @@
     "last_made": "2026-06"
   },
   "response": {
-    "summary": "B. Jack Copeland and Zhao Fan [explicitly discuss Schmidhuber's characterization](https://link.springer.com/article/10.1007/s00283-022-10177-y) and argue that Turing's central ideas should not be treated as merely imported from Gödel. They distinguish the mathematical results and encoding techniques, examine Turing's draft and borrowing records, and argue that the evidence for the claimed dependence is weaker than often assumed. Their article does not deny Gödel's earlier work or Church's independent result, and its historical conclusion is about evidence for influence as well as conceptual novelty. The Stanford reference also explains that Gödel came to accept Turing's analysis as a satisfactory characterization of effective computation, which gives the later model a role beyond its publication date.",
+    "summary": "B. Jack Copeland and Zhao Fan [directly discuss Schmidhuber's characterization](https://link.springer.com/article/10.1007/s00283-022-10177-y). They argue that Turing's surviving précis already contains central ideas without mentioning Gödel, and that library records do not establish dependence on Gödel before those ideas formed. They also distinguish Turing's encoding scheme and undecidability result from Gödel's. Their argument concerns both conceptual differences and the evidence for influence, not a denial of earlier mathematics. The Stanford reference further explains why Gödel regarded Turing's analysis as a satisfactory account of effective computation, giving the later model a role beyond publication order.",
     "quotes": [
       {
         "who": "B. Jack Copeland and Zhao Fan",

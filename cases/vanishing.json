@@ -2,18 +2,18 @@
   "id": "vanishing",
   "title": "The vanishing gradient problem",
   "matchup": "Bengio, Simard and Frasconi (1994) vs Hochreiter (1991)",
-  "question": "Should the analysis of vanishing gradients in recurrent networks be credited first to Hochreiter's 1991 diploma thesis, and should Bengio's later papers have cited it, as Schmidhuber says?",
+  "question": "Do Hochreiter's 1991 analysis and the later citation record support Schmidhuber's claim about priority for the vanishing-gradient analysis?",
   "usual_credit": {
     "summary": "The 1994 paper by Yoshua Bengio, Patrice Simard and Paolo Frasconi in IEEE Transactions on Neural Networks analysed why gradient-based learning struggles with dependencies that span long intervals in recurrent networks, a difficulty now usually called the vanishing gradient problem. Its abstract reports a trade-off between efficient learning by gradient descent and latching on to information for long periods, and an earlier version was presented at the 1993 International Conference on Neural Networks.",
     "works": [
       {
-        "who": "Bengio, Simard, Frasconi",
+        "who": "Yoshua Bengio, Simard, Frasconi",
         "year": 1994,
         "title": "Learning long-term dependencies with gradient descent is difficult",
         "url": "https://doi.org/10.1109/72.279181"
       },
       {
-        "who": "Bengio, Frasconi, Simard",
+        "who": "Yoshua Bengio, Frasconi, Simard",
         "year": 1993,
         "title": "The problem of learning long-term dependencies in recurrent networks",
         "url": "https://doi.org/10.1109/ICNN.1993.298725"
@@ -24,7 +24,7 @@
     "summary": "Schmidhuber says that his student Sepp Hochreiter identified and analysed the problem of vanishing and exploding gradients in his 1991 diploma thesis at the Technical University of Munich, and that the 1994 paper by Bengio and colleagues published essentially identical results three years later without citing the thesis. He adds that even after Hochreiter, Bengio, Frasconi and Schmidhuber co-authored a chapter on the topic in 2001, Bengio's later papers cited only the 1994 paper. He regards the thesis, which is written in German, as one of the most important documents in the history of machine learning and as the starting point of the LSTM network.",
     "prior_works": [
       {
-        "who": "Hochreiter",
+        "who": "Sepp Hochreiter",
         "year": 1991,
         "title": "Untersuchungen zu dynamischen neuronalen Netzen (diploma thesis, TU Munich, in German)",
         "url": "https://people.idsia.ch/~juergen/SeppHochreiter1991ThesisAdvisorSchmidhuber.pdf"
@@ -61,7 +61,7 @@
     "last_made": "2026-02"
   },
   "response": {
-    "summary": "No public reply from Bengio to the citation complaint was found. He co-authored the 2001 chapter 'Gradient flow in recurrent nets' with Hochreiter, Frasconi and Schmidhuber, which says its main result follows the approach first proposed in Hochreiter's thesis and that Bengio and colleagues' paper generalised the analysis to parameterised dynamical systems. The 2016 textbook by Goodfellow, Bengio and Courville says that Hochreiter (1991) and Bengio et al. (1994) identified some of the fundamental difficulties in modelling long sequences, and that the problem was independently discovered by separate researchers.",
+    "summary": "The 2001 chapter co-authored by Hochreiter, Bengio, Frasconi and Schmidhuber says its main result follows the approach first proposed in Hochreiter's thesis and that Bengio and colleagues generalized the analysis to parameterized dynamical systems. The 2016 Goodfellow, Bengio and Courville textbook cites both Hochreiter (1991) and Bengio et al. (1994) and describes independent discovery. Those are substantive later acknowledgments, although the 1994 paper's reference list does not cite the thesis. The evidence therefore distinguishes the initial omission from a stronger claim that Bengio's later accounts never credited Hochreiter.",
     "quotes": [
       {
         "who": "Hochreiter, Bengio, Frasconi and Schmidhuber (2001 chapter, where [12] is the 1991 thesis)",
@@ -97,7 +97,8 @@
   ],
   "crux": "The dispute is whether the 1994 analysis, which also covers general parameterised dynamical systems and the trade-off between reliable memory and gradient decay, is an independent discovery or a later publication of results already contained in the 1991 thesis. It also asks whether later papers that cited only the 1994 paper should have cited the thesis too, although the 2016 textbook by Bengio and co-authors does cite both.",
   "related": [
-    "lstm",
+    "speech-lstm",
+    "gru",
     "resnet",
     "pretraining",
     "turingaward"

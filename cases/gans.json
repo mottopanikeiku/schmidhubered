@@ -2,12 +2,12 @@
   "id": "gans",
   "title": "GANs",
   "matchup": "Goodfellow et al. (2014) vs Schmidhuber (1990, 1991)",
-  "question": "Should the 2014 GAN paper be seen as building on Schmidhuber's 1990-91 adversarial curiosity and predictability minimization, as he says?",
+  "question": "Do the 1990-92 artificial-curiosity and predictability-minimization methods establish the GAN priority that Schmidhuber claims?",
   "usual_credit": {
     "summary": "Ian Goodfellow and co-authors, including Yoshua Bengio, introduced generative adversarial networks at NIPS 2014, where a generator network and a discriminator network are trained against each other in a minimax game until the generator's samples are hard to tell from real data. The method became widely used for image synthesis, the paper received the NeurIPS 2024 Test of Time Award, and the ACM's 2018 Turing Award announcement lists GANs among Bengio's contributions.",
     "works": [
       {
-        "who": "I. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair, A. Courville, Y. Bengio",
+        "who": "I. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair, A. Courville, Yoshua Bengio",
         "year": 2014,
         "title": "Generative Adversarial Nets (NIPS 2014)",
         "url": "https://proceedings.neurips.cc/paper_files/paper/2014/hash/f033ed80deb0234979a61f95710dbe25-Abstract.html"
@@ -18,27 +18,27 @@
     "summary": "Schmidhuber says the two-network adversarial setup was first published in his 1990 report and 1991 SAB paper on artificial curiosity, where a generative controller network produces outputs, a predictor network learns to anticipate their effects, and the controller tries to maximize the error the predictor minimizes. He describes GANs as the special case in which the environment returns 1 or 0 according to whether an output is in a given set, and he says the 2014 paper does not cite this work. He also says the 2014 paper wrongly states that his 1991 predictability minimization is not a minimax game, a point he argued in a peer-reviewed 2020 article.",
     "prior_works": [
       {
-        "who": "J. Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 1990,
-        "title": "Making the world differentiable: On using fully recurrent self-supervised neural networks for dynamic reinforcement learning and planning in non-stationary environments (TR FKI-126-90, TU Munich)",
+        "title": "Making the world differentiable: On using self-supervised fully recurrent neural networks for dynamic reinforcement learning and planning in non-stationary environments (TR FKI-126-90, TU Munich)",
         "url": "https://people.idsia.ch/~juergen/FKI-126-90ocr.pdf"
       },
       {
-        "who": "J. Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 1991,
         "title": "A possibility for implementing curiosity and boredom in model-building neural controllers (SAB 1990 proceedings)",
         "url": "https://sferics.idsia.ch/pub/juergen/curiositysab.pdf"
       },
       {
-        "who": "J. Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 1992,
         "title": "Learning factorial codes by predictability minimization (Neural Computation 4(6))",
         "url": "https://sferics.idsia.ch/pub/juergen/factorial.pdf"
       },
       {
-        "who": "J. Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 2020,
-        "title": "Generative Adversarial Networks are Special Cases of Artificial Curiosity (1990) and also Closely Related to Predictability Minimization (1991) (his peer-reviewed argument, Neural Networks 127)",
+        "title": "Generative Adversarial Networks are Special Cases of Artificial Curiosity (1990) and also Closely Related to Predictability Minimization (1991) (Neural Networks 127)",
         "url": "https://arxiv.org/abs/1906.04493"
       }
     ],
@@ -74,12 +74,12 @@
         "url": "https://x.com/SchmidhuberAI/status/2043344732974096850"
       }
     ],
-    "times_made": 66,
+    "times_made": 64,
     "first_made": "2016-12",
     "last_made": "2026-09"
   },
   "response": {
-    "summary": "The 2014 paper's related-work section discusses predictability minimization and lists three differences from it, and in their feedback to the NIPS reviewers the authors described the competition in predictability minimization as more qualitative than formal. In a 2017 Quora answer, reported here from a copy on Cross Validated because Quora could not be opened, Goodfellow wrote that he does not think there is any significant connection between predictability minimization and GANs. In December 2024 he wrote on X that Schmidhuber interrupted his 2016 talk while he was crediting noise-contrastive estimation. Yann LeCun said in a 2022 ZDNet interview that Schmidhuber's claims about GANs and other things \"didn't turn out to be true\". No public reply from the 2014 authors that addresses the 1990 artificial curiosity reports directly was found, and their replies concern predictability minimization.",
+    "summary": "The 2014 GAN paper distinguishes predictability minimization, which seeks independent representation components, from learning a generator of data samples, and says competition alone supplies GANs' training criterion. Its reviewer response calls PM's competition more qualitative than formal, which Schmidhuber disputes using PM's equations. In a 2017 [Quora answer reproduced on Cross Validated](https://stats.stackexchange.com/questions/251460/were-generative-adversarial-networks-introduced-by-j%C3%BCrgen-schmidhuber), Goodfellow rejects a significant PM-GAN connection and identifies noise-contrastive estimation and self-supervised boosting as relevant connections. These responses concern PM; the linked evidence does not include a direct answer from the GAN authors to the separate 1990 artificial-curiosity argument.",
     "quotes": [
       {
         "who": "Goodfellow et al., NIPS 2014 paper",
@@ -140,7 +140,6 @@
     "https://x.com/SchmidhuberAI/status/1255755680855793665",
     "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XVII",
     "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html",
-    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html",
     "https://people.idsia.ch/~juergen/artificial-curiosity-since-1990.html#sec1:~:text=The%20term%20generative%20adversarial%20networks%20%28GANs%29%20is%20actually%20a%20new",
     "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%207:~:text=Contrary%20to%20later%20claims%2C",
     "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20cite%20Bengio%27s%202014%20paper%20on%20Generative%20Adversarial%20Networks",
@@ -172,7 +171,6 @@
     "https://people.idsia.ch/~juergen/who-invented-generative-adversarial-networks.html#:~:text=The%20most%20cited%20research%20paper%20from%20the%20lab%20of%20Turing%20awardee%20Dr.",
     "https://people.idsia.ch/~juergen/who-invented-generative-adversarial-networks.html#priority:~:text=The%202014%20paper",
     "https://people.idsia.ch/~juergen/who-invented-generative-adversarial-networks.html#priority:~:text=The%202014%20paper%20also%20made%20false%20claims%20about%20Schmidhuber%27s%20other",
-    "https://people.idsia.ch/~juergen/who-invented-generative-adversarial-networks.html#priority",
     "https://people.idsia.ch/~juergen/who-invented-generative-adversarial-networks.html#priority",
     "https://people.idsia.ch/~juergen/who-invented-generative-adversarial-networks.html#priority:~:text=The%20priority%20dispute%20was%20picked%20up%20by%20the%20popular%20press%2C%20e.g.%2C",
     "https://people.idsia.ch/~juergen/blog.html#:~:text=%E2%98%85%20Dec%202025.%20Who%20invented%20generative%20adversarial%20networks%3F%20The%20most",

@@ -2,18 +2,18 @@
   "id": "dropout",
   "title": "Dropout",
   "matchup": "Hinton et al. (2012) and Srivastava et al. (2014) vs Hanson (1990)",
-  "question": "Is dropout a variant of Hanson's 1990 stochastic delta rule that the 2012 dropout papers should have cited, as Schmidhuber says?",
+  "question": "Does the relationship between dropout and Hanson's 1990 stochastic delta rule support Schmidhuber's claim of an earlier invention?",
   "usual_credit": {
     "summary": "Dropout, which randomly omits hidden units during training to reduce overfitting, is usually credited to Geoffrey Hinton and his co-authors Nitish Srivastava, Alex Krizhevsky, Ilya Sutskever and Ruslan Salakhutdinov, in a 2012 preprint and a 2014 paper in the Journal of Machine Learning Research. It was used in the AlexNet system that won the 2012 ImageNet competition, and Hinton's 2025 Nobel lecture credits the 2014 paper with the method.",
     "works": [
       {
-        "who": "Hinton, Srivastava, Krizhevsky, Sutskever, Salakhutdinov",
+        "who": "Geoffrey Hinton, Srivastava, Alex Krizhevsky, Ilya Sutskever, Salakhutdinov",
         "year": 2012,
         "title": "Improving neural networks by preventing co-adaptation of feature detectors",
         "url": "https://arxiv.org/abs/1207.0580"
       },
       {
-        "who": "Srivastava, Hinton, Krizhevsky, Sutskever, Salakhutdinov",
+        "who": "Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, Salakhutdinov",
         "year": 2014,
         "title": "Dropout: a simple way to prevent neural networks from overfitting",
         "url": "https://jmlr.org/papers/v15/srivastava14a.html"
@@ -24,7 +24,7 @@
     "summary": "Schmidhuber says that dropout is a variant of the stochastic delta rule that Stephen José Hanson published in 1990, a stochastic way of training networks by backpropagation, and that Hinton's 2012 papers and a later patent did not cite it. He makes the same point about the 2021 Turing Lecture by LeCun, Bengio and Hinton, which cites Hinton (2012) for dropout without mentioning Hanson.",
     "prior_works": [
       {
-        "who": "Hanson",
+        "who": "Stephen José Hanson",
         "year": 1990,
         "title": "A stochastic version of the delta rule",
         "url": "https://doi.org/10.1016/0167-2789(90)90081-Y"
@@ -61,7 +61,7 @@
     "last_made": "2026-03"
   },
   "response": {
-    "summary": "No public reply from Hinton or his co-authors to the stochastic delta rule claim was found. The 2012 preprint and the 2014 journal paper do not cite Hanson (1990), and the journal paper's related-work section credits denoising autoencoders for the idea of adding noise to the states of units while its motivation section cites a theory of the role of sex in evolution. Frazier-Logue and Hanson argued in a 2018 preprint, later published in Neural Computation, that dropout is a special case of the stochastic delta rule, in which every weight is a random variable with its own mean and standard deviation.",
+    "summary": "The dropout papers motivate random unit omission as a way to prevent co-adaptation and overfitting, while the 2014 paper's related-work section discusses denoising autoencoders and noise in hidden states. They do not cite Hanson (1990). Frazier-Logue and Hanson's 2018 preprint, later published in Neural Computation, argues that dropout is a special case of the stochastic delta rule, whose weights have means and standard deviations. That comparison supplies an explicit argument for the earlier method's relationship to dropout, but it is not a reply from Hinton or his co-authors accepting or rejecting the missing-citation complaint.",
     "quotes": [
       {
         "who": "Noah Frazier-Logue and Stephen José Hanson (preprint)",

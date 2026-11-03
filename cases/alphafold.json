@@ -2,9 +2,9 @@
   "id": "alphafold",
   "title": "AlphaFold",
   "matchup": "Jumper et al. (2021, AlphaFold 2) vs Baldi and Pollastri (2002), Hochreiter et al. (2007) and Golkov et al. (2016)",
-  "question": "Does the 2021 AlphaFold paper behind the 2024 Nobel Prize in Chemistry leave out earlier machine-learning work on protein structure that it builds on, as Schmidhuber says?",
+  "question": "Did the 2021 AlphaFold 2 paper omit earlier work that should have been cited for its protein-structure prediction method?",
   "usual_credit": {
-    "summary": "The 2024 Nobel Prize in Chemistry went half to David Baker for computational protein design and half jointly to Demis Hassabis and John Jumper of Google DeepMind for protein structure prediction, which leaves a quarter of the prize to each of the two. The Nobel Committee describes AlphaFold 2, presented in the 2021 Nature paper by Jumper and colleagues, as an entirely redesigned successor to the earlier AlphaFold 1 that replaces convolutions with a Transformer-based network and produces atomic coordinates directly, and it calls the system the first real scientific breakthrough of artificial intelligence.",
+    "summary": "John Jumper and colleagues presented AlphaFold 2 in Nature in 2021 after its CASP14 evaluation. The paper describes an end-to-end system that uses multiple sequence alignments, pair representations and a structure module to predict atomic coordinates, with accuracy competitive with experimental structures in many test cases. The 2024 Nobel Prize in Chemistry awarded half the prize jointly to Demis Hassabis and Jumper for protein structure prediction, while David Baker received the other half for protein design. The Nobel Committee distinguishes AlphaFold 2's redesigned architecture from AlphaFold 1.",
     "works": [
       {
         "who": "John Jumper et al. (DeepMind)",
@@ -27,7 +27,7 @@
     ]
   },
   "claim": {
-    "summary": "Schmidhuber says the 2021 AlphaFold 2 paper failed to cite important earlier work, and he states that a student from his lab co-founded DeepMind. He names Baldi and Pollastri (2002), who used multiple sequence alignments and profile matrices to predict secondary structure in a pipeline he calls very similar to AlphaFold 2's, Hochreiter, Heusel and Obermayer (2007), who applied an LSTM to protein homology detection, and Golkov et al. (2016), whose network predicted contact maps from co-evolution statistics and was tested on the CASP benchmark. He adds that DeepMind predicted a distance map instead of a contact map, used a Transformer instead of graph convolutions, and used more data and compute. He first wrote this in a July 2025 revision of his Nobel report, repeated it in a post on X in January 2026, and posted it again in replies on 29 July 2026 under news that DeepMind had reassigned the AlphaFold team.",
+    "summary": "Schmidhuber argues that AlphaFold 2 omitted relevant neural-network predecessors: Baldi and Pollastri's 2002 protein-analysis pipeline, Hochreiter, Heusel and Obermayer's 2007 LSTM work on protein homology, and Golkov and colleagues' 2016 contact-map predictor using co-evolution statistics. He regards the use of alignment-derived inputs and learned structural predictions as the relevant continuity, and describes the later system as changing the network and prediction target while using more data and compute. His claim is that these relationships warranted citations, not that the earlier papers reported AlphaFold 2's atomic-coordinate accuracy.",
     "prior_works": [
       {
         "who": "Pierre Baldi and Gianluca Pollastri",
@@ -73,7 +73,7 @@
     "last_made": "2026-07"
   },
   "response": {
-    "summary": "I found no public reply from John Jumper, Demis Hassabis or DeepMind to this citation claim. A report by the Chinese outlet Xinzhiyuan, republished in English by 36Kr in July 2025, says that Daniel Cremers, the supervisor of Golkov et al., asked why DeepMind did not cite the 2016 paper, that Hugo Penedones, a former member of the first AlphaFold team, recalled DeepMind starting on contact-map prediction in 2016 and said it may have arrived at the idea independently, and that Yann LeCun and Pierre Baldi also commented on the long history of neural networks in this field. Those statements are reported second-hand and I could not open the original posts. The Nobel Committee's own background text notes that neural networks had entered secondary structure prediction by 1988 and describes AlphaFold 2 as a redesign of AlphaFold 1 with many new inventions.",
+    "summary": "The AlphaFold 2 paper presents its contribution as an end-to-end architecture that predicts atomic coordinates and performs well even without a closely related known structure. It cites earlier neural protein-structure work, including Qian and Sejnowski (1988), Fariselli and colleagues (2001), and later contact-map methods, but not the three papers Schmidhuber names. The Nobel Committee likewise acknowledges neural secondary-structure prediction by 1988 while describing AlphaFold 2 as a redesigned system. These are the authors' and committee's accounts of the contribution, rather than a direct reply to Schmidhuber's citation complaint.",
     "quotes": [
       {
         "who": "Nobel Committee for Chemistry",

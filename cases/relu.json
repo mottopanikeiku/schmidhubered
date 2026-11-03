@@ -2,18 +2,18 @@
   "id": "relu",
   "title": "Rectified linear units (ReLU)",
   "matchup": "Nair and Hinton (2010) and AlexNet (2012) vs Fukushima (1969) and von der Malsburg (1973)",
-  "question": "Should the rectified linear unit used in modern deep networks be credited to Fukushima's 1969 analog threshold elements rather than to the 2010 work of Nair and Hinton, as Schmidhuber says?",
+  "question": "Does Fukushima's 1969 activation function establish the ReLU invention priority that Schmidhuber claims for it?",
   "usual_credit": {
-    "summary": "The rectified linear unit, the activation function max(0, x), is usually credited to the 2010 paper by Vinod Nair and Geoffrey Hinton on restricted Boltzmann machines. The 2012 AlexNet paper by Alex Krizhevsky, Ilya Sutskever and Hinton followed their naming and reported that deep convolutional networks with ReLUs train several times faster than equivalents with tanh units, and Hinton's 2025 Nobel lecture describes the nonlinearity as introduced by Nair and Hinton in 2010.",
+    "summary": "Vinod Nair and Geoffrey Hinton's 2010 paper studied rectified linear units in restricted Boltzmann machines, and the AlexNet paper adopted their terminology for the activation max(0, x). AlexNet reported faster training than with tanh units, helping make rectifiers common in deep convolutional networks. Hinton's Nobel lecture describes Nair and Hinton's work as introducing the nonlinearity, which is the wording Schmidhuber challenges. The credit at issue therefore spans the activation function's earlier appearance, its later probabilistic formulation and its demonstrated usefulness in large modern networks.",
     "works": [
       {
-        "who": "Nair, Hinton",
+        "who": "Vinod Nair, Geoffrey Hinton",
         "year": 2010,
         "title": "Rectified linear units improve restricted Boltzmann machines",
         "url": "https://www.cs.toronto.edu/~hinton/absps/reluICML.pdf"
       },
       {
-        "who": "Krizhevsky, Sutskever, Hinton",
+        "who": "Alex Krizhevsky, Ilya Sutskever, Geoffrey Hinton",
         "year": 2012,
         "title": "ImageNet classification with deep convolutional neural networks",
         "url": "https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf"
@@ -24,13 +24,13 @@
     "summary": "Schmidhuber says that rectified linear neurons were used by Kunihiko Fukushima in 1969 and that the 2012 AlexNet paper did not cite their origins. He says the same of the 2021 Turing Lecture by LeCun, Bengio and Hinton, which devotes a section to ReLUs citing papers of the 2000s by Hinton and his students. The first version of his critique named Christoph von der Malsburg (1973) as the earlier source, and later versions name Fukushima (1969) and cite both.",
     "prior_works": [
       {
-        "who": "Fukushima",
+        "who": "Kunihiko Fukushima",
         "year": 1969,
         "title": "Visual feature extraction by a multilayered network of analog threshold elements",
         "url": "https://doi.org/10.1109/TSSC.1969.300225"
       },
       {
-        "who": "von der Malsburg",
+        "who": "Christoph von der Malsburg",
         "year": 1973,
         "title": "Self-organization of orientation sensitive cells in the striate cortex",
         "url": "https://doi.org/10.1007/BF00288907"
@@ -73,7 +73,7 @@
     "last_made": "2026-03"
   },
   "response": {
-    "summary": "No public reply from Hinton or his co-authors to the Fukushima claim was found. The AlexNet paper says it follows Nair and Hinton in calling the function max(0, x) a rectified linear unit, and Nair and Hinton's 2010 paper cites Hahnloser and colleagues for properties of such units but neither Fukushima nor von der Malsburg. Glorot, Bordes and Bengio noted in 2011 that most earlier studies of rectifying activations concerned recurrent networks, and the 2016 textbook by Goodfellow, Bengio and Courville says Fukushima's original cognitron introduced a more complicated version while the simplified modern unit came from many viewpoints. The English Wikipedia article on the rectifier credits Fukushima with using it in 1969.",
+    "summary": "Nair and Hinton study rectified units in restricted Boltzmann machines, and AlexNet credits their terminology while reporting faster training than with tanh units. The 2010 paper cites Hahnloser and colleagues but not Fukushima or von der Malsburg. The 2016 Goodfellow, Bengio and Courville textbook mentions Fukushima's cognitron as an earlier, more complicated rectifier design and says the simpler modern unit emerged through several viewpoints. These sources distinguish earlier activation functions from later demonstrations of their use, but do not provide a direct answer by Hinton to the specific Fukushima citation complaint.",
     "quotes": [
       {
         "who": "Krizhevsky, Sutskever and Hinton (AlexNet paper)",

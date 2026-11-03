@@ -2,7 +2,7 @@
   "id": "elm",
   "title": "Extreme Learning Machines",
   "matchup": "Huang, Zhu and Siew (2004–2006) vs Rosenblatt (1958–1962) and earlier random-feature networks",
-  "question": "Should the basic Extreme Learning Machine architecture be credited as a continuation of Rosenblatt's random-hidden-layer networks rather than as a new learning scheme, as Schmidhuber argues?",
+  "question": "Does the relationship between Rosenblatt's networks and Extreme Learning Machines support Schmidhuber's claim that the basic architecture was already known?",
   "usual_credit": {
     "summary": "Guang-Bin Huang, Qin-Yu Zhu and Chee-Kheong Siew introduced the Extreme Learning Machine name for a feedforward-network scheme with randomly chosen hidden-layer parameters and analytically fitted output weights. Their 2004 conference paper and 2006 journal paper emphasized training speed and gave mathematical arguments for this approach. The relevant credit is for that named algorithm and its claimed theory, rather than an uncontested claim that these authors were the first people ever to use random features.",
     "works": [

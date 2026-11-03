@@ -2,18 +2,18 @@
   "id": "distillation",
   "title": "Knowledge distillation",
   "matchup": "Hinton, Vinyals and Dean (2015) vs Schmidhuber (1991, 1992)",
-  "question": "Should the 2015 'distillation' of neural networks be seen as a republication of the 1991 'collapsing' of a chunker network into an automatizer network, as Schmidhuber says?",
+  "question": "Does the 1991 chunker-to-automatizer transfer establish the knowledge-distillation priority that Schmidhuber claims?",
   "usual_credit": {
     "summary": "Knowledge distillation is usually credited to Geoffrey Hinton, Oriol Vinyals and Jeff Dean, whose 2015 preprint 'Distilling the Knowledge in a Neural Network' showed how to transfer what a large model or an ensemble has learned into a single smaller model by training it on the large model's softened output probabilities. The preprint credits Rich Caruana and his collaborators with having pioneered a version of this strategy, and distillation is now widely used to produce smaller models, including from large language models.",
     "works": [
       {
-        "who": "Hinton, Vinyals, Dean",
+        "who": "Geoffrey Hinton, Oriol Vinyals, Jeff Dean",
         "year": 2015,
         "title": "Distilling the Knowledge in a Neural Network",
         "url": "https://arxiv.org/abs/1503.02531"
       },
       {
-        "who": "Buciluǎ, Caruana, Niculescu-Mizil",
+        "who": "Cristian Buciluǎ, Rich Caruana, Alexandru Niculescu-Mizil",
         "year": 2006,
         "title": "Model compression",
         "url": "https://doi.org/10.1145/1150402.1150464"
@@ -24,13 +24,13 @@
     "summary": "Schmidhuber says that Section 4 of his 1992 Neural Computation paper, based on a technical report of April 1991, already described transferring the knowledge of a teacher network into a student network, which he then called collapsing or compressing and which is now called distilling. In that work a 'conscious' chunker network and a 'subconscious' automatizer network operate on different time scales, and the chunker's behaviour is compressed into the automatizer. He says the 2015 authors did not cite this work, nor did their later patent application (US20150356461A1), and since 2025 he has applied the same claim to distillation in DeepSeek and other language models.",
     "prior_works": [
       {
-        "who": "Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 1991,
         "title": "Neural sequence chunkers (technical report FKI-148-91, TU Munich)",
         "url": "https://people.idsia.ch/~juergen/FKI-148-91ocr.pdf"
       },
       {
-        "who": "Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 1992,
         "title": "Learning complex, extended sequences using the principle of history compression",
         "url": "https://doi.org/10.1162/neco.1992.4.2.234"
@@ -73,7 +73,7 @@
     "last_made": "2026-09"
   },
   "response": {
-    "summary": "No public reply from Hinton, Vinyals or Dean to the 1991 claim was found. Their 2015 preprint says that a version of the strategy was pioneered by Rich Caruana and his collaborators, and it does not cite Schmidhuber's work. In July 2026 Vinay Prabhu answered one of Schmidhuber's posts by arguing that the 1991 chunker and automatizer are trained concurrently, unlike standard distillation, while Pedro Domingos replied to another by writing that he had invented distillation and linking a 1997 paper of his own. Schmidhuber answered Prabhu that distillation is a general technique that also works when teacher and student run on different time scales.",
+    "summary": "The linked sources contain no direct reply from Hinton, Vinyals or Dean to the 1991 claim. Their 2015 preprint says that a version of the strategy was pioneered by Rich Caruana and his collaborators, and it does not cite Schmidhuber's work. In July 2026 Vinay Prabhu answered one of Schmidhuber's posts by arguing that the 1991 chunker and automatizer are trained concurrently, unlike standard distillation, while Pedro Domingos replied to another by writing that he had invented distillation and linking a 1997 paper of his own. Schmidhuber answered Prabhu that distillation is a general technique that also works when teacher and student run on different time scales.",
     "quotes": [
       {
         "who": "Hinton, Vinyals and Dean (2015 preprint)",

@@ -2,12 +2,12 @@
   "id": "backprop",
   "title": "Backpropagation",
   "matchup": "Rumelhart, Hinton and Williams (1986) vs Linnainmaa (1970) and Werbos (1982)",
-  "question": "Should the origin of backpropagation be credited to Linnainmaa's 1970 reverse-mode algorithm, with the 1986 paper by Rumelhart, Hinton and Williams seen as the popularisation of a known method, as Schmidhuber says?",
+  "question": "Do Linnainmaa's and Werbos's earlier publications support Schmidhuber's proposed division of backpropagation credit from the 1986 paper?",
   "usual_credit": {
     "summary": "Backpropagation for neural networks is usually credited to David Rumelhart, Geoffrey Hinton and Ronald Williams, whose 1986 Nature paper describes the procedure and reports that the hidden units of a trained network come to represent important features of the task. Hinton has described that demonstration of useful internal representations as the reason the method became popular, and he has also said that press reports crediting him with inventing backpropagation are wrong.",
     "works": [
       {
-        "who": "Rumelhart, Hinton, Williams",
+        "who": "David E. Rumelhart, Geoffrey Hinton, Ronald J. Williams",
         "year": 1986,
         "title": "Learning representations by back-propagating errors",
         "url": "https://www.nature.com/articles/323533a0"
@@ -18,25 +18,25 @@
     "summary": "Schmidhuber says that the modern, efficient form of backpropagation was first published in 1970 by the Finnish master's student Seppo Linnainmaa as the reverse mode of automatic differentiation, that Henry Kelley (1960) and others published precursors, and that Paul Werbos first applied the method to neural networks in 1982. He argues that the 1986 paper was an experimental analysis of a known method which did not cite Linnainmaa or Werbos, and that later surveys by Hinton, LeCun and Bengio did not cite them either. He also holds that credit for an invention belongs to the person who published it first and not to those who popularised it, while describing the 1986 paper as the work that showed backpropagation can yield useful internal representations.",
     "prior_works": [
       {
-        "who": "Kelley",
+        "who": "Henry J. Kelley",
         "year": 1960,
         "title": "Gradient theory of optimal flight paths",
         "url": "https://doi.org/10.2514/8.5282"
       },
       {
-        "who": "Linnainmaa",
+        "who": "Seppo Linnainmaa",
         "year": 1970,
         "title": "The representation of the cumulative rounding error of an algorithm as a Taylor expansion of the local rounding errors (master's thesis, University of Helsinki, in Finnish)",
         "url": "http://www.idsia.ch/~juergen/linnainmaa1970thesis.pdf"
       },
       {
-        "who": "Linnainmaa",
+        "who": "Seppo Linnainmaa",
         "year": 1976,
         "title": "Taylor expansion of the accumulated rounding error (BIT Numerical Mathematics 16)",
         "url": "https://doi.org/10.1007/BF01931367"
       },
       {
-        "who": "Werbos",
+        "who": "Paul J. Werbos",
         "year": 1982,
         "title": "Applications of advances in nonlinear sensitivity analysis",
         "url": "http://werbos.com/Neural/SensitivityIFIPSeptember1981.pdf"
@@ -79,31 +79,25 @@
     "last_made": "2026-08"
   },
   "response": {
-    "summary": "Hinton replied on Reddit in April 2020 that he has never claimed to have invented backpropagation, that Rumelhart invented it independently, and that the authors did not know the earlier history when they published. He says his own contribution was to show that the method could learn useful internal representations, and his 2025 Nobel lecture says the algorithm was invented many times and lists Linnainmaa among its inventors. In a 2015 comment LeCun argued that earlier uses of the chain rule were not shown to work for machine learning until the mid 1980s, while Paul Werbos holds that his 1974 Harvard thesis first described the method. Griewank's history of the reverse mode of differentiation, written by a mathematician, describes many incarnations of the technique from the late 1960s onward, and the 2016 textbook by Goodfellow, Bengio and Courville speaks of the popularization of backpropagation by Rumelhart et al. (1986) and LeCun (1987).",
+    "summary": "Hinton's April 2020 Reddit reply says he never claimed to have invented backpropagation, acknowledges uncited predecessors and identifies useful learned internal representations as the 1986 contribution. His 2025 Nobel lecture lists several inventors, including Linnainmaa and Werbos. Werbos dates his own neural-network formulation to his 1974 thesis, a different historical step from the general differentiation algorithm. The 2016 Goodfellow, Bengio and Courville textbook describes the 1986 work as popularization. These accounts distinguish the differentiation algorithm, its neural-network formulation and the experiments that spread it, rather than assigning every step to one paper.",
     "quotes": [
       {
         "who": "Geoffrey Hinton (Reddit comment, archived copy)",
         "text": "I have never claimed that I invented backpropagation. David Rumelhart invented it independently long after people in other fields had invented it.",
         "date": "2020-04-23",
-        "url": "https://web.archive.org/web/20200423210300/https://www.reddit.com/r/MachineLearning/comments/g5ali0/d_schmidhuber_critique_of_honda_prize_for_dr/fo8rew9/"
+        "url": "https://web.archive.org/web/20210824042207/https://www.reddit.com/r/MachineLearning/comments/g5ali0/d_schmidhuber_critique_of_honda_prize_for_dr/"
       },
       {
         "who": "Geoffrey Hinton (Reddit comment, archived copy)",
         "text": "when we first published we did not know the history so there were previous inventors that we failed to cite",
         "date": "2020-04-23",
-        "url": "https://web.archive.org/web/20200423210300/https://www.reddit.com/r/MachineLearning/comments/g5ali0/d_schmidhuber_critique_of_honda_prize_for_dr/fo8rew9/"
+        "url": "https://web.archive.org/web/20210824042207/https://www.reddit.com/r/MachineLearning/comments/g5ali0/d_schmidhuber_critique_of_honda_prize_for_dr/"
       },
       {
         "who": "Geoffrey Hinton (Nobel Lecture)",
         "text": "The backpropagation algorithm was invented many times (Linnainmaa, 1970; Werbos, 1974; LeCun, 1985; Parker, 1985; Rumelhart, Hinton, and Williams, 1986; Amari, 1993).",
         "date": "2025-08-25",
         "url": "https://www.cs.toronto.edu/~hinton/absps/nobelboltzmann.pdf"
-      },
-      {
-        "who": "Yann LeCun (comment on a Google+ post, archived copy)",
-        "text": "The point is that no one managed to demonstrate a working instantiation until the mid 80s.",
-        "date": "2015-06-30 to 2015-07-03",
-        "url": "https://web.archive.org/web/20160308032017/https://plus.google.com/100849856540000067209/posts/9BDtGwCDL7D"
       },
       {
         "who": "Paul Werbos",

@@ -2,7 +2,7 @@
   "id": "transformers",
   "title": "Transformers",
   "matchup": "Vaswani et al. (2017) vs Schmidhuber (1991, 1992)",
-  "question": "Should the 2017 Transformer be seen as a descendant of Schmidhuber's 1991 fast weight programmers, as he says?",
+  "question": "Does the relationship between fast weight programmers and attention support Schmidhuber's claim to priority for the principle of the 2017 Transformer?",
   "usual_credit": {
     "summary": "Ashish Vaswani and seven co-authors, most of them at Google, introduced the Transformer in 'Attention Is All You Need' at NIPS 2017, a sequence model built from stacked multi-head softmax self-attention layers with positional encodings and no recurrence. The architecture is the basis of BERT, the GPT models and most large language models since, and Katharopoulos et al. (2020) later described a linear-attention variant under the name 'linear Transformer'.",
     "works": [
@@ -24,25 +24,25 @@
     "summary": "Schmidhuber says his 26 March 1991 report on 'fast weight controllers' described a slow network that learns by gradient descent to generate key-like and value-like patterns whose outer products program the weights of a fast network. He says this is mathematically what is now called an unnormalized linear Transformer, apart from the normalization. He adds that a 1993 follow-up used the word 'attention', that the 2017 quadratic Transformer combines the 1991 additive outer-product principle with a softmax, and that the 2017 paper did not cite the 1991 work. The 2021 ICML paper by Schlag, Irie and Schmidhuber states the formal equivalence.",
     "prior_works": [
       {
-        "who": "J. Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 1991,
-        "title": "Learning to control fast-weight memories: An alternative to recurrent nets (TR FKI-147-91, TU Munich, 26 March 1991)",
+        "title": "Learning to Control Fast-Weight Memories: An Alternative to Dynamic Recurrent Networks (TR FKI-147-91, TU Munich, 26 March 1991)",
         "url": "https://people.idsia.ch/~juergen/FKI-147-91ocr.pdf"
       },
       {
-        "who": "J. Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 1992,
         "title": "Learning to control fast-weight memories: An alternative to recurrent nets (Neural Computation 4(1))",
         "url": "https://sferics.idsia.ch/pub/juergen/fastweights.pdf"
       },
       {
-        "who": "J. Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 1993,
         "title": "Reducing the ratio between learning complexity and number of time-varying variables in fully recurrent nets (ICANN 1993)",
         "url": "https://sferics.idsia.ch/pub/juergen/ratio.pdf"
       },
       {
-        "who": "I. Schlag, K. Irie, J. Schmidhuber",
+        "who": "I. Schlag, K. Irie, Jürgen Schmidhuber",
         "year": 2021,
         "title": "Linear Transformers Are Secretly Fast Weight Programmers (ICML 2021)",
         "url": "https://arxiv.org/abs/2102.11174"
@@ -69,9 +69,9 @@
       },
       {
         "text": "The quadratic Transformer combines the 1991 additive outer product fast weight principle [FWP0-2] and softmax (see 2014 above)",
-        "date": "2026-06-19",
+        "date": "2025-11-09",
         "venue": "X",
-        "url": "https://x.com/SchmidhuberAI/status/2067874367095116240"
+        "url": "https://x.com/SchmidhuberAI/status/1987550761916457218"
       }
     ],
     "times_made": 56,
@@ -79,7 +79,7 @@
     "last_made": "2026-10"
   },
   "response": {
-    "summary": "No public reply to the 1991 claim from the authors of the 2017 paper was found. The paper presents the Transformer as the first transduction model relying entirely on self-attention, and its references include memory networks and Hochreiter and Schmidhuber's 1997 LSTM paper but no fast weight work. The English Wikipedia article on Transformers now describes the 1992 fast weight controller and says it was later shown to be equivalent to the unnormalized linear Transformer, citing the 2021 paper that Schmidhuber co-authored.",
+    "summary": "Vaswani and colleagues describe the Transformer as the first transduction model based entirely on attention, without recurrence or convolution. Their paper combines multi-head softmax attention, positional information and feedforward layers, and cites LSTM and earlier memory architectures but not the fast weight papers. The later equivalence result by Schlag, Irie and Schmidhuber concerns linearized attention, rather than the entire softmax-based 2017 architecture. The linked sources contain no direct reply by the 2017 authors to the 1991 claim, so that result establishes a mathematical relationship without itself establishing historical influence or identity between the complete models.",
     "quotes": [
       {
         "who": "Vaswani et al., 'Attention Is All You Need'",
@@ -96,7 +96,7 @@
     ]
   },
   "agreed_facts": [
-    "Schmidhuber's technical report FKI-147-91, 'Learning to control fast-weight memories: An alternative to recurrent nets', is dated 26 March 1991, and the journal version appeared in Neural Computation 4(1) in 1992.",
+    "Schmidhuber's technical report FKI-147-91, 'Learning to control fast-weight memories: An Alternative to Dynamic Recurrent Networks', is dated 26 March 1991, and the journal version appeared in Neural Computation 4(1) in 1992.",
     "Vaswani et al. posted 'Attention Is All You Need' on arXiv on 12 June 2017 and presented it at NIPS 2017.",
     "The 2017 paper cites Hochreiter and Schmidhuber's 1997 LSTM paper and a 2001 gradient-flow paper co-authored by Schmidhuber, and it does not cite the 1991 or 1992 fast weight papers.",
     "Katharopoulos et al. introduced the term 'linear Transformer' at ICML 2020 and do not cite the fast weight papers, and Schlag, Irie and Schmidhuber published 'Linear Transformers Are Secretly Fast Weight Programmers' at ICML 2021.",

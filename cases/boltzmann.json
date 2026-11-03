@@ -2,12 +2,12 @@
   "id": "boltzmann",
   "title": "Boltzmann machines",
   "matchup": "Ackley, Hinton and Sejnowski (1985) vs Sherrington and Kirkpatrick (1975) and the 1960s deep-network work of Ivakhnenko and Lapa",
-  "question": "Did the 1985 Boltzmann machine paper omit earlier work that Schmidhuber describes as its precursors, namely the 1975 Sherrington-Kirkpatrick spin-glass model and the 1960s learning of internal representations in deep networks?",
+  "question": "Do the spin-glass models and earlier multilayer learning methods establish the Boltzmann-machine priority that Schmidhuber claims?",
   "usual_credit": {
     "summary": "The Boltzmann machine is credited to David Ackley, Geoffrey Hinton and Terrence Sejnowski, whose 1985 paper in Cognitive Science presented a learning algorithm for networks of stochastic binary units that include hidden units. The Nobel committee's scientific background describes it as a stochastic extension of Hopfield's 1982 model, and Sejnowski's 2020 PNAS survey says that he and Hinton introduced a learning algorithm for Boltzmann machines proving that, contrary to general belief, multilayer networks could be trained.",
     "works": [
       {
-        "who": "Ackley, Hinton, Sejnowski",
+        "who": "David H. Ackley, Geoffrey Hinton, Terrence J. Sejnowski",
         "year": 1985,
         "title": "A learning algorithm for Boltzmann machines",
         "url": "https://www.cs.toronto.edu/~hinton/absps/cogscibm.pdf"
@@ -15,22 +15,22 @@
     ]
   },
   "claim": {
-    "summary": "Schmidhuber makes two related points. The first is that the Sherrington-Kirkpatrick spin-glass model of 1975, which rests on the Edwards-Anderson model, is Boltzmann-machine-like and learns interaction weights whose phase-diagram points correspond to internal representations, yet the 1985 paper and Hinton's later surveys do not cite it. The second is that the 1985 paper and Sejnowski's 2020 survey present the Boltzmann machine as a way to learn internal representations in hidden units without citing Ivakhnenko and Lapa (1965) or Amari (1967-68), and that Hinton's 2025 Nobel lecture describes learning without a backward pass in the 1980s without citing Ivakhnenko either.",
+    "summary": "Schmidhuber compares the Boltzmann machine with the 1975 Sherrington-Kirkpatrick spin-glass model and argues that the 1985 paper should have cited it. He separately objects that accounts of learning hidden representations omit the 1960s multilayer learning of Ivakhnenko, Lapa and Amari. The first claim concerns the stochastic network's mathematical form, while the second concerns what was already known about training layered models. He regards these earlier contributions as relevant to invention credit, although a shared equilibrium distribution alone does not establish that the earlier physics model used the later Boltzmann-machine learning algorithm.",
     "prior_works": [
       {
-        "who": "Sherrington, Kirkpatrick",
+        "who": "David Sherrington, Scott Kirkpatrick",
         "year": 1975,
         "title": "Solvable model of a spin-glass",
         "url": "https://doi.org/10.1103/PhysRevLett.35.1792"
       },
       {
-        "who": "Edwards, Anderson",
+        "who": "Samuel F. Edwards, Philip W. Anderson",
         "year": 1975,
         "title": "Theory of spin glasses",
         "url": "https://doi.org/10.1088/0305-4608/5/5/017"
       },
       {
-        "who": "Ivakhnenko, Lapa",
+        "who": "Alexey G. Ivakhnenko, Valentin Lapa",
         "year": 1965,
         "title": "Cybernetic predicting devices (English translation, 1966)",
         "url": "https://gwern.net/doc/ai/1966-ivakhnenko.pdf"
@@ -73,7 +73,7 @@
     "last_made": "2025-12"
   },
   "response": {
-    "summary": "No public reply from Hinton, Ackley or Sejnowski to the Sherrington-Kirkpatrick point was found. In a January 2022 message to the Connectionists mailing list, Sejnowski wrote that the threads would be sorted out by historians a century from now and that time was better spent moving the field forward, and his 2020 survey, which Schmidhuber criticises, is quoted below. Hinton's 2025 Nobel lecture tells how Sejnowski had just read the 1983 simulated-annealing paper by Kirkpatrick, Gelatt and Vecchi when the two of them heard Hopfield speak in 1982, and the Nobel committee describes the Boltzmann machine as a stochastic extension of Hopfield's model.",
+    "summary": "The Nobel Committee describes the Boltzmann machine as a stochastic extension of Hopfield's model, and Hinton's Nobel lecture identifies learning hidden-unit weights from local information as its contribution. The 1985 paper cites Hopfield and the 1983 simulated-annealing paper by Kirkpatrick, Gelatt and Vecchi, but not the 1975 Sherrington-Kirkpatrick paper. Sejnowski's 2020 survey claims a demonstration that multilayer networks could be trained, while his 2022 mailing-list comment leaves the historical comparison to historians. These statements document the authors' contribution claims, but do not directly answer Schmidhuber's complaint about the earlier spin-glass citation.",
     "quotes": [
       {
         "who": "Terrence Sejnowski (PNAS survey)",
