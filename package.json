@@ -1,0 +1,15 @@
+{
+  "name": "schmidhubered",
+  "private": true,
+  "type": "module",
+  "description": "Jürgen Schmidhuber's priority claims, case by case, with a vote on each",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "cards": "node scripts/cards.mjs",
+    "track": "node scripts/track.mjs",
+    "sync-issues": "node scripts/sync-issues.mjs"
+  }
+}
