@@ -1,0 +1,64 @@
+name: site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # hourly, so the vote counts baked into the pages stay fresh
+    - cron: '23 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: npm run check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy:
+    needs: check
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - id: pages
+        uses: actions/configure-pages@v6
+      - uses: actions/cache@v6
+        with:
+          path: .cards
+          key: cards-${{ hashFiles('cases/*.json', 'scripts/card-template.mjs', 'src/fonts/*') }}
+          restore-keys: cards-
+      - run: npm run cards
+      - run: npm run build
+        env:
+          # the Pages address, which becomes the custom domain once one is set
+          SITE_URL: ${{ steps.pages.outputs.base_url }}/
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+      - id: deployment
+        uses: actions/deploy-pages@v5

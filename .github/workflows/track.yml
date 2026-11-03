@@ -1,0 +1,47 @@
+name: track
+
+on:
+  schedule:
+    - cron: '41 6 * * *'
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: Post ids to fetch directly, separated by spaces
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: track
+  cancel-in-progress: false
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - id: track
+        run: npm run track
+        env:
+          TRACK_IDS: ${{ inputs.ids }}
+      - name: Commit new posts and redeploy
+        if: steps.track.outputs.new_posts != '' && steps.track.outputs.new_posts != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NEW: ${{ steps.track.outputs.new_posts }}
+        run: |
+          git config user.name mottopanikeiku
+          git config user.email 176798723+mottopanikeiku@users.noreply.github.com
+          git add data/latest.json
+          if git diff --cached --quiet; then exit 0; fi
+          if [ "$NEW" = 1 ]; then noun=post; else noun=posts; fi
+          git commit -m "track: $NEW new $noun"
+          git push
+          # pushes made with the workflow token do not trigger other workflows, so start the deploy here
+          gh workflow run site.yml --ref main
