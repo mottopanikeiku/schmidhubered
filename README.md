@@ -26,4 +26,4 @@ python3 -m http.server -d dist    # then open http://localhost:8000/
 
 The starting point is a catalogue of 1,126 public statements he made on X, his website, in papers, on mailing lists, Reddit and LinkedIn and in interviews between 1996 and 2026, kept in `seed/`. Each file in `cases/` groups the statements behind one dispute and was written from primary sources, with every quote linked to where it appeared. New posts that the daily tracker flags go to `data/latest.json` and are shown as unreviewed until someone folds them into a case, while reviewed claims that fit no single case are kept in `data/recent.json`. Corrections are welcome as issues or as pull requests against the case files.
 
-The code is MIT, the case texts are CC BY 4.0 with quotes remaining their authors', and the type is a subset of Source Serif 4 under the SIL Open Font License.
+The code is MIT, the case texts are CC BY 4.0 with quotes remaining their authors', and the type is a subset of Archivo under the SIL Open Font License.
