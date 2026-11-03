@@ -53,7 +53,8 @@ export function validateCase(c, fileId) {
   const errs = [];
   if (!c || typeof c !== 'object' || Array.isArray(c)) return ['file must hold one JSON object'];
   for (const k of TOP_KEYS) if (!(k in c)) errs.push(`missing "${k}"`);
-  for (const k of Object.keys(c)) if (!TOP_KEYS.includes(k)) errs.push(`unknown key "${k}"`);
+  for (const k of Object.keys(c)) if (!TOP_KEYS.includes(k) && k !== 'card') errs.push(`unknown key "${k}"`);
+  if ('card' in c) checkCard(c.card, errs);
   if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(c.id || '')) errs.push('id must be lowercase words joined by hyphens');
   if (fileId && c.id !== fileId) errs.push(`id "${c.id}" does not match file name "${fileId}"`);
   for (const k of ['title', 'matchup', 'question', 'crux']) if (!isStr(c[k])) errs.push(`${k} must be a non-empty string`);
@@ -91,8 +92,75 @@ export function validateCase(c, fileId) {
   return errs;
 }
 
-// Reads every cases/*.json. Files that fail to parse or validate are reported and left out,
-// so a half-written file from a researcher never takes the whole site down.
+export const CATEGORIES = ['Architectures', 'Learning methods', 'Awards', 'Companies and products', 'Origins of the field', 'Computing history'];
+const SIDES = ['challenger', 'credited', 'neutral'];
+const isYear = (v) => Number.isInteger(v) || (typeof v === 'string' && /\d{4}/.test(v));
+
+// The short-form matchup used on cards and case heroes.
+function checkCard(k, errs) {
+  if (!k || typeof k !== 'object' || Array.isArray(k)) return errs.push('card must be an object');
+  if (!CATEGORIES.includes(k.category)) errs.push(`card.category must be one of: ${CATEGORIES.join(', ')}`);
+  for (const f of ['headline', 'question', 'claim', 'pushback', 'crux']) if (!isStr(k[f])) errs.push(`card.${f} must be a non-empty string`);
+  for (const s of ['credited', 'challenger']) {
+    const x = k[s];
+    if (!x || typeof x !== 'object') { errs.push(`card.${s} must be an object`); continue; }
+    if (!isStr(x.who)) errs.push(`card.${s}.who must be a non-empty string`);
+    if (!isYear(x.year)) errs.push(`card.${s}.year must be a year`);
+    if (!isStr(x.what)) errs.push(`card.${s}.what must be a non-empty string`);
+  }
+  const q = k.his_quote;
+  if (!q || !isStr(q.text) || !isStr(q.date) || !isUrl(q.url)) errs.push('card.his_quote needs text, date and an http(s) url');
+  const t = k.their_quote;
+  if (t !== null && (!t || !isStr(t.who) || !isStr(t.text) || !isStr(t.date) || !isUrl(t.url))) errs.push('card.their_quote must be null or have who, text, date and an http(s) url');
+  if (!Array.isArray(k.timeline)) errs.push('card.timeline must be an array');
+  else k.timeline.forEach((e, i) => {
+    if (!e || !isYear(e.year) || !isStr(e.label) || !SIDES.includes(e.side)) errs.push(`card.timeline[${i}] needs a year, a label and a side (${SIDES.join(', ')})`);
+  });
+}
+
+// First sentence of a case text, Markdown kept. Initials, "et al." and similar abbreviations do not
+// end a sentence.
+export function firstSentence(s) {
+  const text = String(s ?? '').trim();
+  const re = /[.!?](?=["”’)]?\s+["“‘(]?[A-Z0-9])/g;
+  for (let m; (m = re.exec(text));) {
+    const before = text.slice(0, m.index).split(/\s+/).pop();
+    if (/^(?:(?:[A-Z]\.)*[A-Z]|al|e\.g|i\.e|vs|cf|Dr|Mr|Mrs|Ms|Prof|St|No|Fig|Eq|Sec|approx|ca|c|U\.S)$/.test(before)) continue;
+    return text.slice(0, m.index + 1);
+  }
+  return text;
+}
+
+export const yearOf = (v) => Number(String(v ?? '').match(/\d{4}/)?.[0]) || null;
+const shortWho = (who) => (who.length > 34 ? `${who.split(/,|\band\b/)[0].trim()} et al.` : who);
+
+// The case's card, or one derived from the long texts while a file has no card yet.
+export function cardOf(c) {
+  if (c.card) return c.card;
+  const w = c.usual_credit.works[0];
+  const p = c.claim.prior_works[0] || { who: 'Jürgen Schmidhuber', year: yearOf(c.claim.first_made), title: firstSentence(c.claim.summary) };
+  const timeline = [
+    ...c.claim.prior_works.map((x) => ({ year: x.year, label: x.title, side: 'challenger' })),
+    ...c.usual_credit.works.map((x) => ({ year: x.year, label: x.title, side: 'credited' })),
+  ].sort((a, b) => (yearOf(a.year) || 0) - (yearOf(b.year) || 0));
+  return {
+    category: null,
+    headline: c.title,
+    credited: { who: shortWho(w.who), year: w.year, what: w.title },
+    challenger: { who: shortWho(p.who), year: p.year, what: p.title },
+    question: c.question,
+    claim: firstSentence(c.claim.summary),
+    pushback: firstSentence(c.response.summary),
+    crux: firstSentence(c.crux),
+    his_quote: c.claim.quotes[0] || null,
+    their_quote: c.response.quotes[0] || null,
+    timeline,
+  };
+}
+
+// Reads every cases/*.json. Files that fail to parse or validate are reported and left out, so a
+// half-written file never takes the whole site down; a case whose only problem is its card is kept
+// with the card derived from the long texts instead.
 export function loadCases() {
   const dir = path.join(ROOT, 'cases');
   const cases = [];
@@ -109,7 +177,10 @@ export function loadCases() {
     }
     const errors = validateCase(c, id);
     if (errors.length) problems.push({ file: `cases/${f}`, errors });
-    else cases.push(c);
+    if (errors.every((e) => e.startsWith('card'))) {
+      if (errors.length) delete c.card;
+      cases.push(c);
+    }
   }
   return { cases, problems };
 }

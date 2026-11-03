@@ -23,8 +23,15 @@ for (const c of cases) {
   if (missing.length) warnings.push(`${f}: ${missing.length} instance URL(s) not in the seed catalogue, shown without a date or quote`);
   const listed = caseInstances(c, seed).length;
   if (listed !== c.claim.times_made) warnings.push(`${f}: times_made is ${c.claim.times_made} but ${listed} statements are listed`);
-  const prose = JSON.stringify([c.title, c.matchup, c.question, c.usual_credit.summary, c.claim.summary, c.response.summary, c.agreed_facts, c.crux]);
+  const k = c.card;
+  const prose = JSON.stringify([c.title, c.matchup, c.question, c.usual_credit.summary, c.claim.summary, c.response.summary, c.agreed_facts, c.crux,
+    k && [k.headline, k.question, k.claim, k.pushback, k.crux, k.credited, k.challenger, (k.timeline || []).map((e) => e.label)]]);
   if (prose.includes('\u2014')) warnings.push(`${f}: contains an em dash outside quotes`);
+  if (!k) warnings.push(`${f}: no card yet, so the pages derive one from the long texts`);
+  else for (const field of ['claim', 'pushback', 'crux']) {
+    const n = String(k[field]).split(/\s+/).filter(Boolean).length;
+    if (n > 25) warnings.push(`${f}: card.${field} has ${n} words, more than 25`);
+  }
 }
 
 const issues = readJSON('data/issues.json', {});
