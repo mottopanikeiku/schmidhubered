@@ -114,7 +114,7 @@
     "Mnih et al. posted 'Recurrent Models of Visual Attention' on arXiv in June 2014, citing Larochelle and Hinton (2010) and Hochreiter and Schmidhuber (1997).",
     "The ACM's announcement of 27 March 2019 says Bengio's group 'introduced a form of attention mechanism which led to breakthroughs in machine translation'."
   ],
-  "crux": "Whether sequential, learned focusing of a network on selected parts of its input, as in the 1990-93 systems, is the same idea as the 2010 glimpse model and the 2014 alignment mechanism. The alternative is that the later systems differ enough in what is learned and how, for example in the softmax alignment over encoder states. A related question is whether the later authors knew of the earlier work, which the linked sources do not settle.",
+  "crux": "The dispute is over whether sequential, learned focusing of a network on selected parts of its input, as in the 1990-93 systems, is the same idea as the 2010 glimpse model and the 2014 alignment mechanism. The alternative is that the later systems differ enough in what is learned and how, for example in the softmax alignment over encoder states. A related question is whether the later authors knew of the earlier work, which the linked sources do not settle.",
   "related": [
     "transformers",
     "speech-lstm",

@@ -102,7 +102,7 @@
     "The first image-based implementation, I-JEPA, was posted on arXiv on 19 January 2023.",
     "Siamese networks were introduced at NIPS 1993 by Bromley, Guyon, LeCun, Säckinger and Shah."
   ],
-  "crux": "Whether JEPA, as a class of architectures with a latent-space predictor and anti-collapse training, is the same as the 1992 PMAX family, as Schmidhuber argues, or an extension of earlier joint-embedding methods such as Becker and Hinton's, as LeCun argues. LeCun puts the weight on how collapse is prevented and on scaling. A further question is whether leaving PMAX out of the 2022 paper was a failure to credit, given that LeCun's own account names Becker and Hinton as the origin.",
+  "crux": "The dispute is over whether JEPA, as a class of architectures with a latent-space predictor and anti-collapse training, is the same as the 1992 PMAX family, as Schmidhuber argues, or an extension of earlier joint-embedding methods such as Becker and Hinton's, as LeCun argues. LeCun puts the weight on how collapse is prevented and on scaling. A further question is whether leaving PMAX out of the 2022 paper was a failure to credit, given that LeCun's own account names Becker and Hinton as the origin.",
   "related": [
     "world-models",
     "gans",

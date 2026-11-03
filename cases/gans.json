@@ -122,7 +122,7 @@
     "Schmidhuber's article 'Generative Adversarial Networks are Special Cases of Artificial Curiosity (1990) and also Closely Related to Predictability Minimization (1991)' appeared in Neural Networks, volume 127, in 2020.",
     "The 2014 GAN paper received the NeurIPS 2024 Test of Time Award, which was announced on 2024-11-27."
   ],
-  "crux": "Whether artificial curiosity of 1990-91, in which a generative controller and a predictor have opposing objectives, is the same principle as GANs with a binary environment, or whether GANs differ in what is trained and how, as the 2014 paper argued for predictability minimization. A second question is whether the 2014 statement that predictability minimization is not a minimax game is correct.",
+  "crux": "The dispute is over whether artificial curiosity of 1990-91, in which a generative controller and a predictor have opposing objectives, is the same principle as GANs with a binary environment, or whether GANs differ in what is trained and how, as the 2014 paper argued for predictability minimization. A second question is whether the 2014 statement that predictability minimization is not a minimax game is correct.",
   "related": [
     "jepa",
     "world-models",

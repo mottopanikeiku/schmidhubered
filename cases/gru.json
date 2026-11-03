@@ -95,7 +95,7 @@
     "Cho et al. describe the GRU as motivated by the LSTM unit, cite Hochreiter and Schmidhuber (1997), and do not cite Gers et al. (2000); Chung et al. cite the 1997 paper for LSTM and follow the implementation in Graves (2013).",
     "The GRU has a reset gate and an update gate and no separate output gate, while the LSTM unit with a forget gate has input, forget and output gates."
   ],
-  "crux": "Whether the GRU counts as a new architecture or as a simplification of the forget-gate LSTM whose source should have been cited, and whether citing the 1997 LSTM paper alone was an adequate acknowledgement when the gating idea appears in the 2000 paper. The architectural differences are documented; their significance for invention credit is the question.",
+  "crux": "The dispute is over whether the GRU counts as a new architecture or as a simplification of the forget-gate LSTM whose source should have been cited, and whether citing the 1997 LSTM paper alone was an adequate acknowledgement when the gating idea appears in the 2000 paper. The architectural differences are documented; their significance for invention credit is the question.",
   "related": [
     "speech-lstm",
     "attention",

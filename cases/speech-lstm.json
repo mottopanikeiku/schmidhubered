@@ -96,7 +96,7 @@
     "Sutskever, Vinyals and Le's 2014 sequence-to-sequence model used LSTM networks, and Google's 2016 neural machine translation system uses a deep LSTM network with attention and residual connections.",
     "Graves, Mohamed and Hinton's 2013 paper on speech recognition used deep bidirectional LSTM networks."
   ],
-  "crux": "Whether the speech and translation advances that the ACM and the press attribute to Hinton's and Bengio's groups should instead be credited to LSTM and CTC from Schmidhuber's group, or whether the credit is shared among deep feedforward acoustic models, recurrent networks and attention. Google's sources document the use of LSTM; the question is how award citations and press coverage should divide the credit.",
+  "crux": "The dispute is over whether the speech and translation advances that the ACM and the press attribute to Hinton's and Bengio's groups should instead be credited to LSTM and CTC from Schmidhuber's group, or whether the credit is shared among deep feedforward acoustic models, recurrent networks and attention. Google's sources document the use of LSTM; the question is how award citations and press coverage should divide the credit.",
   "related": [
     "gru",
     "attention",

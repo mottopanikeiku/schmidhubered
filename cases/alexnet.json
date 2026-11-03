@@ -101,7 +101,7 @@
     "AlexNet won the ILSVRC 2012 ImageNet classification contest.",
     "The AlexNet paper cites Cireșan, Meier and Schmidhuber (2012) and Cireșan et al. (2011), and it credits Nair and Hinton (2010) for rectified linear units, without citing Fukushima (1969) or Hanson (1990)."
   ],
-  "crux": "Whether AlexNet's 2012 ImageNet result continues the 2011-12 IDSIA GPU network results, which it cites as 'somewhat similar', or is a distinct advance through a larger network, ImageNet-scale training, ReLUs and dropout. The sides also weigh differently the first contest wins at smaller scale against the first win on ImageNet.",
+  "crux": "The dispute is over whether AlexNet's 2012 ImageNet result continues the 2011-12 IDSIA GPU network results, which it cites as 'somewhat similar', or is a distinct advance through a larger network, ImageNet-scale training, ReLUs and dropout. The sides also weigh differently the first contest wins at smaller scale against the first win on ImageNet.",
   "related": [
     "cnn",
     "dropout",

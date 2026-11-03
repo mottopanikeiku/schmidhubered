@@ -126,7 +126,7 @@
     "LeCun et al. published 'Backpropagation Applied to Handwritten Zip Code Recognition' in Neural Computation 1(4) in 1989.",
     "The ACM's 2019 Turing Award announcement says LeCun 'was the first to train a convolutional neural network system on images of handwritten digits'."
   ],
-  "crux": "Whether the 1989 LeCun et al. network counts as the invention of the CNN, or as the next step after Fukushima's architecture, Waibel's backpropagation-trained one-dimensional convolutions and Zhang et al.'s two-dimensional network, which the two sides weigh differently. A further question is whether LeCun knew of the Japanese work in 1988-89, which the linked sources do not establish.",
+  "crux": "The dispute is over whether the 1989 LeCun et al. network counts as the invention of the CNN, or as the next step after Fukushima's architecture, Waibel's backpropagation-trained one-dimensional convolutions and Zhang et al.'s two-dimensional network, which the two sides weigh differently. A further question is whether LeCun knew of the Japanese work in 1988-89, which the linked sources do not establish.",
   "related": [
     "backprop",
     "alexnet",

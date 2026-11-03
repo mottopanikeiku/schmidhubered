@@ -115,7 +115,7 @@
     "Hochreiter's diploma thesis was written at TU Munich in 1991 under Schmidhuber and analyzes vanishing and exploding error signals in recurrent networks.",
     "He et al. posted 'Identity Mappings in Deep Residual Networks' in March 2016, and it cites the Highway Network papers."
   ],
-  "crux": "Whether an identity-shortcut network with no gates is a distinct design from a gated Highway Network or simply its open-gate limit, and whether a December 2015 paper should have treated a May 2015 preprint as prior work instead of 'concurrent'. A further question is whether the weight-1.0 recurrent connection of Hochreiter's 1991 thesis and of LSTM is the same idea as a residual connection between layers.",
+  "crux": "The dispute is over whether an identity-shortcut network with no gates is a distinct design from a gated Highway Network or simply its open-gate limit, and whether a December 2015 paper should have treated a May 2015 preprint as prior work instead of 'concurrent'. A further question is whether the weight-1.0 recurrent connection of Hochreiter's 1991 thesis and of LSTM is the same idea as a residual connection between layers.",
   "related": [
     "vanishing",
     "speech-lstm",

@@ -113,7 +113,7 @@
     "Ha and Schmidhuber's 'World Models' was posted on arXiv on 27 March 2018, and LeCun's 'A Path Towards Autonomous Machine Intelligence' on OpenReview on 27 June 2022.",
     "LeCun gave a lecture on world models at Brown University on 1 April 2026, and his LinkedIn post of 17-18 April 2026 followed a post by Abdelaziz Testas about that lecture."
   ],
-  "crux": "Whether Schmidhuber's 1990 report, which used a recurrent network as a model of the environment together with a controller and intrinsic motivation, adds something to the earlier feedforward-network modelling and control work that both sides cite. A second question is whether LeCun's later writing on world models and hierarchical planning needed to credit it. LeCun cites a 1990 Nguyen and Widrow paper while Schmidhuber's page cites their 1989 IJCNN paper, and which one LeCun means is not stated.",
+  "crux": "The dispute is over whether Schmidhuber's 1990 report, which used a recurrent network as a model of the environment together with a controller and intrinsic motivation, adds something to the earlier feedforward-network modelling and control work that both sides cite. A second question is whether LeCun's later writing on world models and hierarchical planning needed to credit it. LeCun cites a 1990 Nguyen and Widrow paper while Schmidhuber's page cites their 1989 IJCNN paper, and which one LeCun means is not stated.",
   "related": [
     "jepa",
     "gans",

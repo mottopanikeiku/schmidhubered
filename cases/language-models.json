@@ -95,7 +95,7 @@
     "The ACM's 2019 announcement says Bengio's 'A Neural Probabilistic Language Model' 'introduced high-dimension word embeddings as a representation of word meaning'.",
     "Bengio's research page of May 2020 states that a NIPS 1999 paper introduced auto-regressive neural networks for density estimation for the first time."
   ],
-  "crux": "Whether Schmidhuber and Heil's character-level predictive model for compression is the same kind of model as a word-level neural probabilistic language model that learns distributed word embeddings, and whether one sentence calling it related was an adequate acknowledgement. The documented differences in units of prediction and learned representations bear on how close the two methods are.",
+  "crux": "The dispute is over whether Schmidhuber and Heil's character-level predictive model for compression is the same kind of model as a word-level neural probabilistic language model that learns distributed word embeddings, and whether one sentence calling it related was an adequate acknowledgement. The documented differences in units of prediction and learned representations bear on how close the two methods are.",
   "related": [
     "turingaward",
     "attention",

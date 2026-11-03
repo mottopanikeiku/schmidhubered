@@ -102,7 +102,7 @@
     "Katharopoulos et al. introduced the term 'linear Transformer' at ICML 2020 and do not cite the fast weight papers, and Schlag, Irie and Schmidhuber published 'Linear Transformers Are Secretly Fast Weight Programmers' at ICML 2021.",
     "Softmax attention in the 2017 Transformer has costs that grow quadratically with sequence length, while linearized attention scales linearly, and Schmidhuber's own page makes the same distinction."
   ],
-  "crux": "Whether a system with softmax attention, as in the 2017 Transformer, counts as a variant of a 1991 system with additive outer-product memory and no softmax, which Schmidhuber's group has shown equivalent to linear attention only 'apart from normalization'. A second question is whether leaving the 1991 report out of the 2017 reference list, and out of later linear-attention papers, was a failure to credit earlier work or a reasonable reading of what was new.",
+  "crux": "The dispute is over whether a system with softmax attention, as in the 2017 Transformer, counts as a variant of a 1991 system with additive outer-product memory and no softmax, which Schmidhuber's group has shown equivalent to linear attention only 'apart from normalization'. A second question is whether leaving the 1991 report out of the 2017 reference list, and out of later linear-attention papers, was a failure to credit earlier work or a reasonable reading of what was new.",
   "related": [
     "attention",
     "chatgpt",
