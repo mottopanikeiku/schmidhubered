@@ -1,0 +1,136 @@
+{
+  "id": "multiscale-rnn",
+  "title": "Hierarchical recurrent networks with multiple time scales",
+  "matchup": "El Hihi and Bengio (1995) vs Schmidhuber (1991, 1992)",
+  "question": "Should the 1995 hierarchical recurrent networks of El Hihi and Bengio be seen as following Schmidhuber's 1991-93 neural history compressor, rather than as introducing a hierarchy of time scales, as he says?",
+  "usual_credit": {
+    "summary": "Hierarchical recurrent networks with several time scales are usually traced to Salah El Hihi and Yoshua Bengio, whose NIPS 1995 paper 'Hierarchical Recurrent Neural Networks for Long-Term Dependencies' argued that long-term dependencies are represented by variables with a long time scale. Their networks have layers that update at different, fixed rates, implemented with delays and subsampling. Bengio's research page says that this paper introduced the use of a hierarchy of time scales to combat the vanishing gradients issue, and the hierarchical multiscale recurrent network of Chung, Ahn and Bengio (2017) cites it as one of two notable early attempts that inspired its design.",
+    "works": [
+      {
+        "who": "El Hihi, Bengio",
+        "year": 1995,
+        "title": "Hierarchical Recurrent Neural Networks for Long-Term Dependencies (NIPS 1995)",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/1995/hash/c667d53acd899a97a85de0c201ba99be-Abstract.html"
+      },
+      {
+        "who": "Chung, Ahn, Bengio",
+        "year": 2017,
+        "title": "Hierarchical Multiscale Recurrent Neural Networks (ICLR 2017)",
+        "url": "https://arxiv.org/abs/1609.01704"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says that his April 1991 report 'Neural sequence chunkers' and the 1992 Neural Computation paper based on it were the first systems made of recurrent networks working on different, self-organizing time scales. In these systems each level of a hierarchy of recurrent networks receives only the inputs that the level below could not predict, and he says that others started publishing on multi-time scale recurrent networks a few years later. He objects specifically to Bengio's statement, retrieved from Bengio's research page in May 2020, that the NIPS 1995 paper introduced the use of a hierarchy of time scales to combat the vanishing gradients issue, because his own publications on a hierarchy of time scales against that problem date from 1991 to 1993. He lists this among several disputes that all trace back to the same 1991 paper.",
+    "prior_works": [
+      {
+        "who": "Schmidhuber",
+        "year": 1991,
+        "title": "Neural sequence chunkers (technical report FKI-148-91, TU Munich)",
+        "url": "https://people.idsia.ch/~juergen/FKI-148-91ocr.pdf"
+      },
+      {
+        "who": "Schmidhuber",
+        "year": 1992,
+        "title": "Learning complex, extended sequences using the principle of history compression (Neural Computation 4(2))",
+        "url": "https://sferics.idsia.ch/pub/juergen/chunker.pdf"
+      },
+      {
+        "who": "Schmidhuber",
+        "year": 1993,
+        "title": "Netzwerkarchitekturen, Zielfunktionen und Kettenregel (habilitation thesis, TU Munich)",
+        "url": "https://sferics.idsia.ch/pub/juergen/habilitation.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "The systems incrementally learn to define appropriate slower and slower time scales on their own.",
+        "date": "1991-04",
+        "venue": "technical report",
+        "url": "https://people.idsia.ch/~juergen/FKI-148-91ocr.pdf"
+      },
+      {
+        "text": "also was the first system made of RNNs operating on different (self-organizing) time scales",
+        "date": "2019-10",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%201:~:text=also%20was%20the%20first%20system%20made%20of%20RNNs%20operating%20on%20different"
+      },
+      {
+        "text": "A few years later, others also started publishing on multi-time scale RNNs",
+        "date": "2019-10",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%201:~:text=A%20few%20years%20later%2C%20others%20also%20started%20publishing%20on%20multi%2Dtime%20scale"
+      },
+      {
+        "text": "my publications on a hierarchy of time scales to combat the vanishing gradients issue date back to 1991-93",
+        "date": "2023-12-14",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiotimescales:~:text=In%202020%2C%20Bengio%20claimed"
+      }
+    ],
+    "times_made": 3,
+    "first_made": "2019-10",
+    "last_made": "2023-12"
+  },
+  "response": {
+    "summary": "No public reply from Bengio or El Hihi to the 2020 priority claim was found. The 1995 paper itself cites Schmidhuber (1992) and says that a related idea using a hierarchical structure was presented there, although it does not cite the 1991 report. Bengio's research page said in captures of April 2020 and December 2022 that the NIPS 1995 paper introduced the use of a hierarchy of time scales to combat the vanishing gradients issue. A 2001 chapter that Bengio co-authored with Hochreiter, Frasconi and Schmidhuber describes the hierarchical networks of El Hihi and Bengio and Schmidhuber's hierarchical chunker systems in separate paragraphs. In 2017 Chung, Ahn and Bengio named Schmidhuber (1992) and El Hihi and Bengio (1995) as the two notable early attempts that inspired their model, describing the first as self-organizing a hierarchy and the second as updating each layer at a fixed rate.",
+    "quotes": [
+      {
+        "text": "A related idea using a hierarchical structure was presented in (Schmidhuber, 1992).",
+        "who": "El Hihi and Bengio (1995 paper)",
+        "date": "1995",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/1995/file/c667d53acd899a97a85de0c201ba99be-Paper.pdf"
+      },
+      {
+        "text": "The NIPS 1995 paper introduced the use of a hierarchy of time scales to combat the vanishing gradients issue.",
+        "who": "Bengio (research page, capture of 12 April 2020)",
+        "date": "2020-04-12",
+        "url": "https://web.archive.org/web/20200412034718/https://yoshuabengio.org/research/"
+      },
+      {
+        "text": "El Hihi & Bengio [10] looked at hierarchically organized recurrent neural networks with different levels of time-constants or time-delays.",
+        "who": "Hochreiter, Bengio, Frasconi and Schmidhuber (2001 chapter)",
+        "date": "2001",
+        "url": "https://ml.jku.at/publications/older/ch7.pdf"
+      },
+      {
+        "text": "Schmidhuber uses hierarchical recurrent networks with self-organizing time scales",
+        "who": "Hochreiter, Bengio, Frasconi and Schmidhuber (2001 chapter)",
+        "date": "2001",
+        "url": "https://ml.jku.at/publications/older/ch7.pdf"
+      },
+      {
+        "text": "Two notable early attempts inspiring our model are Schmidhuber (1992) and El Hihi & Bengio (1995).",
+        "who": "Chung, Ahn and Bengio (2017 paper)",
+        "date": "2017-03-09",
+        "url": "https://arxiv.org/pdf/1609.01704"
+      },
+      {
+        "text": "The authors propose an RNN architecture that updates each layer with a fixed but different rate, called a hierarchical RNN.",
+        "who": "Chung, Ahn and Bengio (2017 paper, about El Hihi and Bengio)",
+        "date": "2017-03-09",
+        "url": "https://arxiv.org/pdf/1609.01704"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Schmidhuber's report 'Neural sequence chunkers' (FKI-148-91) is dated April 1991, its abstract says that only the input events not expected by the first recurrent net are transferred to the second, and the paper based on it appeared in Neural Computation 4(2):234-242 in March 1992: https://people.idsia.ch/~juergen/FKI-148-91ocr.pdf",
+    "El Hihi and Bengio's 'Hierarchical Recurrent Neural Networks for Long-Term Dependencies' was presented at NIPS 1995 and appears on pages 493-499 of Advances in Neural Information Processing Systems 8: https://proceedings.neurips.cc/paper_files/paper/1995/hash/c667d53acd899a97a85de0c201ba99be-Abstract.html",
+    "The 1995 paper cites Schmidhuber's 1992 paper in its introduction and reference list and does not cite the 1991 report: https://proceedings.neurips.cc/paper_files/paper/1995/file/c667d53acd899a97a85de0c201ba99be-Paper.pdf",
+    "In the 1995 paper the time scales are set by the architecture through discrete delays and subsampling, and its experiments train networks with one to six time scales by backpropagation through time on artificial tasks with sequences of up to 100 steps: https://proceedings.neurips.cc/paper_files/paper/1995/file/c667d53acd899a97a85de0c201ba99be-Paper.pdf",
+    "The 1991 report frames the problem as long time lags that make backpropagated error signals less significant, says that its systems have no pre-wired decay rate and learn their own time scales, and includes a prediction task with a 20-step time lag: https://people.idsia.ch/~juergen/FKI-148-91ocr.pdf",
+    "Bengio's research page said that the NIPS 1995 paper introduced the use of a hierarchy of time scales to combat the vanishing gradients issue in captures of 12 April 2020 and 23 December 2022, and Schmidhuber hosts a copy retrieved on 15 May 2020: https://web.archive.org/web/20200412034718/https://yoshuabengio.org/research/ https://web.archive.org/web/20221223013245/https://yoshuabengio.org/research/ https://people.idsia.ch/~juergen/ResearchYoshuaBengioMay2020text.html"
+  ],
+  "crux": "The dispute is whether a hierarchy of time scales in which a slower recurrent network receives only the inputs that a faster network failed to predict, and in which the time scales organize themselves, counts as the same use of a hierarchy of time scales against long-term dependency problems as El Hihi and Bengio's networks. Their layers update at fixed rates set by delays and subsampling. A narrower question is whether the word 'introduced' on Bengio's research page fits, given that the 1995 paper itself cites the 1992 paper as presenting a related hierarchical idea.",
+  "related": [
+    "pretraining",
+    "vanishing",
+    "hierarchical-rl",
+    "turingaward"
+  ],
+  "instance_urls": [
+    "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%201:~:text=A%20few%20years%20later%2C%20others%20also%20started%20publishing%20on%20multi%2Dtime%20scale",
+    "https://arxiv.org/pdf/2005.05744v1#page=4",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiotimescales:~:text=In%202020%2C%20Bengio%20claimed"
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "id": "test-time-training",
+  "title": "Test-time training",
+  "matchup": "Sun et al. (2020, 2024) and related test-time learning layers vs Schmidhuber (1991, 1992, 1993)",
+  "question": "Should test-time training, in which a model's weights are updated by a learning step while it processes a test input, be seen as something the 1991 fast weight programmers already did, as Schmidhuber says?",
+  "usual_credit": {
+    "summary": "Test-time training under that name is credited to Yu Sun and colleagues, whose 2020 ICML paper proposed updating an image classifier on each unlabeled test sample with a self-supervised task to cope with distribution shift. The 2024 paper 'Learning to (Learn at Test Time)' by Sun, Li, Dalal and others, published at ICML 2025, turned the idea into a sequence layer whose hidden state is itself a small model, either linear or a two-layer MLP, that is updated by gradient steps on a self-supervised loss as the sequence is read. Related work such as Titans by Behrouz, Zhong and Mirrokni (2024) describes itself as learning to memorize at test time.",
+    "works": [
+      {
+        "who": "Sun, Wang, Liu, Miller, Efros, Hardt",
+        "year": 2020,
+        "title": "Test-Time Training with Self-Supervision for Generalization under Distribution Shifts",
+        "url": "http://proceedings.mlr.press/v119/sun20b.html"
+      },
+      {
+        "who": "Sun, Li, Dalal and others",
+        "year": 2024,
+        "title": "Learning to (Learn at Test Time): RNNs with Expressive Hidden States",
+        "url": "https://arxiv.org/abs/2407.04620"
+      },
+      {
+        "who": "Behrouz, Zhong, Mirrokni",
+        "year": 2024,
+        "title": "Titans: Learning to Memorize at Test Time",
+        "url": "https://arxiv.org/abs/2501.00663"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says that the 1991 unnormalized linear Transformer already did test-time training. This is his name for the fast weight controller in which a slow network trained by gradient descent writes outer-product changes into the weights of a fast network while a sequence is processed, and in two posts of 24 June 2026, the first later deleted, he wrote that everybody is talking about test-time training and that this system did it. His 2026 reports on meta learning and recursive self-improvement call the 'in-context learning' and 'test time training' of language models a special case of meta learning that is similar to the 1991 system, and his overview of 1990-91 work lists Titans, MesaNet and the Sun et al. paper among the references for extensions of linear Transformers and other fast weight programmers. On 3 November 2026 he applied the same argument in three posts about a language model that edits another model's weights directly, writing that this is an old hat and exactly what fast weight programmers did in the 1990s.",
+    "prior_works": [
+      {
+        "who": "Schmidhuber",
+        "year": 1991,
+        "title": "Learning to control fast-weight memories: An alternative to recurrent nets (TR FKI-147-91, TU Munich, 26 March 1991)",
+        "url": "https://people.idsia.ch/~juergen/FKI-147-91ocr.pdf"
+      },
+      {
+        "who": "Schmidhuber",
+        "year": 1992,
+        "title": "Learning to control fast-weight memories: An alternative to recurrent nets (Neural Computation 4(1))",
+        "url": "https://sferics.idsia.ch/pub/juergen/fastweights.pdf"
+      },
+      {
+        "who": "Schmidhuber",
+        "year": 1993,
+        "title": "Reducing the ratio between learning complexity and number of time-varying variables in fully recurrent nets (ICANN 1993)",
+        "url": "https://sferics.idsia.ch/pub/juergen/ratio.pdf"
+      },
+      {
+        "who": "Schlag, Irie, Schmidhuber",
+        "year": 2021,
+        "title": "Linear Transformers Are Secretly Fast Weight Programmers (ICML 2021)",
+        "url": "https://arxiv.org/abs/2102.11174"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "Of course, the 1991 Unnormalized Linear Transformer ULTRA did TTT.",
+        "date": "2026-06-24",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2069808010461884539"
+      },
+      {
+        "text": "The \"in-context learning\" and \"test time training\" of recent Large Language Models (LLMs) is a special case of metalearning",
+        "date": "2026",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/metalearning.html#abstract:~:text=The%20%22in%2Dcontext%20learning%22%20and%20%22test%20time%20training%22%20of%20recent%20Large"
+      },
+      {
+        "text": "This so-called \"In-Context Learning\" and \"Test Time Training\" of LLMs is a special case of meta learning, similar to the 1991 unnormalized linear Transformer",
+        "date": "2026-09",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/recursive-self-improvement.html#secllm:~:text=This%20so%2Dcalled%20%22In%2DContext%20Learning%22%20and%20%22Test%20Time%20Training%22%20of%20LLMs"
+      },
+      {
+        "text": "This is an old hat. That's exactly what the fast weight programmers did in the 1990s (including the 1991 unnormalised linear Transformer).",
+        "date": "2026-11-03",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2117446822855888956"
+      },
+      {
+        "text": "That's nothing new: it's exactly what the neural fast weight programmers did in the 1990s",
+        "date": "2026-11-03",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2117449252662382709"
+      }
+    ],
+    "times_made": 7,
+    "first_made": "2026-06",
+    "last_made": "2026-11"
+  },
+  "response": {
+    "summary": "No public reply from the authors of the test-time training papers to the 2026 posts was found. The first version of Sun et al. (July 2024) already cites Schmidhuber's 1992 fast weight paper, says that networks containing TTT layers can be viewed as a special case of fast weight programmers and states that its contribution is to formulate an explicit learning problem for the update. Titans and a December 2025 paper on end-to-end test-time training by Tandon, Dalal, Sun and colleagues also cite the 1992 paper for fast weight programs. A 2025 primer by Irie and Gershman describes MesaNet and Titans as examples of fast weight programmer models in which a local objective is defined directly, refers to test-time training as a related concept, and notes that typical fast weight update rules also correspond to a local objective. A user on X, Raz_Ciuca, answered Schmidhuber's post by calling test-time training a trivial extension of recursive least-squares, and Schmidhuber replied that it is not. The blog post behind the 3 November 2026 replies, 'Sparks of Weight-Space Programming' by Takehi, Teoh, Zhang and Khattab, does not use the terms test-time training or fast weights, and the replies to Schmidhuber's three posts could not be retrieved.",
+    "quotes": [
+      {
+        "text": "networks containing TTT layers can be viewed as a special case of FWPs",
+        "who": "Sun et al. (2024 paper, first version)",
+        "date": "2024-07-05",
+        "url": "https://arxiv.org/pdf/2407.04620v1"
+      },
+      {
+        "text": "In contrast, TTT embraces the idea of formulating an explicit learning problem, where the test instance is the target of generalization.",
+        "who": "Sun et al. (2024 paper, first version)",
+        "date": "2024-07-05",
+        "url": "https://arxiv.org/pdf/2407.04620v1"
+      },
+      {
+        "text": "The idea of seeing linear layers as the key-value (associative) memory system backs to fast weight programs",
+        "who": "Behrouz, Zhong and Mirrokni (Titans)",
+        "date": "2024-12-31",
+        "url": "https://arxiv.org/pdf/2501.00663"
+      },
+      {
+        "text": "the update rules used in typical FWP models have a corresponding local objective function",
+        "who": "Irie and Gershman (2025 primer)",
+        "date": "2025-08-11",
+        "url": "https://arxiv.org/pdf/2508.08435"
+      },
+      {
+        "text": "test-time training can be viewed as a special case of fast weights, with a heavier emphasis on the formulation of an explicit learning problem",
+        "who": "Tandon et al. (end-to-end test-time training paper)",
+        "date": "2025-12-29",
+        "url": "https://arxiv.org/pdf/2512.23675"
+      },
+      {
+        "text": "Which is of course a trivial extension of recursive least-squares (Gauss, 1821)",
+        "who": "Raz_Ciuca (on X)",
+        "date": "2026-06-24",
+        "url": "https://x.com/Raz_Ciuca/status/2069831010959647029"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Schmidhuber's report FKI-147-91 of 26 March 1991 describes a first network that learns to produce context-dependent weight changes for a second network whose weights may vary very quickly: https://people.idsia.ch/~juergen/FKI-147-91ocr.pdf",
+    "The 2020 paper by Sun et al. that proposed 'Test-Time Training' (ICML 2020) adapts image classifiers to distribution shift with a self-supervised task on each test sample, and it does not cite Schmidhuber's work: https://arxiv.org/abs/1909.13231",
+    "The first version of Sun et al.'s 'Learning to (Learn at Test Time)' appeared on arXiv on 5 July 2024, cites Schmidhuber's 1992 Neural Computation paper for fast weight programmers, and a later version of 31 August 2025 extends the related work: https://arxiv.org/abs/2407.04620v1 https://arxiv.org/abs/2407.04620",
+    "Theorem 1 of Sun et al. states that a TTT layer whose inner model is linear, updated by batch gradient descent with a particular step size and zero initial weights, produces the same outputs as linear attention, and Schlag, Irie and Schmidhuber (2021) show the formal equivalence of linearised self-attention and fast weight controllers from the early 1990s: https://arxiv.org/pdf/2407.04620v1 https://arxiv.org/abs/2102.11174",
+    "In the ablation of Sun et al. at 125 million parameters, the layer equivalent to linear attention has a perplexity of 15.23 and TTT-Linear reaches 11.09, and the paper says that the change from batch to mini-batch gradient descent contributes the most improvement: https://arxiv.org/pdf/2407.04620v1",
+    "Schmidhuber's 1990-91 overview page lists Titans, MesaNet and the Sun et al. paper among the references for work on extensions of unnormalized linear Transformers and other fast weight programmers: https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%208",
+    "Schmidhuber's 2026 report describes the in-context learning and test-time training of language models as learning without changing the pre-trained weights through gradient descent during test time, whereas in the TTT layers of Sun et al. the hidden state is a model that is updated by training on the test sequence: https://people.idsia.ch/~juergen/recursive-self-improvement.html https://arxiv.org/pdf/2407.04620v1",
+    "The post that prompted the replies of 3 November 2026 says that GPT-6 Astra edited weights of Qwen3.5-0.8B 'without gradients or training' and calls this Weight-Space Programming: https://x.com/rikiyatakehi/status/2117313742891327994 https://rikiyat.github.io/blog/weight-space-programming/"
+  ],
+  "crux": "The dispute is how much of test-time training is already contained in the 1991 fast weight controller. Schmidhuber's position is that a slow network trained by gradient descent, which writes outer-product changes into the weights of a fast network during a sequence, is what test-time training layers do. Sun et al. agree that their layers can be viewed as a special case of fast weight programmers and that, with a linear model and batch gradient descent, their layer equals linear attention. Their position is that the layers add an explicit learning problem for each update, with mini-batch steps and deeper inner models, and their ablation attributes the largest single improvement to mini-batch updates. A further complication is that the term covers different things, from adapting a classifier on a single test image in 2020 to weight updates inside a sequence layer in 2024 and to a language model editing another model's weights in the posts of 3 November 2026, and it is open whether that last case belongs to the dispute at all.",
+  "related": [
+    "transformers",
+    "fast-weights-2016",
+    "metalearning",
+    "attention"
+  ],
+  "instance_urls": [
+    "https://x.com/SchmidhuberAI/status/2069808010461884539",
+    "https://web.archive.org/web/20260624153125/https://twitter.com/SchmidhuberAI/status/2069805604047053235",
+    "https://people.idsia.ch/~juergen/metalearning.html#abstract:~:text=The%20%22in%2Dcontext%20learning%22%20and%20%22test%20time%20training%22%20of%20recent%20Large",
+    "https://people.idsia.ch/~juergen/recursive-self-improvement.html#secllm:~:text=This%20so%2Dcalled%20%22In%2DContext%20Learning%22%20and%20%22Test%20Time%20Training%22%20of%20LLMs",
+    "https://x.com/SchmidhuberAI/status/2117446822855888956",
+    "https://x.com/SchmidhuberAI/status/2117447416580575628",
+    "https://x.com/SchmidhuberAI/status/2117449252662382709"
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "id": "forward-forward",
+  "title": "Forward-Forward algorithm",
+  "matchup": "Hinton (2022) vs Schmidhuber (1989, 1990, 2021)",
+  "question": "Should Hinton's 2022 Forward-Forward algorithm be seen as related to the local, forward-only learning proposals that Schmidhuber published in 1989, 1990 and 2021, and as owing them a citation, as he says?",
+  "usual_credit": {
+    "summary": "The Forward-Forward algorithm is credited to Geoffrey Hinton, who described it in a December 2022 preprint, 'The Forward-Forward Algorithm: Some Preliminary Investigations'. Instead of a forward and a backward pass, the method runs two forward passes, one on real data and one on negative data, and every layer is trained to have high 'goodness' on the first and low goodness on the second. The paper presents the method as inspired by Boltzmann machines and noise contrastive estimation, as a candidate model of learning in cortex and of learning on low-power analog hardware, and as unlikely to replace backpropagation where power is not an issue.",
+    "works": [
+      {
+        "who": "Hinton",
+        "year": 2022,
+        "title": "The Forward-Forward Algorithm: Some Preliminary Investigations",
+        "url": "https://arxiv.org/abs/2212.13345"
+      },
+      {
+        "who": "Gutmann, Hyvärinen",
+        "year": 2010,
+        "title": "Noise-contrastive estimation: A new estimation principle for unnormalized statistical models",
+        "url": "http://proceedings.mlr.press/v9/gutmann10a.html"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says that in 2022 Hinton proposed a biologically more plausible 'forward-only' deep learning algorithm that, unlike backpropagation, is local in space and time, and that the paper does not mention earlier related proposals from his lab. He points to the neural bucket brigade of 1989, a local learning algorithm based on a 'neural economy' in which neurons pay 'weight substance' to the neurons that activate them, and to his 1990 work on networks adjusting networks and on the neural heat exchanger, which he also describes as local in space and time. He adds a 2021 paper with Louis Kirsch in which small LSTMs take the place of weights and implement backpropagation-like learning solely in forward mode. He writes that Hinton did not copy these proposals directly but did not cite them either, and he notes that the same paper asks whether fast weights could mimic a simplified Transformer while citing only Hinton's 2016 paper, a point covered in the case on fast weights.",
+    "prior_works": [
+      {
+        "who": "Schmidhuber",
+        "year": 1989,
+        "title": "A local learning algorithm for dynamic feedforward and recurrent networks (the neural bucket brigade, Connection Science 1(4))",
+        "url": "https://people.idsia.ch/~juergen/bucketbrigade/bucketbrigade.html"
+      },
+      {
+        "who": "Schmidhuber",
+        "year": 1990,
+        "title": "Networks adjusting networks (workshop proceedings, with extended technical report FKI-125-90, TU Munich)",
+        "url": "https://people.idsia.ch/~juergen/FKI-125-90ocr.pdf"
+      },
+      {
+        "who": "Schmidhuber",
+        "year": 1990,
+        "title": "The Neural Heat Exchanger (talks from 1990, published in the ICONIP 1996 proceedings)",
+        "url": "https://people.idsia.ch/~juergen/heatexchanger/heatexchanger.html"
+      },
+      {
+        "who": "Kirsch, Schmidhuber",
+        "year": 2021,
+        "title": "Meta Learning Backpropagation And Improving It (NeurIPS 2021)",
+        "url": "https://arxiv.org/abs/2012.14905"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "in 2021, our VSML net already meta-learned backprop-like learning algorithms running solely in forward-mode",
+        "date": "2022-12-20",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1605246688939364352"
+      },
+      {
+        "text": "my \"neural economy” was local in space and time (backprop isn't)",
+        "date": "2023-01-12",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1613445742143717376"
+      },
+      {
+        "text": "In 2022, Hinton proposed[HIN22] a biologically more plausible \"forward-only\" deep learning algorithm",
+        "date": "2023-12-14",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonbio:~:text=In%202022%2C%20Hinton%20proposed"
+      },
+      {
+        "text": "While he did not directly plagiarize our earlier related proposals of 1989,[BB2] 1990,[NAN1-5][CC90][NHE][HEL] and 2021,[FWPMETA6] he did not cite them either.",
+        "date": "2023-12-14",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonbio:~:text=While%20he%20did%20not%20directly%20plagiarize"
+      }
+    ],
+    "times_made": 5,
+    "first_made": "2022-12",
+    "last_made": "2023-12"
+  },
+  "response": {
+    "summary": "No public reply from Hinton to the claim was found. The preprint cites no work by Schmidhuber, either in the arXiv version of 27 December 2022 or in the two copies hosted on Hinton's Toronto page. It describes the method as inspired by Boltzmann machines and noise contrastive estimation. It also cites Kohan et al.'s error forward-propagation procedure as having some similarity to its supervised variant, Ren et al. (2022) for training with local objectives and Jabri and Flower (1992) in the context of analog hardware. In the paper's own terms the method replaces the forward and backward passes of backpropagation with two forward passes, one on positive data and one on negative data.",
+    "quotes": [
+      {
+        "text": "The Forward-Forward algorithm is a greedy multi-layer learning procedure inspired by Boltzmann machines (Hinton and Sejnowski, 1986) and Noise Contrastive Estimation",
+        "who": "Hinton (2022 preprint)",
+        "date": "2022-12-27",
+        "url": "https://arxiv.org/pdf/2212.13345"
+      },
+      {
+        "text": "This way of using FF for supervised learning has some similarity to the error forward-propagation procedure (Kohan et al., 2018)",
+        "who": "Hinton (2022 preprint, footnote 10)",
+        "date": "2022-12-27",
+        "url": "https://arxiv.org/pdf/2212.13345"
+      },
+      {
+        "text": "replaces the forward and backward passes of backpropagation by two forward passes, one with positive (i.e. real) data and the other with negative data",
+        "who": "Hinton (2022 preprint, abstract)",
+        "date": "2022-12-27",
+        "url": "https://arxiv.org/pdf/2212.13345"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Schmidhuber's 'A local learning algorithm for dynamic feedforward and recurrent networks', the neural bucket brigade, appeared in Connection Science 1(4):403-412 in 1989, and its abstract describes an on-line algorithm that performs local computations only while still dealing with hidden units: https://people.idsia.ch/~juergen/bucketbrigade/bucketbrigade.html",
+    "The neural heat exchanger was presented in talks from 1990 and published in the proceedings of the 1996 International Conference on Neural Information Processing, and its abstract calls it an alternative supervised learning method for multi-layer neural nets that is entirely local, unlike backpropagation: https://people.idsia.ch/~juergen/heatexchanger/heatexchanger.html",
+    "Kirsch and Schmidhuber's 'Meta Learning Backpropagation And Improving It' appeared as an arXiv preprint in December 2020 and at NeurIPS 2021, and its abstract says that replacing the weights of a network by tiny LSTMs allows the backpropagation learning algorithm to be implemented solely by running in forward mode: https://arxiv.org/abs/2012.14905",
+    "Hinton's paper was posted to arXiv on 27 December 2022, and the arXiv version and two copies on his University of Toronto page list no work by Schmidhuber among their references: https://arxiv.org/abs/2212.13345 https://www.cs.toronto.edu/~hinton/absps/FFXfinal.pdf https://www.cs.toronto.edu/~hinton/FFA13.pdf",
+    "Neither of Schmidhuber's tweets of 20 December 2022 and 12 January 2023 names Hinton or the Forward-Forward paper, since both refer to recent work on 'forward-only' learning, while his priority-disputes page names the 2022 paper in dispute H6: https://x.com/SchmidhuberAI/status/1605246688939364352 https://x.com/SchmidhuberAI/status/1613445742143717376 https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonbio",
+    "Schmidhuber's references for dispute H6 also include the Helmholtz machine paper of Dayan, Hinton, Neal and Zemel (1995), which his page describes as related to his neural heat exchanger, and a 1990 paper by Cotter and Conwell on fixed-weight networks that can learn: https://people.idsia.ch/~juergen/ai-priority-disputes.html#HIN22"
+  ],
+  "crux": "The dispute is whether Hinton's method, which trains each layer to give high goodness on real data and low goodness on negative data using two forward passes, belongs to the same family as Schmidhuber's earlier local learning proposals. Those proposals are the 1989 neural bucket brigade, which moves 'weight substance' between connections in a reinforcement learning economy, the 1990 neural heat exchanger, in which inputs and targets enter a deep pipeline from opposite ends, and the 2021 meta-learned algorithms that run only in forward mode. Schmidhuber himself writes that Hinton did not copy these proposals directly, so the question is narrower than priority for the algorithm, and it concerns whether a paper introducing a new learning procedure with a local, backward-free aim owed a citation to earlier work with a similar aim.",
+  "related": [
+    "synthetic-gradients",
+    "boltzmann",
+    "fast-weights-2016",
+    "metalearning"
+  ],
+  "instance_urls": [
+    "https://x.com/SchmidhuberAI/status/1605246688939364352",
+    "https://x.com/SchmidhuberAI/status/1613445742143717376",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonbio:~:text=In%202022%2C%20Hinton%20proposed",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#HIN22:~:text=Does%20not%20mention%20previous%20related%20work.",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#H6"
+  ]
+}

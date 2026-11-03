@@ -1,0 +1,134 @@
+{
+  "id": "fast-weights-2016",
+  "title": "Fast weights (2016)",
+  "matchup": "Ba, Hinton, Mnih, Leibo and Ionescu (2016) vs Schmidhuber (1991, 1992, 1993)",
+  "question": "Should the 2016 paper 'Using Fast Weights to Attend to the Recent Past' be seen as a republication of Schmidhuber's 1991-93 fast weight programmers, as he says?",
+  "usual_credit": {
+    "summary": "The 2016 NIPS paper by Jimmy Ba, Geoffrey Hinton, Volodymyr Mnih, Joel Leibo and Catalin Ionescu is usually cited as the work that brought fast weights back into recurrent networks for sequence processing. It adds to a recurrent network a matrix of fast weights that stores outer products of recent hidden states and decays quickly, which the authors present as a neurally plausible form of attention to the recent past, and it credits Hinton and Plaut (1987) with suggesting that fast weights could allow true recursion. The 2021 ACM Turing lecture of Bengio, LeCun and Hinton cites it for the statement that fast weights create a high-capacity, short-term memory, and Hinton's 2022 Forward-Forward paper cites it again when asking whether fast weights could mimic a simplified Transformer.",
+    "works": [
+      {
+        "who": "Ba, Hinton, Mnih, Leibo, Ionescu",
+        "year": 2016,
+        "title": "Using Fast Weights to Attend to the Recent Past",
+        "url": "https://arxiv.org/abs/1610.06258"
+      },
+      {
+        "who": "Hinton, Plaut",
+        "year": 1987,
+        "title": "Using fast weights to deblur old memories",
+        "url": "https://www.cs.toronto.edu/~hinton/absps/fastweights87.pdf"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says that his 1991 report and 1992 Neural Computation paper on 'fast weight controllers' already described a slow network that learns by gradient descent to compute the weight changes of a fast network. He says his 1993 ICANN paper extended this to a single recurrent network that reprograms its own fast weights through outer-product changes, motivated by raising the number of time-varying variables from the order of H to the order of H squared for H hidden units. He says the 2016 paper did not make clear that much of it was a republication of this work and of that motivation, and he objects to its sentence that his 1993 paper did not implement 'this method of achieving recursion', because his earlier papers described experiments with such an implementation. He adds that the 2021 Turing lecture refers to the 2016 paper without clarifying that the idea was first described in the 1991-93 papers, and that Hinton's 2022 Forward-Forward paper again cites only his own 2016 paper. He also notes that the older fast weights of von der Malsburg (1981) and Feldman (1982) did not have networks programming the fast weight changes of other networks.",
+    "prior_works": [
+      {
+        "who": "Schmidhuber",
+        "year": 1991,
+        "title": "Learning to control fast-weight memories: An alternative to recurrent nets (TR FKI-147-91, TU Munich, 26 March 1991)",
+        "url": "https://people.idsia.ch/~juergen/FKI-147-91ocr.pdf"
+      },
+      {
+        "who": "Schmidhuber",
+        "year": 1992,
+        "title": "Learning to control fast-weight memories: An alternative to recurrent nets (Neural Computation 4(1))",
+        "url": "https://sferics.idsia.ch/pub/juergen/fastweights.pdf"
+      },
+      {
+        "who": "Schmidhuber",
+        "year": 1993,
+        "title": "Reducing the ratio between learning complexity and number of time-varying variables in fully recurrent nets (ICANN 1993)",
+        "url": "https://sferics.idsia.ch/pub/juergen/ratio.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "A quarter century later, others followed this approach.",
+        "date": "2019-10",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%208:~:text=A%20quarter%20century%20later%2C%20others%20followed%20this%20approach."
+      },
+      {
+        "text": "Hinton's 2016 paper[FWP4a] did not make clear that much of it was a rehash of my papers on fast weight programmers",
+        "date": "2023-12-14",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonfast:~:text=Hinton%27s%202016%20paper"
+      },
+      {
+        "text": "ignoring my even earlier papers[FWP0-1] which did describe experiments with such an implementation",
+        "date": "2023-12-14",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonfast:~:text=ignoring%20my%20even%20earlier%20papers"
+      },
+      {
+        "text": "As recently as of 2022, Hinton[HIN22] asks: \"For sequential data, is it possible to use fast weights to mimic a simplified Transformer?\"",
+        "date": "2023-12-14",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonfast:~:text=As%20recently%20as%20of%202022%2C%20Hinton"
+      },
+      {
+        "text": "This motivation and a variant of the method was republished over two decades later.",
+        "date": "2025",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/fast-weight-programmer-1991-transformer.html#sec3:~:text=This%20motivation%20and%20a%20variant%20of%20the%20method%20was%20republished%20over%20two"
+      }
+    ],
+    "times_made": 6,
+    "first_made": "2019-10",
+    "last_made": "2025"
+  },
+  "response": {
+    "summary": "No public reply from Hinton or his co-authors to the claim was found. The 2016 paper cites Schmidhuber (1993) and Hochreiter and Schmidhuber (1997) but not the 1991 report or the 1992 journal paper. It credits Hinton and Plaut (1987) with suggesting that fast weights could allow true recursion and adds that neither that paper nor Schmidhuber's 1993 paper actually implemented this method of achieving recursion. The 1987 paper lists truly recursive processing among the possible uses of fast weights. A 2025 primer by Irie and Gershman, whose first author has co-authored papers with Schmidhuber, writes that Ba et al. connected a special instantiation of recurrent fast weight programmers (Schmidhuber, 1993) to a form of attention.",
+    "quotes": [
+      {
+        "text": "Schmidhuber [1993] pointed out that a system of this kind could be trained end-to-end using backpropagation",
+        "who": "Ba et al. (2016 paper)",
+        "date": "2016-10-20",
+        "url": "https://arxiv.org/pdf/1610.06258"
+      },
+      {
+        "text": "but neither of these papers actually implemented this method of achieving recursion.",
+        "who": "Ba et al. (2016 paper, same sentence)",
+        "date": "2016-10-20",
+        "url": "https://arxiv.org/pdf/1610.06258"
+      },
+      {
+        "text": "It can be used to allow truly recursive processing.",
+        "who": "Hinton and Plaut (1987 paper)",
+        "date": "1987",
+        "url": "https://www.cs.toronto.edu/~hinton/absps/fastweights87.pdf"
+      },
+      {
+        "text": "a special instantiation of recurrent FWPs (Schmidhuber, 1993b) (in which a recurrent hidden state is used as both keys and values)",
+        "who": "Irie and Gershman (2025 primer, about Ba et al.)",
+        "date": "2025-08-11",
+        "url": "https://arxiv.org/pdf/2508.08435"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Schmidhuber's report FKI-147-91 is dated 26 March 1991 and the journal version appeared in Neural Computation 4(1) in 1992, and the report's two experiments are a flip-flop task with unknown time delays and a temporary variable binding task: https://people.idsia.ch/~juergen/FKI-147-91ocr.pdf",
+    "Schmidhuber's 1993 ICANN paper (pages 460-463) includes the weights of a fully recurrent network among the time-varying variables that can store temporal information, and changes them with an update that adds a product of unit activations passed through differentiable thresholding functions: https://sferics.idsia.ch/pub/juergen/ratio.pdf",
+    "Ba et al. posted their paper to arXiv on 20 October 2016 and published it at NIPS 2016, and its references include Hinton and Plaut (1987), Schmidhuber (1993) and Hochreiter and Schmidhuber (1997) but no other work by Schmidhuber: https://arxiv.org/abs/1610.06258 https://proceedings.neurips.cc/paper_files/paper/2016/hash/9f44e956e3a2b7b5598c625fcc802c36-Abstract.html",
+    "Both the 2016 paper and the 1993 paper update a weight matrix during a sequence by adding products of unit activations and train the slow weights by gradient descent. The 2016 paper adds exponential decay (0.95 in its experiments), layer normalization and an inner loop of settling steps, and it shows that the fast weight matrix is equivalent to attending to earlier hidden states: https://arxiv.org/pdf/1610.06258",
+    "The 2021 Turing lecture cites Ba et al. (2016) for the statement that fast weights create a high-capacity, short-term memory, and Schmidhuber's Turing-award page gives the year of that paper as 2014 while his priority-disputes page gives 2016: https://www.cs.toronto.edu/~hinton/absps/ACM21.pdf https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonfast",
+    "Hinton's 2022 Forward-Forward paper asks whether fast weights can be used to mimic a simplified Transformer and cites Ba et al. (2016) for the question: https://arxiv.org/pdf/2212.13345"
+  ],
+  "crux": "The dispute is whether the 2016 recurrent network with decaying outer-product fast weights is a republication of Schmidhuber's 1993 recurrent fast weight programmer and its 1991-92 feed-forward precursors, or a separate proposal that builds on Hinton and Plaut's 1987 idea and adds decay, layer normalization and an interpretation as attention. A narrower question concerns the 2016 sentence saying that neither Hinton and Plaut nor the 1993 paper actually implemented the method of achieving recursion. Schmidhuber points to the experiments of his 1991 report, which are a flip-flop task with unknown time delays and a temporary variable binding task, and the question is whether those count as implementing what the 2016 sentence describes.",
+  "related": [
+    "transformers",
+    "attention",
+    "test-time-training",
+    "forward-forward",
+    "turingaward"
+  ],
+  "instance_urls": [
+    "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%208:~:text=A%20quarter%20century%20later%2C%20others%20followed%20this%20approach.",
+    "https://arxiv.org/pdf/2005.05744v1#page=11",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20refer%20to%20Hinton%27s%202014%20paper%20on%20%22a%20high%2Dcapacity%2C%20short%2Dterm",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonfast:~:text=Hinton%27s%202016%20paper",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonfast:~:text=As%20recently%20as%20of%202022%2C%20Hinton",
+    "https://people.idsia.ch/~juergen/fast-weight-programmer-1991-transformer.html#sec3:~:text=This%20motivation%20and%20a%20variant%20of%20the%20method%20was%20republished%20over%20two"
+  ]
+}

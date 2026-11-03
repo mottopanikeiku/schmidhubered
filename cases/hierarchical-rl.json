@@ -43,8 +43,8 @@
       },
       {
         "who": "Jürgen Schmidhuber and Reiner Wahnsiedler",
-        "year": 1992,
-        "title": "Planning simple trajectories using neural subgoal generators",
+        "year": 1993,
+        "title": "Planning Simple Trajectories Using Neural Subgoal Generators (SAB 1992 proceedings, published 1993)",
         "url": "https://sferics.idsia.ch/pub/juergen/subgoalsab.pdf"
       }
     ],
@@ -108,7 +108,7 @@
     ]
   },
   "agreed_facts": [
-    "Schmidhuber's technical report FKI-129-90 appeared in 1990, his paper \"Learning to generate sub-goals for action sequences\" in 1991, and his paper with Wahnsiedler on neural subgoal generators in 1992.",
+    "Schmidhuber's technical report FKI-129-90 appeared in 1990, his paper \"Learning to generate sub-goals for action sequences\" in 1991, and his paper with Wahnsiedler on neural subgoal generators in the 1993 proceedings of SAB 1992.",
     "Dayan and Hinton's \"Feudal Reinforcement Learning\" appeared in Advances in Neural Information Processing Systems 5, and Sutton, Precup and Singh's options paper appeared in Artificial Intelligence in 1999.",
     "LeCun's paper of 27 June 2022 lists learning hierarchical representations and plans at multiple levels of abstraction and time scales as one of three main challenges and proposes a hierarchical joint-embedding architecture for planning.",
     "Schmidhuber announced his critique of LeCun's paper on X on 7 July 2022."
