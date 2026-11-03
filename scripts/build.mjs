@@ -25,7 +25,12 @@ const byId = new Map(cases.map((c) => [c.id, c]));
 const issues = readJSON('data/issues.json', {});
 const seed = loadSeed();
 const rules = loadRules();
+// Statements read and confirmed as claims that no single case covers (newest first), and the tracker's
+// unreviewed posts, minus any that have since been reviewed into that list.
+const recent = readJSON('data/recent.json', []).slice().sort((a, b) => b.date.localeCompare(a.date));
+const reviewedIds = new Set(recent.map((p) => p.id));
 const posts = readJSON('data/latest.json', [])
+  .filter((p) => !reviewedIds.has(p.id))
   .map((p) => ({ ...p, cases: matchCases(p.text, rules), likely_claim: likelyClaim(p.text) }))
   .sort((a, b) => b.created_at.localeCompare(a.created_at));
 
@@ -275,14 +280,23 @@ function instanceItem(i) {
   return `<li class="inst"><p class="inst-meta">${timeTag(i.date, { short: true })} · ${venueLink(i.venue, i.url)}${flags}</p>${quote}</li>`;
 }
 
+function postContext(p) {
+  const parts = [p.reply_to ? `replying to <a href="${esc(p.reply_to)}" rel="noopener">a post</a>` : '', p.quoting ? `quoting <a href="${esc(p.quoting)}" rel="noopener">a post</a>` : ''].filter(Boolean);
+  return parts.length ? ` <span class="ctx">${parts.join(', ')}</span>` : '';
+}
+
 function postItem(p, r, { showCases = true } = {}) {
   const when = p.created_at.slice(0, 10);
   const caseLinks = p.cases.map((id) => (byId.has(id) ? `<a href="${r}cases/${id}/">${esc(byId.get(id).title)}</a>` : esc(id)));
-  const context = [p.reply_to ? `replying to <a href="${esc(p.reply_to)}" rel="noopener">a post</a>` : '', p.quoting ? `quoting <a href="${esc(p.quoting)}" rel="noopener">a post</a>` : ''].filter(Boolean).join(', ');
   const match = caseLinks.length ? `seems to match ${caseLinks.join(', ')}` : 'matches no case by keyword';
   const matches = showCases ? `<p class="post-cases">${p.likely_claim ? 'Worded like a priority claim' : 'Not worded like a priority claim'}, and ${match}.</p>` : '';
-  return `<li class="inst auto"><p class="inst-meta">${timeTag(when, { short: true })} · <a href="${esc(p.url)}" rel="noopener">X</a> <span class="tag">found automatically, not yet reviewed</span>${context ? ` <span class="ctx">${context}</span>` : ''}</p>
+  return `<li class="inst auto"><p class="inst-meta">${timeTag(when, { short: true })} · <a href="${esc(p.url)}" rel="noopener">X</a> <span class="tag">found automatically, not yet reviewed</span>${postContext(p)}</p>
 ${verbatim(p.text)}${matches}</li>`;
+}
+
+function reviewedItem(p) {
+  return `<li class="inst"><p class="inst-meta">${timeTag(p.date.slice(0, 10), { short: true })} · <a href="${esc(p.url)}" rel="noopener">X</a>${postContext(p)}</p>
+${verbatim(p.text)}</li>`;
 }
 
 // ---------------------------------------------------------------- case pages
@@ -375,14 +389,31 @@ function minYear(c) {
   return ys.length ? Math.min(...ys) : 9999;
 }
 
-function latestLine(r) {
-  const p = posts.find((x) => x.likely_claim);
-  if (p) {
-    return `<p class="latest-line">The most recent claim picked up by the daily check of his posts is <a href="${esc(p.url)}" rel="noopener">a post on X from ${esc(fmtDate(p.created_at.slice(0, 10)))}</a>, which is listed with other unreviewed posts under <a href="${r}latest/">Latest</a>.</p>`;
-  }
-  let best = null;
-  for (const c of cases) for (const i of caseInstances(c, seed)) if (i.date && (!best || dateKey(i.date) > dateKey(best.date)) && dateKey(i.date) !== '9999') best = i;
-  return best ? `<p class="latest-line">The most recent claim in the case files is <a href="${esc(best.url)}" rel="noopener">a statement from ${esc(fmtDate(best.date))}</a>.</p>` : '';
+const WHAT = { X: 'a post on X', website: 'a passage on his website', paper: 'a passage in a paper', LinkedIn: 'a post on LinkedIn', Reddit: 'a comment on Reddit', interview: 'an interview', letter: 'a letter', talk: 'a talk' };
+
+// The opening words of a statement for the home page: no leading @handles or links, cut at a word
+// boundary and before any parenthesis the cut would leave open.
+function opening(text, max = 110) {
+  let s = String(text || '').replace(/^(?:@\w+\s+)+/, '').replace(/https?:\/\/\S+/g, '').replace(/\s+/g, ' ').trim();
+  if (s.length <= max) return s;
+  s = s.slice(0, s.lastIndexOf(' ', max));
+  const open = s.lastIndexOf('(');
+  if (open > 0 && s.indexOf(')', open) < 0) s = s.slice(0, open);
+  return s.replace(/[\s,;:(–-]+$/, '') + '…';
+}
+
+// The newest claim on record: case statements, reviewed recent statements and flagged tracker posts.
+function latestLine() {
+  const all = [
+    ...cases.flatMap((c) => caseInstances(c, seed)).filter((i) => dateKey(i.date) !== '9999')
+      .map((i) => ({ key: dateKey(i.date), date: i.date, url: i.url, text: i.quote, venue: i.venue })),
+    ...recent.map((p) => ({ key: p.date, date: p.date.slice(0, 10), url: p.url, text: p.text, venue: 'X' })),
+    ...posts.filter((p) => p.likely_claim).map((p) => ({ key: p.created_at, date: p.created_at.slice(0, 10), url: p.url, text: p.text, venue: 'X', unreviewed: true })),
+  ].sort((a, b) => b.key.localeCompare(a.key));
+  const best = all[0];
+  if (!best) return '';
+  const words = opening(best.text);
+  return `<p class="latest-line">The most recent recorded claim is <a href="${esc(best.url)}" rel="noopener">${WHAT[best.venue] || 'a statement'} from ${esc(fmtDate(best.date))}</a>${best.unreviewed ? ', not yet reviewed' : ''}${words ? `: “${esc(words)}”` : '.'}</p>`;
 }
 
 function homePage() {
@@ -410,7 +441,7 @@ ${tally(c)}
 <p class="dek">${TAGLINE}</p>
 <div class="intro">
 <p>For thirty years Jürgen Schmidhuber has argued in public that results credited to others, in machine learning and well beyond it, were published earlier, often by his own lab and sometimes by researchers he believes were overlooked. Each case below sets out who is usually credited, what he says came first in his own words, how the other side has answered and the exact point in dispute. You vote by reacting to the case’s issue on GitHub, so each account counts once and the arguments stay in public.</p>
-${latestLine(r)}
+${latestLine()}
 </div>
 </header>
 
@@ -448,15 +479,21 @@ function latestPage() {
   const shown = posts.filter((p) => p.likely_claim || p.cases.length);
   const others = posts.length - shown.length;
   const since = posts.length ? fmtDate(posts[posts.length - 1].created_at.slice(0, 10)) : null;
+  const reviewed = recent.length
+    ? `<p>These posts were read and confirmed as priority claims, but each answers something that no single case covers, so they are kept here instead of in a case file.</p>
+<ol class="instances">${recent.map(reviewedItem).join('\n')}</ol>`
+    : '<p>No statement outside the case files has been reviewed yet.</p>';
+  const unreviewed = `${shown.length ? `<ol class="instances">${shown.map((p) => postItem(p, r)).join('\n')}</ol>` : '<p>The daily check has not picked up any new posts since the catalogue was compiled, so nothing is waiting for review.</p>'}
+${posts.length ? `<p class="note">The daily check has picked up ${plural(posts.length, 'new post')} since ${esc(since)}${others ? `, and ${others === 1 ? 'one of them is' : `${others} of them are`} not listed because ${others === 1 ? 'it matched' : 'they matched'} no case and used no claim wording` : ''}. A post is flagged when it names a year between 1960 and 2016 together with a word such as invented, first, published, cite or old hat, and it is matched to cases by keyword, as the <a href="${r}about/">About</a> page describes in more detail.</p>` : ''}`;
   const body = `<div class="wrap prose-page">
 <header class="page-head">
 <h1>Latest</h1>
-<p class="lede">A script reads his newest posts on X once a day and lists here the ones that look like priority claims, newest first. Nothing on this page has been reviewed yet, so a match below only means that the wording resembles a case, until the post is read and added to a case file by hand.</p>
+<p class="lede">This page collects his newest statements that are not part of a case file. The first list holds posts that have been read and confirmed as priority claims but fit no single case, while the second holds posts that a daily script picked up from X and nobody has reviewed yet, so a match there only means that the wording resembles a case.</p>
 </header>
-${shown.length ? `<ol class="instances latest">${shown.map((p) => postItem(p, r)).join('\n')}</ol>` : '<p>The daily check has not picked up any new posts since the catalogue was compiled, so there is nothing waiting for review.</p>'}
-${posts.length ? `<p class="note">The daily check has picked up ${plural(posts.length, 'new post')} since ${esc(since)}${others ? `, and ${others === 1 ? 'one of them is' : `${others} of them are`} not listed because ${others === 1 ? 'it matched' : 'they matched'} no case and used no claim wording` : ''}. A post is flagged when it names a year between 1960 and 2016 together with a word such as invented, first, published, cite or old hat, and it is matched to cases by keyword, as the <a href="${r}about/">About</a> page describes in more detail.</p>` : ''}
+${block('reviewed', 'Reviewed, not tied to a case', reviewed)}
+${block('unreviewed', 'Found automatically, not yet reviewed', unreviewed)}
 </div>`;
-  return layout({ at: 'latest/', title: 'Latest', nav: 'latest', body, description: 'His newest posts on X that look like priority claims, found automatically and not yet reviewed.' });
+  return layout({ at: 'latest/', title: 'Latest', nav: 'latest', body, description: 'His newest statements on X: reviewed claims that fit no single case, and posts found automatically that are not yet reviewed.' });
 }
 
 // ---------------------------------------------------------------- about
@@ -477,7 +514,7 @@ ${block('voting', 'How voting works', `<p>Each case has an issue in the site’s
 
 ${block('limits', 'What a vote can tell you', `<p>A vote here is the opinion of someone with a GitHub account who found the site, which makes the totals a poll of interested readers and not a measure of expert agreement or of what happened. A person with two accounts can vote twice and a link shared in one community can move a count within hours, so the numbers are best read next to the case and never instead of it.</p>`)}
 
-${block('new-posts', 'New posts', `<p>A scheduled job reads his latest posts on X once a day and lists new ones on the <a href="${r}latest/">Latest</a> page. It flags a post as a likely claim when the text names a year between 1960 and 2016 (or a decade such as the 1990s) and also uses a word such as invented, first, published, introduced, cite, plagiarism, old hat, nothing new, based on or essentially, and it matches posts to cases with the keyword patterns used to build the catalogue. Flagged posts also appear on the matching case pages, marked as found automatically and not yet reviewed, until someone reads them and adds them to the case file.</p>`)}
+${block('new-posts', 'New posts', `<p>A scheduled job reads his latest posts on X once a day and lists new ones on the <a href="${r}latest/">Latest</a> page. It flags a post as a likely claim when the text names a year between 1960 and 2016 (or a decade such as the 1990s) and also uses a word such as invented, first, published, introduced, cite, plagiarism, old hat, nothing new, based on or essentially, and it matches posts to cases with the keyword patterns used to build the catalogue. Flagged posts also appear on the matching case pages, marked as found automatically and not yet reviewed, until someone reads them and adds them to the case file. Posts that have been read and confirmed as claims but fit no single case are listed separately on the same page.</p>`)}
 
 ${block('corrections', 'Corrections', `<p>If a quote is wrong, a source is missing or a case misstates either side, please <a href="${REPO_URL}/issues/new" rel="noopener">open an issue</a> with the page and the correction, or comment on the case’s own issue. Pull requests that edit the files in <code>cases/</code> are welcome as well, since each case is a single JSON file.</p>`)}
 

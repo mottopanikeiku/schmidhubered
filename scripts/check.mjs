@@ -92,6 +92,17 @@ for (const f of ['seed/cases_seed.json', 'seed/unassigned.json']) {
   });
 }
 if (Array.isArray(latest)) latest.forEach((p, i) => scan(`data/latest.json[${i}].text`, p?.text, true));
+
+const recent = readJSON('data/recent.json', []);
+if (!Array.isArray(recent)) errors.push('data/recent.json: must be an array of reviewed posts');
+else {
+  recent.forEach((p, i) => {
+    for (const k of ['id', 'url', 'date', 'text']) if (typeof p?.[k] !== 'string' || !p[k]) errors.push(`data/recent.json[${i}]: "${k}" must be a non-empty string`);
+    if (p?.date && Number.isNaN(Date.parse(p.date))) errors.push(`data/recent.json[${i}]: date "${p.date}" is not a date`);
+    scan(`data/recent.json[${i}].text`, p?.text, true);
+  });
+  if (new Set(recent.map((p) => p?.id)).size !== recent.length) errors.push('data/recent.json: an id appears twice');
+}
 for (const f of ['README.md']) if (fs.existsSync(path.join(ROOT, f))) scan(f, fs.readFileSync(path.join(ROOT, f), 'utf8'), false);
 
 // ---------------------------------------------------------------- links

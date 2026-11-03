@@ -1,7 +1,7 @@
 // Finds new posts by @SchmidhuberAI and appends them to data/latest.json, newest first.
 //   node scripts/track.mjs              read his latest posts through api.fxtwitter.com
 //   node scripts/track.mjs <id> [<id>]  also fetch these post ids directly (Twitter's embed endpoint)
-// Posts already in seed/known_post_ids.json or data/latest.json are skipped. Each new post gets the
+// Posts already in seed/known_post_ids.json, data/latest.json or data/recent.json are skipped. Each new post gets the
 // case ids whose patterns in seed/case_rules.json match it and a likely_claim flag (see lib.mjs).
 // When fxtwitter cannot be reached the run warns and exits successfully, so the schedule never fails on it.
 import fs from 'node:fs';
@@ -14,7 +14,12 @@ const FILE = path.join(ROOT, 'data/latest.json');
 const UA = 'schmidhubered-tracker (+https://github.com/mottopanikeiku/schmidhubered)';
 
 const latest = readJSON('data/latest.json', []);
-const known = new Set([...readJSON('seed/known_post_ids.json', []), ...latest.map((p) => p.id)]);
+// Already catalogued, already tracked, or already reviewed into data/recent.json.
+const known = new Set([
+  ...readJSON('seed/known_post_ids.json', []),
+  ...latest.map((p) => p.id),
+  ...readJSON('data/recent.json', []).map((p) => p.id),
+]);
 const rules = loadRules();
 const own = (name) => String(name || '').toLowerCase() === HANDLE.toLowerCase();
 const postUrl = (user, id) => `https://x.com/${user}/status/${id}`;
