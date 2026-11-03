@@ -242,5 +242,66 @@
     "https://x.com/SchmidhuberAI/status/2101268421048520809",
     "https://x.com/SchmidhuberAI/status/2101275869071171879",
     "https://x.com/SchmidhuberAI/status/2101315260082712831"
-  ]
+  ],
+  "card": {
+    "category": "Awards",
+    "headline": "2018 Turing Award",
+    "credited": {
+      "who": "Bengio, Hinton, LeCun",
+      "year": 2018,
+      "what": "ACM Turing Award"
+    },
+    "challenger": {
+      "who": "Ivakhnenko, Amari, Linnainmaa, others",
+      "year": 1965,
+      "what": "Earlier deep learning foundations"
+    },
+    "question": "Does the 2018 Turing Award credit its laureates with methods others published first?",
+    "claim": "He says ACM praised the laureates for methods first published by others, such as Ivakhnenko, Linnainmaa and Fukushima, whom the laureates did not cite.",
+    "pushback": "LeCun says making an idea work at scale is a separate contribution, and ACM's text credits experiments and engineering as well as concepts.",
+    "crux": "The question is whether the award text misstates where deep learning came from, or fairly describes what the three laureates added.",
+    "his_quote": {
+      "text": "ACM lauds the awardees for work based on algorithms and conceptual foundations first published by other researchers whom the awardees failed to cite",
+      "date": "2020-06-25",
+      "url": "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html"
+    },
+    "their_quote": {
+      "who": "Yann LeCun, 2022",
+      "text": "He has an unusual idea about how credit should be attributed.",
+      "date": "2022-12-13",
+      "url": "https://analyticsindiamag.com/ai-features/angels-demons-of-ai"
+    },
+    "timeline": [
+      {
+        "year": 1965,
+        "label": "Ivakhnenko's multilayer learning work",
+        "side": "challenger"
+      },
+      {
+        "year": 1970,
+        "label": "Linnainmaa's reverse-mode differentiation thesis",
+        "side": "challenger"
+      },
+      {
+        "year": 1980,
+        "label": "Fukushima's neocognitron",
+        "side": "challenger"
+      },
+      {
+        "year": 2019,
+        "label": "ACM announces the 2018 Turing Award",
+        "side": "credited"
+      },
+      {
+        "year": 2020,
+        "label": "His critique of ACM's justification",
+        "side": "challenger"
+      },
+      {
+        "year": 2021,
+        "label": "Laureates publish their Turing Lecture",
+        "side": "credited"
+      }
+    ]
+  }
 }

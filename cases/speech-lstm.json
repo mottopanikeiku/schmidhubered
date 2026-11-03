@@ -120,5 +120,66 @@
     "https://people.idsia.ch/~juergen/ai-priority-disputes.html#highway:~:text=LBH%20also%20have%20participated%20in%20other%20PR%20work%20that%20has%20misled%20many.%20For",
     "https://people.idsia.ch/~juergen/ai-priority-disputes.html#highway:~:text=Similarly%2C%20in%202016%2C%20the%20NY%20Times%20published%20an%20article",
     "https://x.com/SchmidhuberAI/status/1894779433955037284"
-  ]
+  ],
+  "card": {
+    "category": "Awards",
+    "headline": "Speech and translation breakthroughs",
+    "credited": {
+      "who": "Hinton et al.",
+      "year": 2012,
+      "what": "Deep acoustic models for speech"
+    },
+    "challenger": {
+      "who": "Hochreiter, Schmidhuber, Graves",
+      "year": 1997,
+      "what": "LSTM and CTC training"
+    },
+    "question": "Did speech and translation gains credited to Hinton and Bengio come mostly from LSTM?",
+    "claim": "He says the speech and translation advances came mainly from his group's LSTM and CTC, which Hinton's 2012 speech review did not cite.",
+    "pushback": "The 2012 review covers deep feedforward speech models and the ACM credits Bengio's attention method, and neither claims LSTM or CTC for those groups.",
+    "crux": "The question is how award citations and press coverage should divide credit between deep acoustic models, attention, and LSTM with CTC.",
+    "his_quote": {
+      "text": "Hinton et al. (2012) still used the old hybrid approach",
+      "date": "2021-09-24",
+      "url": "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#A:~:text=Hinton%20et%20al.%20%282012%29%20still%20used%20the%20old%20hybrid%20approach"
+    },
+    "their_quote": {
+      "who": "ACM Turing Award announcement, 2019",
+      "text": "His group also introduced a form of attention mechanism which led to breakthroughs in machine translation",
+      "date": "2019-03-27",
+      "url": "https://awards.acm.org/binaries/content/assets/press-releases/2019/march/turing-award-2018.pdf"
+    },
+    "timeline": [
+      {
+        "year": 1997,
+        "label": "LSTM published in Neural Computation",
+        "side": "challenger"
+      },
+      {
+        "year": 2006,
+        "label": "CTC training method presented at ICML",
+        "side": "challenger"
+      },
+      {
+        "year": 2012,
+        "label": "Speech review by Hinton and three other groups",
+        "side": "credited"
+      },
+      {
+        "year": 2014,
+        "label": "Sequence-to-sequence translation with LSTM",
+        "side": "neutral"
+      },
+      {
+        "year": 2015,
+        "label": "Google voice search adopts CTC-trained LSTM",
+        "side": "neutral"
+      },
+      {
+        "year": 2019,
+        "label": "ACM Turing Award announcement",
+        "side": "credited"
+      }
+    ]
+  }
 }

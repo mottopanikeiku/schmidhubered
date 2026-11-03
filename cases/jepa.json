@@ -137,5 +137,66 @@
     "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_lecun-claims-7-that-my-1990-paper-on-world-activity-7481231432674320384-mvMa",
     "https://x.com/SchmidhuberAI/status/2101707376201973917",
     "https://x.com/SchmidhuberAI/status/2102009688766185749"
-  ]
+  ],
+  "card": {
+    "category": "Architectures",
+    "headline": "JEPA",
+    "credited": {
+      "who": "Yann LeCun",
+      "year": 2022,
+      "what": "Joint embedding predictive architecture"
+    },
+    "challenger": {
+      "who": "Schmidhuber and Prelinger",
+      "year": 1992,
+      "what": "Predictability maximization (PMAX)"
+    },
+    "question": "Is LeCun's 2022 JEPA essentially the same idea as the 1992 PMAX system?",
+    "claim": "He says his 1992 PMAX trained two networks so that one predicts the other's internal representation, and that LeCun did not cite it.",
+    "pushback": "LeCun says JEPA names a class of architectures going back to Becker and Hinton's 1989 work, and that Schmidhuber did not invent it either.",
+    "crux": "The question is whether JEPA matches PMAX specifically, or only shares a general design going back to Becker and Hinton's 1989 work.",
+    "his_quote": {
+      "text": "JEPA is essentially identical to our 1992 Predictability Maximization system",
+      "date": "2026-03-31",
+      "url": "https://people.idsia.ch/~juergen/who-invented-jepa.html#:~:text=However%2C%20the%20core%20ideas%20are%20not%20original%20to%20LeCun.%20Instead%2C%20JEPA%20is"
+    },
+    "their_quote": {
+      "who": "Yann LeCun, 2026",
+      "text": "JEPA is a class of architectures, not a method. There were lots of JEPAs before I proposed the name as a unifying concept.",
+      "date": "2026-03-24",
+      "url": "https://x.com/ylecun/status/2036529737120497859"
+    },
+    "timeline": [
+      {
+        "year": 1989,
+        "label": "Becker and Hinton's joint-embedding report",
+        "side": "neutral"
+      },
+      {
+        "year": 1992,
+        "label": "PMAX technical report",
+        "side": "challenger"
+      },
+      {
+        "year": 2022,
+        "label": "LeCun's JEPA position paper",
+        "side": "credited"
+      },
+      {
+        "year": 2023,
+        "label": "I-JEPA applies the idea to images",
+        "side": "credited"
+      },
+      {
+        "year": 2026,
+        "label": "His posts say JEPA repeats PMAX",
+        "side": "challenger"
+      },
+      {
+        "year": 2026,
+        "label": "LeCun points to Becker and Hinton instead",
+        "side": "credited"
+      }
+    ]
+  }
 }

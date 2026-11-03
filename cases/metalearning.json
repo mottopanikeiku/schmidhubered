@@ -142,5 +142,66 @@
     "https://x.com/SchmidhuberAI/status/2106136361950642547",
     "https://x.com/SchmidhuberAI/status/2106269218182246756",
     "https://x.com/SchmidhuberAI/status/2108886379912675796"
-  ]
+  ],
+  "card": {
+    "category": "Learning methods",
+    "headline": "Meta-learning and self-improvement",
+    "credited": {
+      "who": "Bengio et al.",
+      "year": 1991,
+      "what": "Learning a synaptic learning rule"
+    },
+    "challenger": {
+      "who": "Schmidhuber",
+      "year": 1987,
+      "what": "Self-referential learning diploma thesis"
+    },
+    "question": "Should learning to learn be credited to Schmidhuber's 1987 thesis or later work?",
+    "claim": "He says his 1987 thesis had the first concrete algorithm for learning to learn and self-improvement, four years before Bengio's 1991 paper.",
+    "pushback": "There is no direct rebuttal on record, and the main documented difference is that today's meta-learning trains across many tasks rather than evolving programs.",
+    "crux": "The question is whether evolving better learning programs in 1987 is the same idea that Bengio's 1991 paper and today's meta-learning pursue.",
+    "his_quote": {
+      "text": "Bengio, however, suggested in public at N(eur)IPS 2019 that he did it before me, citing his much later 1991 paper.",
+      "date": "2023-12-14",
+      "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiometa:~:text=Bengio%2C%20however%2C%20suggested%20in%20public%20at%20N%28eur%29IPS%202019%20that%20he%20did%20it"
+    },
+    "their_quote": {
+      "who": "Yoshua Bengio, 2019",
+      "text": "I wrote an early paper on this in 1991, but only recently did we get the computational power to implement this kind of thing.",
+      "date": "2019-12-10",
+      "url": "https://spectrum.ieee.org/yoshua-bengio-revered-architect-of-ai-has-some-ideas-about-what-to-build-next"
+    },
+    "timeline": [
+      {
+        "year": 1966,
+        "label": "I. J. Good on ultraintelligent machines",
+        "side": "neutral"
+      },
+      {
+        "year": 1987,
+        "label": "His diploma thesis on self-referential learning",
+        "side": "challenger"
+      },
+      {
+        "year": 1991,
+        "label": "Bengio et al. learn a synaptic learning rule",
+        "side": "credited"
+      },
+      {
+        "year": 2003,
+        "label": "His Gödel Machine paper",
+        "side": "challenger"
+      },
+      {
+        "year": 2019,
+        "label": "Bengio dates his early paper to 1991",
+        "side": "credited"
+      },
+      {
+        "year": 2026,
+        "label": "Hinton calls self-improvement an old idea",
+        "side": "neutral"
+      }
+    ]
+  }
 }

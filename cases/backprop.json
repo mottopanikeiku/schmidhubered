@@ -176,5 +176,66 @@
     "https://arxiv.org/pdf/2212.11279v3#page=12",
     "https://x.com/SchmidhuberAI/status/2065525109528330510",
     "https://x.com/SchmidhuberAI/status/2087924087653814614"
-  ]
+  ],
+  "card": {
+    "category": "Learning methods",
+    "headline": "Backpropagation",
+    "credited": {
+      "who": "Rumelhart, Hinton, Williams",
+      "year": 1986,
+      "what": "Backpropagation learns internal representations"
+    },
+    "challenger": {
+      "who": "Linnainmaa and Werbos",
+      "year": 1970,
+      "what": "Reverse-mode automatic differentiation"
+    },
+    "question": "Should credit for backpropagation go to Linnainmaa and Werbos rather than the 1986 paper?",
+    "claim": "He says Linnainmaa published modern backpropagation in 1970 and Werbos applied it to neural networks in 1982, while the 1986 paper cited neither.",
+    "pushback": "Hinton and mathematician Andreas Griewank say the method was invented many times by different people, and Linnainmaa's 1970 thesis did not mention neural networks.",
+    "crux": "The question is whether a general 1970 differentiation method counts as inventing backpropagation, or only as its mathematical precursor.",
+    "his_quote": {
+      "text": "Its modern version (also called the reverse mode of automatic differentiation) was first published in 1970 by Finnish master student Seppo Linnainmaa.",
+      "date": "2025-07-29",
+      "url": "https://x.com/SchmidhuberAI/status/1950194864940835159"
+    },
+    "their_quote": {
+      "who": "Geoffrey Hinton, 2020",
+      "text": "I have never claimed that I invented backpropagation. David Rumelhart invented it independently long after people in other fields had invented it.",
+      "date": "2020-04-23",
+      "url": "https://web.archive.org/web/20210824042207/https://www.reddit.com/r/MachineLearning/comments/g5ali0/d_schmidhuber_critique_of_honda_prize_for_dr/"
+    },
+    "timeline": [
+      {
+        "year": 1970,
+        "label": "Linnainmaa's master's thesis on reverse mode",
+        "side": "challenger"
+      },
+      {
+        "year": 1974,
+        "label": "Werbos's Harvard PhD thesis",
+        "side": "neutral"
+      },
+      {
+        "year": 1982,
+        "label": "Werbos applies it to neural networks",
+        "side": "challenger"
+      },
+      {
+        "year": 1986,
+        "label": "Rumelhart, Hinton and Williams in Nature",
+        "side": "credited"
+      },
+      {
+        "year": 2020,
+        "label": "Hinton says earlier inventors went uncited",
+        "side": "credited"
+      },
+      {
+        "year": 2025,
+        "label": "Hinton's Nobel lecture lists several inventors",
+        "side": "credited"
+      }
+    ]
+  }
 }

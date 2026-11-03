@@ -165,5 +165,66 @@
     "https://x.com/SchmidhuberAI/status/1253617620177301505",
     "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XII:~:text=Nevertheless%2C%20he%20accepted%20the%20Honda%20Prize%20for%20%22creating%22%20the%20method",
     "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XII:~:text=Nevertheless%2C%20he%20accepted%20the%20Honda%20Prize%20for%20%22creating%22%20the%20method"
-  ]
+  ],
+  "card": {
+    "category": "Awards",
+    "headline": "2019 Honda Prize",
+    "credited": {
+      "who": "Geoffrey Hinton",
+      "year": 2019,
+      "what": "Honda Prize for deep learning"
+    },
+    "challenger": {
+      "who": "Linnainmaa, Werbos, Hanson, others",
+      "year": 1970,
+      "what": "Earlier backpropagation and dropout"
+    },
+    "question": "Does the Honda press release credit Hinton with inventions others published first?",
+    "claim": "He says the press release credits Hinton with backpropagation and dropout, which Linnainmaa, Werbos and Hanson published earlier and Hinton did not cite.",
+    "pushback": "Hinton says he never claimed to invent backpropagation and that his part was showing it could learn useful internal representations.",
+    "crux": "The question is whether the release credits Hinton with inventing these methods or with demonstrating and popularizing them.",
+    "his_quote": {
+      "text": "Honda credits him for fundamental inventions of others whom he did not cite.",
+      "date": "2020-04-21",
+      "url": "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#:~:text=Honda%20credits%20him%20for%20fundamental%20inventions%20of%20others%20whom%20he%20did"
+    },
+    "their_quote": {
+      "who": "Geoffrey Hinton, 2020",
+      "text": "I have never claimed that I invented backpropagation.",
+      "date": "2020-04-23",
+      "url": "https://web.archive.org/web/20210824042207/https://www.reddit.com/r/MachineLearning/comments/g5ali0/d_schmidhuber_critique_of_honda_prize_for_dr/"
+    },
+    "timeline": [
+      {
+        "year": 1970,
+        "label": "Linnainmaa's thesis on reverse-mode differentiation",
+        "side": "challenger"
+      },
+      {
+        "year": 1982,
+        "label": "Werbos applies the method to neural networks",
+        "side": "challenger"
+      },
+      {
+        "year": 1986,
+        "label": "Rumelhart, Hinton and Williams paper in Nature",
+        "side": "credited"
+      },
+      {
+        "year": 1990,
+        "label": "Hanson's stochastic delta rule",
+        "side": "challenger"
+      },
+      {
+        "year": 2019,
+        "label": "Honda Prize press release for Hinton",
+        "side": "credited"
+      },
+      {
+        "year": 2020,
+        "label": "His critique and Hinton's reply on Reddit",
+        "side": "neutral"
+      }
+    ]
+  }
 }

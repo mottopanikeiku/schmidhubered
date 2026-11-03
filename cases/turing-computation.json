@@ -101,5 +101,66 @@
     "https://x.com/SchmidhuberAI/status/2069680876611334211",
     "https://x.com/SchmidhuberAI/status/2069846426008330511",
     "https://x.com/SchmidhuberAI/status/2070146541809975740"
-  ]
+  ],
+  "card": {
+    "category": "Computing history",
+    "headline": "Foundations of computability",
+    "credited": {
+      "who": "Alan Turing",
+      "year": 1936,
+      "what": "Universal machine and computability limits"
+    },
+    "challenger": {
+      "who": "Gödel and Church",
+      "year": 1931,
+      "what": "Earlier universal models and limits"
+    },
+    "question": "Was Turing's 1936 paper mainly a restatement of Gödel's and Church's earlier results?",
+    "claim": "He says Gödel's 1931 and Church's 1935 work already gave universal models and the essential limits of computation, so Turing mostly rephrased them.",
+    "pushback": "Copeland and Fan say Turing's surviving summary contains his central ideas without mentioning Gödel, and that his encoding and undecidability proof differ from Gödel's.",
+    "crux": "The question is whether Turing's analysis of mechanical computation is a new foundation or mainly a new presentation of earlier results.",
+    "his_quote": {
+      "text": "Gödel's model (1931) was universal, too! So was Church's (1935).",
+      "date": "2026-06-24",
+      "url": "https://x.com/SchmidhuberAI/status/2069846426008330511"
+    },
+    "their_quote": {
+      "who": "B. Jack Copeland and Zhao Fan, 2022",
+      "text": "there is very little evidence for this contention.",
+      "date": "2022-06-04",
+      "url": "https://link.springer.com/article/10.1007/s00283-022-10177-y"
+    },
+    "timeline": [
+      {
+        "year": 1931,
+        "label": "Gödel's incompleteness paper",
+        "side": "challenger"
+      },
+      {
+        "year": 1935,
+        "label": "Church presents his unsolvable problem",
+        "side": "challenger"
+      },
+      {
+        "year": 1936,
+        "label": "Turing's On Computable Numbers",
+        "side": "credited"
+      },
+      {
+        "year": 2004,
+        "label": "His article says Turing rephrased Gödel",
+        "side": "challenger"
+      },
+      {
+        "year": 2012,
+        "label": "His letter in Nature on Turing",
+        "side": "challenger"
+      },
+      {
+        "year": 2022,
+        "label": "Copeland and Fan dispute his account",
+        "side": "neutral"
+      }
+    ]
+  }
 }

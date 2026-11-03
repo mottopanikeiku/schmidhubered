@@ -90,5 +90,66 @@
     "https://people.idsia.ch/~juergen/ai-priority-disputes.html#pillory:~:text=Case%201.%20Around%201960%2C%20Frank%20Rosenblatt%20not%20only%20had%20linear%20NNs%20plus",
     "https://people.idsia.ch/~juergen/ai-priority-disputes.html#ELM1:~:text=This%20paper%20does%20not%20mention%20that%20the%20%22ELM%22%20concept%20goes%20back%20to",
     "https://people.idsia.ch/~juergen/who-invented-deep-learning.html#1stdl:~:text=However%2C%20Rosenblatt%20basically%20had%20what%20much%20later%20was%20rebranded%20as"
-  ]
+  ],
+  "card": {
+    "category": "Learning methods",
+    "headline": "Extreme Learning Machines",
+    "credited": {
+      "who": "Huang, Zhu, Siew",
+      "year": 2004,
+      "what": "Extreme Learning Machine"
+    },
+    "challenger": {
+      "who": "Frank Rosenblatt",
+      "year": 1962,
+      "what": "Perceptrons with fixed random layer"
+    },
+    "question": "Did Rosenblatt's perceptrons already have the basic Extreme Learning Machine design?",
+    "claim": "He says Rosenblatt already had perceptrons with a fixed random first layer and a trained output layer, later rebranded as ELMs without attribution.",
+    "pushback": "In a 2015 paper Huang acknowledges Rosenblatt but claims broader mathematical theory, more general hidden units and more learning settings as new contributions.",
+    "crux": "The question is whether sharing a fixed random hidden layer settles priority, or ELM's solver and theory deserve separate credit.",
+    "his_quote": {
+      "text": "Rosenblatt basically had what much later was rebranded as Extreme Learning Machines (ELMs) without proper attribution.",
+      "date": "2025-11",
+      "url": "https://people.idsia.ch/~juergen/who-invented-deep-learning.html#1stdl:~:text=However%2C%20Rosenblatt%20basically%20had%20what%20much%20later%20was%20rebranded%20as"
+    },
+    "their_quote": {
+      "who": "Guang-Bin Huang, 2015",
+      "text": "ELM actually provides a unifying learning platform for wide types of neural networks and machine learning techniques",
+      "date": "2015-05-15",
+      "url": "http://elm2013.extreme-learning-machines.org/pdf/ELM-Rosenblatt-Neumann.pdf"
+    },
+    "timeline": [
+      {
+        "year": 1962,
+        "label": "Rosenblatt's Principles of Neurodynamics",
+        "side": "challenger"
+      },
+      {
+        "year": 1992,
+        "label": "Schmidt et al. on networks with random weights",
+        "side": "neutral"
+      },
+      {
+        "year": 2004,
+        "label": "First Extreme Learning Machine paper",
+        "side": "credited"
+      },
+      {
+        "year": 2006,
+        "label": "ELM theory and applications journal paper",
+        "side": "credited"
+      },
+      {
+        "year": 2015,
+        "label": "Huang's paper on ELM's origins",
+        "side": "credited"
+      },
+      {
+        "year": 2022,
+        "label": "His post saying Rosenblatt had ELMs",
+        "side": "challenger"
+      }
+    ]
+  }
 }

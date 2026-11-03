@@ -166,5 +166,66 @@
     "https://x.com/SchmidhuberAI/status/2107481338974462170",
     "https://x.com/SchmidhuberAI/status/2107505357115314237",
     "https://x.com/SchmidhuberAI/status/2113615666972619047"
-  ]
+  ],
+  "card": {
+    "category": "Architectures",
+    "headline": "The Transformer",
+    "credited": {
+      "who": "Vaswani et al. (Google)",
+      "year": 2017,
+      "what": "Transformer with softmax self-attention"
+    },
+    "challenger": {
+      "who": "Schmidhuber",
+      "year": 1991,
+      "what": "Fast weight programmers"
+    },
+    "question": "Is the 2017 Transformer a variant of Schmidhuber's 1991 fast weight programmer?",
+    "claim": "He says his 1991 fast weight system is mathematically a linear Transformer apart from normalization, and that the 2017 paper did not cite it.",
+    "pushback": "No reply from the 2017 authors is on record, and their Transformer uses softmax attention, which the proven equivalence to linear attention does not cover.",
+    "crux": "The question is whether the softmax attention of 2017 is a variant of the 1991 fast weight memory or a different mechanism.",
+    "his_quote": {
+      "text": "This is mathematically equivalent (apart from normalization) to what was later called a Transformer with linearized self-attention",
+      "date": "2025",
+      "url": "https://people.idsia.ch/~juergen/fast-weight-programmer-1991-transformer.html#sec2:~:text=This%20is%20mathematically%20equivalent%20%28apart%20from%20normalization%29%20to%20what"
+    },
+    "their_quote": {
+      "who": "Vaswani et al., 2017",
+      "text": "the Transformer is the first transduction model relying entirely on self-attention to compute representations of its input and output",
+      "date": "2017-06-12",
+      "url": "https://arxiv.org/pdf/1706.03762"
+    },
+    "timeline": [
+      {
+        "year": 1991,
+        "label": "Fast weight controller report",
+        "side": "challenger"
+      },
+      {
+        "year": 1992,
+        "label": "Journal version in Neural Computation",
+        "side": "challenger"
+      },
+      {
+        "year": 1993,
+        "label": "Follow-up paper uses the word attention",
+        "side": "challenger"
+      },
+      {
+        "year": 2017,
+        "label": "Attention Is All You Need",
+        "side": "credited"
+      },
+      {
+        "year": 2020,
+        "label": "Katharopoulos et al. name the linear Transformer",
+        "side": "neutral"
+      },
+      {
+        "year": 2021,
+        "label": "Paper shows linear Transformers are fast weight programmers",
+        "side": "challenger"
+      }
+    ]
+  }
 }

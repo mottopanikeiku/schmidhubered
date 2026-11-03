@@ -135,5 +135,61 @@
     "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#Hinton:~:text=The%20Nobel%20Committee%20lauds%20Hinton%20et%20al.%27s%202006%20method%20for%20layer%2Dwise",
     "https://people.idsia.ch/~juergen/who-invented-deep-learning.html#pre:~:text=Schmidhuber%20built%20an%20unsupervised%20or%20self%2Dsupervised%20RNN%20hierarchy",
     "https://arxiv.org/pdf/2005.05744v5#page=5"
-  ]
+  ],
+  "card": {
+    "category": "Learning methods",
+    "headline": "Unsupervised pre-training",
+    "credited": {
+      "who": "Hinton et al.",
+      "year": 2006,
+      "what": "Layer-wise pre-training of deep nets"
+    },
+    "challenger": {
+      "who": "Schmidhuber",
+      "year": 1991,
+      "what": "Neural history compressor"
+    },
+    "question": "Is the 2006 layer-by-layer pre-training a version of the 1991 history compressor?",
+    "claim": "He says his 1991 history compressor already trained deep networks one level at a time without labels, and the 2006 papers did not cite it.",
+    "pushback": "The 2006 papers stack feedforward models such as Boltzmann machines, not recurrent predictors, and a 2016 textbook traces the approach to Fukushima in 1975.",
+    "crux": "The question is whether the shared step of training levels one by one without labels matters more than their different architectures.",
+    "his_quote": {
+      "text": "Let me re-advertise a much older, very similar, but more general, working Deep Learner of 1991.",
+      "date": "2014-02-06",
+      "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2014-February/026591.html"
+    },
+    "their_quote": {
+      "who": "Goodfellow, Bengio and Courville, 2016",
+      "text": "This approach dates back at least as far as the neocognitron (Fukushima, 1975).",
+      "date": "2016",
+      "url": "https://www.deeplearningbook.org/contents/representation.html"
+    },
+    "timeline": [
+      {
+        "year": 1991,
+        "label": "Neural sequence chunker report",
+        "side": "challenger"
+      },
+      {
+        "year": 1992,
+        "label": "History compression paper in Neural Computation",
+        "side": "challenger"
+      },
+      {
+        "year": 2006,
+        "label": "Hinton's deep belief net papers",
+        "side": "credited"
+      },
+      {
+        "year": 2014,
+        "label": "His mailing-list post on the 1991 learner",
+        "side": "challenger"
+      },
+      {
+        "year": 2016,
+        "label": "Textbook traces the approach to Fukushima",
+        "side": "credited"
+      }
+    ]
+  }
 }

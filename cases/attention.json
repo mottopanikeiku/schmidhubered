@@ -140,5 +140,66 @@
     "https://people.idsia.ch/~juergen/who-invented-transformer-neural-networks.html#2014:~:text=In%202014%2C%20this%20approach%20was%20combined%20with%20an%20attention%20mechanism",
     "https://people.idsia.ch/~juergen/who-invented-transformer-neural-networks.html#ATT14:~:text=This%20work%20on%20soft%20%22attention%22%20did%20not%20cite%20the%20much%20earlier%20original",
     "https://arxiv.org/pdf/2005.05744v5#page=17"
-  ]
+  ],
+  "card": {
+    "category": "Architectures",
+    "headline": "Neural attention",
+    "credited": {
+      "who": "Bahdanau, Cho, Bengio",
+      "year": 2014,
+      "what": "Soft attention for translation"
+    },
+    "challenger": {
+      "who": "Schmidhuber (with Huber)",
+      "year": 1990,
+      "what": "Trainable fovea and soft attention"
+    },
+    "question": "Did his 1990-93 systems already introduce the neural attention credited to Bahdanau and others?",
+    "claim": "He says his lab had hard attention, a trained fovea, in 1990 and soft attention by 1991-93, and the later papers cited neither.",
+    "pushback": "Bahdanau says he developed soft alignment to fix a translation bottleneck, and the 2014 mechanism adds a softmax that the 1991-93 version lacked.",
+    "crux": "The question is whether learning where to focus, as in the 1990-93 systems, is the same idea as the 2014 alignment mechanism.",
+    "his_quote": {
+      "text": "Bengio's work on soft \"attention\"[ATT14] failed to cite my much earlier original work of 1991-1993 on soft attention",
+      "date": "2023-12-14",
+      "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengioatt:~:text=However%2C%20Bengio%27s%20work%20on%20soft%20%22attention%22"
+    },
+    "their_quote": {
+      "who": "Dzmitry Bahdanau, 2022 email",
+      "text": "was independent from Neural Turing Machines, Memory Networks, as well as some relevant cog-sci papers from the 90s",
+      "date": "2024-12-03",
+      "url": "https://x.com/karpathy/status/1864023344435380613"
+    },
+    "timeline": [
+      {
+        "year": 1990,
+        "label": "Report on learned fovea trajectories",
+        "side": "challenger"
+      },
+      {
+        "year": 1993,
+        "label": "Paper on internal spotlights of attention",
+        "side": "challenger"
+      },
+      {
+        "year": 2010,
+        "label": "Larochelle and Hinton's glimpse model",
+        "side": "credited"
+      },
+      {
+        "year": 2014,
+        "label": "Bahdanau, Cho and Bengio on arXiv",
+        "side": "credited"
+      },
+      {
+        "year": 2019,
+        "label": "ACM credits Bengio's group with attention",
+        "side": "credited"
+      },
+      {
+        "year": 2024,
+        "label": "Karpathy publishes Bahdanau's origin email",
+        "side": "neutral"
+      }
+    ]
+  }
 }

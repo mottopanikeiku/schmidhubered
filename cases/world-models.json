@@ -153,5 +153,66 @@
     "https://people.idsia.ch/~juergen/who-invented-jepa.html#addendum1:~:text=LeCun%20spread%20additional%20falsehoods%20on%20social%20media%3A%20on%2018%20April%202026%2C",
     "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#addendum4:~:text=then%20boldly%20claimed%20that%20my%201990%20world%20model%20paper",
     "https://x.com/SchmidhuberAI/status/2109914111400370244"
-  ]
+  ],
+  "card": {
+    "category": "Learning methods",
+    "headline": "World models",
+    "credited": {
+      "who": "Yann LeCun",
+      "year": 2022,
+      "what": "World models for planning"
+    },
+    "challenger": {
+      "who": "Schmidhuber",
+      "year": 1990,
+      "what": "Recurrent world model and controller"
+    },
+    "question": "Should LeCun's 2022 world-model proposal have credited Schmidhuber's 1990 recurrent world model?",
+    "claim": "He says his 1990 report had a recurrent network predicting all of an agent's inputs for planning, which LeCun's 2022 paper repeats without citation.",
+    "pushback": "LeCun says neither of them invented world models, which go back to optimal control and to Nguyen and Widrow's earlier neural control work.",
+    "crux": "The question is whether his recurrent model with curiosity adds enough to earlier neural control work that later proposals should credit it.",
+    "his_quote": {
+      "text": "I used the term world model for a recurrent NN (RNN) that learns to predict the agent's sensory inputs (including pain and reward signals)",
+      "date": "2026-02-05",
+      "url": "https://x.com/SchmidhuberAI/status/2019440903044436111"
+    },
+    "their_quote": {
+      "who": "Yann LeCun, 2026",
+      "text": "I did not \"invent\" world models, and neither did Jürgen.",
+      "date": "2026-04-17",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7451033888723894272/"
+    },
+    "timeline": [
+      {
+        "year": 1987,
+        "label": "Werbos's neural models for control",
+        "side": "neutral"
+      },
+      {
+        "year": 1989,
+        "label": "Nguyen and Widrow's neural control paper",
+        "side": "neutral"
+      },
+      {
+        "year": 1990,
+        "label": "His report Making the world differentiable",
+        "side": "challenger"
+      },
+      {
+        "year": 2018,
+        "label": "Ha and Schmidhuber's World Models paper",
+        "side": "challenger"
+      },
+      {
+        "year": 2022,
+        "label": "LeCun's position paper on autonomous intelligence",
+        "side": "credited"
+      },
+      {
+        "year": 2026,
+        "label": "LeCun says neither of them invented it",
+        "side": "credited"
+      }
+    ]
+  }
 }

@@ -111,5 +111,66 @@
     "https://people.idsia.ch/~juergen/ai-priority-disputes.html#B6",
     "https://people.idsia.ch/~juergen/deep-learning-history.html#text:~:text=In%201995%2C%20Schmidhuber%20%26%20Heil%20already%20had%20a%20neural%20probabilistic%20text",
     "https://arxiv.org/pdf/2212.11279v3#page=24"
-  ]
+  ],
+  "card": {
+    "category": "Architectures",
+    "headline": "Neural language models",
+    "credited": {
+      "who": "Bengio et al.",
+      "year": 2000,
+      "what": "Neural probabilistic language model"
+    },
+    "challenger": {
+      "who": "Schmidhuber and Heil",
+      "year": 1994,
+      "what": "Neural text compression model"
+    },
+    "question": "Does Schmidhuber and Heil's 1994 text-compression network count as an earlier neural language model?",
+    "claim": "He says his text-compression network with Heil was already a neural probabilistic text model, and that Bengio's 2003 paper reused its basic concepts.",
+    "pushback": "Bengio's 2003 paper cites it as related character-level work and says it pushes the idea to large-scale models of word sequences.",
+    "crux": "The question is whether predicting characters for compression is the same kind of model as predicting words with learned word representations.",
+    "his_quote": {
+      "text": "in 1995, we already had a similar, excellent, auto-regressive, neural probabilistic text model.",
+      "date": "2023-12-14",
+      "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiodensity:~:text=However%2C%20several%20years%20earlier%2C%20in%201995%2C%20we%20already%20had%20a%20similar%2C"
+    },
+    "their_quote": {
+      "who": "Bengio et al., 2003",
+      "text": "here we push this idea to a large scale, and concentrate on learning a statistical model of the distribution of word sequences",
+      "date": "2003",
+      "url": "https://jmlr.org/papers/volume3/bengio03a/bengio03a.pdf"
+    },
+    "timeline": [
+      {
+        "year": 1994,
+        "label": "Schmidhuber and Heil's NIPS text-compression paper",
+        "side": "challenger"
+      },
+      {
+        "year": 1996,
+        "label": "Journal paper on sequential neural text compression",
+        "side": "challenger"
+      },
+      {
+        "year": 2000,
+        "label": "Bengio et al.'s NIPS language model paper",
+        "side": "credited"
+      },
+      {
+        "year": 2003,
+        "label": "Journal version cites Schmidhuber as related",
+        "side": "credited"
+      },
+      {
+        "year": 2019,
+        "label": "Turing Award text credits Bengio's word embeddings",
+        "side": "credited"
+      },
+      {
+        "year": 2021,
+        "label": "He first raises the priority claim",
+        "side": "challenger"
+      }
+    ]
+  }
 }

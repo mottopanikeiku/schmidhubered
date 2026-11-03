@@ -122,5 +122,66 @@
     "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonbio:~:text=In%202022%2C%20Hinton%20proposed",
     "https://people.idsia.ch/~juergen/ai-priority-disputes.html#HIN22:~:text=Does%20not%20mention%20previous%20related%20work.",
     "https://people.idsia.ch/~juergen/ai-priority-disputes.html#H6"
-  ]
+  ],
+  "card": {
+    "category": "Learning methods",
+    "headline": "Forward-Forward algorithm",
+    "credited": {
+      "who": "Geoffrey Hinton",
+      "year": 2022,
+      "what": "Forward-Forward learning algorithm"
+    },
+    "challenger": {
+      "who": "Schmidhuber",
+      "year": 1989,
+      "what": "Local learning without backpropagation"
+    },
+    "question": "Should Hinton's 2022 Forward-Forward paper have cited Schmidhuber's earlier local learning proposals?",
+    "claim": "He says the Forward-Forward paper should have cited his 1989, 1990 and 2021 local learning proposals, though he says Hinton did not directly copy them.",
+    "pushback": "Hinton has not replied directly, and his method trains layers on real versus negative data, an idea he traces to Boltzmann machines and noise-contrastive estimation.",
+    "crux": "The question is whether a new local learning method owed citations to earlier work that shared its aim but used different rules.",
+    "his_quote": {
+      "text": "While he did not directly plagiarize our earlier related proposals of 1989,[BB2] 1990,[NAN1-5][CC90][NHE][HEL] and 2021,[FWPMETA6] he did not cite them either.",
+      "date": "2023-12-14",
+      "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonbio:~:text=While%20he%20did%20not%20directly%20plagiarize"
+    },
+    "their_quote": {
+      "who": "Geoffrey Hinton, 2022",
+      "text": "The Forward-Forward algorithm is a greedy multi-layer learning procedure inspired by Boltzmann machines (Hinton and Sejnowski, 1986) and Noise Contrastive Estimation",
+      "date": "2022-12-27",
+      "url": "https://arxiv.org/pdf/2212.13345"
+    },
+    "timeline": [
+      {
+        "year": 1989,
+        "label": "Neural bucket brigade in Connection Science",
+        "side": "challenger"
+      },
+      {
+        "year": 1990,
+        "label": "Networks Adjusting Networks and heat exchanger talks",
+        "side": "challenger"
+      },
+      {
+        "year": 1996,
+        "label": "Neural heat exchanger published",
+        "side": "challenger"
+      },
+      {
+        "year": 2010,
+        "label": "Gutmann and Hyvärinen's noise-contrastive estimation",
+        "side": "neutral"
+      },
+      {
+        "year": 2021,
+        "label": "Kirsch and Schmidhuber's forward-mode meta-learning",
+        "side": "challenger"
+      },
+      {
+        "year": 2022,
+        "label": "Hinton's Forward-Forward preprint",
+        "side": "credited"
+      }
+    ]
+  }
 }

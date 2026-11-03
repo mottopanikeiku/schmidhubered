@@ -173,5 +173,66 @@
     "https://x.com/SchmidhuberAI/status/2095555531947520485",
     "https://x.com/SchmidhuberAI/status/2095560111452217460",
     "https://x.com/SchmidhuberAI/status/2095783405166244348"
-  ]
+  ],
+  "card": {
+    "category": "Awards",
+    "headline": "2024 Physics Nobel",
+    "credited": {
+      "who": "Hopfield and Hinton",
+      "year": 2024,
+      "what": "Nobel Prize in Physics"
+    },
+    "challenger": {
+      "who": "Amari, Ivakhnenko and others",
+      "year": 1965,
+      "what": "Earlier networks and learning methods"
+    },
+    "question": "Did the 2024 Physics Nobel reward methods that others had published years earlier?",
+    "claim": "He says the prize rewards methods republished from earlier Ukrainian and Japanese work, such as Amari's 1972 network, without citing the original inventors.",
+    "pushback": "Amari says the laureates rediscovered and advanced the earlier ideas, and a historian says the North American and Japanese groups worked independently.",
+    "crux": "The question is whether the laureates' methods match the earlier work, and whether leaving it uncited was plagiarism or independent rediscovery.",
+    "his_quote": {
+      "text": "Instead they republished methodologies developed in Ukraine and Japan in the 1960s and 1970s, as well as other techniques, without citing the original inventors.",
+      "date": "2024-12-07",
+      "url": "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#:~:text=Unfortunately%2C%20however%2C%20the%20awardees%20did%20not%20make%20any%20such"
+    },
+    "their_quote": {
+      "who": "Shun'ichi Amari, 2025",
+      "text": "they re-discovered our ideas and advanced them, thereby developing AI today",
+      "date": "2025-03-27",
+      "url": "https://sj.jst.go.jp/stories/2025/s0327-01p.html"
+    },
+    "timeline": [
+      {
+        "year": 1965,
+        "label": "Ivakhnenko and Lapa's multilayer learning",
+        "side": "challenger"
+      },
+      {
+        "year": 1972,
+        "label": "Amari's learning recurrent network",
+        "side": "challenger"
+      },
+      {
+        "year": 1982,
+        "label": "Hopfield's associative memory paper",
+        "side": "credited"
+      },
+      {
+        "year": 1985,
+        "label": "Boltzmann machine learning algorithm",
+        "side": "credited"
+      },
+      {
+        "year": 2024,
+        "label": "Nobel Prize to Hopfield and Hinton",
+        "side": "credited"
+      },
+      {
+        "year": 2024,
+        "label": "His report, A Nobel Prize for Plagiarism",
+        "side": "challenger"
+      }
+    ]
+  }
 }

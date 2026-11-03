@@ -73,5 +73,56 @@
     "https://people.idsia.ch/~juergen/turing-oversold.html#abstract:~:text=The%20famous%20so%2Dcalled%20%22Turing%20Test%22%20was%20actually%20predefined%20by",
     "https://people.idsia.ch/~juergen/deep-learning-history.html#learningRNN:~:text=%28Margin%20note%3A%20it%20has%20been%20pointed%20out%20that%20the%20famous%20%22Turing%20Test%22",
     "https://arxiv.org/pdf/2212.11279v3#page=8"
-  ]
+  ],
+  "card": {
+    "category": "Origins of the field",
+    "headline": "The Turing test",
+    "credited": {
+      "who": "Alan Turing",
+      "year": 1950,
+      "what": "The imitation game"
+    },
+    "challenger": {
+      "who": "René Descartes",
+      "year": 1637,
+      "what": "Language criterion for machines"
+    },
+    "question": "Did Descartes's 1637 language criterion already define the Turing test?",
+    "claim": "He says Descartes predefined the test in 1637 by using language to tell humans from machines, so it should be called the Descartes Test.",
+    "pushback": "The Stanford encyclopedia counts Descartes as an anticipation, but distinguishes his language criterion from Turing's specific imitation game for testing machines.",
+    "crux": "The question is whether an earlier idea of telling humans from machines by language earns credit for Turing's specific test.",
+    "his_quote": {
+      "text": "should actually be called the \"Descartes Test.\"",
+      "date": "2022-12-22",
+      "url": "https://people.idsia.ch/~juergen/deep-learning-history.html#learningRNN:~:text=%28Margin%20note%3A%20it%20has%20been%20pointed%20out%20that%20the%20famous%20%22Turing%20Test%22"
+    },
+    "their_quote": {
+      "who": "Graham Oppy and David Dowe (Stanford Encyclopedia), 2021",
+      "text": "a proposal made by Turing (1950) as a way of dealing with the question whether machines can think.",
+      "date": "2021-10-04",
+      "url": "https://plato.stanford.edu/archives/fall2024/entries/turing-test/"
+    },
+    "timeline": [
+      {
+        "year": 1637,
+        "label": "Descartes's Discourse on Method",
+        "side": "challenger"
+      },
+      {
+        "year": 1950,
+        "label": "Turing's Computing Machinery and Intelligence",
+        "side": "credited"
+      },
+      {
+        "year": 2021,
+        "label": "Stanford encyclopedia entry on the Turing test",
+        "side": "neutral"
+      },
+      {
+        "year": 2022,
+        "label": "His proposal to call it the Descartes Test",
+        "side": "challenger"
+      }
+    ]
+  }
 }

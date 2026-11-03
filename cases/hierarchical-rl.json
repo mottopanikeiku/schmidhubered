@@ -129,5 +129,66 @@
     "https://people.idsia.ch/~juergen/deep-learning-history.html#subgoal:~:text=The%20system%20is%20learning%20action%20plans%20at%20multiple%20levels%20of%20abstraction",
     "https://arxiv.org/pdf/2212.11279v3#page=18",
     "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lecunmultiple:~:text=Far%20from%20a%20future%20investigation%2C%20I%20published%20exactly%20this%20over%203"
-  ]
+  ],
+  "card": {
+    "category": "Learning methods",
+    "headline": "Hierarchical reinforcement learning",
+    "credited": {
+      "who": "Dayan and Hinton",
+      "year": 1992,
+      "what": "Feudal reinforcement learning"
+    },
+    "challenger": {
+      "who": "Schmidhuber",
+      "year": 1990,
+      "what": "Learned subgoal generators"
+    },
+    "question": "Did his 1990-92 subgoal generators already contain the hierarchical planning idea of later work?",
+    "claim": "He says his 1990-92 networks learned to generate subgoals between a start and a goal, and that Dayan, Hinton and LeCun did not cite them.",
+    "pushback": "LeCun's 2022 paper claims priority for none of its parts and traces subgoal-style planning to control theory, while Dayan and Hinton have not replied.",
+    "crux": "The question is whether learning subgoals from start and goal inputs is the same idea as later feudal and hierarchical planning methods.",
+    "his_quote": {
+      "text": "already in 1990, this problem was at least partially solved through my Hierarchical Reinforcement Learning (HRL) with end-to-end differentiable NN-based subgoal generators",
+      "date": "2022-07-07",
+      "url": "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#:~:text=%283b%29%20Answer%20regarding%20NN%2Dbased%20hierarchical%20action%20plans%3A%20already%20in"
+    },
+    "their_quote": {
+      "who": "Yann LeCun, 2022",
+      "text": "The present piece does not claim priority for any of them but presents a proposal for how to assemble them into a consistent whole.",
+      "date": "2022-06-27",
+      "url": "https://raw.githubusercontent.com/enricosavorgnan/jepa/main/docs/lecun_2022_a_path_towards_autonomous_mach.pdf"
+    },
+    "timeline": [
+      {
+        "year": 1990,
+        "label": "His subgoal generator report FKI-129-90",
+        "side": "challenger"
+      },
+      {
+        "year": 1991,
+        "label": "Learning to generate sub-goals for action sequences",
+        "side": "challenger"
+      },
+      {
+        "year": 1992,
+        "label": "Dayan and Hinton's feudal reinforcement learning",
+        "side": "credited"
+      },
+      {
+        "year": 1999,
+        "label": "Sutton, Precup and Singh's options framework",
+        "side": "neutral"
+      },
+      {
+        "year": 2022,
+        "label": "LeCun's paper on autonomous machine intelligence",
+        "side": "credited"
+      },
+      {
+        "year": 2022,
+        "label": "His critique of LeCun's paper on X",
+        "side": "challenger"
+      }
+    ]
+  }
 }

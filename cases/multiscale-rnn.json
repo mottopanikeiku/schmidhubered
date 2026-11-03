@@ -126,5 +126,66 @@
     "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%201:~:text=A%20few%20years%20later%2C%20others%20also%20started%20publishing%20on%20multi%2Dtime%20scale",
     "https://arxiv.org/pdf/2005.05744v1#page=4",
     "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiotimescales:~:text=In%202020%2C%20Bengio%20claimed"
-  ]
+  ],
+  "card": {
+    "category": "Architectures",
+    "headline": "Hierarchies of time scales",
+    "credited": {
+      "who": "El Hihi and Bengio",
+      "year": 1995,
+      "what": "Hierarchical recurrent networks"
+    },
+    "challenger": {
+      "who": "Schmidhuber",
+      "year": 1991,
+      "what": "Neural sequence chunker"
+    },
+    "question": "Did the 1995 El Hihi and Bengio paper introduce recurrent hierarchies of time scales?",
+    "claim": "He says his 1991 report already stacked recurrent networks on different time scales, each passing up only inputs it failed to predict.",
+    "pushback": "The 1995 paper itself cites his 1992 work as a related idea, and its layers update at fixed rates rather than self-organizing ones.",
+    "crux": "The question is whether levels that set their own time scales already count as the time-scale hierarchy credited to the 1995 paper.",
+    "his_quote": {
+      "text": "my publications on a hierarchy of time scales to combat the vanishing gradients issue date back to 1991-93",
+      "date": "2023-12-14",
+      "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiotimescales:~:text=In%202020%2C%20Bengio%20claimed"
+    },
+    "their_quote": {
+      "who": "Yoshua Bengio (research page), 2020",
+      "text": "The NIPS 1995 paper introduced the use of a hierarchy of time scales to combat the vanishing gradients issue.",
+      "date": "2020-04-12",
+      "url": "https://web.archive.org/web/20200412034718/https://yoshuabengio.org/research/"
+    },
+    "timeline": [
+      {
+        "year": 1991,
+        "label": "Neural sequence chunker report",
+        "side": "challenger"
+      },
+      {
+        "year": 1992,
+        "label": "History compression paper in Neural Computation",
+        "side": "challenger"
+      },
+      {
+        "year": 1995,
+        "label": "El Hihi and Bengio's hierarchical RNN paper",
+        "side": "credited"
+      },
+      {
+        "year": 2001,
+        "label": "Joint chapter describes both approaches",
+        "side": "neutral"
+      },
+      {
+        "year": 2017,
+        "label": "Chung, Ahn and Bengio cite both as inspiration",
+        "side": "neutral"
+      },
+      {
+        "year": 2020,
+        "label": "Bengio's page says the 1995 paper introduced it",
+        "side": "credited"
+      }
+    ]
+  }
 }

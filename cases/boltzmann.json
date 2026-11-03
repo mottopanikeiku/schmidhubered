@@ -138,5 +138,66 @@
     "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#Hinton:~:text=Incredibly%2C%20even%20Hinton%27s%20recent%202025%20article",
     "https://people.idsia.ch/~juergen/who-invented-deep-learning.html#1stdl:~:text=Ivakhnenko%20%26%20Lapa%20also%20demonstrated%20that%20it%20is%20possible%20to%20learn",
     "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonbio:~:text=Already%20in%20the%201960s%2C%20Ivakhnenko%20%26%20Lapa%20demonstrated%20that%20it%20is"
-  ]
+  ],
+  "card": {
+    "category": "Architectures",
+    "headline": "Boltzmann machines",
+    "credited": {
+      "who": "Ackley, Hinton, Sejnowski",
+      "year": 1985,
+      "what": "Boltzmann machine learning algorithm"
+    },
+    "challenger": {
+      "who": "Sherrington and Kirkpatrick",
+      "year": 1975,
+      "what": "Spin-glass model"
+    },
+    "question": "Is the Boltzmann machine new, or a version of the 1975 spin-glass model?",
+    "claim": "He says the 1985 paper should have cited the similar 1975 Sherrington-Kirkpatrick spin-glass model and Ivakhnenko and Lapa's 1965 multilayer learning.",
+    "pushback": "The Nobel Committee calls it a stochastic extension of Hopfield's 1982 model, and Hinton says its advance was learning hidden-unit weights from local information.",
+    "crux": "The question is whether a learning rule for hidden units makes the Boltzmann machine new rather than a 1975 spin-glass variant.",
+    "his_quote": {
+      "text": "It didn't cite the first working algorithm for deep learning of internal representations by Ivakhnenko & Lapa (Ukraine, 1965).",
+      "date": "2024-12-07",
+      "url": "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#Hinton:~:text=The%20related%20Boltzmann%20Machine%20paper%20by%20Ackley%2C%20Hinton%2C%20and%20Sejnowski"
+    },
+    "their_quote": {
+      "who": "Terrence Sejnowski, 2020",
+      "text": "Geoffrey Hinton and I introduced a learning algorithm for Boltzmann machines proving that contrary to general belief it was possible to train multilayer networks",
+      "date": "2020-01-28",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7720171/"
+    },
+    "timeline": [
+      {
+        "year": 1965,
+        "label": "Ivakhnenko and Lapa's multilayer learning",
+        "side": "challenger"
+      },
+      {
+        "year": 1975,
+        "label": "Sherrington-Kirkpatrick spin-glass model",
+        "side": "challenger"
+      },
+      {
+        "year": 1982,
+        "label": "Hopfield's network model",
+        "side": "neutral"
+      },
+      {
+        "year": 1985,
+        "label": "Boltzmann machine paper in Cognitive Science",
+        "side": "credited"
+      },
+      {
+        "year": 2020,
+        "label": "Sejnowski's PNAS survey",
+        "side": "credited"
+      },
+      {
+        "year": 2024,
+        "label": "Nobel Committee calls it Hopfield's stochastic extension",
+        "side": "credited"
+      }
+    ]
+  }
 }

@@ -194,5 +194,66 @@
     "https://people.idsia.ch/~juergen/ai-boom-roots-munich-1991.html#:~:text=%E2%98%85%2031%20August%201991%3A%20first%20peer%2Dreviewed%20publication",
     "https://x.com/SchmidhuberAI/status/2072550822852927589",
     "https://people.idsia.ch/~juergen/recursive-self-improvement.html#secAC:~:text=The%202014%20GAN%20variant%20is%20a%20special%20case%20of%20this%20where%20the%20environment"
-  ]
+  ],
+  "card": {
+    "category": "Architectures",
+    "headline": "GANs",
+    "credited": {
+      "who": "Goodfellow et al.",
+      "year": 2014,
+      "what": "Generative adversarial nets"
+    },
+    "challenger": {
+      "who": "Schmidhuber",
+      "year": 1990,
+      "what": "Artificial curiosity"
+    },
+    "question": "Are GANs a special case of his 1990 artificial curiosity?",
+    "claim": "He says his 1990 curiosity system already pitted a generator against a predictor, and that the GAN paper failed to cite it.",
+    "pushback": "Goodfellow says there is no significant connection to predictability minimization, and that in GANs competition alone is the training criterion.",
+    "crux": "The question is whether a generator that maximizes a predictor's error is already the GAN principle.",
+    "his_quote": {
+      "text": "GANs are special cases of Artificial Curiosity (1990) and also closely related to Predictability Minimization (1991).",
+      "date": "2020-04-30",
+      "url": "https://x.com/SchmidhuberAI/status/1255755680855793665"
+    },
+    "their_quote": {
+      "who": "Ian Goodfellow, 2017",
+      "text": "I personally don’t think that there is any significant connection between predictability minimization and GANs.",
+      "date": "2017-03-21",
+      "url": "https://stats.stackexchange.com/questions/251460/were-generative-adversarial-networks-introduced-by-j%C3%BCrgen-schmidhuber"
+    },
+    "timeline": [
+      {
+        "year": 1990,
+        "label": "Artificial curiosity report",
+        "side": "challenger"
+      },
+      {
+        "year": 1992,
+        "label": "Predictability minimization paper",
+        "side": "challenger"
+      },
+      {
+        "year": 2010,
+        "label": "Niemitalo's generator-vs-classifier blog post",
+        "side": "neutral"
+      },
+      {
+        "year": 2014,
+        "label": "GAN paper at NIPS",
+        "side": "credited"
+      },
+      {
+        "year": 2016,
+        "label": "Exchange at the NIPS GAN tutorial",
+        "side": "neutral"
+      },
+      {
+        "year": 2020,
+        "label": "His article calling GANs special cases",
+        "side": "challenger"
+      }
+    ]
+  }
 }

@@ -92,5 +92,66 @@
     "https://x.com/SchmidhuberAI/status/2000234358381101432",
     "https://web.archive.org/web/20251227083019/https://twitter.com/SchmidhuberAI/status/2004832202006122512",
     "https://x.com/SchmidhuberAI/status/2005307785605452066"
-  ]
+  ],
+  "card": {
+    "category": "Computing history",
+    "headline": "The transistor",
+    "credited": {
+      "who": "Bardeen, Brattain, Shockley",
+      "year": 1947,
+      "what": "Working point-contact transistor"
+    },
+    "challenger": {
+      "who": "Julius Edgar Lilienfeld",
+      "year": 1925,
+      "what": "Field-effect transistor patents"
+    },
+    "question": "Should Lilienfeld's 1925 field-effect patents make him the inventor of the transistor?",
+    "claim": "He says Lilienfeld's field-effect designs worked as described and gave substantial gain, so Lilienfeld invented the transistor and deserved the Nobel Prize.",
+    "pushback": "The Computer History Museum says no records prove Lilienfeld built working devices, and credits Bell Labs with a working point-contact amplifier in 1947.",
+    "crux": "The question is whether credit goes to an early patented design, to later evidence it could work, or to a demonstrated device.",
+    "his_quote": {
+      "text": "the inventor of the transistor is Julius Edgar Lilienfeld.",
+      "date": "2025-10",
+      "url": "https://people.idsia.ch/~juergen/who-invented-the-transistor.html#prio:~:text=As%20of%202025%2C%20there%20is%20no%20reasonable%20doubt%20that%20the%20inventor%20of%20the"
+    },
+    "their_quote": {
+      "who": "Computer History Museum",
+      "text": "no records exist to prove that Heil or Lilienfeld actually constructed functioning devices.",
+      "date": "undated",
+      "url": "https://www.computerhistory.org/siliconengine/field-effect-semiconductor-device-concepts-patented/"
+    },
+    "timeline": [
+      {
+        "year": 1925,
+        "label": "Lilienfeld's first field-effect patent application",
+        "side": "challenger"
+      },
+      {
+        "year": 1928,
+        "label": "Lilienfeld's second device patent",
+        "side": "challenger"
+      },
+      {
+        "year": 1947,
+        "label": "Bardeen and Brattain's point-contact amplifier",
+        "side": "credited"
+      },
+      {
+        "year": 1956,
+        "label": "Nobel Prize for Shockley, Bardeen and Brattain",
+        "side": "credited"
+      },
+      {
+        "year": 1959,
+        "label": "Atalla and Kahng's practical field-effect device",
+        "side": "neutral"
+      },
+      {
+        "year": 2025,
+        "label": "His article naming Lilienfeld the inventor",
+        "side": "challenger"
+      }
+    ]
+  }
 }

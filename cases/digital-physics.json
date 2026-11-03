@@ -75,5 +75,61 @@
     "https://people.idsia.ch/~juergen/randomness.html#:~:text=as%20first%20suggested%20by%20computer%20pioneer%20Konrad%20Zuse%20in%201967",
     "https://people.idsia.ch/~juergen/zuse-1941-first-general-computer.html#abstract:~:text=In%201967%2C%20he%20also%20suggested%20what%27s%20known%20as%20Zuse%27s%20thesis%2C%20namely%2C",
     "https://x.com/SchmidhuberAI/status/1989998451321360806"
-  ]
+  ],
+  "card": {
+    "category": "Computing history",
+    "headline": "Computational universe",
+    "credited": {
+      "who": "Stephen Wolfram",
+      "year": 2002,
+      "what": "A New Kind of Science"
+    },
+    "challenger": {
+      "who": "Konrad Zuse",
+      "year": 1967,
+      "what": "Universe as discrete computation"
+    },
+    "question": "Does Wolfram's 2002 book give Zuse's computational-universe idea the credit it deserves?",
+    "claim": "He says Zuse first proposed in 1967 that the universe is computed on a discrete computer, and that Wolfram's note misrepresents Zuse's model.",
+    "pushback": "Wolfram's book names Zuse and Fredkin, and argues that literal cellular-automaton models like theirs cannot work, unlike his more abstract models.",
+    "crux": "The question is whether Zuse's 1967 proposal and Wolfram's 2002 program are the same contribution, and whether Wolfram describes Zuse fairly.",
+    "his_quote": {
+      "text": "Konrad Zuse who was the first to suggest that the physical universe is being computed on a discrete computer",
+      "date": "2003-06",
+      "url": "https://people.idsia.ch/~juergen/wolfram.html#:~:text=It%20was%20not%20Wolfram%20but%20Konrad%20Zuse%20who%20was%20the%20first%20to%20suggest%20that"
+    },
+    "their_quote": {
+      "who": "Stephen Wolfram, 2002",
+      "text": "no such literal mechanistic model can ever in the end realistically be expected to work.",
+      "date": "2002",
+      "url": "https://www.wolframscience.com/reference/notes/1026b/"
+    },
+    "timeline": [
+      {
+        "year": 1967,
+        "label": "Zuse proposes a computed universe",
+        "side": "challenger"
+      },
+      {
+        "year": 1969,
+        "label": "Zuse's book Rechnender Raum",
+        "side": "challenger"
+      },
+      {
+        "year": 1970,
+        "label": "English translation, Calculating Space",
+        "side": "challenger"
+      },
+      {
+        "year": 2002,
+        "label": "Wolfram's A New Kind of Science",
+        "side": "credited"
+      },
+      {
+        "year": 2003,
+        "label": "His CERN Courier letter crediting Zuse",
+        "side": "challenger"
+      }
+    ]
+  }
 }

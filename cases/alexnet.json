@@ -146,5 +146,66 @@
     "https://people.idsia.ch/~juergen/most-cited-neural-nets.html#:~:text=AlexNet%20cited%20DanNet%20but%20also%20used%20ReLUs%20%281969%29",
     "https://people.idsia.ch/~juergen/most-cited-neural-nets.html#:~:text=Another%20of%20the%20most%20cited%20NNs%20of%20the%2021st%20century%E2%80%94the%20VGG%20network",
     "https://x.com/SchmidhuberAI/status/2092745936426393955"
-  ]
+  ],
+  "card": {
+    "category": "Architectures",
+    "headline": "AlexNet",
+    "credited": {
+      "who": "Krizhevsky, Sutskever, Hinton",
+      "year": 2012,
+      "what": "Deep CNN wins ImageNet"
+    },
+    "challenger": {
+      "who": "Cireșan, Schmidhuber et al.",
+      "year": 2011,
+      "what": "DanNet GPU CNN wins contests"
+    },
+    "question": "Was AlexNet a continuation of the Schmidhuber lab's 2011 DanNet or a distinct advance?",
+    "claim": "He says his lab's GPU network DanNet won four image contests before AlexNet, and that AlexNet was very similar to it.",
+    "pushback": "The AlexNet paper calls Cireșan's earlier network somewhat similar and lists its own contributions as network size, fast GPU code and regularization.",
+    "crux": "The question is whether winning ImageNet at scale was a distinct advance or the next step after DanNet's earlier contest wins.",
+    "his_quote": {
+      "text": "AlexNet (2012) was similar to DanNet (2011) which won 4 image recognition contests before AlexNet (first superhuman performance in 2011)",
+      "date": "2025-09-25",
+      "url": "https://x.com/SchmidhuberAI/status/1971206813057274015"
+    },
+    "their_quote": {
+      "who": "AlexNet paper, 2012",
+      "text": "The resultant architecture is somewhat similar to that of the \"columnar\" CNN",
+      "date": "2012-12",
+      "url": "https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf"
+    },
+    "timeline": [
+      {
+        "year": 2011,
+        "label": "IJCAI paper on fast GPU CNNs",
+        "side": "challenger"
+      },
+      {
+        "year": 2011,
+        "label": "DanNet wins IJCNN traffic sign contest",
+        "side": "challenger"
+      },
+      {
+        "year": 2012,
+        "label": "DanNet paper at CVPR",
+        "side": "challenger"
+      },
+      {
+        "year": 2012,
+        "label": "AlexNet wins ImageNet contest",
+        "side": "credited"
+      },
+      {
+        "year": 2015,
+        "label": "His article calling AlexNet very similar",
+        "side": "challenger"
+      },
+      {
+        "year": 2019,
+        "label": "Turing Award release credits Hinton's students",
+        "side": "credited"
+      }
+    ]
+  }
 }

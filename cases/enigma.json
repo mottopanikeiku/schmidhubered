@@ -67,5 +67,56 @@
   "instance_urls": [
     "https://people.idsia.ch/~juergen/turing-oversold.html",
     "https://people.idsia.ch/~juergen/turing-oversold.html#abstract:~:text=The%20Colossus%20special%20purpose%20computer%20of%20WWII"
-  ]
+  ],
+  "card": {
+    "category": "Computing history",
+    "headline": "Breaking Enigma",
+    "credited": {
+      "who": "Turing and Welchman",
+      "year": 1940,
+      "what": "British Bombe"
+    },
+    "challenger": {
+      "who": "Rejewski, Różycki, Zygalski",
+      "year": 1938,
+      "what": "Polish Enigma methods and Bomba"
+    },
+    "question": "Should the core Enigma-breaking algorithm be credited to the Polish team rather than Turing?",
+    "claim": "He says the core Enigma code-breaking algorithm came from Rejewski, Różycki and Zygalski, though he grants Turing and Welchman an important contribution.",
+    "pushback": "The National Museum of Computing credits the Poles but says German procedure changes made their Bomba inadequate, and Turing's Bombe used a different crib-based attack.",
+    "crux": "The question is whether the British wartime methods repeat the Polish core algorithm or are distinct contributions built on it.",
+    "his_quote": {
+      "text": "Polish mathematicians Rejewski, Rozycki and Zygalski.",
+      "date": "2022",
+      "url": "https://people.idsia.ch/~juergen/turing-oversold.html#abstract:~:text=The%20Colossus%20special%20purpose%20computer%20of%20WWII"
+    },
+    "their_quote": {
+      "who": "The National Museum of Computing",
+      "text": "Turing's attack was based on the use of ‘cribs’",
+      "date": "undated",
+      "url": "https://www.tnmoc.org/bombe"
+    },
+    "timeline": [
+      {
+        "year": 1938,
+        "label": "Polish Cipher Bureau's Enigma methods and Bomba",
+        "side": "challenger"
+      },
+      {
+        "year": 1940,
+        "label": "First British Bombe begins operating",
+        "side": "credited"
+      },
+      {
+        "year": 2021,
+        "label": "His article crediting both Polish and British work",
+        "side": "challenger"
+      },
+      {
+        "year": 2022,
+        "label": "His summary giving the core algorithm to Poland",
+        "side": "challenger"
+      }
+    ]
+  }
 }

@@ -124,5 +124,66 @@
     "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonfast:~:text=Hinton%27s%202016%20paper",
     "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonfast:~:text=As%20recently%20as%20of%202022%2C%20Hinton",
     "https://people.idsia.ch/~juergen/fast-weight-programmer-1991-transformer.html#sec3:~:text=This%20motivation%20and%20a%20variant%20of%20the%20method%20was%20republished%20over%20two"
-  ]
+  ],
+  "card": {
+    "category": "Architectures",
+    "headline": "Fast weights",
+    "credited": {
+      "who": "Ba, Hinton et al.",
+      "year": 2016,
+      "what": "Fast weights attend to past"
+    },
+    "challenger": {
+      "who": "Schmidhuber",
+      "year": 1991,
+      "what": "Fast weight programmers"
+    },
+    "question": "Is the 2016 fast-weights method new, or a version of his 1991-93 work?",
+    "claim": "He says his 1991-93 papers already trained one network to rewrite another's weights, then its own, and that the 2016 paper largely rehashed them.",
+    "pushback": "Ba and colleagues cite his 1993 paper but say it did not implement this recursion, and they add decay, normalization and an attention interpretation.",
+    "crux": "The question is whether decay, normalization and an attention interpretation make the 2016 method new or a repeat of the 1993 design.",
+    "his_quote": {
+      "text": "Hinton's 2016 paper[FWP4a] did not make clear that much of it was a rehash of my papers on fast weight programmers",
+      "date": "2023-12-14",
+      "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonfast:~:text=Hinton%27s%202016%20paper"
+    },
+    "their_quote": {
+      "who": "Ba et al., 2016",
+      "text": "neither of these papers actually implemented this method of achieving recursion.",
+      "date": "2016-10-20",
+      "url": "https://arxiv.org/pdf/1610.06258"
+    },
+    "timeline": [
+      {
+        "year": 1987,
+        "label": "Hinton and Plaut propose fast weights",
+        "side": "credited"
+      },
+      {
+        "year": 1991,
+        "label": "His fast weight controller report",
+        "side": "challenger"
+      },
+      {
+        "year": 1993,
+        "label": "Recurrent network programs its own fast weights",
+        "side": "challenger"
+      },
+      {
+        "year": 2016,
+        "label": "Ba et al.'s fast weights paper",
+        "side": "credited"
+      },
+      {
+        "year": 2021,
+        "label": "Turing Lecture cites Ba et al.",
+        "side": "credited"
+      },
+      {
+        "year": 2025,
+        "label": "Irie and Gershman call it a special case",
+        "side": "neutral"
+      }
+    ]
+  }
 }

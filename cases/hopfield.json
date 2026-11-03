@@ -138,5 +138,66 @@
     "https://people.idsia.ch/~juergen/deep-learning-history.html#learningRNN:~:text=10%20years%20later%2C%20the%20basic%20equations%20of%20the%20Amari%20network%20were",
     "https://arxiv.org/pdf/2212.11279v3#page=8",
     "https://people.idsia.ch/~juergen/ai-priority-disputes.html#pillory:~:text=Case%202.%20In%201972%2C%20Shun%2DIchi%20Amari%20made%20the%20original%20Lenz%2DIsing"
-  ]
+  ],
+  "card": {
+    "category": "Architectures",
+    "headline": "Hopfield networks",
+    "credited": {
+      "who": "John Hopfield",
+      "year": 1982,
+      "what": "Associative memory network"
+    },
+    "challenger": {
+      "who": "Shun'ichi Amari",
+      "year": 1972,
+      "what": "Learning recurrent associative network"
+    },
+    "question": "Is the 1982 Hopfield network essentially the same model as Amari's 1972 network?",
+    "claim": "He says Amari's 1972 paper had the same basic equations, and that Hopfield republished them in 1982 without citing it.",
+    "pushback": "No direct reply from Hopfield is on record, and the documented differences are his energy function for one-at-a-time updates and his capacity analysis.",
+    "crux": "The question is whether Hopfield's energy function and capacity analysis make his network a new model or a version of Amari's.",
+    "his_quote": {
+      "text": "Amari's approach was republished much later by Hopfield who used the same basic equations but failed to cite the prior work.",
+      "date": "2025-07-31",
+      "url": "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#hopfield:~:text=Amari%27s%20approach%20was%20republished%20much%20later%20by%20Hopfield%20who%20used%20the"
+    },
+    "their_quote": {
+      "who": "William Bialek, 2024",
+      "text": "Despite these and other precursors, Hopfield’s papers in 1982 and 1984 came as a surprise.",
+      "date": "2024-12-26",
+      "url": "https://arxiv.org/pdf/2412.18030"
+    },
+    "timeline": [
+      {
+        "year": 1972,
+        "label": "Amari's learning recurrent network",
+        "side": "challenger"
+      },
+      {
+        "year": 1974,
+        "label": "Little's model of persistent brain states",
+        "side": "neutral"
+      },
+      {
+        "year": 1982,
+        "label": "Hopfield's paper in PNAS",
+        "side": "credited"
+      },
+      {
+        "year": 2022,
+        "label": "His first post crediting Amari",
+        "side": "challenger"
+      },
+      {
+        "year": 2024,
+        "label": "Nobel Prize in Physics for Hopfield",
+        "side": "credited"
+      },
+      {
+        "year": 2025,
+        "label": "Amari says his 1972 paper went uncited",
+        "side": "challenger"
+      }
+    ]
+  }
 }

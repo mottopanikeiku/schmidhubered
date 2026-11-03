@@ -176,5 +176,66 @@
     "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_i-am-proud-of-the-work-my-team-did-in-munich-activity-7473642473047719937-KM6W",
     "https://x.com/SchmidhuberAI/status/2082921760840691837",
     "https://x.com/SchmidhuberAI/status/2092745936426393955"
-  ]
+  ],
+  "card": {
+    "category": "Architectures",
+    "headline": "Residual networks (ResNet)",
+    "credited": {
+      "who": "He et al. (Microsoft)",
+      "year": 2015,
+      "what": "Deep residual learning (ResNet)"
+    },
+    "challenger": {
+      "who": "Srivastava, Greff, Schmidhuber",
+      "year": 2015,
+      "what": "Highway Networks"
+    },
+    "question": "Is ResNet essentially a Highway Network with its gates held open?",
+    "claim": "He says ResNet is a Highway Network whose gates are always open, published seven months later, and that residual connections date to Hochreiter's 1991 thesis.",
+    "pushback": "He et al. report that gating the shortcuts hampers training of very deep networks, and that Highway Networks had not shown gains past 100 layers.",
+    "crux": "The question is whether a network without gates is a new design or the open-gate special case of Highway Networks.",
+    "his_quote": {
+      "text": "Setting all Highway NN gates to 1.0 effectively gives us the ResNet published 7 months later.",
+      "date": "2025",
+      "url": "https://people.idsia.ch/~juergen/highway-networks.html#:~:text=Setting%20all%20Highway%20NN%20gates%20to%201.0%20effectively%20gives%20us%20the%20ResNet"
+    },
+    "their_quote": {
+      "who": "He et al., 2016",
+      "text": "Multiplicative manipulations (scaling, gating, 1×1 convolutions, and dropout) on the shortcuts can hamper information propagation and lead to optimization problems.",
+      "date": "2016-03-16",
+      "url": "https://arxiv.org/pdf/1603.05027"
+    },
+    "timeline": [
+      {
+        "year": 1991,
+        "label": "Hochreiter's thesis on vanishing error signals",
+        "side": "challenger"
+      },
+      {
+        "year": 1997,
+        "label": "LSTM with constant error flow",
+        "side": "challenger"
+      },
+      {
+        "year": 2015,
+        "label": "Highway Networks posted in May",
+        "side": "challenger"
+      },
+      {
+        "year": 2015,
+        "label": "ResNet posted in December, wins ImageNet contest",
+        "side": "credited"
+      },
+      {
+        "year": 2016,
+        "label": "Identity mappings paper tests gated shortcuts",
+        "side": "credited"
+      },
+      {
+        "year": 2025,
+        "label": "His article on who invented residual connections",
+        "side": "challenger"
+      }
+    ]
+  }
 }

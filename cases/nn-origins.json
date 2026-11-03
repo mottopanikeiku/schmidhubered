@@ -114,5 +114,66 @@
     "https://x.com/SchmidhuberAI/status/2097656285202186740",
     "https://x.com/SchmidhuberAI/status/2097697639496065226",
     "https://x.com/SchmidhuberAI/status/2101681225911980465"
-  ]
+  ],
+  "card": {
+    "category": "Origins of the field",
+    "headline": "Artificial neural networks",
+    "credited": {
+      "who": "McCulloch, Pitts, Rosenblatt",
+      "year": 1943,
+      "what": "Neuron models and perceptrons"
+    },
+    "challenger": {
+      "who": "Legendre and Gauss",
+      "year": 1805,
+      "what": "Least-squares linear regression"
+    },
+    "question": "Should least-squares regression from 1805 count as the first neural network?",
+    "claim": "He says a linear network trained to minimize squared error is mathematically identical to least-squares regression, which Legendre published in 1805.",
+    "pushback": "Stephen José Hanson argues that biological motivation and threshold behavior set neural models apart from multiple linear regression.",
+    "crux": "The question is whether mathematical equivalence to a simple linear network is enough to earn credit for inventing neural networks.",
+    "his_quote": {
+      "text": "The most successful deep learners of today generalize the linear regressors of 1800.",
+      "date": "2022-01-02",
+      "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-January/037102.html"
+    },
+    "their_quote": {
+      "who": "Stephen José Hanson, 2022",
+      "text": "Multiple regression is not such a model.",
+      "date": "2022-01-02",
+      "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-January/037102.html"
+    },
+    "timeline": [
+      {
+        "year": 1795,
+        "label": "Gauss's claimed unpublished least-squares work",
+        "side": "challenger"
+      },
+      {
+        "year": 1805,
+        "label": "Legendre publishes least squares",
+        "side": "challenger"
+      },
+      {
+        "year": 1943,
+        "label": "McCulloch and Pitts' logical neuron model",
+        "side": "credited"
+      },
+      {
+        "year": 1962,
+        "label": "Rosenblatt's book on perceptrons",
+        "side": "credited"
+      },
+      {
+        "year": 1981,
+        "label": "Stigler's study of Gauss's priority claim",
+        "side": "neutral"
+      },
+      {
+        "year": 2021,
+        "label": "Public debate with Hanson on a mailing list",
+        "side": "neutral"
+      }
+    ]
+  }
 }

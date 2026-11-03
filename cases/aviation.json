@@ -77,5 +77,66 @@
     "https://people.idsia.ch/~juergen/planetruth.html#:~:text=The%20caption%20of%20your%20Commentary%20picture%20%28Nature%20421%2C%2015%3B%202003%29",
     "https://people.idsia.ch/~juergen/planetruth.html#:~:text=The%20first%20powered%2C%20controlled%2C%20sustained%20flight%20took%20place%2050%20years",
     "https://www.nature.com/articles/d41586-019-00491-5"
-  ]
+  ],
+  "card": {
+    "category": "Computing history",
+    "headline": "First powered flight",
+    "credited": {
+      "who": "Wright brothers",
+      "year": 1903,
+      "what": "Powered, controlled airplane flight"
+    },
+    "challenger": {
+      "who": "Henri Giffard",
+      "year": 1852,
+      "what": "Steam-powered airship flight"
+    },
+    "question": "Does Giffard's 1852 airship beat the Wrights to the first powered, controlled, sustained flight?",
+    "claim": "He says Giffard's steam airship made the first powered, controlled, sustained flight in 1852, though he credits the Wrights for heavier-than-air flight.",
+    "pushback": "The Science Museum says Giffard's airship lacked the power to circle against the wind and return, so its control was limited.",
+    "crux": "The question is whether \"first powered flight\" should include airships or mean controlled flight in a heavier-than-air machine.",
+    "his_quote": {
+      "text": "The first powered, controlled, sustained flight took place 50 years before the Wright brothers, in 1852",
+      "date": "2003-11-24",
+      "url": "https://people.idsia.ch/~juergen/planetruth.html#:~:text=The%20first%20powered%2C%20controlled%2C%20sustained%20flight%20took%20place%2050%20years"
+    },
+    "their_quote": {
+      "who": "National Air and Space Museum, 2022",
+      "text": "They made the first powered, controlled flight of a heavier-than-air flying machine.",
+      "date": "2022-06-23",
+      "url": "https://airandspace.si.edu/stories/editorial/wright-brothers-made-history-kitty-hawk"
+    },
+    "timeline": [
+      {
+        "year": 1852,
+        "label": "Giffard flies a steam-powered airship",
+        "side": "challenger"
+      },
+      {
+        "year": 1890,
+        "label": "Ader's heavier-than-air machine",
+        "side": "challenger"
+      },
+      {
+        "year": 1903,
+        "label": "Wright Flyer flights at Kitty Hawk",
+        "side": "credited"
+      },
+      {
+        "year": 2003,
+        "label": "His Nature letter crediting the Wrights' combination",
+        "side": "challenger"
+      },
+      {
+        "year": 2019,
+        "label": "His Nature letter disputing the first flight",
+        "side": "challenger"
+      },
+      {
+        "year": 2022,
+        "label": "Smithsonian credits the Wrights' airplane flight",
+        "side": "credited"
+      }
+    ]
+  }
 }

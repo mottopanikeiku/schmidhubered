@@ -108,5 +108,61 @@
     "https://arxiv.org/pdf/2005.05744v1#page=12",
     "https://people.idsia.ch/~juergen/compressednetworksearch.html#:~:text=Update%20of%202024%3A%202024%20ACM%20SIGEVO%20Impact%20Award%20for%20our%20seminal%202014",
     "https://x.com/SchmidhuberAI/status/1800543516323463476"
-  ]
+  ],
+  "card": {
+    "category": "Learning methods",
+    "headline": "Deep RL from pixels",
+    "credited": {
+      "who": "Mnih et al., DeepMind",
+      "year": 2013,
+      "what": "Deep Q-network plays Atari"
+    },
+    "challenger": {
+      "who": "Koutník, Cuccu, Schmidhuber, Gomez",
+      "year": 2013,
+      "what": "Evolved networks drive from video"
+    },
+    "question": "Was his lab's 2013 driving system the first deep reinforcement learning from pixels?",
+    "claim": "He says his lab's evolved networks drove a simulated car from video in July 2013, months before DeepMind claimed to be first.",
+    "pushback": "The authors have not replied directly, but their agent used one setup across 49 Atari games, which Thomas Dietterich says differs from solving one task.",
+    "crux": "The question is whether an evolved network driving a simulated car already fits DeepMind's description of the first pixel-based deep reinforcement learning.",
+    "his_quote": {
+      "text": "The earlier system [3] indeed was able to \"learn successful policies directly from high-dimensional sensory inputs using end-to-end reinforcement learning\"",
+      "date": "2015-02-26",
+      "url": "https://people.idsia.ch/~juergen/naturedeepmind.html"
+    },
+    "their_quote": {
+      "who": "Thomas Dietterich, 2015",
+      "text": "these methods learn to play many different games starting from a blank slate",
+      "date": "2015",
+      "url": "https://web.archive.org/web/20150504173812/https://plus.google.com/100849856540000067209/posts/eLQf4KC97Bs"
+    },
+    "timeline": [
+      {
+        "year": 2013,
+        "label": "Evolved networks drive a TORCS car from video",
+        "side": "challenger"
+      },
+      {
+        "year": 2013,
+        "label": "DeepMind's Atari paper on arXiv",
+        "side": "credited"
+      },
+      {
+        "year": 2014,
+        "label": "Koutník et al. evolve deep convolutional controllers",
+        "side": "challenger"
+      },
+      {
+        "year": 2015,
+        "label": "DeepMind's Nature paper on 49 Atari games",
+        "side": "credited"
+      },
+      {
+        "year": 2015,
+        "label": "His critique of the Nature paper",
+        "side": "challenger"
+      }
+    ]
+  }
 }

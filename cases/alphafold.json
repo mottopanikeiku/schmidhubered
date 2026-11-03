@@ -115,5 +115,66 @@
     "https://x.com/SchmidhuberAI/status/2082575178177843373",
     "https://web.archive.org/web/20260729204920/https://twitter.com/SchmidhuberAI/status/2082569186048369068",
     "https://web.archive.org/web/20260729205056/https://twitter.com/SchmidhuberAI/status/2082569587439067508"
-  ]
+  ],
+  "card": {
+    "category": "Companies and products",
+    "headline": "AlphaFold 2",
+    "credited": {
+      "who": "Jumper et al., DeepMind",
+      "year": 2021,
+      "what": "Protein structure prediction network"
+    },
+    "challenger": {
+      "who": "Baldi, Pollastri and others",
+      "year": 2002,
+      "what": "Neural protein-analysis pipeline"
+    },
+    "question": "Should the AlphaFold 2 paper have cited earlier neural protein-prediction work it left out?",
+    "claim": "He says AlphaFold 2 built on uncited neural protein work by Baldi and Pollastri (2002), Hochreiter et al. (2007) and Golkov et al. (2016).",
+    "pushback": "The Nobel Committee calls AlphaFold 2 neural network engineering with a multitude of new inventions, and its paper cites other early neural protein work.",
+    "crux": "The question is whether the 2002-2016 networks contain AlphaFold 2's core ideas or are only background to a new design.",
+    "his_quote": {
+      "text": "They failed to cite important prior work by Baldi and Pollastri (2002)",
+      "date": "2025-07-31",
+      "url": "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#more:~:text=Two%20authors%20of%20a%20DeepMind%20team"
+    },
+    "their_quote": {
+      "who": "Nobel Committee for Chemistry, 2024",
+      "text": "an ingenious piece of neural network engineering by Jumper, Hassabis and their coworkers, with a multitude of new inventions",
+      "date": "2024-10-09",
+      "url": "https://www.nobelprize.org/uploads/2024/10/advanced-chemistryprize2024.pdf"
+    },
+    "timeline": [
+      {
+        "year": 1988,
+        "label": "Neural networks first predict protein secondary structure",
+        "side": "neutral"
+      },
+      {
+        "year": 2002,
+        "label": "Baldi and Pollastri's protein-analysis pipeline",
+        "side": "challenger"
+      },
+      {
+        "year": 2007,
+        "label": "Hochreiter et al. on LSTM protein homology",
+        "side": "challenger"
+      },
+      {
+        "year": 2016,
+        "label": "Golkov et al. contact prediction at NeurIPS",
+        "side": "challenger"
+      },
+      {
+        "year": 2021,
+        "label": "AlphaFold 2 paper in Nature",
+        "side": "credited"
+      },
+      {
+        "year": 2024,
+        "label": "Chemistry Nobel to Hassabis and Jumper",
+        "side": "credited"
+      }
+    ]
+  }
 }

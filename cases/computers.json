@@ -108,5 +108,66 @@
     "https://x.com/SchmidhuberAI/status/2068670785812631936",
     "https://web.archive.org/web/20260621121718/https://twitter.com/SchmidhuberAI/status/2068669589521608802",
     "https://x.com/SchmidhuberAI/status/2070576382023717069"
-  ]
+  ],
+  "card": {
+    "category": "Computing history",
+    "headline": "First programmable computer",
+    "credited": {
+      "who": "Eckert, Mauchly, ENIAC team",
+      "year": 1945,
+      "what": "ENIAC electronic computer"
+    },
+    "challenger": {
+      "who": "Konrad Zuse",
+      "year": 1941,
+      "what": "Z3 programmable relay computer"
+    },
+    "question": "Was Zuse's 1941 Z3 the first working programmable general-purpose computer?",
+    "claim": "He says Zuse's relay-based Z3 of 1941 was the first working programmable general-purpose computer, and that Colossus preceded ENIAC among electronic machines.",
+    "pushback": "Museums divide the credit by criteria, and Z3 was electromechanical and lacked a conditional-jump instruction, while ENIAC computed at electronic speed.",
+    "crux": "The question is which criteria define the first computer: programmability, general-purpose use, electronic construction or stored programs.",
+    "his_quote": {
+      "text": "Konrad Zuse created the world's first working programmable general-purpose computer: the Z3.",
+      "date": "2022-12-21",
+      "url": "https://arxiv.org/pdf/2212.11279v1#page=23"
+    },
+    "their_quote": {
+      "who": "German Patent and Trade Mark Office",
+      "text": "today's computers have several fathers.",
+      "date": "2025-12-08",
+      "url": "https://dpma.de/english/our_office/publications/milestones/computerpioneers/konradzuse/index.html"
+    },
+    "timeline": [
+      {
+        "year": 1936,
+        "label": "Turing's paper On Computable Numbers",
+        "side": "neutral"
+      },
+      {
+        "year": 1941,
+        "label": "Zuse completes the relay-based Z3",
+        "side": "challenger"
+      },
+      {
+        "year": 1944,
+        "label": "Colossus working at Bletchley Park",
+        "side": "challenger"
+      },
+      {
+        "year": 1945,
+        "label": "ENIAC completed",
+        "side": "credited"
+      },
+      {
+        "year": 1946,
+        "label": "ENIAC publicly announced",
+        "side": "credited"
+      },
+      {
+        "year": 2006,
+        "label": "His Nature letter backing Colossus over ENIAC",
+        "side": "challenger"
+      }
+    ]
+  }
 }

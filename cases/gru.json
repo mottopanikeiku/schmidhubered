@@ -107,5 +107,66 @@
     "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XVII-1:~:text=but%20for%20some%20reason%20he%20introduced%20in%202014%20what%20he%20called%20%22gated",
     "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiogru:~:text=but%20for%20some%20reason%20he%20and%20his%20team%20invented%20the%20new%20name%20%22gated",
     "https://people.idsia.ch/~juergen/ai-priority-disputes.html#B5"
-  ]
+  ],
+  "card": {
+    "category": "Architectures",
+    "headline": "Gated recurrent units",
+    "credited": {
+      "who": "Cho, Bengio et al.",
+      "year": 2014,
+      "what": "Gated recurrent unit (GRU)"
+    },
+    "challenger": {
+      "who": "Gers, Schmidhuber, Cummins",
+      "year": 2000,
+      "what": "LSTM with forget gates"
+    },
+    "question": "Is the GRU a new architecture or a simplified version of the forget-gate LSTM?",
+    "claim": "He says the GRU is a renamed variant of his group's 2000 forget-gate LSTM, and that the GRU papers cited only the 1997 LSTM paper.",
+    "pushback": "Cho and colleagues cite LSTM as their motivation but describe a simpler unit with reset and update gates and no separate output gate.",
+    "crux": "The question is whether the GRU's two-gate design is a new architecture or a simplified forget-gate LSTM whose 2000 source deserved citation.",
+    "his_quote": {
+      "text": "A simplified variant of vanilla LSTM with forget gates for recurrent units (2000) has been called GRU since 2014.",
+      "date": "2018-08",
+      "url": "https://people.idsia.ch/~juergen/whatsnew.html#:~:text=A%20simplified%20variant%20of%20vanilla%20LSTM%20with%20forget%20gates%20for%20recurrent"
+    },
+    "their_quote": {
+      "who": "Cho et al., 2014",
+      "text": "that has been motivated by the LSTM unit but is much simpler to compute and implement",
+      "date": "2014-06-03",
+      "url": "https://arxiv.org/pdf/1406.1078"
+    },
+    "timeline": [
+      {
+        "year": 1997,
+        "label": "Hochreiter and Schmidhuber's LSTM paper",
+        "side": "challenger"
+      },
+      {
+        "year": 2000,
+        "label": "Forget-gate LSTM in Neural Computation",
+        "side": "challenger"
+      },
+      {
+        "year": 2014,
+        "label": "Cho et al. introduce the GRU",
+        "side": "credited"
+      },
+      {
+        "year": 2014,
+        "label": "Chung et al. compare GRU and LSTM",
+        "side": "credited"
+      },
+      {
+        "year": 2017,
+        "label": "Google Brain finds LSTM better for translation",
+        "side": "neutral"
+      },
+      {
+        "year": 2018,
+        "label": "Finite-precision study finds LSTM stronger than GRU",
+        "side": "neutral"
+      }
+    ]
+  }
 }

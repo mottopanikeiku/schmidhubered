@@ -178,5 +178,66 @@
     "https://x.com/SchmidhuberAI/status/2088569445547446339",
     "https://x.com/SchmidhuberAI/status/2093589881423266144",
     "https://x.com/SchmidhuberAI/status/2108116820700053713"
-  ]
+  ],
+  "card": {
+    "category": "Architectures",
+    "headline": "Convolutional networks",
+    "credited": {
+      "who": "LeCun et al.",
+      "year": 1989,
+      "what": "Backprop-trained CNN for digits"
+    },
+    "challenger": {
+      "who": "Fukushima, Waibel, Zhang",
+      "year": 1979,
+      "what": "Neocognitron and backprop-trained convolutions"
+    },
+    "question": "Did LeCun's 1989 network invent CNNs, or follow Fukushima, Waibel and Zhang?",
+    "claim": "He says Fukushima's 1979 neocognitron had the basic CNN architecture, and Waibel in 1987 and Zhang in 1988 trained convolutional networks by backpropagation before LeCun.",
+    "pushback": "LeCun says the neocognitron was not trained by backpropagation and used separate cell layers where his 1989 network used strided convolutions.",
+    "crux": "The question is whether inventing CNNs means the 1979 layered architecture or training it by backpropagation, and who did that first.",
+    "his_quote": {
+      "text": "However, the basic CNN architecture with convolutional and downsampling layers is actually due to Fukushima (1979)",
+      "date": "2020-06-25",
+      "url": "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XVIII:~:text=However%2C%20the%20basic%20CNN%20architecture%20with%20convolutional%20and"
+    },
+    "their_quote": {
+      "who": "Yann LeCun, 2024",
+      "text": "The original Cognitron and Neocognitron didn't use backprop because backprop hadn't been popularized nor demonstrated as a learning mechanism yet",
+      "date": "2024-09-28",
+      "url": "https://x.com/ylecun/status/1840123570338599361"
+    },
+    "timeline": [
+      {
+        "year": 1979,
+        "label": "Fukushima's neocognitron, Japanese version",
+        "side": "challenger"
+      },
+      {
+        "year": 1987,
+        "label": "Waibel's time-delay network report",
+        "side": "challenger"
+      },
+      {
+        "year": 1988,
+        "label": "Zhang et al.'s backprop-trained character network",
+        "side": "challenger"
+      },
+      {
+        "year": 1989,
+        "label": "LeCun et al.'s zip code paper",
+        "side": "credited"
+      },
+      {
+        "year": 2019,
+        "label": "ACM credits LeCun's handwritten-digit CNN",
+        "side": "credited"
+      },
+      {
+        "year": 2024,
+        "label": "LeCun replies on X about the neocognitron",
+        "side": "credited"
+      }
+    ]
+  }
 }

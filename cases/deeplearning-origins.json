@@ -194,5 +194,66 @@
     "https://x.com/SchmidhuberAI/status/2077098043527041136",
     "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2026-August/044798.html",
     "https://x.com/SchmidhuberAI/status/2097656285202186740"
-  ]
+  ],
+  "card": {
+    "category": "Origins of the field",
+    "headline": "Origins of deep learning",
+    "credited": {
+      "who": "Hinton, LeCun, Bengio",
+      "year": 2006,
+      "what": "Deep learning revival"
+    },
+    "challenger": {
+      "who": "Ivakhnenko and Lapa",
+      "year": 1965,
+      "what": "Group method of data handling"
+    },
+    "question": "Does Ivakhnenko and Lapa's 1965 method count as the start of deep learning?",
+    "claim": "He says Ivakhnenko and Lapa published the first working deep learning algorithm in 1965, and that surveys by Hinton, LeCun and Bengio left them out.",
+    "pushback": "Stephen José Hanson says Ivakhnenko's method stacked polynomial functions for function approximation and did not learn internal representations in Rumelhart's sense.",
+    "crux": "The question is whether growing polynomial layers one at a time by regression counts as deep learning in the modern sense.",
+    "his_quote": {
+      "text": "In the 2000s, AI techniques of the 1960s (Ivakhnenko & Lapa 1965, Amari 1967) were renamed “deep learning” without correct attribution.",
+      "date": "2026-09-09",
+      "url": "https://x.com/SchmidhuberAI/status/2097656285202186740"
+    },
+    "their_quote": {
+      "who": "Stephen José Hanson, 2022",
+      "text": "The method proposes to use series of polynomial functions that are stacked in filtered sets.",
+      "date": "2022-01-27",
+      "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-January/037241.html"
+    },
+    "timeline": [
+      {
+        "year": 1965,
+        "label": "Ivakhnenko and Lapa's group method of data handling",
+        "side": "challenger"
+      },
+      {
+        "year": 1967,
+        "label": "Amari's theory of adaptive pattern classifiers",
+        "side": "challenger"
+      },
+      {
+        "year": 1971,
+        "label": "Ivakhnenko's eight-layer network paper",
+        "side": "challenger"
+      },
+      {
+        "year": 2006,
+        "label": "Hinton and Salakhutdinov's deep network paper",
+        "side": "credited"
+      },
+      {
+        "year": 2015,
+        "label": "LeCun, Bengio and Hinton's Nature review",
+        "side": "credited"
+      },
+      {
+        "year": 2022,
+        "label": "Hanson's reading of Ivakhnenko's papers",
+        "side": "neutral"
+      }
+    ]
+  }
 }

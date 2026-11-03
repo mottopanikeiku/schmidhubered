@@ -132,5 +132,66 @@
     "https://x.com/SchmidhuberAI/status/1975947200808288372",
     "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lbhothers",
     "https://people.idsia.ch/~juergen/most-cited-neural-nets.html#:~:text=AlexNet%20cited%20DanNet%20but%20also%20used%20ReLUs%20%281969%29"
-  ]
+  ],
+  "card": {
+    "category": "Architectures",
+    "headline": "Rectified linear units",
+    "credited": {
+      "who": "Nair and Hinton",
+      "year": 2010,
+      "what": "Rectified linear units"
+    },
+    "challenger": {
+      "who": "Kunihiko Fukushima",
+      "year": 1969,
+      "what": "Rectifying units in vision network"
+    },
+    "question": "Should the ReLU be credited to Fukushima's 1969 network rather than Nair and Hinton?",
+    "claim": "He says Fukushima used rectified linear neurons in 1969, and that AlexNet and later accounts by Hinton and colleagues did not cite him.",
+    "pushback": "A 2016 textbook calls Fukushima's 1975 cognitron a more complicated rectifier design, and AlexNet reported that the simple unit trains deep networks faster.",
+    "crux": "The question is whether Fukushima's 1969 rectifier is the same function, and whether later papers owed it a citation.",
+    "his_quote": {
+      "text": "AlexNet used Kunihiko Fukushima's rectified linear neurons (ReLUs)",
+      "date": "2021-02",
+      "url": "https://people.idsia.ch/~juergen/DanNet-triggers-deep-CNN-revolution-2011.html#:~:text=Unlike%20DanNet%2C%20AlexNet%20used%20Kunihiko%20Fukushima%27s%20rectified%20linear"
+    },
+    "their_quote": {
+      "who": "Goodfellow, Bengio and Courville, 2016",
+      "text": "The original cognitron (Fukushima, 1975) introduced a more complicated version that was highly inspired by our knowledge of brain function.",
+      "date": "2016",
+      "url": "https://www.deeplearningbook.org/contents/intro.html"
+    },
+    "timeline": [
+      {
+        "year": 1969,
+        "label": "Fukushima's rectifying visual feature network",
+        "side": "challenger"
+      },
+      {
+        "year": 1973,
+        "label": "Von der Malsburg's orientation-cell model",
+        "side": "challenger"
+      },
+      {
+        "year": 2010,
+        "label": "Nair and Hinton's rectified linear units paper",
+        "side": "credited"
+      },
+      {
+        "year": 2012,
+        "label": "AlexNet adopts the ReLU name",
+        "side": "credited"
+      },
+      {
+        "year": 2020,
+        "label": "He first objects to the ReLU credit",
+        "side": "challenger"
+      },
+      {
+        "year": 2025,
+        "label": "Hinton's Nobel lecture credits the 2010 paper",
+        "side": "credited"
+      }
+    ]
+  }
 }

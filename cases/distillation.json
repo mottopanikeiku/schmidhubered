@@ -151,5 +151,66 @@
     "https://x.com/SchmidhuberAI/status/2080704707526377562",
     "https://web.archive.org/web/20260926055830/https://twitter.com/SchmidhuberAI/status/2103725881902399730",
     "https://x.com/SchmidhuberAI/status/2104217072486007169"
-  ]
+  ],
+  "card": {
+    "category": "Learning methods",
+    "headline": "Knowledge distillation",
+    "credited": {
+      "who": "Hinton, Vinyals, Dean",
+      "year": 2015,
+      "what": "Distilling knowledge into smaller networks"
+    },
+    "challenger": {
+      "who": "Schmidhuber",
+      "year": 1991,
+      "what": "Compressing one network into another"
+    },
+    "question": "Is his 1991 collapsing of one network into another the same as knowledge distillation?",
+    "claim": "He says his 1991 report already compressed a teacher network's knowledge into a student network, and that the 2015 paper did not cite it.",
+    "pushback": "Vinay Prabhu argues the 1991 networks were trained together, unlike standard distillation, and the 2015 paper credits Caruana's 2006 model compression instead.",
+    "crux": "The question is whether his 1991 network-to-network transfer is the same technique as training a small model on a large one's outputs.",
+    "his_quote": {
+      "text": "NN distillation was published by Juergen Schmidhuber in 1991.",
+      "date": "2025-11",
+      "url": "https://people.idsia.ch/~juergen/who-invented-knowledge-distillation-with-neural-networks.html#:~:text=NN%20distillation%20was%20published%20by%20Juergen%20Schmidhuber%20in%201991."
+    },
+    "their_quote": {
+      "who": "Hinton, Vinyals and Dean, 2015",
+      "text": "A version of this strategy has already been pioneered by Rich Caruana and his collaborators",
+      "date": "2015-03-09",
+      "url": "https://arxiv.org/pdf/1503.02531"
+    },
+    "timeline": [
+      {
+        "year": 1991,
+        "label": "Neural sequence chunkers report",
+        "side": "challenger"
+      },
+      {
+        "year": 1992,
+        "label": "History compression paper in Neural Computation",
+        "side": "challenger"
+      },
+      {
+        "year": 1997,
+        "label": "Domingos paper he later calls distillation",
+        "side": "neutral"
+      },
+      {
+        "year": 2006,
+        "label": "Buciluǎ, Caruana and Niculescu-Mizil's model compression",
+        "side": "neutral"
+      },
+      {
+        "year": 2015,
+        "label": "Hinton, Vinyals and Dean's distillation preprint",
+        "side": "credited"
+      },
+      {
+        "year": 2026,
+        "label": "Prabhu and Domingos reply on X",
+        "side": "neutral"
+      }
+    ]
+  }
 }

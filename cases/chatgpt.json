@@ -129,5 +129,66 @@
     "https://people.idsia.ch/~juergen/ai-boom-roots-munich-1991.html",
     "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_i-am-proud-of-the-work-my-team-did-in-munich-activity-7473642473047719937-KM6W",
     "https://x.com/SchmidhuberAI/status/2107505357115314237"
-  ]
+  ],
+  "card": {
+    "category": "Companies and products",
+    "headline": "ChatGPT's G, P, T",
+    "credited": {
+      "who": "Radford et al., OpenAI",
+      "year": 2018,
+      "what": "Generative pre-trained Transformer"
+    },
+    "challenger": {
+      "who": "Schmidhuber's Munich group",
+      "year": 1990,
+      "what": "Curiosity, chunkers, fast weights"
+    },
+    "question": "Did his group's 1990-91 work establish the principles behind GPT's G, P and T?",
+    "claim": "He says his Munich group published the principles behind GPT's letters: adversarial curiosity in 1990, and unsupervised pre-training and linear Transformers in 1991.",
+    "pushback": "There is no direct reply from OpenAI, but the GPT paper uses \"generative\" for language modeling, uses softmax attention and cites other pre-training work.",
+    "crux": "The question is whether the 1990-91 methods are fairly called the principles behind GPT's generative pre-training and Transformer.",
+    "his_quote": {
+      "text": "has its roots in the early nineties at the Technical University of Munich, especially the \"G\" and the \"P\" and the \"T\" in \"ChatGPT.\"",
+      "date": "2025-01-23",
+      "url": "https://x.com/SchmidhuberAI/status/1882337549190123724"
+    },
+    "their_quote": {
+      "who": "Radford et al., OpenAI, 2018",
+      "text": "The closest line of work to ours involves pre-training a neural network using a language modeling objective",
+      "date": "2018-06-11",
+      "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf"
+    },
+    "timeline": [
+      {
+        "year": 1990,
+        "label": "Adversarial artificial curiosity report",
+        "side": "challenger"
+      },
+      {
+        "year": 1991,
+        "label": "Fast weight controller report",
+        "side": "challenger"
+      },
+      {
+        "year": 1991,
+        "label": "Neural sequence chunker report",
+        "side": "challenger"
+      },
+      {
+        "year": 2018,
+        "label": "OpenAI's GPT paper",
+        "side": "credited"
+      },
+      {
+        "year": 2021,
+        "label": "Linear attention shown equivalent to fast weights",
+        "side": "challenger"
+      },
+      {
+        "year": 2022,
+        "label": "OpenAI releases ChatGPT",
+        "side": "credited"
+      }
+    ]
+  }
 }

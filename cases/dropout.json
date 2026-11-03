@@ -109,5 +109,66 @@
     "https://people.idsia.ch/~juergen/deep-learning-history.html#graph:~:text=In%201990%2C%20Hanson%20introduced%20the%20Stochastic%20Delta%20Rule%2C%20a%20stochastic",
     "https://arxiv.org/pdf/2212.11279v3#page=16",
     "https://people.idsia.ch/~juergen/most-cited-neural-nets.html#:~:text=AlexNet%20cited%20DanNet%20but%20also%20used%20ReLUs%20%281969%29"
-  ]
+  ],
+  "card": {
+    "category": "Learning methods",
+    "headline": "Dropout",
+    "credited": {
+      "who": "Hinton, Srivastava et al.",
+      "year": 2012,
+      "what": "Randomly dropping hidden units"
+    },
+    "challenger": {
+      "who": "Stephen José Hanson",
+      "year": 1990,
+      "what": "Stochastic delta rule"
+    },
+    "question": "Is dropout a variant of Hanson's 1990 stochastic delta rule or a separate technique?",
+    "claim": "He says dropout is a variant of Hanson's 1990 stochastic delta rule, which Hinton's 2012 papers and the 2021 Turing Lecture did not cite.",
+    "pushback": "Hinton's group has not answered, and dropout silences units at a fixed rate while Hanson's rule makes each weight random with learned mean and spread.",
+    "crux": "The question is whether silencing random units at a fixed rate is a special case of making weights random with learned spread.",
+    "his_quote": {
+      "text": "However, \"dropout\" is actually a variant of Hanson's much earlier stochastic delta rule (1990)",
+      "date": "2020-04-21",
+      "url": "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#V:~:text=However%2C%20%22dropout%22%20is%20actually%20a%20variant%20of%20Hanson%27s%20much%20earlier"
+    },
+    "their_quote": {
+      "who": "Srivastava, Hinton et al., 2014",
+      "text": "A motivation for dropout comes from a theory of the role of sex in evolution",
+      "date": "2014-06",
+      "url": "http://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf"
+    },
+    "timeline": [
+      {
+        "year": 1990,
+        "label": "Hanson's stochastic delta rule in Physica D",
+        "side": "challenger"
+      },
+      {
+        "year": 2012,
+        "label": "Hinton et al.'s dropout preprint",
+        "side": "credited"
+      },
+      {
+        "year": 2012,
+        "label": "AlexNet uses dropout to win ImageNet",
+        "side": "credited"
+      },
+      {
+        "year": 2014,
+        "label": "Srivastava et al.'s dropout paper in JMLR",
+        "side": "credited"
+      },
+      {
+        "year": 2018,
+        "label": "Hanson preprint calls dropout a special case",
+        "side": "challenger"
+      },
+      {
+        "year": 2021,
+        "label": "Turing Lecture cites Hinton for dropout",
+        "side": "credited"
+      }
+    ]
+  }
 }

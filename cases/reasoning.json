@@ -132,5 +132,61 @@
     "https://x.com/SchmidhuberAI/status/2101973610420183324",
     "https://web.archive.org/web/20260921094857/https://twitter.com/SchmidhuberAI/status/2101971936871875021",
     "https://x.com/SchmidhuberAI/status/2107523715248370152"
-  ]
+  ],
+  "card": {
+    "category": "Learning methods",
+    "headline": "Chain-of-thought reasoning models",
+    "credited": {
+      "who": "Wei et al. (Google)",
+      "year": 2022,
+      "what": "Chain-of-thought prompting"
+    },
+    "challenger": {
+      "who": "Schmidhuber",
+      "year": 2015,
+      "what": "On Learning to Think"
+    },
+    "question": "Did Schmidhuber's 2015 report On Learning to Think anticipate chain-of-thought reasoning in language models?",
+    "claim": "He says his 2015 controller, trained by reinforcement learning to query a world model for planning, is what is now called chain of thought.",
+    "pushback": "No reply from the later authors is on record, and his controller passes internal vectors to a fixed model rather than writing out text.",
+    "crux": "The question is whether a controller querying a world model is the same idea as a language model writing out its reasoning.",
+    "his_quote": {
+      "text": "an RL prompt engineer which learns to query its model for abstract reasoning and planning and decision making. Today this is called \"chain of thought.\"",
+      "date": "2025-05-21",
+      "url": "https://x.com/SchmidhuberAI/status/1925204946967801861"
+    },
+    "their_quote": null,
+    "timeline": [
+      {
+        "year": 2015,
+        "label": "On Learning to Think posted to arXiv",
+        "side": "challenger"
+      },
+      {
+        "year": 2018,
+        "label": "His One Big Net for Everything proposal",
+        "side": "challenger"
+      },
+      {
+        "year": 2021,
+        "label": "Scratchpads paper by Nye et al.",
+        "side": "credited"
+      },
+      {
+        "year": 2022,
+        "label": "Wei et al.'s chain-of-thought paper",
+        "side": "credited"
+      },
+      {
+        "year": 2024,
+        "label": "OpenAI o1 trained to reason with RL",
+        "side": "credited"
+      },
+      {
+        "year": 2025,
+        "label": "DeepSeek-R1 report",
+        "side": "credited"
+      }
+    ]
+  }
 }

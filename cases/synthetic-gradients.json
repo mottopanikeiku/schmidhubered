@@ -80,5 +80,61 @@
     "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%2015:~:text=A%20quarter%20century%20later%2C%20DeepMind%20called%20this%20%22Synthetic%20Gradients.%22",
     "https://people.idsia.ch/~juergen/ai-priority-disputes.html#NAN5:~:text=This%20work%20of%20DeepMind%20is%20similar%20to",
     "https://arxiv.org/pdf/2005.05744v5#page=21"
-  ]
+  ],
+  "card": {
+    "category": "Learning methods",
+    "headline": "Synthetic gradients",
+    "credited": {
+      "who": "Jaderberg et al. (DeepMind)",
+      "year": 2016,
+      "what": "Decoupled neural interfaces"
+    },
+    "challenger": {
+      "who": "Schmidhuber",
+      "year": 1990,
+      "what": "Networks adjusting networks"
+    },
+    "question": "Is DeepMind's 2016 synthetic-gradient method the same as Schmidhuber's 1990 learned error estimator?",
+    "claim": "He says his 1990 work trained a second network to estimate a recurrent network's error gradients, which DeepMind called synthetic gradients in 2016.",
+    "pushback": "DeepMind's paper cites his 1990 work and says its own goal is letting network parts update without waiting for backpropagation.",
+    "crux": "The question is whether learning to estimate gradients for local learning is the same invention as estimating them to decouple modules.",
+    "his_quote": {
+      "text": "A quarter century later, DeepMind called this \"Synthetic Gradients.\"",
+      "date": "2026-02-23",
+      "url": "https://arxiv.org/pdf/2005.05744v5#page=21"
+    },
+    "their_quote": {
+      "who": "Jaderberg et al., 2016",
+      "text": "The goal of this work is to remove update locking for neural networks. This is achieved by removing backpropagation.",
+      "date": "2016-08-18",
+      "url": "https://arxiv.org/pdf/1608.05343"
+    },
+    "timeline": [
+      {
+        "year": 1989,
+        "label": "Workshop talk on networks adjusting networks",
+        "side": "challenger"
+      },
+      {
+        "year": 1990,
+        "label": "Proceedings and technical report published",
+        "side": "challenger"
+      },
+      {
+        "year": 2016,
+        "label": "DeepMind posts the synthetic gradients paper",
+        "side": "credited"
+      },
+      {
+        "year": 2017,
+        "label": "Paper presented at ICML",
+        "side": "credited"
+      },
+      {
+        "year": 2021,
+        "label": "He first raises the priority claim",
+        "side": "challenger"
+      }
+    ]
+  }
 }

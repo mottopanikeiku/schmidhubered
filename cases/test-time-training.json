@@ -140,5 +140,66 @@
     "https://web.archive.org/web/20260624153125/https://twitter.com/SchmidhuberAI/status/2069805604047053235",
     "https://people.idsia.ch/~juergen/metalearning.html#abstract:~:text=The%20%22in%2Dcontext%20learning%22%20and%20%22test%20time%20training%22%20of%20recent%20Large",
     "https://people.idsia.ch/~juergen/recursive-self-improvement.html#secllm:~:text=This%20so%2Dcalled%20%22In%2DContext%20Learning%22%20and%20%22Test%20Time%20Training%22%20of%20LLMs"
-  ]
+  ],
+  "card": {
+    "category": "Learning methods",
+    "headline": "Test-time training",
+    "credited": {
+      "who": "Yu Sun et al.",
+      "year": 2020,
+      "what": "Test-time training (TTT)"
+    },
+    "challenger": {
+      "who": "Schmidhuber",
+      "year": 1991,
+      "what": "Fast weight controller"
+    },
+    "question": "Did Schmidhuber's 1991 fast weight controller already perform what is now called test-time training?",
+    "claim": "He says his 1991 system, where one network learns to rewrite another's weights while reading a sequence, already did test-time training.",
+    "pushback": "Sun et al. call their layers a special case of his fast weights, but say they add an explicit learning problem on each test input.",
+    "crux": "The question is whether learning to change weights during a sequence already covers test-time training, or the explicit learning problem is new.",
+    "his_quote": {
+      "text": "Of course, the 1991 Unnormalized Linear Transformer ULTRA did TTT.",
+      "date": "2026-06-24",
+      "url": "https://x.com/SchmidhuberAI/status/2069808010461884539"
+    },
+    "their_quote": {
+      "who": "Sun et al., 2024",
+      "text": "In contrast, TTT embraces the idea of formulating an explicit learning problem, where the test instance is the target of generalization.",
+      "date": "2024-07-05",
+      "url": "https://arxiv.org/pdf/2407.04620v1"
+    },
+    "timeline": [
+      {
+        "year": 1991,
+        "label": "Fast weight controller report",
+        "side": "challenger"
+      },
+      {
+        "year": 1992,
+        "label": "Journal version in Neural Computation",
+        "side": "challenger"
+      },
+      {
+        "year": 2020,
+        "label": "Sun et al. adapt classifiers at test time",
+        "side": "credited"
+      },
+      {
+        "year": 2021,
+        "label": "Linear Transformers shown to be fast weight programmers",
+        "side": "challenger"
+      },
+      {
+        "year": 2024,
+        "label": "TTT layers paper cites his 1992 work",
+        "side": "credited"
+      },
+      {
+        "year": 2026,
+        "label": "His posts say the 1991 system did TTT",
+        "side": "challenger"
+      }
+    ]
+  }
 }

@@ -101,5 +101,66 @@
     "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2023-February/039284.html",
     "https://x.com/SchmidhuberAI/status/1866875607767748965",
     "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#Hinton:~:text=However%2C%20this%20makes%20no%20sense%2C%20because%20the%201969%20book"
-  ]
+  ],
+  "card": {
+    "category": "Origins of the field",
+    "headline": "Neural network winter",
+    "credited": {
+      "who": "Terrence Sejnowski",
+      "year": 2020,
+      "what": "Field abandoned after Perceptrons"
+    },
+    "challenger": {
+      "who": "Ivakhnenko, Lapa, Amari",
+      "year": 1965,
+      "what": "Working multilayer learning methods"
+    },
+    "question": "Was neural network research abandoned after the 1969 book Perceptrons until the 1980s?",
+    "claim": "He says Ivakhnenko, Lapa and Amari had working multilayer learning methods before 1969, and that this research continued, especially outside the English-speaking world.",
+    "pushback": "No reply from Sejnowski is on record, and Pearlmutter's objection, which Schmidhuber accepted, was that he had misstated what the book itself proved.",
+    "crux": "The question is whether a decline among English-speaking researchers justifies saying the whole field was abandoned until the 1980s.",
+    "his_quote": {
+      "text": "Deep learning research was not abandoned in the 1970s. It was alive and kicking, especially outside of the Anglosphere.",
+      "date": "2022-02-01",
+      "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-February/037270.html"
+    },
+    "their_quote": {
+      "who": "Terrence Sejnowski, 2020",
+      "text": "the field was abandoned until a new generation of neural network researchers took a fresh look at the problem in the 1980s.",
+      "date": "2020-01-28",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7720171/"
+    },
+    "timeline": [
+      {
+        "year": 1965,
+        "label": "Ivakhnenko and Lapa's multilayer learning method",
+        "side": "challenger"
+      },
+      {
+        "year": 1967,
+        "label": "Amari's theory of adaptive pattern classifiers",
+        "side": "challenger"
+      },
+      {
+        "year": 1969,
+        "label": "Minsky and Papert publish Perceptrons",
+        "side": "neutral"
+      },
+      {
+        "year": 1971,
+        "label": "Ivakhnenko's polynomial theory paper",
+        "side": "challenger"
+      },
+      {
+        "year": 2020,
+        "label": "Sejnowski says the field was abandoned",
+        "side": "credited"
+      },
+      {
+        "year": 2022,
+        "label": "Pearlmutter disputes his reading of the book",
+        "side": "neutral"
+      }
+    ]
+  }
 }

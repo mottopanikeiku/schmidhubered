@@ -89,5 +89,66 @@
     "https://x.com/SchmidhuberAI/status/2097656285202186740",
     "https://x.com/SchmidhuberAI/status/2097697639496065226",
     "https://x.com/SchmidhuberAI/status/2101665771650711607"
-  ]
+  ],
+  "card": {
+    "category": "Origins of the field",
+    "headline": "Founding of AI",
+    "credited": {
+      "who": "McCarthy et al.",
+      "year": 1956,
+      "what": "Dartmouth AI project"
+    },
+    "challenger": {
+      "who": "Cybernetics and earlier automata",
+      "year": 1951,
+      "what": "Paris meeting on machine thought"
+    },
+    "question": "Was the 1956 Dartmouth project the birth of AI or a renaming of cybernetics?",
+    "claim": "He says practical AI existed long before 1956, citing a 1951 Paris AI conference, and that in 1956 cybernetics was renamed AI.",
+    "pushback": "Historian David Brock says whether Paris counts as AI's birthplace depends on the definition, and the Dartmouth proposal itself discussed earlier neuron-net research.",
+    "crux": "The question is whether founding AI means building the first machines that act intelligently or forming a named research field.",
+    "his_quote": {
+      "text": "In 1956, Cybernetics was renamed \"AI\" by logic programming experts.",
+      "date": "2026-09-20",
+      "url": "https://x.com/SchmidhuberAI/status/2101665771650711607"
+    },
+    "their_quote": {
+      "who": "David C. Brock, 2021",
+      "text": "This view hinges on just how one takes the phrase “artificial intelligence.”",
+      "date": "2021-02-09",
+      "url": "https://spectrum.ieee.org/cybernetics-computer-design-and-a-meeting-of-the-minds"
+    },
+    "timeline": [
+      {
+        "year": 1931,
+        "label": "Gödel's paper on undecidable propositions",
+        "side": "challenger"
+      },
+      {
+        "year": 1951,
+        "label": "Paris meeting on calculating machines and thought",
+        "side": "challenger"
+      },
+      {
+        "year": 1955,
+        "label": "Dartmouth proposal dated 31 August",
+        "side": "credited"
+      },
+      {
+        "year": 1956,
+        "label": "Dartmouth summer research project",
+        "side": "credited"
+      },
+      {
+        "year": 2021,
+        "label": "Brock's account of the Paris meeting",
+        "side": "neutral"
+      },
+      {
+        "year": 2026,
+        "label": "His post saying cybernetics was renamed AI",
+        "side": "challenger"
+      }
+    ]
+  }
 }
