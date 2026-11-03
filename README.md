@@ -4,7 +4,7 @@ Jürgen Schmidhuber has argued in public for thirty years that results credited 
 
 The site is live at [mottopanikeiku.github.io/schmidhubered](https://mottopanikeiku.github.io/schmidhubered/) and is rebuilt every hour so that the vote counts stay current.
 
-![A case page: the question, the usual credit beside his claim, and the sources](docs/case-page.png)
+![Every case as a line from the year he says an idea first appeared to the year it is usually credited](docs/chart.png)
 
 ## Voting
 
