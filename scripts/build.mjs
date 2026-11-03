@@ -60,46 +60,49 @@ function slug(s) {
   return s.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
-// "Alan M. Turing" and "Alan Turing" share a key; initials are dropped so the same person matches across cases.
-function personKey(name) {
-  const t = name.split(/\s+/);
-  const last = t[t.length - 1];
-  const given = t.slice(0, -1).find((x) => !/^([A-Z]\.)+$/.test(x) && !/^[A-Z]$/.test(x));
-  return slug(given ? `${given} ${last}` : last);
-}
+const isInitial = (t) => /^(?:[A-Z]\.)+-?(?:[A-Z]\.)*$/.test(t) || /^[A-Z]$/.test(t);
 
+// Splits a "who" string into people and organisations. People are keyed by surname, so "Y. Bengio",
+// "Yoshua Bengio" and "Geoffrey E. Hinton" versus "Geoffrey Hinton" fall together across cases.
 function credited(who) {
   const out = [];
-  let s = who;
-  for (const m of who.matchAll(/\(([^)]+)\)/g)) out.push({ key: slug(m[1]), label: m[1].trim() });
-  s = s.replace(/\([^)]*\)/g, '').replace(/,?\s*\bet al\.?/gi, '').replace(/\s+/g, ' ').trim();
+  const s = who.replace(/\([^)]*\)/g, '').replace(/,?\s*\bet al\.?/gi, '').replace(/\s+/g, ' ').trim();
   let parts = s.split(/\s*,\s*|\s+and\s+|\s*&\s*/).map((p) => p.replace(/^the\s+/i, '').trim()).filter(Boolean);
   // "Wilbur and Orville Wright": a lone given name before a full name takes that surname.
   if (parts.length === 2 && !/\s/.test(parts[0]) && /^\S+ \S+$/.test(parts[1]) && !ORG.test(who)) {
     parts = [`${parts[0]} ${parts[1].split(' ')[1]}`, parts[1]];
   }
-  for (const p of parts) out.push(ORG.test(p) || !/\s/.test(p) ? { key: slug(p), label: p } : { key: personKey(p), label: p });
+  parts.forEach((p, i) => {
+    if (ORG.test(p)) return out.push({ key: slug(p), org: p });
+    const t = p.split(' ');
+    const surname = t[t.length - 1];
+    out.push({ key: slug(surname), surname, full: p, given: t.slice(0, -1).find((x) => !isInitial(x)) || null, first: i === 0 });
+  });
+  for (const m of who.matchAll(/\(([^)]+)\)/g)) out.push({ key: slug(m[1]), org: m[1].trim() });
   return out;
 }
 
+// The filter lists organisations, first authors and anyone credited in two or more cases; a case
+// matches a name wherever it appears among its credited works.
 const creditIndex = new Map();
 for (const c of cases) {
-  const seen = new Set();
   for (const w of c.usual_credit.works) {
-    for (const { key, label } of credited(w.who)) {
-      if (seen.has(key)) continue;
-      seen.add(key);
-      const e = creditIndex.get(key) || { key, labels: new Map(), cases: 0 };
-      e.labels.set(label, (e.labels.get(label) || 0) + 1);
-      e.cases++;
-      creditIndex.set(key, e);
+    for (const x of credited(w.who)) {
+      const e = creditIndex.get(x.key) || { key: x.key, org: x.org, surname: x.surname, full: x.full, givens: new Set(), cases: new Set(), lead: false };
+      if (x.given) e.givens.add(x.given);
+      e.cases.add(c.id);
+      e.lead ||= Boolean(x.org || x.first);
+      creditIndex.set(x.key, e);
     }
   }
 }
-const creditList = [...creditIndex.values()].map((e) => {
-  const label = [...e.labels.entries()].sort((a, b) => b[1] - a[1] || b[0].length - a[0].length)[0][0];
-  return { key: e.key, label, cases: e.cases, sortKey: slug(label.split(' ').pop()) };
-}).sort((a, b) => a.sortKey.localeCompare(b.sortKey) || a.label.localeCompare(b.label));
+const creditList = [...creditIndex.values()].filter((e) => e.lead || e.cases.size > 1).map((e) => ({
+  key: e.key,
+  cases: e.cases.size,
+  // One given name: "Geoffrey Hinton". Initials only: as written, "K. He". Several people: the surname.
+  label: e.org || (e.givens.size === 1 ? `${[...e.givens][0]} ${e.surname}` : e.givens.size ? e.surname : e.full),
+  sortKey: slug(e.org || e.surname),
+})).sort((a, b) => a.sortKey.localeCompare(b.sortKey));
 const creditKeys = (c) => [...new Set(c.usual_credit.works.flatMap((w) => credited(w.who).map((x) => x.key)))];
 
 // ---------------------------------------------------------------- assets
