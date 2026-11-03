@@ -1,8 +1,8 @@
 {
   "id": "language-models",
   "title": "Neural language models",
-  "matchup": "Bengio et al. (2000, 2003) vs Schmidhuber and Heil (1995-96)",
-  "question": "Does Schmidhuber and Heil's 1995-96 text-compression work establish the neural-language-model priority that Schmidhuber claims?",
+  "matchup": "Bengio et al. (2000, 2003) vs Schmidhuber and Heil (1994-96)",
+  "question": "Does Schmidhuber and Heil's 1994-96 text-compression work establish the neural-language-model priority that Schmidhuber claims?",
   "usual_credit": {
     "summary": "Yoshua Bengio, Réjean Ducharme, Pascal Vincent and Christian Jauvin introduced the neural probabilistic language model (NIPS 2000, JMLR 2003), which learns distributed word representations together with a neural network that predicts the next word and so avoids the curse of dimensionality of n-gram models. The ACM's 2019 Turing Award announcement calls it a landmark paper that introduced high-dimension word embeddings and cites its impact on translation and question answering.",
     "works": [
@@ -18,10 +18,16 @@
     "summary": "Schmidhuber says that in 1995 he and Stefan Heil already had an auto-regressive neural probabilistic text model, used for text compression, and that Bengio's 2003 paper only briefly called it related. He also objects to Bengio's statement that a 1999 paper introduced auto-regressive neural networks for density estimation for the first time, and he adds earlier work on word embeddings and word-category prediction by Pollack (1987-90) and by Nakamura and Shikano (1989).",
     "prior_works": [
       {
-        "who": "Jürgen Schmidhuber, S. Heil",
+        "who": "Jürgen Schmidhuber, Stefan Heil",
         "year": 1996,
-        "title": "Sequential neural text compression (IEEE Trans. Neural Networks 7(1); an earlier version appeared at NIPS 1995)",
+        "title": "Sequential neural text compression (IEEE Trans. Neural Networks 7(1); related conference paper at NIPS 1994)",
         "url": "https://sferics.idsia.ch/pub/juergen/textcompression.pdf"
+      },
+      {
+        "who": "Jürgen Schmidhuber, Stefan Heil",
+        "year": 1994,
+        "title": "Predictive Coding with Neural Nets: Application to Text Compression (NIPS 1994)",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/1994/hash/5705e1164a8394aace6018e27d20d237-Abstract.html"
       }
     ],
     "quotes": [
@@ -84,7 +90,7 @@
     ]
   },
   "agreed_facts": [
-    "Schmidhuber and Heil's 'Sequential neural text compression' appeared in IEEE Transactions on Neural Networks 7(1) in 1996, with an earlier version at NIPS 1995.",
+    "Schmidhuber and Heil's 'Sequential neural text compression' appeared in IEEE Transactions on Neural Networks 7(1) in 1996, with a related text-compression paper at NIPS 1994.",
     "The JMLR 2003 paper by Bengio et al. cites Schmidhuber (1996) in its related-work discussion and cites Miikkulainen and Dyer (1991) as earlier work on neural language modelling.",
     "The ACM's 2019 announcement says Bengio's 'A Neural Probabilistic Language Model' 'introduced high-dimension word embeddings as a representation of word meaning'.",
     "Bengio's research page of May 2020 states that a NIPS 1999 paper introduced auto-regressive neural networks for density estimation for the first time."

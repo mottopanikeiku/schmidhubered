@@ -2,18 +2,18 @@
   "id": "multiscale-rnn",
   "title": "Hierarchical recurrent networks with multiple time scales",
   "matchup": "El Hihi and Bengio (1995) vs Schmidhuber (1991, 1992)",
-  "question": "Should the 1995 hierarchical recurrent networks of El Hihi and Bengio be seen as following Schmidhuber's 1991-93 neural history compressor, rather than as introducing a hierarchy of time scales, as he says?",
+  "question": "Does the 1991-93 history-compressor work support Schmidhuber's objection to crediting the 1995 paper with introducing recurrent hierarchies of time scales?",
   "usual_credit": {
-    "summary": "Hierarchical recurrent networks with several time scales are usually traced to Salah El Hihi and Yoshua Bengio, whose NIPS 1995 paper 'Hierarchical Recurrent Neural Networks for Long-Term Dependencies' argued that long-term dependencies are represented by variables with a long time scale. Their networks have layers that update at different, fixed rates, implemented with delays and subsampling. Bengio's research page says that this paper introduced the use of a hierarchy of time scales to combat the vanishing gradients issue, and the hierarchical multiscale recurrent network of Chung, Ahn and Bengio (2017) cites it as one of two notable early attempts that inspired its design.",
+    "summary": "El Hihi and Bengio's 1995 paper studies recurrent layers updating at different fixed rates, using delays and subsampling to address long-term dependencies. Bengio's archived research page describes that paper as introducing a hierarchy of time scales against vanishing gradients, which is the statement Schmidhuber challenges. The paper itself cites his 1992 history-compression work as related, rather than claiming there were no earlier recurrent hierarchies. Chung, Ahn and Bengio's later hierarchical multiscale model also identifies both research lines as early influences while distinguishing fixed update rates from self-organizing time scales.",
     "works": [
       {
-        "who": "El Hihi, Bengio",
+        "who": "Salah El Hihi, Yoshua Bengio",
         "year": 1995,
         "title": "Hierarchical Recurrent Neural Networks for Long-Term Dependencies (NIPS 1995)",
         "url": "https://proceedings.neurips.cc/paper_files/paper/1995/hash/c667d53acd899a97a85de0c201ba99be-Abstract.html"
       },
       {
-        "who": "Chung, Ahn, Bengio",
+        "who": "Junyoung Chung, Sungjin Ahn, Yoshua Bengio",
         "year": 2017,
         "title": "Hierarchical Multiscale Recurrent Neural Networks (ICLR 2017)",
         "url": "https://arxiv.org/abs/1609.01704"
@@ -21,34 +21,28 @@
     ]
   },
   "claim": {
-    "summary": "Schmidhuber says that his April 1991 report 'Neural sequence chunkers' and the 1992 Neural Computation paper based on it were the first systems made of recurrent networks working on different, self-organizing time scales. In these systems each level of a hierarchy of recurrent networks receives only the inputs that the level below could not predict, and he says that others started publishing on multi-time scale recurrent networks a few years later. He objects specifically to Bengio's statement, retrieved from Bengio's research page in May 2020, that the NIPS 1995 paper introduced the use of a hierarchy of time scales to combat the vanishing gradients issue, because his own publications on a hierarchy of time scales against that problem date from 1991 to 1993. He lists this among several disputes that all trace back to the same 1991 paper.",
+    "summary": "Schmidhuber argues that his April 1991 sequence-chunker report and its 1992 journal paper already used a hierarchy of recurrent networks to handle long time lags. Each level passes upward only inputs it cannot predict, so slower levels organize their own time scales rather than receiving fixed update rates. He therefore objects to Bengio's later research-page statement that the 1995 paper introduced hierarchies of time scales for this problem. His priority claim concerns the general use of such a hierarchy, while the two papers use different rules for deciding when higher levels update.",
     "prior_works": [
       {
-        "who": "Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 1991,
         "title": "Neural sequence chunkers (technical report FKI-148-91, TU Munich)",
         "url": "https://people.idsia.ch/~juergen/FKI-148-91ocr.pdf"
       },
       {
-        "who": "Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 1992,
         "title": "Learning complex, extended sequences using the principle of history compression (Neural Computation 4(2))",
         "url": "https://sferics.idsia.ch/pub/juergen/chunker.pdf"
       },
       {
-        "who": "Schmidhuber",
+        "who": "Jürgen Schmidhuber",
         "year": 1993,
         "title": "Netzwerkarchitekturen, Zielfunktionen und Kettenregel (habilitation thesis, TU Munich)",
         "url": "https://sferics.idsia.ch/pub/juergen/habilitation.pdf"
       }
     ],
     "quotes": [
-      {
-        "text": "The systems incrementally learn to define appropriate slower and slower time scales on their own.",
-        "date": "1991-04",
-        "venue": "technical report",
-        "url": "https://people.idsia.ch/~juergen/FKI-148-91ocr.pdf"
-      },
       {
         "text": "also was the first system made of RNNs operating on different (self-organizing) time scales",
         "date": "2019-10",
@@ -73,7 +67,7 @@
     "last_made": "2023-12"
   },
   "response": {
-    "summary": "No public reply from Bengio or El Hihi to the 2020 priority claim was found. The 1995 paper itself cites Schmidhuber (1992) and says that a related idea using a hierarchical structure was presented there, although it does not cite the 1991 report. Bengio's research page said in captures of April 2020 and December 2022 that the NIPS 1995 paper introduced the use of a hierarchy of time scales to combat the vanishing gradients issue. A 2001 chapter that Bengio co-authored with Hochreiter, Frasconi and Schmidhuber describes the hierarchical networks of El Hihi and Bengio and Schmidhuber's hierarchical chunker systems in separate paragraphs. In 2017 Chung, Ahn and Bengio named Schmidhuber (1992) and El Hihi and Bengio (1995) as the two notable early attempts that inspired their model, describing the first as self-organizing a hierarchy and the second as updating each layer at a fixed rate.",
+    "summary": "El Hihi and Bengio's 1995 paper explicitly says Schmidhuber (1992) presented a related hierarchical idea, although it does not cite the 1991 report. A 2001 chapter co-authored by Bengio and Schmidhuber discusses both approaches, and Chung, Ahn and Bengio's later paper calls both early attempts that inspired its model. It distinguishes Schmidhuber's self-organizing hierarchy from fixed layer rates. These acknowledgments limit any claim that the earlier work went wholly uncited, while leaving Bengio's archived use of introduced open to the priority objection. They are source statements, not a direct reply to Schmidhuber's 2020 complaint.",
     "quotes": [
       {
         "text": "A related idea using a hierarchical structure was presented in (Schmidhuber, 1992).",
