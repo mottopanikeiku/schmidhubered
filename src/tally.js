@@ -39,19 +39,29 @@ export function contest(c) {
   return (c.v * (1 - mean) ** 2 + c.p * (0.5 - mean) ** 2 + c.n * mean ** 2) / t;
 }
 
-// state: 'closed' when the case has no issue yet, 'unknown' when counts could not be fetched.
-// compact: the card version, a bar and the vote count; the full version adds percentages.
-export function tallyInner(c, state, compact = false) {
-  const empty = (text) => `<div class="bar-slot"></div><p class="tally-text">${text}</p>`;
-  if (state === 'closed') return empty('Voting not yet open');
-  if (state === 'unknown' || !c) return empty('Vote count unavailable');
+function segments(c) {
   const t = total(c);
-  if (!t) return empty('No votes yet');
-  const pc = percents(c);
-  const label = CHOICES.map(([k, name]) => `${name} ${pc[k]}%`).join(', ');
-  const segs = CHOICES.filter(([k]) => c[k] > 0)
+  return CHOICES.filter(([k]) => c[k] > 0)
     .map(([k]) => `<span class="seg ${k}" style="width:${((c[k] * 100) / t).toFixed(2)}%"></span>`).join('');
-  const count = `<span class="total">${t.toLocaleString('en-US')} ${t === 1 ? 'vote' : 'votes'}</span>`;
-  const keys = compact ? '' : ' ' + CHOICES.map(([k, name]) => `<span class="k ${k}">${name} ${pc[k]}%</span>`).join(' ');
-  return `<div class="bar-slot"><div class="bar" role="img" aria-label="${label}">${segs}</div></div><p class="tally-text">${count}${keys}</p>`;
+}
+
+// "12 votes: valid 50%, partly 25%, not valid 25%", or why there is no count.
+export function voteLine(c, state) {
+  if (state === 'closed') return 'Voting not yet open';
+  if (state === 'unknown' || !c) return 'Vote count unavailable';
+  const t = total(c);
+  if (!t) return 'No votes yet';
+  const pc = percents(c);
+  return `${t.toLocaleString('en-US')} ${t === 1 ? 'vote' : 'votes'}: ${CHOICES.map(([k, name]) => `${name.toLowerCase()} ${pc[k]}%`).join(', ')}`;
+}
+
+// The result on a case page: a thin bar and the line above, or just the line when there are no votes.
+export function tallyInner(c, state) {
+  const bar = c && total(c) ? `<span class="bar" role="img" aria-label="${voteLine(c, state)}">${segments(c)}</span>` : '';
+  return `<span class="bar-slot">${bar}</span><span class="tally-text">${voteLine(c, state)}</span>`;
+}
+
+// The tiny bar at the end of a chart row; nothing at all until a case has votes.
+export function miniInner(c) {
+  return c && total(c) ? `<span class="bar" aria-hidden="true">${segments(c)}</span>` : '';
 }

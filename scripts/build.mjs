@@ -7,7 +7,7 @@ import {
   ROOT, REPO, SITE_URL, VOTES_API, readJSON, loadCases, loadSeed, caseInstances, esc, inline, fact, plain,
   fmtDate, year, dateKey, tweetId, plural, host, loadRules, matchCases, likelyClaim, cardOf, yearOf, CATEGORIES,
 } from './lib.mjs';
-import { CHOICES, fromReactions, total, contest, tallyInner } from '../src/tally.js';
+import { CHOICES, fromReactions, total, tallyInner, miniInner, voteLine } from '../src/tally.js';
 import { cardHash } from './card-template.mjs';
 
 const OUT = path.resolve(ROOT, process.env.OUT_DIR || 'dist');
@@ -109,8 +109,6 @@ function clip(s, n = 160) {
   return t.length <= n ? t : t.slice(0, t.lastIndexOf(' ', n - 1)) + '…';
 }
 
-const WORDMARK = 'Schmidhuber<span class="ed">ed</span>';
-
 function layout({ at, title, description, image = 'card.png', imageAlt, body, nav, base = null, type = 'website' }) {
   const depth = at.split('/').filter(Boolean).length;
   const r = depth ? '../'.repeat(depth) : './';
@@ -135,8 +133,8 @@ ${base ? `<base href="${esc(base)}">\n` : ''}<title>${esc(full)}</title>
 <meta property="og:image:alt" content="${esc(imageAlt || TAGLINE)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#f3f2ee" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f5f4f0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="${r}favicon.png" type="image/png" sizes="32x32">
 <link rel="icon" href="${r}favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="${r}apple-touch-icon.png">
@@ -149,8 +147,8 @@ ${base ? `<base href="${esc(base)}">\n` : ''}<title>${esc(full)}</title>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
 <div class="wrap top-row">
-<a class="brand" href="${r}" aria-label="${SITE}, all cases">${WORDMARK}</a>
-<nav aria-label="Site">${navLink('', 'Cases', 'cases')}${navLink('latest/', 'Latest', 'latest')}${navLink('about/', 'About', 'about')}</nav>
+<a class="brand" href="${r}">${SITE}</a>
+<nav aria-label="Site">${navLink('about/', 'About', 'about')}${navLink('latest/', 'Latest', 'latest')}</nav>
 </div>
 </header>
 <main id="main" tabindex="-1">
@@ -168,10 +166,10 @@ ${body}
 
 // ---------------------------------------------------------------- pieces
 
-function tally(c, { compact = false } = {}) {
+// Vote result on a case page; the live script refreshes anything carrying data-issue.
+function tally(c) {
   const v = voteState(c);
-  const attrs = (v.num ? ` data-issue="${v.num}"` : '') + (compact ? ' data-compact' : '');
-  return `<div class="tally${compact ? ' tally-compact' : ''}"${attrs}>${tallyInner(v.counts, v.state, compact)}</div>`;
+  return `<p class="tally"${v.num ? ` data-issue="${v.num}"` : ''}>${tallyInner(v.counts, v.state)}</p>`;
 }
 
 function timeTag(d, opts) {
@@ -269,38 +267,82 @@ ${inner}
 </section>`;
 }
 
-// ---------------------------------------------------------------- the matchup
+// ---------------------------------------------------------------- the year scale
 
-// The two sides of a case in time order: the earlier work Schmidhuber points to on the left in
-// vermilion, the usually credited work on the right in blue, joined by an axis with one tick per decade.
-function matchup(k, big = false) {
-  const a = yearOf(k.challenger.year);
-  const b = yearOf(k.credited.year);
-  const gap = a && b ? b - a : null;
-  const yrs = (n) => `${n} ${n === 1 ? 'yr' : 'yrs'}`;
-  const gapText = gap === null ? '' : gap === 0 ? 'same year' : yrs(Math.abs(gap));
-  const gapSr = gap === null ? '' : gap === 0 ? 'in the same year as' : gap > 0 ? `${yrs(gap)} before` : `${yrs(-gap)} after`;
-  const ticks = gap ? Math.min(Math.floor(Math.abs(gap) / 10), 12) : 0;
-  const side = (s, cls, label) => `<div class="side ${cls}">
-<span class="side-label${big ? '' : ' sr'}">${label}</span>
-<span class="yr">${esc(s.year)}</span>
-<span class="who">${esc(s.who)}</span>
-<span class="what">${esc(s.what)}</span>
-</div>`;
-  return `<div class="matchup${big ? ' matchup-big' : ''}">
-${side(k.challenger, 'challenger', 'Claimed first')}
-<div class="gap"><span class="gap-n" aria-hidden="true">${gapText}</span><span class="sr">${gapSr}</span><span class="axis" aria-hidden="true">${'<i></i>'.repeat(ticks)}</span></div>
-${side(k.credited, 'credited', 'Usually credited')}
-</div>`;
+// One scale for the home chart and the case pictures. The few years before 1900 share a narrow band
+// at the left, then comes a visible break, and 1900 to the present runs linearly across the rest.
+const allYears = cases.flatMap((c) => [yearOf(cardOf(c).challenger.year), yearOf(cardOf(c).credited.year)]).filter(Boolean);
+const END = NOW.getUTCFullYear();
+const BREAK = 1900;
+const START = Math.floor(Math.min(BREAK, ...allYears) / 100) * 100;
+const BAND = START < BREAK ? 6 : 0;
+const SKIP = START < BREAK ? 4 : 0;
+
+function xOf(y) {
+  if (y < BREAK) return ((y - START) / (BREAK - START)) * BAND;
+  return BAND + SKIP + ((Math.min(y, END) - BREAK) / (END - BREAK)) * (100 - BAND - SKIP);
+}
+const at = (y) => `${xOf(y).toFixed(2)}%`;
+
+function ticks() {
+  const out = START < BREAK ? [{ y: START, major: true }] : [];
+  for (let y = BREAK; y <= END; y += 10) out.push({ y, major: y % 50 === 0 });
+  return out;
+}
+
+// Year labels along a line; `majorOnly` keeps just 1600, 1900, 1950 and 2000 for the case pictures.
+function axis(majorOnly = false) {
+  const marks = ticks().filter((t) => !majorOnly || t.major)
+    .map((t) => `<span class="tick${t.major ? ' major' : ''}${t.y === START ? ' first' : ''}" style="left:${at(t.y)}">${t.y}</span>`).join('');
+  const brk = BAND ? `<span class="break" style="left:${(BAND + SKIP / 2).toFixed(2)}%"></span>` : '';
+  return `<span class="axis" aria-hidden="true">${marks}${brk}</span>`;
 }
 
 // ---------------------------------------------------------------- case pages
 
 const listed = (c) => new Set(caseInstances(c, seed).map((i) => tweetId(i.url)).filter(Boolean));
 
-// Events on a horizontal axis. Each label (about 15% of the axis wide, centred on its dot, or hanging
-// off it near either end) goes into the first of four lanes, two above and two below, where it does
-// not overlap a label already placed.
+// Two dots, or one split dot (half red, half blue) when both fall in the same year.
+function dots(a, b) {
+  if (a === b) return `<span class="dot split" style="left:${at(a)}"></span>`;
+  return `<span class="dot his" style="left:${at(a)}"></span><span class="dot cred" style="left:${at(b)}"></span>`;
+}
+
+// The matchup as one picture: his year and the credited year at either end, and the two dots on a
+// hairline drawn to the same scale as the home chart, so the gap shows where it sits in history.
+// The gap sits above the line and the axis years below it, so the two never meet.
+function picture(k) {
+  const a = yearOf(k.challenger.year);
+  const b = yearOf(k.credited.year);
+  const gap = a && b ? Math.abs(b - a) : null;
+  const gapText = gap === null ? '' : gap === 0 ? 'same year' : `${gap} ${gap === 1 ? 'year' : 'years'}`;
+  const mid = a && b ? (xOf(a) + xOf(b)) / 2 : 0;
+  const edge = mid < 6 ? ' start' : mid > 94 ? ' end' : '';
+  const end = (s, cls) => `<div class="end ${cls}"><span class="big">${esc(s.year)}</span><span class="who">${esc(s.who)}</span><span class="what">${esc(s.what)}</span></div>`;
+  const line = a && b ? `<span class="line">
+${axis(true)}
+<span class="join" style="left:${at(Math.min(a, b))};width:${Math.abs(xOf(b) - xOf(a)).toFixed(2)}%"></span>
+${dots(a, b)}
+<span class="gapl${edge}" style="left:${mid.toFixed(2)}%">${gapText}</span>
+</span>` : '';
+  return `<figure class="picture">
+<figcaption class="sr">Claimed first in ${esc(k.challenger.year)} by ${esc(k.challenger.who)}; usually credited to ${esc(k.credited.who)}, ${esc(k.credited.year)}; ${gap === 0 ? 'in the same year' : `${gapText} apart`}.</figcaption>
+<div class="ends">${end(k.challenger, 'his')}${end(k.credited, 'cred')}</div>
+${line}
+</figure>`;
+}
+
+// A quote under a one-sentence summary, cut at a word boundary when it runs long.
+function sideQuote(q, who) {
+  if (!q) return '';
+  let t = String(q.text).replace(/\s+/g, ' ').trim();
+  if (t.length > 220) t = `${t.slice(0, t.lastIndexOf(' ', 216))}…`;
+  return `<blockquote class="sq"><p>“${plain(t)}”</p></blockquote>
+<p class="cite">${esc(String(who).replace(/,\s*\d{4}$/, ''))}, ${timeTag(q.date, { short: true })}, <a href="${esc(q.url)}" rel="noopener">source</a></p>`;
+}
+
+// Events as dots on a hairline, each label in the first of four lanes (two above, two below) where it
+// does not overlap a label already placed. Labels are about 15% of the line wide.
 function timeline(k) {
   const ev = (k.timeline || []).map((e) => ({ ...e, y: yearOf(e.year) })).filter((e) => e.y).sort((a, b) => a.y - b.y);
   if (ev.length < 2) return '';
@@ -312,17 +354,17 @@ function timeline(k) {
     const x = max === min ? (i / (ev.length - 1)) * 100 : ((e.y - min) / (max - min)) * 100;
     const align = x < 12 ? 'start' : x > 88 ? 'end' : '';
     const box = align === 'start' ? [x, x + W] : align === 'end' ? [x - W, x] : [x - W / 2, x + W / 2];
-    let lane = lanes.findIndex((l) => l.every(([a, b]) => box[1] + 1 < a || box[0] > b + 1));
+    let lane = lanes.findIndex((l) => l.every(([p, q]) => box[1] + 1 < p || box[0] > q + 1));
     if (lane < 0) lane = i % 4;
     lanes[lane].push(box);
-    return { lane, html: `<li class="ev ${esc(e.side)} lane${lane}${align ? ` ${align}` : ''}" style="--x:${x.toFixed(2)}%"><span class="ev-box"><span class="ev-year">${esc(e.year)}</span><span class="ev-label">${inline(e.label)}</span></span></li>` };
+    const side = { challenger: 'his', credited: 'cred', neutral: 'other' }[e.side] || 'other';
+    return { lane, html: `<li class="ev ${side} lane${lane}${align ? ` ${align}` : ''}" style="--x:${x.toFixed(2)}%"><span class="ev-box"><span class="ev-year">${esc(e.year)}</span><span class="ev-label">${inline(e.label)}</span></span></li>` };
   });
-  // Only the two lanes next to the axis in use: a shorter axis.
   const tall = placed.some((p) => p.lane > 1);
   return `<section class="timeline" aria-labelledby="tl-h">
-<h2 class="section-label" id="tl-h">Timeline</h2>
+<h2 id="tl-h">Timeline</h2>
 <ol class="tl${tall ? '' : ' tl-short'}">${placed.map((p) => p.html).join('')}</ol>
-<p class="tl-key"><span class="key challenger">Schmidhuber’s side</span><span class="key credited">credited side</span><span class="key neutral">other events</span></p>
+<p class="muted small">Red marks his side, blue the usually credited side and grey everything else.</p>
 </section>`;
 }
 
@@ -334,49 +376,42 @@ function casePage(c) {
   const fresh = posts.filter((p) => p.likely_claim && p.cases.includes(c.id) && !known.has(p.id));
   const v = voteState(c);
   const issueUrl = v.num ? `${REPO_URL}/issues/${v.num}` : null;
-  const emoji = { n: '👎', p: '😕', v: '👍' };
-  const buttons = CHOICES.map(([key, name]) => (issueUrl
-    ? `<a class="vote-btn ${key}" href="${issueUrl}" target="_blank" rel="noopener"><span aria-hidden="true">${emoji[key]}</span> ${name}</a>`
-    : `<span class="vote-btn ${key}" aria-disabled="true"><span aria-hidden="true">${emoji[key]}</span> ${name}</span>`)).join('');
+  const pills = CHOICES.map(([key, name]) => (issueUrl
+    ? `<a class="pill ${key}" href="${issueUrl}" target="_blank" rel="noopener"><span class="d" aria-hidden="true"></span>${name}</a>`
+    : `<span class="pill ${key}" aria-disabled="true"><span class="d" aria-hidden="true"></span>${name}</span>`)).join('');
   const note = issueUrl
-    ? 'Votes are reactions on this case’s GitHub issue, so each account counts once: the button opens it in a new tab, where you react with 👍, 😕 or 👎.'
-    : 'Votes are reactions on this case’s GitHub issue, so each account counts once, and voting opens here once the issue exists.';
+    ? 'Each GitHub account gets one vote: the buttons open this case’s issue, where you react with 👍, 😕 or 👎.'
+    : 'Each GitHub account gets one vote, on this case’s issue, once it exists.';
   const related = c.related.filter((id) => byId.has(id) && id !== c.id).map((id) => byId.get(id));
   const when = span(c);
   const count = inst.length + fresh.length;
 
-  const body = `<article class="case">
-<div class="wrap">
-<p class="crumbs"><a href="${r}">All cases</a>${k.category ? ` <span aria-hidden="true">/</span> <a href="${r}?cat=${slug(k.category)}">${esc(k.category)}</a>` : ''}</p>
+  const body = `<article class="case wrap">
+<p class="crumbs"><a href="${r}">← All cases</a>${k.category ? `<span class="muted"> · ${esc(k.category)}</span>` : ''}</p>
 <h1 class="case-title">${esc(k.headline)}</h1>
-${matchup(k, true)}
-<p class="said"><a href="#every">${statements(c)}${when ? `, ${when}` : ''}</a></p>
-</div>
+${picture(k)}
 
-<section class="verdict" id="vote" aria-labelledby="q">
-<div class="wrap">
+<section class="vote" id="vote" aria-labelledby="q">
 <h2 class="question" id="q">${inline(k.question)}</h2>
-<div class="vote-btns">${buttons}</div>
+<div class="pills">${pills}</div>
 ${tally(c)}
-<p class="vote-note">${note}</p>
-</div>
+<p class="note">${note}</p>
 </section>
 
-<div class="wrap">
-<div class="panels">
-<section class="panel challenger" aria-labelledby="p1"><h2 class="section-label" id="p1">His claim</h2><p>${inline(k.claim)}</p>${panelQuote(k.his_quote, 'Schmidhuber')}</section>
-<section class="panel credited" aria-labelledby="p2"><h2 class="section-label" id="p2">The pushback</h2><p>${inline(k.pushback)}</p>${k.their_quote ? panelQuote(k.their_quote, k.their_quote.who) : ''}</section>
-<section class="panel judge" aria-labelledby="p3"><h2 class="section-label" id="p3">What you’re judging</h2><p>${inline(k.crux)}</p></section>
+<div class="sides">
+<section aria-labelledby="s1"><h2 id="s1">His claim</h2><p>${inline(k.claim)}</p>${sideQuote(k.his_quote, 'Schmidhuber')}</section>
+<section aria-labelledby="s2"><h2 id="s2">The pushback</h2><p>${inline(k.pushback)}</p>${k.their_quote ? sideQuote(k.their_quote, k.their_quote.who) : ''}</section>
 </div>
+<p class="at-issue"><span class="muted">At issue:</span> ${inline(k.crux.replace(/^The question is whether /, 'whether '))}</p>
 
 ${timeline(k)}
 
 <details class="full" id="full">
-<summary><span class="full-title">Read the full case</span><span class="full-hint">Both accounts, sources, agreed facts and all ${plural(count, 'statement')}</span></summary>
+<summary>Read the full case</summary>
 <div class="full-body">
 <div class="two">
-<section><h3 class="challenger">Schmidhuber’s claim</h3><p>${inline(c.claim.summary)}</p>${c.claim.prior_works.length ? `<h4>What he says came first</h4>${works(c.claim.prior_works)}` : ''}</section>
-<section><h3 class="credited">Usually credited</h3><p>${inline(c.usual_credit.summary)}</p>${works(c.usual_credit.works)}</section>
+<section><h3>Schmidhuber’s claim</h3><p>${inline(c.claim.summary)}</p>${c.claim.prior_works.length ? `<h4>What he says came first</h4>${works(c.claim.prior_works)}` : ''}</section>
+<section><h3>Usually credited</h3><p>${inline(c.usual_credit.summary)}</p>${works(c.usual_credit.works)}</section>
 </div>
 ${c.claim.quotes.length ? `<section><h3>In his words</h3>${c.claim.quotes.map((q) => quoteFigure(q, '')).join('\n')}</section>` : ''}
 <section><h3>What the other side says</h3><p>${inline(c.response.summary)}</p>${c.response.quotes.map((q) => quoteFigure(q, `${inline(q.who)}, `)).join('')}</section>
@@ -390,23 +425,16 @@ ${c.agreed_facts.length ? `<section><h3>Facts nobody disputes</h3><ol class="fac
 </details>
 <script>if (location.hash === '#every' || location.hash === '#full') document.getElementById('full').open = true;</script>
 
-${related.length ? `<section class="related" aria-labelledby="rel-h"><h2 class="section-label" id="rel-h">Related cases</h2>
-<ul>${related.map((x) => `<li><a class="chip" href="${r}cases/${x.id}/">${esc(cardOf(x).headline)}</a></li>`).join('')}</ul></section>` : ''}
-</div>
+${related.length ? `<p class="related"><span class="muted">Related:</span> ${related.map((x) => `<a href="${r}cases/${x.id}/">${esc(cardOf(x).headline)}</a>`).join(', ')}</p>` : ''}
 </article>`;
 
   return layout({
     at: `cases/${c.id}/`, title: k.headline, description: clip(k.question), body, nav: 'cases', type: 'article',
-    image: cardFor(c), imageAlt: `${k.headline}: ${k.credited.who} (${k.credited.year}) and ${k.challenger.who} (${k.challenger.year})`,
+    image: cardFor(c), imageAlt: `${k.headline}: ${k.challenger.who} (${k.challenger.year}) and ${k.credited.who} (${k.credited.year})`,
   });
 }
 
 // ---------------------------------------------------------------- home
-
-function minYear(c) {
-  const ys = c.usual_credit.works.map((w) => yearOf(w.year)).filter(Boolean);
-  return ys.length ? Math.min(...ys) : 9999;
-}
 
 // The newest claim on record: case statements, reviewed recent statements and flagged tracker posts.
 function newestClaim() {
@@ -418,57 +446,61 @@ function newestClaim() {
   ].sort((a, b) => b.key.localeCompare(a.key))[0];
 }
 
-function caseCard(c) {
+// One chart row: the headline, then a hairline from his year (red) to the credited year (blue), then a
+// tiny vote bar once there are votes. The tooltip holds the short question and the vote split.
+function chartRow(c) {
   const k = cardOf(c);
+  const a = yearOf(k.challenger.year);
+  const b = yearOf(k.credited.year);
   const v = voteState(c);
-  const n = total(v.counts);
-  const k2 = v.counts ? contest(v.counts) : -1;
-  return `<li class="card" data-cat="${k.category ? slug(k.category) : ''}" data-votes="${n}" data-contest="${k2.toFixed(5)}" data-statements="${c.claim.times_made}" data-year="${minYear(c)}" data-title="${esc(k.headline)}">
-<p class="cat">${k.category ? esc(k.category) : '&nbsp;'}</p>
-<h2 class="headline"><a href="cases/${c.id}/">${esc(k.headline)}</a></h2>
-${matchup(k)}
-<p class="q">${inline(k.question)}</p>
-<div class="card-foot">${tally(c, { compact: true })}<a class="vote-link" href="cases/${c.id}/#vote">Vote<span class="sr"> on ${esc(k.headline)}</span></a></div>
+  const issue = v.num ? ` data-issue="${v.num}"` : '';
+  const lo = Math.min(a, b);
+  const flip = xOf(a) > 55 ? ' flip' : '';
+  return `<li class="row" data-cat="${k.category ? slug(k.category) : ''}" data-gap="${b - a}" data-his="${a}" data-cred="${b}" data-votes="${total(v.counts)}" data-title="${esc(k.headline)}" style="--a:${xOf(a).toFixed(2)};--b:${xOf(b).toFixed(2)}">
+<a class="row-link" href="cases/${c.id}/">
+<span class="row-label">${esc(k.headline)}</span>
+<span class="plot"><span class="join" style="left:${at(lo)};width:${Math.abs(xOf(b) - xOf(a)).toFixed(2)}%"></span>${dots(a, b)}</span>
+<span class="mini"${issue}>${miniInner(v.counts)}</span>
+<span class="sr">, claimed ${esc(k.challenger.year)}, usually credited ${esc(k.credited.year)}</span>
+<span class="tip${flip}"><span class="tip-q">${esc(k.question)}</span><span class="tip-v"${issue}>${voteLine(v.counts, v.state)}</span></span>
+</a>
 </li>`;
 }
 
 function homePage() {
-  const ranked = cases.map((c) => ({ c, votes: total(voteState(c).counts) }))
-    .sort((a, b) => b.votes - a.votes || b.c.claim.times_made - a.c.claim.times_made || cardOf(a.c).headline.localeCompare(cardOf(b.c).headline));
-  const cats = CATEGORIES.map((name) => ({ name, n: cases.filter((c) => cardOf(c).category === name).length })).filter((x) => x.n);
+  // In order of his year, as the sort control starts: a cascade from the oldest claims down.
+  const his = (c) => yearOf(cardOf(c).challenger.year);
+  const cred = (c) => yearOf(cardOf(c).credited.year);
+  const ranked = cases.slice().sort((x, y) => his(x) - his(y) || cred(x) - cred(y));
+  const cats = CATEGORIES.filter((name) => cases.some((c) => cardOf(c).category === name));
   const newest = newestClaim();
+  const decades = ticks().map((t) => `<span class="gl${t.major ? ' major' : ''}" style="left:${at(t.y)}"></span>`).join('');
 
-  const body = `<section class="hero">
-<div class="wrap">
-<h1 class="wordmark">${WORDMARK}</h1>
-<p class="hero-line">Jürgen Schmidhuber says these ${cases.length} results were done earlier, by him or by others. Read both sides and vote.</p>
-<ul class="stats">
-<li><span class="stat-n">${cases.length}</span><span class="stat-l">cases</span></li>
-<li><span class="stat-n">${CATALOGUE}</span><span class="stat-l">statements since 1996</span></li>
-${newest ? `<li><a href="${esc(newest.url)}" rel="noopener"><span class="stat-n">${esc(fmtDate(newest.date, { short: true }))}</span><span class="stat-l">latest claim</span></a></li>` : ''}
-</ul>
-</div>
-</section>
-
-<section class="board wrap" aria-label="Cases">
+  const body = `<section class="home wrap">
+<p class="intro">Each line runs from the year Jürgen Schmidhuber says an idea first appeared (<span class="his-t">red</span>) to the year it is usually credited (<span class="cred-t">blue</span>). Pick one to see both sides and vote.</p>
 <div class="controls">
-<div class="chips" role="group" aria-label="Category">
-<button type="button" class="chip" data-cat="" aria-pressed="true">All <span class="n">${cases.length}</span></button>
-${cats.map((x) => `<button type="button" class="chip" data-cat="${slug(x.name)}" aria-pressed="false">${esc(x.name)} <span class="n">${x.n}</span></button>`).join('\n')}
-</div>
-<div class="sorters">
-<label>Sort <select id="sort">
-<option value="votes">Most votes</option>
-<option value="contested">Most contested</option>
-<option value="statements">Most statements</option>
-<option value="year">Oldest credited work</option>
+<label>Sort by <select id="sort">
+<option value="his">his year</option>
+<option value="cred">credited year</option>
+<option value="gap">largest gap</option>
+<option value="votes">most votes</option>
 </select></label>
-<span class="shown" id="shown" aria-live="polite">${plural(cases.length, 'case')}</span>
+<label>Show <select id="cat">
+<option value="">all categories</option>
+${cats.map((name) => `<option value="${slug(name)}">${esc(name.toLowerCase())}</option>`).join('\n')}
+</select></label>
+<span class="muted" id="shown" aria-live="polite">${plural(cases.length, 'case')}</span>
 </div>
-</div>
-<ol class="grid" id="grid">
-${ranked.map(({ c }) => caseCard(c)).join('\n')}
+<div class="chart">
+<div class="chart-head" aria-hidden="true"><span></span><span class="plot">${axis()}</span><span></span></div>
+<div class="chart-body">
+<span class="grid" aria-hidden="true">${decades}</span>
+<ol class="rows" id="rows">
+${ranked.map(chartRow).join('\n')}
 </ol>
+</div>
+</div>
+<p class="stats muted">${plural(cases.length, 'case')} · ${CATALOGUE} statements since 1996${newest ? ` · most recent <a href="${esc(newest.url)}" rel="noopener">${esc(fmtDate(newest.date, { short: true }))}</a>` : ''}</p>
 </section>`;
 
   return layout({
@@ -484,21 +516,17 @@ function latestPage() {
   const shown = posts.filter((p) => p.likely_claim || p.cases.length);
   const others = posts.length - shown.length;
   const since = posts.length ? fmtDate(posts[posts.length - 1].created_at.slice(0, 10)) : null;
-  const reviewed = recent.length
-    ? `<p class="lead">Read and confirmed as priority claims, but no single case covers them.</p>
-<ol class="instances">${recent.map(reviewedItem).join('\n')}</ol>`
-    : '<p>No statement outside the case files has been reviewed yet.</p>';
-  const unreviewed = `${shown.length ? `<p class="lead">Picked up by the daily check of his posts on X and not read by anyone yet, so a match only means the wording resembles a case.</p><ol class="instances">${shown.map((p) => postItem(p, r)).join('\n')}</ol>` : '<p class="lead">The daily check has not picked up any new posts since the catalogue was compiled, so nothing is waiting for review.</p>'}
-${posts.length ? `<p class="note">${plural(posts.length, 'new post')} since ${esc(since)}${others ? `, of which ${others} matched no case and used no claim wording and ${others === 1 ? 'is' : 'are'} not listed` : ''}. The flagging rule is on the <a href="${r}about/">About</a> page.</p>` : ''}`;
+  const reviewed = recent.length ? block('reviewed', 'Reviewed, not tied to a case', `<p class="muted">Read and confirmed as priority claims, but no single case covers them.</p>
+<ol class="instances">${recent.map(reviewedItem).join('\n')}</ol>`) : '';
+  const unreviewed = `${shown.length ? `<p class="muted">Picked up by the daily check of his posts on X and not read by anyone yet, so a match only means the wording resembles a case.</p><ol class="instances">${shown.map((p) => postItem(p, r)).join('\n')}</ol>` : '<p class="muted">The daily check has not picked up any new posts since the catalogue was compiled, so nothing is waiting for review.</p>'}
+${posts.length ? `<p class="muted small">${plural(posts.length, 'new post')} since ${esc(since)}${others ? `, of which ${others} matched no case and used no claim wording and ${others === 1 ? 'is' : 'are'} not listed` : ''}. The flagging rule is on the <a href="${r}about/">About</a> page.</p>` : ''}`;
   const body = `<div class="wrap page">
-<header class="page-head">
-<h1>Latest</h1>
+<h1 class="page-title">Latest</h1>
 <p class="dek">His newest statements that are not in a case file yet.</p>
-</header>
-${block('reviewed', 'Reviewed, not tied to a case', reviewed)}
+${reviewed}
 ${block('unreviewed', 'Found automatically, not yet reviewed', unreviewed)}
 </div>`;
-  return layout({ at: 'latest/', title: 'Latest', nav: 'latest', body, description: 'His newest statements on X: reviewed claims that fit no single case, and posts found automatically that are not yet reviewed.' });
+  return layout({ at: 'latest/', title: 'Latest', nav: 'latest', body, description: 'His newest statements on X that are not in a case file yet, found automatically and not yet reviewed.' });
 }
 
 // ---------------------------------------------------------------- about
@@ -506,10 +534,8 @@ ${block('unreviewed', 'Found automatically, not yet reviewed', unreviewed)}
 function aboutPage() {
   const r = '../';
   const body = `<div class="wrap page">
-<header class="page-head">
-<h1>About</h1>
+<h1 class="page-title">About</h1>
 <p class="dek">${SITE} sets out Jürgen Schmidhuber’s priority claims one case at a time, with both sides and a vote.</p>
-</header>
 ${block('research', 'Sources', `<p>Every case is built from a catalogue of ${CATALOGUE} public statements he made between 1996 and 2026, and written from the primary sources on both sides.</p>
 <ul>
 <li>X, his website at IDSIA, papers, the Connectionists mailing list, Reddit, LinkedIn and interviews</li>
@@ -518,15 +544,11 @@ ${block('research', 'Sources', `<p>Every case is built from a catalogue of ${CAT
 </ul>`)}
 ${block('neutrality', 'Neutrality', '<p>The site takes no side: both accounts appear in their own words, agreed facts are kept apart from the argument, and no case ends in a verdict. Where nobody has replied in public, the case says so.</p>')}
 ${block('voting', 'Voting', `<p>Each case has an <a href="${REPO_URL}/issues?q=label%3Acase" rel="noopener">issue on GitHub</a>, and a vote is a reaction on its first post, so each account counts once and can change its vote.</p>
-<ul class="legend">
-<li><span class="dot challenger"></span>👍 Valid, the claim holds</li>
-<li><span class="dot partly"></span>😕 Partly</li>
-<li><span class="dot credited"></span>👎 Not valid</li>
-</ul>
 <ul>
+<li>👍 valid, 😕 partly, 👎 not valid</li>
 <li>Counts load live from the GitHub API and are rebuilt into the pages every hour</li>
-<li>“Most contested” ranks cases by how widely votes spread between valid and not valid</li>
 </ul>`)}
+${block('chart', 'The chart', '<p>Each case is a line from the year he says the idea first appeared to the year it is usually credited. Years before 1900 are squeezed into a narrow band at the left so that the twentieth century has room.</p>')}
 ${block('limits', 'What a vote means', '<p>It is a poll of interested readers with GitHub accounts, which makes it neither expert consensus nor a ruling on what happened.</p>')}
 ${block('new-posts', 'New posts', `<p>A daily job reads his posts on X and lists new ones on <a href="${r}latest/">Latest</a>, flagging a post when it names a year from 1960 to 2016 together with words such as invented, first, published, cite or old hat.</p>`)}
 ${block('corrections', 'Corrections', `<p>If a quote is wrong or a case misstates either side, <a href="${REPO_URL}/issues/new" rel="noopener">open an issue</a> or a pull request against the case file.</p>`)}
@@ -537,8 +559,8 @@ ${block('licence', 'Licence', '<p>Case texts are CC BY 4.0 and the code is MIT, 
 
 function notFound() {
   const base = new URL(SITE_URL).pathname;
-  const body = `<div class="wrap page"><header class="page-head"><h1>Not found</h1>
-<p class="dek">There is no page here, perhaps because a case was renamed, so try the <a href="./">list of cases</a>.</p></header></div>`;
+  const body = `<div class="wrap page"><h1 class="page-title">Not found</h1>
+<p class="dek">There is no page here, perhaps because a case was renamed, so try the <a href="./">list of cases</a>.</p></div>`;
   return layout({ at: '', title: 'Not found', nav: '', body, base, description: 'Page not found.' });
 }
 
