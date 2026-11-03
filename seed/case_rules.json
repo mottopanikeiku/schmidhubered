@@ -1,138 +1,182 @@
 [
  {
-  "id": "gans",
-  "pattern": "\\bgans?\\b|generative adversarial|predictability minimi|artificial curiosity"
- },
- {
-  "id": "transformers",
-  "pattern": "transformer|fast weight|ultra\\b|linear attention"
- },
- {
-  "id": "attention",
-  "pattern": "\\battention\\b(?!.*transformer)"
- },
- {
-  "id": "resnet",
-  "pattern": "resnet|residual|highway"
- },
- {
-  "id": "backprop",
-  "pattern": "backprop|reverse mode|linnainmaa|werbos"
- },
- {
-  "id": "cnn",
-  "pattern": "\\bcnns?\\b|convolution|neocognitron|fukushima"
- },
- {
-  "id": "jepa",
-  "pattern": "jepa|pmax|world model|predictive coding|predictability maxim"
- },
- {
-  "id": "distillation",
-  "pattern": "distill|collapsing"
- },
- {
-  "id": "pretraining",
-  "pattern": "pre-?train|belief net|history compressor|self-supervised|hierarchical temporal"
- },
- {
-  "id": "vanishing",
-  "pattern": "vanishing|exploding gradient|hochreiter"
- },
- {
-  "id": "lstm",
-  "pattern": "\\blstm\\b"
+  "id": "ai-origins",
+  "pattern": "dartmouth|cybernetics|mccarthy|founding of ai|origins? of ai|father of ai"
  },
  {
   "id": "alexnet",
   "pattern": "alexnet|dannet|gpu.?cnn|gpu-mpcnn|superhuman"
  },
  {
-  "id": "hopfield",
-  "pattern": "hopfield|amari|ising"
- },
- {
-  "id": "boltzmann",
-  "pattern": "boltzmann|sherrington"
- },
- {
-  "id": "deeplearning-origins",
-  "pattern": "ivakhnenko|origins? of deep learning|first deep learn|deep learning revolution|multilayer perceptron|deep mlp"
- },
- {
-  "id": "nobel2024",
-  "pattern": "nobel prize in physics|physics nobel|nobel.*2024|nobelprize"
- },
- {
   "id": "alphafold",
   "pattern": "alphafold|chemistry nobel|protein structure"
  },
  {
-  "id": "turingaward",
-  "pattern": "turing award|turing lecture|\\bacm\\b"
- },
- {
-  "id": "honda",
-  "pattern": "honda"
- },
- {
-  "id": "chatgpt",
-  "pattern": "chatgpt|\\bgpt\\b|generative pre-?trained"
- },
- {
-  "id": "reasoning",
-  "pattern": "deepseek|chain.of.thought|learning to think|reasoning|prompt engineer|recurrent depth"
- },
- {
-  "id": "deeprl",
-  "pattern": "\\bdqn\\b|deep rl|high-dimensional sensory|policy gradient|ddpg|deep reinforcement"
- },
- {
-  "id": "metalearning",
-  "pattern": "meta-?learn|self-improv|\\brsi\\b|godel machine|g\u00f6del machine|learning to learn"
- },
- {
-  "id": "dropout-relu",
-  "pattern": "dropout|relu|rectified"
- },
- {
-  "id": "transistor",
-  "pattern": "transistor|lilienfeld"
- },
- {
-  "id": "computers",
-  "pattern": "zuse|eniac|colossus|first .*computer|turing machine|turing test|theoretical computer science|g[\u00f6o]del|church"
- },
- {
-  "id": "ai-origins",
-  "pattern": "dartmouth|cybernetics|mccarthy|founding of ai|origins? of ai|father of ai"
- },
- {
-  "id": "minsky",
-  "pattern": "minsky|papert|ai winter|perceptrons"
+  "id": "attention",
+  "pattern": "\\battention\\b(?!.*transformer)"
  },
  {
   "id": "aviation",
   "pattern": "wright|powered flight|aviation"
  },
  {
+  "id": "backprop",
+  "pattern": "backprop|reverse mode|linnainmaa|werbos"
+ },
+ {
+  "id": "boltzmann",
+  "pattern": "boltzmann|sherrington"
+ },
+ {
+  "id": "chatgpt",
+  "pattern": "chatgpt|\\bgpt\\b|generative pre-?trained"
+ },
+ {
+  "id": "cnn",
+  "pattern": "\\bcnns?\\b|convolution|neocognitron|fukushima"
+ },
+ {
+  "id": "computers",
+  "pattern": "zuse|eniac|colossus|\\bz3\\b|first .*computer|programmable computer|babbage|atanasoff"
+ },
+ {
+  "id": "deeplearning-origins",
+  "pattern": "ivakhnenko|origins? of deep learning|first deep learn|deep learning revolution|multilayer perceptron|deep mlp"
+ },
+ {
+  "id": "deeprl",
+  "pattern": "\\bdqn\\b|deep rl|high-dimensional sensory|policy gradient|ddpg|deep reinforcement"
+ },
+ {
+  "id": "digital-physics",
+  "pattern": "digital physics|computable universe|wolfram|universe.*(program|computer)|zuse.*(universe|rechnender)"
+ },
+ {
+  "id": "distillation",
+  "pattern": "distill|collapsing"
+ },
+ {
+  "id": "dropout",
+  "pattern": "dropout|hanson"
+ },
+ {
   "id": "elm",
   "pattern": "extreme learning|\\belm\\b"
  },
  {
-  "id": "language-models",
-  "pattern": "language model|predictive text|text compression|probabilistic language"
+  "id": "enigma",
+  "pattern": "enigma|rejewski|bombe|polish cryptanaly"
+ },
+ {
+  "id": "fast-weights-2016",
+  "pattern": "fast weights to attend|ba et al|using fast weights"
+ },
+ {
+  "id": "forward-forward",
+  "pattern": "forward-forward|forward forward|forward-only|neural bucket brigade|heat exchanger"
+ },
+ {
+  "id": "gans",
+  "pattern": "\\bgans?\\b|generative adversarial|predictability minimi|artificial curiosity"
+ },
+ {
+  "id": "gru",
+  "pattern": "\\bgru\\b|gated recurrent|forget gate"
  },
  {
   "id": "hierarchical-rl",
   "pattern": "subgoal|hierarchical (planning|rl|reinforcement)|goal-conditioned|goal conditioned|multi-dimensional reward|gvf"
  },
  {
-  "id": "synthetic-gradients",
-  "pattern": "synthetic gradient|local learning|wake-sleep"
+  "id": "honda",
+  "pattern": "honda"
+ },
+ {
+  "id": "hopfield",
+  "pattern": "hopfield|amari|ising"
+ },
+ {
+  "id": "jepa",
+  "pattern": "jepa|pmax|predictability maxim|joint embedding"
+ },
+ {
+  "id": "language-models",
+  "pattern": "language model|predictive text|text compression|probabilistic language"
+ },
+ {
+  "id": "metalearning",
+  "pattern": "meta-?learn|self-improv|\\brsi\\b|godel machine|g\u00f6del machine|learning to learn"
+ },
+ {
+  "id": "minsky",
+  "pattern": "minsky|papert|ai winter|perceptrons"
+ },
+ {
+  "id": "multiscale-rnn",
+  "pattern": "multiple time scales|multi-time-scale|time scales|el hihi|hierarchy of time"
  },
  {
   "id": "nn-origins",
   "pattern": "origin of nns|gauss|legendre|rosenblatt|mcculloch|first neural net|origin of neural"
+ },
+ {
+  "id": "nobel2024",
+  "pattern": "nobel prize in physics|physics nobel|nobel.*2024|nobelprize"
+ },
+ {
+  "id": "pretraining",
+  "pattern": "pre-?train|belief net|history compressor|self-supervised|hierarchical temporal"
+ },
+ {
+  "id": "reasoning",
+  "pattern": "deepseek|chain.of.thought|learning to think|reasoning|prompt engineer|recurrent depth"
+ },
+ {
+  "id": "relu",
+  "pattern": "\\brelu\\b|rectified linear|rectifier"
+ },
+ {
+  "id": "resnet",
+  "pattern": "resnet|residual|highway"
+ },
+ {
+  "id": "speech-lstm",
+  "pattern": "speech recogni|\\bctc\\b|google translate|voice search|speech.*lstm"
+ },
+ {
+  "id": "synthetic-gradients",
+  "pattern": "synthetic gradient|local learning|wake-sleep"
+ },
+ {
+  "id": "test-time-training",
+  "pattern": "test-time|test time training|\\bttt\\b|in-context learning|learning at test|edit(s|ing)? (its|their) own weights|without gradients"
+ },
+ {
+  "id": "transformers",
+  "pattern": "transformer|fast weight|ultra\\b|linear attention|old hat|nothing new"
+ },
+ {
+  "id": "transistor",
+  "pattern": "transistor|lilienfeld"
+ },
+ {
+  "id": "turing-computation",
+  "pattern": "g[\u00f6o]del|church|turing machine|computability|halting problem|theoretical computer science"
+ },
+ {
+  "id": "turing-test",
+  "pattern": "turing test|imitation game|descartes"
+ },
+ {
+  "id": "turingaward",
+  "pattern": "turing award|turing lecture|\\bacm\\b"
+ },
+ {
+  "id": "vanishing",
+  "pattern": "vanishing|exploding gradient|hochreiter"
+ },
+ {
+  "id": "world-models",
+  "pattern": "world model|model-based|recurrent world|controller.*model"
  }
 ]
