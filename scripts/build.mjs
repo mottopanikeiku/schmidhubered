@@ -240,31 +240,57 @@ function works(list) {
 
 const VENUES = { X: 'X', website: 'his website', paper: 'paper', LinkedIn: 'LinkedIn', Reddit: 'Reddit', interview: 'interview', letter: 'letter', talk: 'talk' };
 const venue = (v, url) => VENUES[v] || host(url);
+const venueLink = (v, url) => `<a href="${esc(url)}" rel="noopener">${esc(v ? venue(v, url) : host(url))}</a>`;
+
+// Verbatim text in a blockquote. Long statements show their opening paragraphs and keep the rest
+// behind a toggle, so one 4,000-character post does not bury the list.
+function verbatim(text) {
+  const paras = String(text).split(/\n\s*\n/);
+  const shown = [];
+  let len = 0;
+  while (paras.length && (!shown.length || len + paras[0].length < 420)) {
+    len += paras[0].length;
+    shown.push(paras.shift());
+  }
+  const body = (ps) => ps.map((p) => `<p>${plain(p)}</p>`).join('');
+  const more = paras.length ? `<details class="more"><summary>Show the rest</summary>${body(paras)}</details>` : '';
+  return `<blockquote>${body(shown)}${more}</blockquote>`;
+}
 
 function quoteFigure(q, attribution) {
-  return `<figure class="quote"><blockquote><p>${plain(q.text)}</p></blockquote>
+  return `<figure class="quote">${verbatim(q.text)}
 <figcaption>${attribution}${timeTag(q.date)}${q.venue ? `, ${esc(venue(q.venue, q.url))}` : ''}. <a href="${esc(q.url)}" rel="noopener">Source</a></figcaption></figure>`;
 }
 
 function instanceItem(i) {
-  const meta = [timeTag(i.date, { short: true }), i.venue ? esc(venue(i.venue, i.url)) : null].filter(Boolean).join(' · ');
-  const quote = i.quote ? `<blockquote><p>${plain(i.quote)}</p></blockquote>` : '<p class="noquote">No verbatim text was recorded for this statement.</p>';
+  const quote = i.quote ? verbatim(i.quote) : '<p class="noquote">No verbatim text was recorded for this statement.</p>';
   const flags = i.deleted ? ' <span class="tag">since deleted</span>' : '';
-  return `<li class="inst"><p class="inst-meta">${meta}${flags} <a href="${esc(i.url)}" rel="noopener">${esc(host(i.url))}</a></p>${quote}</li>`;
+  return `<li class="inst"><p class="inst-meta">${timeTag(i.date, { short: true })} · ${venueLink(i.venue, i.url)}${flags}</p>${quote}</li>`;
 }
 
 function postItem(p, r, { showCases = true } = {}) {
   const when = p.created_at.slice(0, 10);
   const caseLinks = p.cases.map((id) => (byId.has(id) ? `<a href="${r}cases/${id}/">${esc(byId.get(id).title)}</a>` : esc(id)));
   const context = [p.reply_to ? `replying to <a href="${esc(p.reply_to)}" rel="noopener">a post</a>` : '', p.quoting ? `quoting <a href="${esc(p.quoting)}" rel="noopener">a post</a>` : ''].filter(Boolean).join(', ');
-  const matches = showCases ? `<p class="post-cases">${caseLinks.length ? `Seems to match: ${caseLinks.join(', ')}` : 'Matches no case by keyword'}${p.likely_claim ? '' : ', and has no year and credit word together'}</p>` : '';
-  return `<li class="inst auto"><p class="inst-meta">${timeTag(when, { short: true })} · X <span class="tag">found automatically, not yet reviewed</span> <a href="${esc(p.url)}" rel="noopener">x.com</a>${context ? ` <span class="ctx">${context}</span>` : ''}</p>
-<blockquote><p>${plain(p.text)}</p></blockquote>${matches}</li>`;
+  const match = caseLinks.length ? `seems to match ${caseLinks.join(', ')}` : 'matches no case by keyword';
+  const matches = showCases ? `<p class="post-cases">${p.likely_claim ? 'Worded like a priority claim' : 'Not worded like a priority claim'}, and ${match}.</p>` : '';
+  return `<li class="inst auto"><p class="inst-meta">${timeTag(when, { short: true })} · <a href="${esc(p.url)}" rel="noopener">X</a> <span class="tag">found automatically, not yet reviewed</span>${context ? ` <span class="ctx">${context}</span>` : ''}</p>
+${verbatim(p.text)}${matches}</li>`;
 }
 
 // ---------------------------------------------------------------- case pages
 
 const listed = (c) => new Set(caseInstances(c, seed).map((i) => tweetId(i.url)).filter(Boolean));
+
+// A case section: the label sits in the left margin on wide screens and above the text on phones.
+function block(id, title, inner, cls = '') {
+  return `<section class="block${cls ? ` ${cls}` : ''}" id="${id}" aria-labelledby="${id}-h">
+<h2 id="${id}-h">${title}</h2>
+<div class="block-body">
+${inner}
+</div>
+</section>`;
+}
 
 function casePage(c) {
   const r = '../../';
@@ -307,46 +333,26 @@ ${c.claim.prior_works.length ? `<h3>What he says came first</h3>${works(c.claim.
 </section>
 </div>
 
-${c.claim.quotes.length ? `<section class="block" aria-labelledby="words">
-<h2 id="words">In his words</h2>
-${c.claim.quotes.map((q) => quoteFigure(q, '')).join('\n')}
-</section>` : ''}
+${c.claim.quotes.length ? block('words', 'In his words', c.claim.quotes.map((q) => quoteFigure(q, '')).join('\n')) : ''}
 
-<section class="block" aria-labelledby="response">
-<h2 id="response">What the other side says</h2>
-<p>${inline(c.response.summary)}</p>
-${respQuotes}
-</section>
+${block('response', 'What the other side says', `<p>${inline(c.response.summary)}</p>\n${respQuotes}`)}
 
-${c.agreed_facts.length ? `<section class="block" aria-labelledby="facts">
-<h2 id="facts">Facts nobody disputes</h2>
-<ol class="facts">${c.agreed_facts.map((f) => `<li>${fact(f)}</li>`).join('')}</ol>
-</section>` : ''}
+${c.agreed_facts.length ? block('facts', 'Facts nobody disputes', `<ol class="facts">${c.agreed_facts.map((f) => `<li>${fact(f)}</li>`).join('')}</ol>`) : ''}
 
-<section class="block crux" aria-labelledby="dispute">
-<h2 id="dispute">What’s actually in dispute</h2>
-<p>${inline(c.crux)}</p>
-</section>
+${block('dispute', 'What’s actually in dispute', `<p>${inline(c.crux)}</p>`, 'crux')}
 
-<section class="block vote" aria-labelledby="vote">
-<h2 id="vote">Your vote</h2>
-<p class="vote-q">${inline(c.question)}</p>
+${block('vote', 'Your vote', `<p class="vote-q">${inline(c.question)}</p>
 <div class="vote-btns">${buttons}</div>
 <p class="vote-note">${voteNote}</p>
-${tally(c, ' tally-wide')}
-</section>
+${tally(c, ' tally-wide')}`, 'vote')}
 
-<section class="block" aria-labelledby="every-h" id="every">
-<details>
-<summary><h2 id="every-h">Every time he has made this claim</h2> <span class="count">${plural(inst.length + fresh.length, 'statement')}</span></summary>
+${block('every', 'Every time he has made this claim', `<details id="every-list">
+<summary>${inst.length + fresh.length === 1 ? 'Show the one statement' : `Show all ${plural(inst.length + fresh.length, 'statement')}`}${fresh.length ? ` (${fresh.length} not yet reviewed)` : ''}</summary>
 <ol class="instances">${fresh.map((p) => postItem(p, r, { showCases: false })).join('')}${inst.slice().reverse().map(instanceItem).join('')}</ol>
 </details>
-</section>
+<script>if (location.hash === '#every') document.getElementById('every-list').open = true;</script>`)}
 
-${related.length ? `<section class="block" aria-labelledby="related">
-<h2 id="related">Related cases</h2>
-<ul class="related">${related.map((x) => `<li><a href="${r}cases/${x.id}/">${inline(x.title)}</a><span>${inline(x.matchup)}</span></li>`).join('')}</ul>
-</section>` : ''}
+${related.length ? block('related', 'Related cases', `<ul class="related">${related.map((x) => `<li><a href="${r}cases/${x.id}/">${inline(x.title)}</a><span>${inline(x.matchup)}</span></li>`).join('')}</ul>`) : ''}
 </article>`;
 
   return layout({
@@ -440,8 +446,8 @@ function latestPage() {
 <h1>Latest</h1>
 <p class="lede">A script reads his newest posts on X once a day and lists here the ones that look like priority claims, newest first. Nothing on this page has been reviewed yet, so a match below only means that the wording resembles a case, until the post is read and added to a case file by hand.</p>
 </header>
-${shown.length ? `<ol class="instances latest">${shown.map((p) => postItem(p, r)).join('\n')}</ol>` : '<p>No new posts have been picked up yet.</p>'}
-${posts.length ? `<p class="note">The daily check has read ${plural(posts.length, 'new post')} since ${esc(since)}${others ? `, and the ${plural(others, 'other')} matched no case and showed no claim wording, so ${others === 1 ? 'it is' : 'they are'} not listed` : ''}. A post is flagged when it names a year between 1960 and 2016 together with a word such as invented, first, published, cite or old hat, and it is matched to cases by keyword; the method is described on the <a href="${r}about/">About</a> page.</p>` : ''}
+${shown.length ? `<ol class="instances latest">${shown.map((p) => postItem(p, r)).join('\n')}</ol>` : '<p>The daily check has not picked up any new posts since the catalogue was compiled, so there is nothing waiting for review.</p>'}
+${posts.length ? `<p class="note">The daily check has picked up ${plural(posts.length, 'new post')} since ${esc(since)}${others ? `, and ${others === 1 ? 'one of them is' : `${others} of them are`} not listed because ${others === 1 ? 'it matched' : 'they matched'} no case and used no claim wording` : ''}. A post is flagged when it names a year between 1960 and 2016 together with a word such as invented, first, published, cite or old hat, and it is matched to cases by keyword, as the <a href="${r}about/">About</a> page describes in more detail.</p>` : ''}
 </div>`;
   return layout({ at: 'latest/', title: 'Latest', nav: 'latest', body, description: 'His newest posts on X that look like priority claims, found automatically and not yet reviewed.' });
 }
@@ -455,29 +461,20 @@ function aboutPage() {
 <h1>About</h1>
 <p class="lede">${SITE} collects the priority claims Jürgen Schmidhuber has made in public, groups them by the result in question and lays out each one so that a reader can weigh it without first reading thirty years of posts.</p>
 </header>
-<div class="prose">
-<h2>How the cases were researched</h2>
-<p>The cases start from a catalogue of ${CATALOGUE} public statements by Schmidhuber, gathered from his posts on X, his website at IDSIA, his papers, mailing lists such as Connectionists, Reddit, LinkedIn and published interviews, and dated from 1996 to 2026. Statements that dispute the same credit were grouped into one case, which was then written from primary sources: the credited papers, the earlier work he points to, and what the credited researchers, prize committees and historians have said in reply. Every quote links to the place it was published, and the full list of statements behind a case is at the bottom of its page.</p>
+${block('research', 'How the cases were researched', `<p>The cases start from a catalogue of ${CATALOGUE} public statements by Schmidhuber, gathered from his posts on X, his website at IDSIA, his papers, mailing lists such as Connectionists, Reddit, LinkedIn and published interviews, and dated from 1996 to 2026. Statements that dispute the same credit were grouped into one case, which was then written from primary sources: the credited papers, the earlier work he points to, and what the credited researchers, prize committees and historians have said in reply. Every quote links to the place it was published, and the full list of statements behind a case is at the bottom of its page.</p>`)}
 
-<h2>Neutrality</h2>
-<p>The site takes no side. Each case gives both accounts in their own words, keeps the facts that both accept apart from the argument, and ends with the narrow point that actually separates them, without a verdict and without adjectives that carry one. Where nobody has answered a claim in public, the case says so instead of writing an answer on anyone’s behalf, and the name is the one place where the site allows itself a light touch.</p>
+${block('neutrality', 'Neutrality', `<p>The site takes no side: each case gives both accounts in their own words, keeps the facts that both accept apart from the argument, and ends with the narrow point that actually separates them, without a verdict and without adjectives that carry one. Where nobody has answered a claim in public, the case says so instead of writing an answer on anyone’s behalf, and the name is the one place where the site allows itself a light touch.</p>`)}
 
-<h2>How voting works</h2>
-<p>Each case has an issue in the site’s <a href="${REPO_URL}/issues?q=label%3Acase" rel="noopener">GitHub repository</a>, and a vote is a reaction on that issue’s first post: 👍 for valid, 😕 for partly valid and 👎 for not valid. Because the votes are GitHub reactions, each account counts once, anyone can see who voted, and you can change your vote by changing your reaction. The comments under each issue are open for arguments and corrections.</p>
-<p>Counts are read live from the GitHub API when a page loads and kept for a few minutes, and an hourly rebuild bakes the latest counts into the pages, so they still show without JavaScript or when the API’s limit of 60 requests an hour per visitor is reached. Sorting by “most contested” scores a valid vote as 1, a partly vote as ½ and a not-valid vote as 0 and ranks the cases by how widely their votes spread, so an even split between valid and not valid comes first.</p>
+${block('voting', 'How voting works', `<p>Each case has an issue in the site’s <a href="${REPO_URL}/issues?q=label%3Acase" rel="noopener">GitHub repository</a>, and a vote is a reaction on that issue’s first post: 👍 for valid, 😕 for partly valid and 👎 for not valid. Because the votes are GitHub reactions, each account counts once, anyone can see who voted, and you can change your vote by changing your reaction. The comments under each issue are open for arguments and corrections.</p>
+<p>Counts are read live from the GitHub API when a page loads and kept for a few minutes, and an hourly rebuild bakes the latest counts into the pages, so they still show without JavaScript or when the API’s limit of 60 requests an hour per visitor is reached. Sorting by “most contested” scores a valid vote as 1, a partly vote as ½ and a not-valid vote as 0 and ranks the cases by how widely their votes spread, so an even split between valid and not valid comes first.</p>`)}
 
-<h2>What a vote can tell you</h2>
-<p>A vote here is the opinion of someone with a GitHub account who found the site, which makes the totals a poll of interested readers and not a measure of expert agreement or of what happened. A person with two accounts can vote twice and a link shared in one community can move a count within hours, so the numbers are best read next to the case and never instead of it.</p>
+${block('limits', 'What a vote can tell you', `<p>A vote here is the opinion of someone with a GitHub account who found the site, which makes the totals a poll of interested readers and not a measure of expert agreement or of what happened. A person with two accounts can vote twice and a link shared in one community can move a count within hours, so the numbers are best read next to the case and never instead of it.</p>`)}
 
-<h2>New posts</h2>
-<p>A scheduled job reads his latest posts on X once a day and lists new ones on the <a href="${r}latest/">Latest</a> page. It flags a post as a likely claim when the text names a year between 1960 and 2016 (or a decade such as the 1990s) and also uses a word such as invented, first, published, introduced, cite, plagiarism, old hat, nothing new, based on or essentially, and it matches posts to cases with the keyword patterns used to build the catalogue. These posts appear on case pages marked as found automatically and not yet reviewed, until someone reads them and adds them to the case file.</p>
+${block('new-posts', 'New posts', `<p>A scheduled job reads his latest posts on X once a day and lists new ones on the <a href="${r}latest/">Latest</a> page. It flags a post as a likely claim when the text names a year between 1960 and 2016 (or a decade such as the 1990s) and also uses a word such as invented, first, published, introduced, cite, plagiarism, old hat, nothing new, based on or essentially, and it matches posts to cases with the keyword patterns used to build the catalogue. Flagged posts also appear on the matching case pages, marked as found automatically and not yet reviewed, until someone reads them and adds them to the case file.</p>`)}
 
-<h2>Corrections</h2>
-<p>If a quote is wrong, a source is missing or a case misstates either side, please <a href="${REPO_URL}/issues/new" rel="noopener">open an issue</a> with the page and the correction, or comment on the case’s own issue. Pull requests that edit the files in <code>cases/</code> are welcome as well, since each case is a single JSON file.</p>
+${block('corrections', 'Corrections', `<p>If a quote is wrong, a source is missing or a case misstates either side, please <a href="${REPO_URL}/issues/new" rel="noopener">open an issue</a> with the page and the correction, or comment on the case’s own issue. Pull requests that edit the files in <code>cases/</code> are welcome as well, since each case is a single JSON file.</p>`)}
 
-<h2>Licence and credits</h2>
-<p>Case texts are published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener license">CC BY 4.0</a> and the code under the MIT licence, while every quote remains the work of its author and is reproduced for commentary. The type is a subset of Source Serif 4, designed by Frank Grießhammer for Adobe and used under the SIL Open Font License.</p>
-</div>
+${block('licence', 'Licence and credits', `<p>Case texts are published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener license">CC BY 4.0</a> and the code under the MIT licence, while every quote remains the work of its author and is reproduced for commentary. The type is a subset of Source Serif 4, designed by Frank Grießhammer for Adobe and used under the SIL Open Font License.</p>`)}
 </div>`;
   return layout({ at: 'about/', title: 'About', nav: 'about', body, description: 'How the cases were researched from 1,126 public statements, the neutrality policy, how voting on GitHub works and how to suggest a correction.' });
 }

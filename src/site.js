@@ -42,6 +42,13 @@ if (tallies.length) {
   });
 }
 
+// "Made 17 times" links to the full list of statements, which is collapsed by default. A link that
+// arrives with #every is handled by an inline script next to the list, before the page is painted.
+const every = document.getElementById('every-list');
+if (every) {
+  for (const a of document.querySelectorAll('a[href="#every"]')) a.addEventListener('click', () => { every.open = true; });
+}
+
 const list = document.getElementById('rows');
 if (list) {
   const sort = document.getElementById('sort');
