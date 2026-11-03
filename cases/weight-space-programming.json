@@ -1,0 +1,218 @@
+{
+  "id": "weight-space-programming",
+  "title": "Weight-Space Programming",
+  "matchup": "Takehi et al. (2026) vs Schmidhuber (1991, 1992, 1993)",
+  "question": "Do the 1991-93 fast weight programmers establish the priority Schmidhuber claims over what Takehi and colleagues call Weight-Space Programming?",
+  "usual_credit": {
+    "summary": "Weight-Space Programming is the name that Rikiya Takehi, Jayden Teoh, Alex Zhang and Omar Khattab, all listed at MIT CSAIL, give to experiments in which a general-purpose language model, GPT-6 Astra, reads the weights of other networks and edits or writes them without running gradient descent or a training loop. Their blog post of 2 November 2026 and a seven-post thread by Takehi the same day report that Astra could name the game a small policy network was trained on, repair a failing control policy by changing 3.5% of its weights, and write small game-playing networks from scratch. The headline result is that Astra, given a Python session over the weights and a budget of 50 forward passes on practice problems, changed 131,072 of Qwen3.5-0.8B's 0.8 billion weights (0.016%). This raised MATH-500 accuracy from 7.9% to 48.1% and IFEval from 21.0% to 62.3%, a gain the authors attribute to removing a direction that caused reasoning loops. The post calls these early results, reports that the same procedure did not help Gemma 3 270M, which rarely loops, and says the authors are building a benchmark and a harness.",
+    "works": [
+      {
+        "who": "Rikiya Takehi, Jayden Teoh, Alex Zhang, Omar Khattab",
+        "year": 2026,
+        "title": "Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights (blog post, 2 November 2026)",
+        "url": "https://rikiyat.github.io/blog/weight-space-programming/"
+      },
+      {
+        "who": "Rikiya Takehi",
+        "year": 2026,
+        "title": "Thread on X announcing Weight-Space Programming (2 November 2026)",
+        "url": "https://x.com/rikiyatakehi/status/2117313742891327994"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "On 3 November 2026 Schmidhuber posted three times about Weight-Space Programming, saying each time that what it describes is exactly what fast weight programmers did in the 1990s, including the 1991 unnormalised linear Transformer, and linking his overview page for the original papers. The posts do not say which part of the work he means. The first replies to the opening post of Takehi's thread, the second quotes that post, whose text says frontier LLMs can now read and write neural network weights, and the third replies to a news account's summary of the same result. His overview describes a fast weight programmer as a slow feedforward network that learns by gradient descent to program the changes of another network's fast weights, and it says that before 1991 no network had learned by gradient descent to compute such changes for another network or for itself. The same page says the weights of a network should be viewed as its program, and it also describes fast weights used from 2005 in reinforcement learning through neuroevolution, where the environment is not differentiable. The posts do not say that the 1990s systems used a language model, a natural-language description of the goal or a pre-trained network as the programmer, and they use the word 'exactly' without listing which properties of the new work he counts as the same.",
+    "prior_works": [
+      {
+        "who": "Jürgen Schmidhuber",
+        "year": 1991,
+        "title": "Learning to Control Fast-Weight Memories: An Alternative to Dynamic Recurrent Networks (TR FKI-147-91, TU Munich, 26 March 1991)",
+        "url": "https://people.idsia.ch/~juergen/FKI-147-91ocr.pdf"
+      },
+      {
+        "who": "Jürgen Schmidhuber",
+        "year": 1992,
+        "title": "Learning to control fast-weight memories: An Alternative to Dynamic Recurrent Networks (Neural Computation 4(1))",
+        "url": "https://sferics.idsia.ch/pub/juergen/fastweights.pdf"
+      },
+      {
+        "who": "Jürgen Schmidhuber",
+        "year": 1993,
+        "title": "A 'self-referential' weight matrix (ICANN 1993)",
+        "url": "https://sferics.idsia.ch/pub/juergen/selfref.pdf"
+      },
+      {
+        "who": "Jürgen Schmidhuber",
+        "year": 1993,
+        "title": "Reducing the ratio between learning complexity and number of time-varying variables in fully recurrent nets (ICANN 1993)",
+        "url": "https://sferics.idsia.ch/pub/juergen/ratio.pdf"
+      },
+      {
+        "who": "Imanol Schlag, Kazuki Irie, Jürgen Schmidhuber",
+        "year": 2021,
+        "title": "Linear Transformers Are Secretly Fast Weight Programmers (ICML 2021)",
+        "url": "https://arxiv.org/abs/2102.11174"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "This is an old hat. That's exactly what the fast weight programmers did in the 1990s (including the 1991 unnormalised linear Transformer).",
+        "date": "2026-11-03",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2117446822855888956"
+      },
+      {
+        "text": "This is an old hat. That's exactly what the neural fast weight programmers did in the 1990s (including the 1991 unnormalised linear Transformer).",
+        "date": "2026-11-03",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2117447416580575628"
+      },
+      {
+        "text": "That's nothing new: it's exactly what the neural fast weight programmers did in the 1990s (including the 1991 unnormalised linear Transformer).",
+        "date": "2026-11-03",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2117449252662382709"
+      },
+      {
+        "text": "Before 1991, no network learned by gradient descent to quickly compute the changes of the fast weight storage of another network or of itself.",
+        "date": "2021-03-26",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/fast-weight-programmer-1991-transformer.html#:~:text=Before%201991%2C%20no%20network%20learned%20by%20gradient%20descent"
+      },
+      {
+        "text": "the connection strengths or weights of an artificial neural network (NN) should be viewed as its program.",
+        "date": "2021-03-26",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/fast-weight-programmer-1991-transformer.html#:~:text=the%20connection%20strengths%20or%20weights%20of%20an%20artificial%20neural%20network"
+      }
+    ],
+    "times_made": 3,
+    "first_made": "2026-11",
+    "last_made": "2026-11"
+  },
+  "response": {
+    "summary": "As of 09:20 UTC on 3 November 2026 the linked evidence does not include a reply from Takehi or his co-authors that addresses the claim, and no reply from the news account MTSlive was found either. The one reaction from the credited side is that Jayden Teoh, a co-author, quote-posted the first reply at 02:46 UTC with the words 'ahh of course' and nothing more, which states no position on the claim. Takehi's one later post, at 04:32 UTC, announces a copy of the edited model on the Hugging Face Hub and does not mention Schmidhuber. X shows 11, 66 and 5 replies under his three posts, but their content could not be retrieved, so this summary does not cover them. The authors' position before his posts is in their blog, which lists 'custom networks trained to write them' among existing ways of writing weights, with a link to Schlag, Irie and Schmidhuber's 2021 paper on linear Transformers as fast weight programmers. The blog says that in earlier work either the reader is trained for the task or training still does the writing, whereas the new element is a general-purpose frontier model used as it is. Its references do not include the 1991, 1992 or 1993 papers. The only independent comments found that touch on earlier work are Hacker News remarks that networks generating weights for other networks were explored before as hypernetworks, and none of them mentions Schmidhuber or fast weights.",
+    "quotes": [
+      {
+        "who": "Takehi et al., blog post",
+        "text": "Today, weights are written by optimization, by custom networks trained to write them, or by compilers from formal programs.",
+        "date": "2026-11-02",
+        "url": "https://rikiyat.github.io/blog/weight-space-programming/"
+      },
+      {
+        "who": "Takehi et al., blog post",
+        "text": "a general-purpose LLM reads and writes a network’s weights directly (i.e., not through an optimizer, and in particular not with gradient descent)",
+        "date": "2026-11-02",
+        "url": "https://rikiyat.github.io/blog/weight-space-programming/"
+      },
+      {
+        "who": "Takehi et al., blog post",
+        "text": "either the reader is trained for the task or training still does the writing.",
+        "date": "2026-11-02",
+        "url": "https://rikiyat.github.io/blog/weight-space-programming/"
+      },
+      {
+        "who": "Takehi et al., blog post",
+        "text": "What is new here is a general-purpose frontier model, used as it is, that reads and writes the weights themselves",
+        "date": "2026-11-02",
+        "url": "https://rikiyat.github.io/blog/weight-space-programming/"
+      },
+      {
+        "who": "Jayden Teoh (blog co-author), quote-posting his first reply",
+        "text": "ahh of course",
+        "date": "2026-11-03",
+        "url": "https://x.com/jayden_teoh_/status/2117448220909691079"
+      },
+      {
+        "who": "maciejzj, Hacker News comment on the blog post",
+        "text": "making DL models that generate weights for other models has been explored before in “hypernetworks”, though these have been far more simplistic and constrained.",
+        "date": "2026-11-02",
+        "url": "https://news.ycombinator.com/item?id=50343173"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Schmidhuber's report FKI-147-91 of 26 March 1991 describes two feedforward networks in which the first learns, by a gradient-based method, to produce context-dependent weight changes for a second network whose weights may vary very quickly: https://people.idsia.ch/~juergen/FKI-147-91ocr.pdf",
+    "In the 1991 report and its 1992 Neural Computation version, the second network's weights act as a short-term memory, are set from the first network's outputs at the start of an episode and are changed at every time step, in one variant by the product of two output activations (Equation 5), while the first network is trained by gradient descent with derivatives that pass through those changes (Equations 2 and 3): https://people.idsia.ch/~juergen/FKI-147-91ocr.pdf https://sferics.idsia.ch/pub/juergen/fastweights.pdf",
+    "The 1993 ICANN paper 'A self-referential weight matrix' derives a gradient-based learning algorithm for a recurrent network that addresses and changes all of its own weights through special output units, and it states that its purpose is to show that such algorithms are possible at all, not to find an efficient one: https://sferics.idsia.ch/pub/juergen/selfref.pdf",
+    "Takehi, Teoh, Zhang and Khattab, all listed at MIT CSAIL, published 'Sparks of Weight-Space Programming' on 2 November 2026, and Takehi announced it the same day in a seven-post thread whose opening post says frontier LLMs can now natively read and write neural network weights: https://rikiyat.github.io/blog/weight-space-programming/ https://x.com/rikiyatakehi/status/2117313742891327994",
+    "The blog defines Weight-Space Programming as a general-purpose LLM reading and writing a network's weights directly, not through an optimizer and in particular not with gradient descent, and in its Experiment 8 a budget of 50 forward passes on practice problems led Astra to change 131,072 of Qwen3.5-0.8B's 0.8 billion weights (0.016%), after which MATH-500 rose from 7.9% to 48.1%: https://rikiyat.github.io/blog/weight-space-programming/",
+    "The blog reports that the same procedure could not improve Gemma 3 270M, a model that rarely loops, and that none of Astra's edits moved its MATH-500 score by more than about a point: https://rikiyat.github.io/blog/weight-space-programming/",
+    "The blog's introduction lists three ways weights are written today, by optimization, by 'custom networks trained to write them' and by compilers from formal programs, and it links the second to arXiv 2102.11174 by Schlag, Irie and Schmidhuber (2021), but its references do not include the 1991, 1992 or 1993 papers: https://rikiyat.github.io/blog/weight-space-programming/ https://arxiv.org/abs/2102.11174",
+    "Schmidhuber's overview page says that before 1991 no network learned by gradient descent to quickly compute the changes of the fast weight storage of another network or of itself, and a later section of the page covers fast weights in reinforcement learning through neuroevolution from 2005: https://people.idsia.ch/~juergen/fast-weight-programmer-1991-transformer.html",
+    "Schmidhuber made his three posts at 02:40, 02:42 and 02:50 UTC on 3 November 2026, about nine hours after Takehi's thread, and the third replies to a post by MTSlive that summarised the work as GPT-6 Astra reading and writing neural network weights through pure reasoning with no gradients and no training loops: https://x.com/MTSlive/status/2117333670000504945"
+  ],
+  "crux": "The question is whether a general-purpose language model that reads another network's weights and writes edits to them, with no gradient descent run by the writer, applies the same principle as a slow network that learns by gradient descent to output weight changes for a fast network. On one reading the shared principle is a network writing another network's weights as its program, which his overview and the 1991-93 papers describe and which the authors' link to the 2021 fast weight programmer paper places among earlier methods. On the other reading, the 1991 and 1992 systems learned a writer for a given task through gradient descent and used its output as a short-term memory that changes at every step of a sequence. Takehi's team, in contrast, gives a pre-trained model a natural-language goal and has it write or edit the weights of a separate network, which they say sets the work apart from methods where training does the writing. Voters also have to decide whether the 1991 unnormalised linear Transformer, an outer-product fast weight memory, bears on an LLM writing or editing network weights.",
+  "related": [
+    "transformers",
+    "test-time-training",
+    "fast-weights-2016",
+    "metalearning"
+  ],
+  "instance_urls": [
+    "https://x.com/SchmidhuberAI/status/2117446822855888956",
+    "https://x.com/SchmidhuberAI/status/2117447416580575628",
+    "https://x.com/SchmidhuberAI/status/2117449252662382709"
+  ],
+  "card": {
+    "category": "Learning methods",
+    "headline": "Weight-Space Programming",
+    "credited": {
+      "who": "Takehi et al.",
+      "year": 2026,
+      "what": "Weight-Space Programming"
+    },
+    "challenger": {
+      "who": "Schmidhuber",
+      "year": 1991,
+      "what": "Fast weight programmers"
+    },
+    "question": "Did Schmidhuber's 1991 fast weight programmers already do Weight-Space Programming?",
+    "claim": "He says what Takehi's post describes is exactly what fast weight programmers did in the 1990s, including his 1991 unnormalised linear Transformer.",
+    "pushback": "Before his posts, Takehi's team wrote that the new part is a general-purpose LLM, used as it is, writing weights without gradient descent.",
+    "crux": "The question is whether a prompted LLM writing network weights is the same principle as a slow net trained to write them.",
+    "his_quote": {
+      "text": "This is an old hat. That's exactly what the neural fast weight programmers did in the 1990s (including the 1991 unnormalised linear Transformer).",
+      "date": "2026-11-03",
+      "url": "https://x.com/SchmidhuberAI/status/2117447416580575628"
+    },
+    "their_quote": {
+      "who": "Takehi et al., 2026",
+      "text": "What is new here is a general-purpose frontier model, used as it is, that reads and writes the weights themselves",
+      "date": "2026-11-02",
+      "url": "https://rikiyat.github.io/blog/weight-space-programming/#:~:text=What%20is%20new%20here%20is"
+    },
+    "timeline": [
+      {
+        "year": 1991,
+        "label": "Fast weight controller report",
+        "side": "challenger"
+      },
+      {
+        "year": 1992,
+        "label": "Journal version in Neural Computation",
+        "side": "challenger"
+      },
+      {
+        "year": 1993,
+        "label": "Self-referential weight matrix paper",
+        "side": "challenger"
+      },
+      {
+        "year": 2021,
+        "label": "Linear Transformers shown to be fast weight programmers",
+        "side": "challenger"
+      },
+      {
+        "year": 2026,
+        "label": "Takehi et al. post Weight-Space Programming",
+        "side": "credited"
+      },
+      {
+        "year": 2026,
+        "label": "His three posts say fast weight programmers did this",
+        "side": "challenger"
+      }
+    ]
+  }
+}
