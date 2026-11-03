@@ -1,6 +1,7 @@
 // Vote arithmetic and markup, shared by the build (counts baked into the HTML) and the browser
 // (live counts from the GitHub API). Keep this file free of imports so the build can inline it.
 
+// Left to right in the order of the matchup: Schmidhuber's side (valid), partly, the credited side (not valid).
 export const CHOICES = [
   ['v', 'Valid', '+1'],
   ['p', 'Partly', 'confused'],
@@ -39,16 +40,18 @@ export function contest(c) {
 }
 
 // state: 'closed' when the case has no issue yet, 'unknown' when counts could not be fetched.
-export function tallyInner(c, state) {
-  if (state === 'closed') return '<div class="bar-slot"></div><p class="tally-text">Voting not yet open</p>';
-  if (state === 'unknown' || !c) return '<div class="bar-slot"></div><p class="tally-text">Vote count unavailable</p>';
+// compact: the card version, a bar and the vote count; the full version adds percentages.
+export function tallyInner(c, state, compact = false) {
+  const empty = (text) => `<div class="bar-slot"></div><p class="tally-text">${text}</p>`;
+  if (state === 'closed') return empty('Voting not yet open');
+  if (state === 'unknown' || !c) return empty('Vote count unavailable');
   const t = total(c);
-  if (!t) return '<div class="bar-slot"></div><p class="tally-text">No votes yet</p>';
+  if (!t) return empty('No votes yet');
   const pc = percents(c);
   const label = CHOICES.map(([k, name]) => `${name} ${pc[k]}%`).join(', ');
   const segs = CHOICES.filter(([k]) => c[k] > 0)
     .map(([k]) => `<span class="seg ${k}" style="width:${((c[k] * 100) / t).toFixed(2)}%"></span>`).join('');
-  const keys = CHOICES.map(([k, name]) => `<span class="k ${k}">${name} ${pc[k]}%</span>`).join(' ');
-  return `<div class="bar-slot"><div class="bar" role="img" aria-label="${label}">${segs}</div></div>` +
-    `<p class="tally-text"><span class="total">${t.toLocaleString('en-US')} ${t === 1 ? 'vote' : 'votes'}</span> ${keys}</p>`;
+  const count = `<span class="total">${t.toLocaleString('en-US')} ${t === 1 ? 'vote' : 'votes'}</span>`;
+  const keys = compact ? '' : ' ' + CHOICES.map(([k, name]) => `<span class="k ${k}">${name} ${pc[k]}%</span>`).join(' ');
+  return `<div class="bar-slot"><div class="bar" role="img" aria-label="${label}">${segs}</div></div><p class="tally-text">${count}${keys}</p>`;
 }

@@ -31,6 +31,5 @@ https://creativecommons.org/licenses/by/4.0/. Quotations inside them, and the
 statements catalogued in seed/ and data/, remain the work of their authors and
 are reproduced for commentary.
 
-The fonts in src/fonts/ are a subset of Source Serif 4 by Adobe, distributed
-under the SIL Open Font License 1.1 (src/fonts/OFL.md) and renamed as the
-license requires for modified versions.
+The font in src/fonts/ is a subset of Archivo by Omnibus-Type, distributed
+under the SIL Open Font License 1.1 (src/fonts/OFL.txt).

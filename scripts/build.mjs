@@ -5,7 +5,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {
   ROOT, REPO, SITE_URL, VOTES_API, readJSON, loadCases, loadSeed, caseInstances, esc, inline, fact, plain,
-  fmtDate, year, dateKey, tweetId, plural, host, loadRules, matchCases, likelyClaim,
+  fmtDate, year, dateKey, tweetId, plural, host, loadRules, matchCases, likelyClaim, cardOf, yearOf, CATEGORIES,
 } from './lib.mjs';
 import { CHOICES, fromReactions, total, contest, tallyInner } from '../src/tally.js';
 import { cardHash } from './card-template.mjs';
@@ -20,7 +20,7 @@ const NOW = new Date();
 // ---------------------------------------------------------------- inputs
 
 const { cases, problems } = loadCases();
-for (const p of problems) console.warn(`skipping ${p.file}: ${p.errors.join('; ')}`);
+for (const p of problems) console.warn(`${p.file}: ${p.errors.join('; ')}`);
 const byId = new Map(cases.map((c) => [c.id, c]));
 const issues = readJSON('data/issues.json', {});
 const seed = loadSeed();
@@ -57,58 +57,9 @@ function voteState(c) {
   return { num, state: 'open', counts: votes.byIssue.get(num) || { v: 0, p: 0, n: 0 } };
 }
 
-// ---------------------------------------------------------------- credited names for the filter
-
-const ORG = /\b(company|corporation|laborator(y|ies)|labs?|team|group|university|school|institute|committee|museum|foundation|society|academy|council|association|bureau|deepmind|google|openai|meta|microsoft|ibm|nvidia|acm|ieee)\b|-ai\b/i;
-
 function slug(s) {
   return s.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
-
-const isInitial = (t) => /^(?:[A-Z]\.)+-?(?:[A-Z]\.)*$/.test(t) || /^[A-Z]$/.test(t);
-
-// Splits a "who" string into people and organisations. People are keyed by surname, so "Y. Bengio",
-// "Yoshua Bengio" and "Geoffrey E. Hinton" versus "Geoffrey Hinton" fall together across cases.
-function credited(who) {
-  const out = [];
-  const s = who.replace(/\([^)]*\)/g, '').replace(/,?\s*\bet al\.?/gi, '').replace(/\s+/g, ' ').trim();
-  let parts = s.split(/\s*,\s*|\s+and\s+|\s*&\s*/).map((p) => p.replace(/^the\s+/i, '').trim()).filter(Boolean);
-  // "Wilbur and Orville Wright": a lone given name before a full name takes that surname.
-  if (parts.length === 2 && !/\s/.test(parts[0]) && /^\S+ \S+$/.test(parts[1]) && !ORG.test(who)) {
-    parts = [`${parts[0]} ${parts[1].split(' ')[1]}`, parts[1]];
-  }
-  parts.forEach((p, i) => {
-    if (ORG.test(p)) return out.push({ key: slug(p), org: p });
-    const t = p.split(' ');
-    const surname = t[t.length - 1];
-    out.push({ key: slug(surname), surname, full: p, given: t.slice(0, -1).find((x) => !isInitial(x)) || null, first: i === 0 });
-  });
-  for (const m of who.matchAll(/\(([^)]+)\)/g)) out.push({ key: slug(m[1]), org: m[1].trim() });
-  return out;
-}
-
-// The filter lists organisations, first authors and anyone credited in two or more cases; a case
-// matches a name wherever it appears among its credited works.
-const creditIndex = new Map();
-for (const c of cases) {
-  for (const w of c.usual_credit.works) {
-    for (const x of credited(w.who)) {
-      const e = creditIndex.get(x.key) || { key: x.key, org: x.org, surname: x.surname, full: x.full, givens: new Set(), cases: new Set(), lead: false };
-      if (x.given) e.givens.add(x.given);
-      e.cases.add(c.id);
-      e.lead ||= Boolean(x.org || x.first);
-      creditIndex.set(x.key, e);
-    }
-  }
-}
-const creditList = [...creditIndex.values()].filter((e) => e.lead || e.cases.size > 1).map((e) => ({
-  key: e.key,
-  cases: e.cases.size,
-  // One given name: "Geoffrey Hinton". Initials only: as written, "K. He". Several people: the surname.
-  label: e.org || (e.givens.size === 1 ? `${[...e.givens][0]} ${e.surname}` : e.givens.size ? e.surname : e.full),
-  sortKey: slug(e.org || e.surname),
-})).sort((a, b) => a.sortKey.localeCompare(b.sortKey));
-const creditKeys = (c) => [...new Set(c.usual_credit.works.flatMap((w) => credited(w.who).map((x) => x.key)))];
 
 // ---------------------------------------------------------------- assets
 
@@ -121,7 +72,7 @@ function hashed(...files) {
 function writeAssets() {
   fs.rmSync(OUT, { recursive: true, force: true });
   fs.mkdirSync(path.join(OUT, 'fonts'), { recursive: true });
-  for (const f of ['serif-roman.woff2', 'serif-italic.woff2']) fs.copyFileSync(path.join(ROOT, 'src/fonts', f), path.join(OUT, 'fonts', f));
+  fs.copyFileSync(path.join(ROOT, 'src/fonts/archivo.woff2'), path.join(OUT, 'fonts/archivo.woff2'));
   fs.copyFileSync(path.join(ROOT, 'src/style.css'), path.join(OUT, 'style.css'));
   for (const f of ['card.png', 'favicon.svg', 'favicon.png', 'apple-touch-icon.png']) {
     if (fs.existsSync(path.join(ROOT, 'src', f))) fs.copyFileSync(path.join(ROOT, 'src', f), path.join(OUT, f));
@@ -158,6 +109,8 @@ function clip(s, n = 160) {
   return t.length <= n ? t : t.slice(0, t.lastIndexOf(' ', n - 1)) + '…';
 }
 
+const WORDMARK = 'Schmidhuber<span class="ed">ed</span>';
+
 function layout({ at, title, description, image = 'card.png', imageAlt, body, nav, base = null, type = 'website' }) {
   const depth = at.split('/').filter(Boolean).length;
   const r = depth ? '../'.repeat(depth) : './';
@@ -182,32 +135,30 @@ ${base ? `<base href="${esc(base)}">\n` : ''}<title>${esc(full)}</title>
 <meta property="og:image:alt" content="${esc(imageAlt || TAGLINE)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#f6f2e8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#171511" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f3f2ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="${r}favicon.png" type="image/png" sizes="32x32">
 <link rel="icon" href="${r}favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="${r}apple-touch-icon.png">
-<link rel="preload" href="${r}fonts/serif-roman.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="${r}fonts/serif-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="${r}fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${r}style.css?v=${VERSION}">
 <script>document.documentElement.className = 'js';</script>
 <script src="${r}site.js?v=${VERSION}" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="masthead">
-<div class="wrap masthead-row">
-<a class="brand" href="${r}">${SITE}</a>
+<header class="top">
+<div class="wrap top-row">
+<a class="brand" href="${r}" aria-label="${SITE}, all cases">${WORDMARK}</a>
 <nav aria-label="Site">${navLink('', 'Cases', 'cases')}${navLink('latest/', 'Latest', 'latest')}${navLink('about/', 'About', 'about')}</nav>
 </div>
 </header>
 <main id="main" tabindex="-1">
 ${body}
 </main>
-<footer class="colophon">
+<footer class="foot">
 <div class="wrap">
-<p>Case texts are <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener license">CC BY 4.0</a> and quotes remain their authors’. The code is MIT and lives at <a href="${REPO_URL}" rel="noopener">${esc(REPO)}</a>, where corrections are welcome as issues.</p>
-<p>Built ${fmtDate(NOW.toISOString().slice(0, 10))} at ${NOW.toISOString().slice(11, 16)} UTC.</p>
+<p>Case texts <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener license">CC BY 4.0</a>, quotes remain their authors’, code MIT at <a href="${REPO_URL}" rel="noopener">${esc(REPO)}</a>. Built ${fmtDate(NOW.toISOString().slice(0, 10))}, ${NOW.toISOString().slice(11, 16)} UTC.</p>
 </div>
 </footer>
 </body>
@@ -217,10 +168,10 @@ ${body}
 
 // ---------------------------------------------------------------- pieces
 
-function tally(c, cls = '') {
+function tally(c, { compact = false } = {}) {
   const v = voteState(c);
-  const attrs = v.num ? ` data-issue="${v.num}"` : '';
-  return `<div class="tally${cls}"${attrs}>${tallyInner(v.counts, v.state)}</div>`;
+  const attrs = (v.num ? ` data-issue="${v.num}"` : '') + (compact ? ' data-compact' : '');
+  return `<div class="tally${compact ? ' tally-compact' : ''}"${attrs}>${tallyInner(v.counts, v.state, compact)}</div>`;
 }
 
 function timeTag(d, opts) {
@@ -246,7 +197,7 @@ function span(c) {
 function works(list) {
   return `<ul class="works">${list.map((w) => {
     const title = w.url ? `<a href="${esc(w.url)}" rel="noopener">${inline(w.title)}</a>` : `<cite>${inline(w.title)}</cite>`;
-    return `<li><span class="who">${inline(w.who)}</span> <span class="yr">(${esc(w.year)})</span>. ${title}</li>`;
+    return `<li><span class="who">${inline(w.who)}</span> <span class="yr">${esc(w.year)}</span> ${title}</li>`;
   }).join('')}</ul>`;
 }
 
@@ -271,7 +222,16 @@ function verbatim(text) {
 
 function quoteFigure(q, attribution) {
   return `<figure class="quote">${verbatim(q.text)}
-<figcaption>${attribution}${timeTag(q.date)}${q.venue ? `, ${esc(venue(q.venue, q.url))}` : ''}. <a href="${esc(q.url)}" rel="noopener">Source</a></figcaption></figure>`;
+<figcaption>${attribution}${timeTag(q.date, { short: true })}${q.venue ? `, ${esc(venue(q.venue, q.url))}` : ''} · <a href="${esc(q.url)}" rel="noopener">source</a></figcaption></figure>`;
+}
+
+// A short quote for the case panels, cut at a word boundary when it runs long.
+function panelQuote(q, who) {
+  if (!q) return '';
+  let t = String(q.text).replace(/\s+/g, ' ').trim();
+  if (t.length > 240) t = `${t.slice(0, t.lastIndexOf(' ', 236))}…`;
+  return `<figure class="pq"><blockquote><p>${plain(t)}</p></blockquote>
+<figcaption>${esc(String(who).replace(/,\s*\d{4}$/, ''))}, ${timeTag(q.date, { short: true })} · <a href="${esc(q.url)}" rel="noopener">source</a></figcaption></figure>`;
 }
 
 function instanceItem(i) {
@@ -287,7 +247,7 @@ function postContext(p) {
 
 function postItem(p, r, { showCases = true } = {}) {
   const when = p.created_at.slice(0, 10);
-  const caseLinks = p.cases.map((id) => (byId.has(id) ? `<a href="${r}cases/${id}/">${esc(byId.get(id).title)}</a>` : esc(id)));
+  const caseLinks = p.cases.map((id) => (byId.has(id) ? `<a href="${r}cases/${id}/">${esc(cardOf(byId.get(id)).headline)}</a>` : esc(id)));
   const match = caseLinks.length ? `seems to match ${caseLinks.join(', ')}` : 'matches no case by keyword';
   const matches = showCases ? `<p class="post-cases">${p.likely_claim ? 'Worded like a priority claim' : 'Not worded like a priority claim'}, and ${match}.</p>` : '';
   return `<li class="inst auto"><p class="inst-meta">${timeTag(when, { short: true })} · <a href="${esc(p.url)}" rel="noopener">X</a> <span class="tag">found automatically, not yet reviewed</span>${postContext(p)}</p>
@@ -299,13 +259,9 @@ function reviewedItem(p) {
 ${verbatim(p.text)}</li>`;
 }
 
-// ---------------------------------------------------------------- case pages
-
-const listed = (c) => new Set(caseInstances(c, seed).map((i) => tweetId(i.url)).filter(Boolean));
-
-// A case section: the label sits in the left margin on wide screens and above the text on phones.
-function block(id, title, inner, cls = '') {
-  return `<section class="block${cls ? ` ${cls}` : ''}" id="${id}" aria-labelledby="${id}-h">
+// A labelled section for the text pages: the label sits in the margin on wide screens.
+function block(id, title, inner) {
+  return `<section class="block" id="${id}" aria-labelledby="${id}-h">
 <h2 id="${id}-h">${title}</h2>
 <div class="block-body">
 ${inner}
@@ -313,162 +269,211 @@ ${inner}
 </section>`;
 }
 
+// ---------------------------------------------------------------- the matchup
+
+// The two sides of a case in time order: the earlier work Schmidhuber points to on the left in
+// vermilion, the usually credited work on the right in blue, joined by an axis with one tick per decade.
+function matchup(k, big = false) {
+  const a = yearOf(k.challenger.year);
+  const b = yearOf(k.credited.year);
+  const gap = a && b ? b - a : null;
+  const yrs = (n) => `${n} ${n === 1 ? 'yr' : 'yrs'}`;
+  const gapText = gap === null ? '' : gap === 0 ? 'same year' : yrs(Math.abs(gap));
+  const gapSr = gap === null ? '' : gap === 0 ? 'in the same year as' : gap > 0 ? `${yrs(gap)} before` : `${yrs(-gap)} after`;
+  const ticks = gap ? Math.min(Math.floor(Math.abs(gap) / 10), 12) : 0;
+  const side = (s, cls, label) => `<div class="side ${cls}">
+<span class="side-label${big ? '' : ' sr'}">${label}</span>
+<span class="yr">${esc(s.year)}</span>
+<span class="who">${esc(s.who)}</span>
+<span class="what">${esc(s.what)}</span>
+</div>`;
+  return `<div class="matchup${big ? ' matchup-big' : ''}">
+${side(k.challenger, 'challenger', 'Claimed first')}
+<div class="gap"><span class="gap-n" aria-hidden="true">${gapText}</span><span class="sr">${gapSr}</span><span class="axis" aria-hidden="true">${'<i></i>'.repeat(ticks)}</span></div>
+${side(k.credited, 'credited', 'Usually credited')}
+</div>`;
+}
+
+// ---------------------------------------------------------------- case pages
+
+const listed = (c) => new Set(caseInstances(c, seed).map((i) => tweetId(i.url)).filter(Boolean));
+
+// Events on a horizontal axis. Each label (about 15% of the axis wide, centred on its dot, or hanging
+// off it near either end) goes into the first of four lanes, two above and two below, where it does
+// not overlap a label already placed.
+function timeline(k) {
+  const ev = (k.timeline || []).map((e) => ({ ...e, y: yearOf(e.year) })).filter((e) => e.y).sort((a, b) => a.y - b.y);
+  if (ev.length < 2) return '';
+  const min = ev[0].y;
+  const max = ev[ev.length - 1].y;
+  const W = 15;
+  const lanes = [[], [], [], []];
+  const placed = ev.map((e, i) => {
+    const x = max === min ? (i / (ev.length - 1)) * 100 : ((e.y - min) / (max - min)) * 100;
+    const align = x < 12 ? 'start' : x > 88 ? 'end' : '';
+    const box = align === 'start' ? [x, x + W] : align === 'end' ? [x - W, x] : [x - W / 2, x + W / 2];
+    let lane = lanes.findIndex((l) => l.every(([a, b]) => box[1] + 1 < a || box[0] > b + 1));
+    if (lane < 0) lane = i % 4;
+    lanes[lane].push(box);
+    return { lane, html: `<li class="ev ${esc(e.side)} lane${lane}${align ? ` ${align}` : ''}" style="--x:${x.toFixed(2)}%"><span class="ev-box"><span class="ev-year">${esc(e.year)}</span><span class="ev-label">${inline(e.label)}</span></span></li>` };
+  });
+  // Only the two lanes next to the axis in use: a shorter axis.
+  const tall = placed.some((p) => p.lane > 1);
+  return `<section class="timeline" aria-labelledby="tl-h">
+<h2 class="section-label" id="tl-h">Timeline</h2>
+<ol class="tl${tall ? '' : ' tl-short'}">${placed.map((p) => p.html).join('')}</ol>
+<p class="tl-key"><span class="key challenger">Schmidhuber’s side</span><span class="key credited">credited side</span><span class="key neutral">other events</span></p>
+</section>`;
+}
+
 function casePage(c) {
   const r = '../../';
+  const k = cardOf(c);
   const inst = caseInstances(c, seed);
   const known = listed(c);
   const fresh = posts.filter((p) => p.likely_claim && p.cases.includes(c.id) && !known.has(p.id));
   const v = voteState(c);
   const issueUrl = v.num ? `${REPO_URL}/issues/${v.num}` : null;
-  const buttons = CHOICES.map(([k, name], idx) => {
-    const emoji = ['👍', '😕', '👎'][idx];
-    return issueUrl
-      ? `<a class="vote-btn ${k}" href="${issueUrl}" target="_blank" rel="noopener"><span aria-hidden="true">${emoji}</span> ${name}</a>`
-      : `<span class="vote-btn ${k}" aria-disabled="true"><span aria-hidden="true">${emoji}</span> ${name}</span>`;
-  }).join('');
-  const voteNote = issueUrl
-    ? 'Voting happens on GitHub so that each account counts once: each button opens this case’s issue in a new tab, where you react to the first post with 👍 for valid, 😕 for partly or 👎 for not valid.'
-    : 'Voting happens on GitHub so that each account counts once, and it opens here as soon as this case has its issue.';
+  const emoji = { n: '👎', p: '😕', v: '👍' };
+  const buttons = CHOICES.map(([key, name]) => (issueUrl
+    ? `<a class="vote-btn ${key}" href="${issueUrl}" target="_blank" rel="noopener"><span aria-hidden="true">${emoji[key]}</span> ${name}</a>`
+    : `<span class="vote-btn ${key}" aria-disabled="true"><span aria-hidden="true">${emoji[key]}</span> ${name}</span>`)).join('');
+  const note = issueUrl
+    ? 'Votes are reactions on this case’s GitHub issue, so each account counts once: the button opens it in a new tab, where you react with 👍, 😕 or 👎.'
+    : 'Votes are reactions on this case’s GitHub issue, so each account counts once, and voting opens here once the issue exists.';
   const related = c.related.filter((id) => byId.has(id) && id !== c.id).map((id) => byId.get(id));
-  const respQuotes = c.response.quotes.map((q) => quoteFigure(q, `${inline(q.who)}, `)).join('');
+  const when = span(c);
+  const count = inst.length + fresh.length;
 
-  const body = `<article class="case wrap">
-<header class="case-head">
-<p class="kicker"><a href="${r}">Cases</a></p>
-<h1>${inline(c.title)}</h1>
-<p class="matchup">${inline(c.matchup)}</p>
-<p class="question"><span class="label">The question</span>${inline(c.question)}</p>
-</header>
-
-<div class="sides">
-<section class="side" aria-labelledby="credited">
-<h2 id="credited">Usually credited</h2>
-<p>${inline(c.usual_credit.summary)}</p>
-${works(c.usual_credit.works)}
-</section>
-<section class="side" aria-labelledby="claim">
-<h2 id="claim">Schmidhuber’s claim</h2>
-<p>${inline(c.claim.summary)}</p>
-${c.claim.prior_works.length ? `<h3>What he says came first</h3>${works(c.claim.prior_works)}` : ''}
-<p class="count-line"><a href="#every">${statements(c)}${span(c) ? `, ${span(c)}` : ''}</a></p>
-</section>
+  const body = `<article class="case">
+<div class="wrap">
+<p class="crumbs"><a href="${r}">All cases</a>${k.category ? ` <span aria-hidden="true">/</span> <a href="${r}?cat=${slug(k.category)}">${esc(k.category)}</a>` : ''}</p>
+<h1 class="case-title">${esc(k.headline)}</h1>
+${matchup(k, true)}
+<p class="said"><a href="#every">${statements(c)}${when ? `, ${when}` : ''}</a></p>
 </div>
 
-${c.claim.quotes.length ? block('words', 'In his words', c.claim.quotes.map((q) => quoteFigure(q, '')).join('\n')) : ''}
-
-${block('response', 'What the other side says', `<p>${inline(c.response.summary)}</p>\n${respQuotes}`)}
-
-${c.agreed_facts.length ? block('facts', 'Facts nobody disputes', `<ol class="facts">${c.agreed_facts.map((f) => `<li>${fact(f)}</li>`).join('')}</ol>`) : ''}
-
-${block('dispute', 'What’s actually in dispute', `<p>${inline(c.crux)}</p>`, 'crux')}
-
-${block('vote', 'Your vote', `<p class="vote-q">${inline(c.question)}</p>
+<section class="verdict" id="vote" aria-labelledby="q">
+<div class="wrap">
+<h2 class="question" id="q">${inline(k.question)}</h2>
 <div class="vote-btns">${buttons}</div>
-<p class="vote-note">${voteNote}</p>
-${tally(c, ' tally-wide')}`, 'vote')}
+${tally(c)}
+<p class="vote-note">${note}</p>
+</div>
+</section>
 
-${block('every', 'Every time he has made this claim', `<details id="every-list">
-<summary>${inst.length + fresh.length === 1 ? 'Show the one statement' : `Show all ${plural(inst.length + fresh.length, 'statement')}`}${fresh.length ? ` (${fresh.length} not yet reviewed)` : ''}</summary>
+<div class="wrap">
+<div class="panels">
+<section class="panel challenger" aria-labelledby="p1"><h2 class="section-label" id="p1">His claim</h2><p>${inline(k.claim)}</p>${panelQuote(k.his_quote, 'Schmidhuber')}</section>
+<section class="panel credited" aria-labelledby="p2"><h2 class="section-label" id="p2">The pushback</h2><p>${inline(k.pushback)}</p>${k.their_quote ? panelQuote(k.their_quote, k.their_quote.who) : ''}</section>
+<section class="panel judge" aria-labelledby="p3"><h2 class="section-label" id="p3">What you’re judging</h2><p>${inline(k.crux)}</p></section>
+</div>
+
+${timeline(k)}
+
+<details class="full" id="full">
+<summary><span class="full-title">Read the full case</span><span class="full-hint">Both accounts, sources, agreed facts and all ${plural(count, 'statement')}</span></summary>
+<div class="full-body">
+<div class="two">
+<section><h3 class="challenger">Schmidhuber’s claim</h3><p>${inline(c.claim.summary)}</p>${c.claim.prior_works.length ? `<h4>What he says came first</h4>${works(c.claim.prior_works)}` : ''}</section>
+<section><h3 class="credited">Usually credited</h3><p>${inline(c.usual_credit.summary)}</p>${works(c.usual_credit.works)}</section>
+</div>
+${c.claim.quotes.length ? `<section><h3>In his words</h3>${c.claim.quotes.map((q) => quoteFigure(q, '')).join('\n')}</section>` : ''}
+<section><h3>What the other side says</h3><p>${inline(c.response.summary)}</p>${c.response.quotes.map((q) => quoteFigure(q, `${inline(q.who)}, `)).join('')}</section>
+${c.agreed_facts.length ? `<section><h3>Facts nobody disputes</h3><ol class="facts">${c.agreed_facts.map((f) => `<li>${fact(f)}</li>`).join('')}</ol></section>` : ''}
+<section><h3>What’s actually in dispute</h3><p>${inline(c.crux)}</p></section>
+<section id="every"><h3>Every time he has made this claim</h3>
+<p class="count-line">${statements(c)}${when ? `, ${when}` : ''}${fresh.length ? `, plus ${fresh.length} found automatically and not yet reviewed` : ''}</p>
 <ol class="instances">${fresh.map((p) => postItem(p, r, { showCases: false })).join('')}${inst.slice().reverse().map(instanceItem).join('')}</ol>
+</section>
+</div>
 </details>
-<script>if (location.hash === '#every') document.getElementById('every-list').open = true;</script>`)}
+<script>if (location.hash === '#every' || location.hash === '#full') document.getElementById('full').open = true;</script>
 
-${related.length ? block('related', 'Related cases', `<ul class="related">${related.map((x) => `<li><a href="${r}cases/${x.id}/">${inline(x.title)}</a><span>${inline(x.matchup)}</span></li>`).join('')}</ul>`) : ''}
+${related.length ? `<section class="related" aria-labelledby="rel-h"><h2 class="section-label" id="rel-h">Related cases</h2>
+<ul>${related.map((x) => `<li><a class="chip" href="${r}cases/${x.id}/">${esc(cardOf(x).headline)}</a></li>`).join('')}</ul></section>` : ''}
+</div>
 </article>`;
 
   return layout({
-    at: `cases/${c.id}/`, title: c.title, description: clip(c.question), body, nav: 'cases', type: 'article',
-    image: cardFor(c), imageAlt: `${c.title}: ${c.matchup}`,
+    at: `cases/${c.id}/`, title: k.headline, description: clip(k.question), body, nav: 'cases', type: 'article',
+    image: cardFor(c), imageAlt: `${k.headline}: ${k.credited.who} (${k.credited.year}) and ${k.challenger.who} (${k.challenger.year})`,
   });
 }
 
 // ---------------------------------------------------------------- home
 
 function minYear(c) {
-  const ys = c.usual_credit.works.map((w) => Number(String(w.year).match(/\d{4}/)?.[0])).filter(Boolean);
+  const ys = c.usual_credit.works.map((w) => yearOf(w.year)).filter(Boolean);
   return ys.length ? Math.min(...ys) : 9999;
 }
 
-const WHAT = { X: 'a post on X', website: 'a passage on his website', paper: 'a passage in a paper', LinkedIn: 'a post on LinkedIn', Reddit: 'a comment on Reddit', interview: 'an interview', letter: 'a letter', talk: 'a talk' };
-
-// The opening words of a statement for the home page: no leading @handles or links, cut at a word
-// boundary and before any parenthesis the cut would leave open.
-function opening(text, max = 110) {
-  let s = String(text || '').replace(/^(?:@\w+\s+)+/, '').replace(/https?:\/\/\S+/g, '').replace(/\s+/g, ' ').trim();
-  if (s.length <= max) return s;
-  s = s.slice(0, s.lastIndexOf(' ', max));
-  const open = s.lastIndexOf('(');
-  if (open > 0 && s.indexOf(')', open) < 0) s = s.slice(0, open);
-  return s.replace(/[\s,;:(–-]+$/, '') + '…';
+// The newest claim on record: case statements, reviewed recent statements and flagged tracker posts.
+function newestClaim() {
+  return [
+    ...cases.flatMap((c) => caseInstances(c, seed)).filter((i) => dateKey(i.date) !== '9999')
+      .map((i) => ({ key: dateKey(i.date), date: i.date, url: i.url })),
+    ...recent.map((p) => ({ key: p.date, date: p.date.slice(0, 10), url: p.url })),
+    ...posts.filter((p) => p.likely_claim).map((p) => ({ key: p.created_at, date: p.created_at.slice(0, 10), url: p.url })),
+  ].sort((a, b) => b.key.localeCompare(a.key))[0];
 }
 
-// The newest claim on record: case statements, reviewed recent statements and flagged tracker posts.
-function latestLine() {
-  const all = [
-    ...cases.flatMap((c) => caseInstances(c, seed)).filter((i) => dateKey(i.date) !== '9999')
-      .map((i) => ({ key: dateKey(i.date), date: i.date, url: i.url, text: i.quote, venue: i.venue })),
-    ...recent.map((p) => ({ key: p.date, date: p.date.slice(0, 10), url: p.url, text: p.text, venue: 'X' })),
-    ...posts.filter((p) => p.likely_claim).map((p) => ({ key: p.created_at, date: p.created_at.slice(0, 10), url: p.url, text: p.text, venue: 'X', unreviewed: true })),
-  ].sort((a, b) => b.key.localeCompare(a.key));
-  const best = all[0];
-  if (!best) return '';
-  const words = opening(best.text);
-  return `<p class="latest-line">The most recent recorded claim is <a href="${esc(best.url)}" rel="noopener">${WHAT[best.venue] || 'a statement'} from ${esc(fmtDate(best.date))}</a>${best.unreviewed ? ', not yet reviewed' : ''}${words ? `: “${esc(words)}”` : '.'}</p>`;
+function caseCard(c) {
+  const k = cardOf(c);
+  const v = voteState(c);
+  const n = total(v.counts);
+  const k2 = v.counts ? contest(v.counts) : -1;
+  return `<li class="card" data-cat="${k.category ? slug(k.category) : ''}" data-votes="${n}" data-contest="${k2.toFixed(5)}" data-statements="${c.claim.times_made}" data-year="${minYear(c)}" data-title="${esc(k.headline)}">
+<p class="cat">${k.category ? esc(k.category) : '&nbsp;'}</p>
+<h2 class="headline"><a href="cases/${c.id}/">${esc(k.headline)}</a></h2>
+${matchup(k)}
+<p class="q">${inline(k.question)}</p>
+<div class="card-foot">${tally(c, { compact: true })}<a class="vote-link" href="cases/${c.id}/#vote">Vote<span class="sr"> on ${esc(k.headline)}</span></a></div>
+</li>`;
 }
 
 function homePage() {
-  const r = './';
-  const rows = cases.map((c) => {
-    const v = voteState(c);
-    return { c, v, votes: total(v.counts), contest: v.counts ? contest(v.counts) : -1 };
-  }).sort((a, b) => b.votes - a.votes || b.c.claim.times_made - a.c.claim.times_made || a.c.title.localeCompare(b.c.title));
+  const ranked = cases.map((c) => ({ c, votes: total(voteState(c).counts) }))
+    .sort((a, b) => b.votes - a.votes || b.c.claim.times_made - a.c.claim.times_made || cardOf(a.c).headline.localeCompare(cardOf(b.c).headline));
+  const cats = CATEGORIES.map((name) => ({ name, n: cases.filter((c) => cardOf(c).category === name).length })).filter((x) => x.n);
+  const newest = newestClaim();
 
-  const row = ({ c, votes: n, contest: k }) => `<li class="row" id="case-${c.id}" data-votes="${n}" data-contest="${k.toFixed(5)}" data-statements="${c.claim.times_made}" data-year="${minYear(c)}" data-title="${esc(c.title)}" data-credited="${esc(creditKeys(c).join(' '))}">
-<div class="row-main">
-<h2 class="row-title"><a href="${r}cases/${c.id}/">${inline(c.title)}</a></h2>
-<p class="row-matchup">${inline(c.matchup)}</p>
-<p class="row-question">${inline(c.question)}</p>
+  const body = `<section class="hero">
+<div class="wrap">
+<h1 class="wordmark">${WORDMARK}</h1>
+<p class="hero-line">Jürgen Schmidhuber says these ${cases.length} results were done earlier, by him or by others. Read both sides and vote.</p>
+<ul class="stats">
+<li><span class="stat-n">${cases.length}</span><span class="stat-l">cases</span></li>
+<li><span class="stat-n">${CATALOGUE}</span><span class="stat-l">statements since 1996</span></li>
+${newest ? `<li><a href="${esc(newest.url)}" rel="noopener"><span class="stat-n">${esc(fmtDate(newest.date, { short: true }))}</span><span class="stat-l">latest claim</span></a></li>` : ''}
+</ul>
 </div>
-<div class="row-side">
-<p class="row-count">${statements(c)}${span(c) ? ` <span class="yrs">${span(c)}</span>` : ''}</p>
-${tally(c)}
-</div>
-</li>`;
+</section>
 
-  const body = `<div class="wrap">
-<header class="home-head">
-<h1 class="title">${SITE}</h1>
-<p class="dek">${TAGLINE}</p>
-<div class="intro">
-<p>For thirty years Jürgen Schmidhuber has argued in public that results credited to others, in machine learning and well beyond it, were published earlier, often by his own lab and sometimes by researchers he believes were overlooked. Each case below sets out who is usually credited, what he says came first in his own words, how the other side has answered and the exact point in dispute. You vote by reacting to the case’s issue on GitHub, so each account counts once and the arguments stay in public.</p>
-${latestLine()}
+<section class="board wrap" aria-label="Cases">
+<div class="controls">
+<div class="chips" role="group" aria-label="Category">
+<button type="button" class="chip" data-cat="" aria-pressed="true">All <span class="n">${cases.length}</span></button>
+${cats.map((x) => `<button type="button" class="chip" data-cat="${slug(x.name)}" aria-pressed="false">${esc(x.name)} <span class="n">${x.n}</span></button>`).join('\n')}
 </div>
-</header>
-
-<div class="controls" role="group" aria-label="Sort and filter the cases">
-<label for="sort">Sort by</label>
-<select id="sort">
+<div class="sorters">
+<label>Sort <select id="sort">
 <option value="votes">Most votes</option>
 <option value="contested">Most contested</option>
 <option value="statements">Most statements</option>
-<option value="year">Date of the credited work</option>
-</select>
-<label for="credited">Credited to</label>
-<select id="credited">
-<option value="">Anyone</option>
-${creditList.map((e) => `<option value="${esc(e.key)}">${esc(e.label)}${e.cases > 1 ? ` (${e.cases})` : ''}</option>`).join('\n')}
-</select>
-<p class="shown" id="shown" aria-live="polite">${plural(cases.length, 'case')}</p>
+<option value="year">Oldest credited work</option>
+</select></label>
+<span class="shown" id="shown" aria-live="polite">${plural(cases.length, 'case')}</span>
 </div>
-
-<ol class="rows" id="rows">
-${rows.map(row).join('\n')}
+</div>
+<ol class="grid" id="grid">
+${ranked.map(({ c }) => caseCard(c)).join('\n')}
 </ol>
-</div>`;
+</section>`;
 
   return layout({
     at: '', title: SITE, nav: 'cases', body,
-    description: `${TAGLINE}. Each case sets out who is usually credited, what he says came first, the reply and the point in dispute.`,
+    description: `${TAGLINE}: who is usually credited, what he says came first, the reply and the point in dispute.`,
   });
 }
 
@@ -480,15 +485,15 @@ function latestPage() {
   const others = posts.length - shown.length;
   const since = posts.length ? fmtDate(posts[posts.length - 1].created_at.slice(0, 10)) : null;
   const reviewed = recent.length
-    ? `<p>These posts were read and confirmed as priority claims, but each answers something that no single case covers, so they are kept here instead of in a case file.</p>
+    ? `<p class="lead">Read and confirmed as priority claims, but no single case covers them.</p>
 <ol class="instances">${recent.map(reviewedItem).join('\n')}</ol>`
     : '<p>No statement outside the case files has been reviewed yet.</p>';
-  const unreviewed = `${shown.length ? `<ol class="instances">${shown.map((p) => postItem(p, r)).join('\n')}</ol>` : '<p>The daily check has not picked up any new posts since the catalogue was compiled, so nothing is waiting for review.</p>'}
-${posts.length ? `<p class="note">The daily check has picked up ${plural(posts.length, 'new post')} since ${esc(since)}${others ? `, and ${others === 1 ? 'one of them is' : `${others} of them are`} not listed because ${others === 1 ? 'it matched' : 'they matched'} no case and used no claim wording` : ''}. A post is flagged when it names a year between 1960 and 2016 together with a word such as invented, first, published, cite or old hat, and it is matched to cases by keyword, as the <a href="${r}about/">About</a> page describes in more detail.</p>` : ''}`;
-  const body = `<div class="wrap prose-page">
+  const unreviewed = `${shown.length ? `<p class="lead">Picked up by the daily check of his posts on X and not read by anyone yet, so a match only means the wording resembles a case.</p><ol class="instances">${shown.map((p) => postItem(p, r)).join('\n')}</ol>` : '<p class="lead">The daily check has not picked up any new posts since the catalogue was compiled, so nothing is waiting for review.</p>'}
+${posts.length ? `<p class="note">${plural(posts.length, 'new post')} since ${esc(since)}${others ? `, of which ${others} matched no case and used no claim wording and ${others === 1 ? 'is' : 'are'} not listed` : ''}. The flagging rule is on the <a href="${r}about/">About</a> page.</p>` : ''}`;
+  const body = `<div class="wrap page">
 <header class="page-head">
 <h1>Latest</h1>
-<p class="lede">This page collects his newest statements that are not part of a case file. The first list holds posts that have been read and confirmed as priority claims but fit no single case, while the second holds posts that a daily script picked up from X and nobody has reviewed yet, so a match there only means that the wording resembles a case.</p>
+<p class="dek">His newest statements that are not in a case file yet.</p>
 </header>
 ${block('reviewed', 'Reviewed, not tied to a case', reviewed)}
 ${block('unreviewed', 'Found automatically, not yet reviewed', unreviewed)}
@@ -500,33 +505,40 @@ ${block('unreviewed', 'Found automatically, not yet reviewed', unreviewed)}
 
 function aboutPage() {
   const r = '../';
-  const body = `<div class="wrap prose-page">
+  const body = `<div class="wrap page">
 <header class="page-head">
 <h1>About</h1>
-<p class="lede">${SITE} collects the priority claims Jürgen Schmidhuber has made in public, groups them by the result in question and lays out each one so that a reader can weigh it without first reading thirty years of posts.</p>
+<p class="dek">${SITE} sets out Jürgen Schmidhuber’s priority claims one case at a time, with both sides and a vote.</p>
 </header>
-${block('research', 'How the cases were researched', `<p>The cases start from a catalogue of ${CATALOGUE} public statements by Schmidhuber, gathered from his posts on X, his website at IDSIA, his papers, mailing lists such as Connectionists, Reddit, LinkedIn and published interviews, and dated from 1996 to 2026. Each post, email, comment, interview answer or section of a web page counts as one statement, so a long report that he has revised over the years can contribute several. Statements that dispute the same credit were grouped into one case, which was then written from primary sources: the credited papers, the earlier work he points to, and what the credited researchers, prize committees and historians have said in reply. Every quote links to the place it was published, and the full list of statements behind a case is at the bottom of its page.</p>`)}
-
-${block('neutrality', 'Neutrality', `<p>The site takes no side: each case gives both accounts in their own words, keeps the facts that both accept apart from the argument, and ends with the narrow point that actually separates them, without a verdict and without adjectives that carry one. Where nobody has answered a claim in public, the case says so instead of writing an answer on anyone’s behalf, and the name is the one place where the site allows itself a light touch.</p>`)}
-
-${block('voting', 'How voting works', `<p>Each case has an issue in the site’s <a href="${REPO_URL}/issues?q=label%3Acase" rel="noopener">GitHub repository</a>, and a vote is a reaction on that issue’s first post: 👍 for valid, 😕 for partly valid and 👎 for not valid. Because the votes are GitHub reactions, each account counts once, anyone can see who voted, and you can change your vote by changing your reaction. The comments under each issue are open for arguments and corrections.</p>
-<p>Counts are read live from the GitHub API when a page loads and kept for a few minutes, and an hourly rebuild bakes the latest counts into the pages, so they still show without JavaScript or when the API’s limit of 60 requests an hour per visitor is reached. Sorting by “most contested” scores a valid vote as 1, a partly vote as ½ and a not-valid vote as 0 and ranks the cases by how widely their votes spread, so an even split between valid and not valid comes first.</p>`)}
-
-${block('limits', 'What a vote can tell you', `<p>A vote here is the opinion of someone with a GitHub account who found the site, which makes the totals a poll of interested readers and not a measure of expert agreement or of what happened. A person with two accounts can vote twice and a link shared in one community can move a count within hours, so the numbers are best read next to the case and never instead of it.</p>`)}
-
-${block('new-posts', 'New posts', `<p>A scheduled job reads his latest posts on X once a day and lists new ones on the <a href="${r}latest/">Latest</a> page. It flags a post as a likely claim when the text names a year between 1960 and 2016 (or a decade such as the 1990s) and also uses a word such as invented, first, published, introduced, cite, plagiarism, old hat, nothing new, based on or essentially, and it matches posts to cases with the keyword patterns used to build the catalogue. Flagged posts also appear on the matching case pages, marked as found automatically and not yet reviewed, until someone reads them and adds them to the case file. Posts that have been read and confirmed as claims but fit no single case are listed separately on the same page.</p>`)}
-
-${block('corrections', 'Corrections', `<p>If a quote is wrong, a source is missing or a case misstates either side, please <a href="${REPO_URL}/issues/new" rel="noopener">open an issue</a> with the page and the correction, or comment on the case’s own issue. Pull requests that edit the files in <code>cases/</code> are welcome as well, since each case is a single JSON file.</p>`)}
-
-${block('licence', 'Licence and credits', `<p>Case texts are published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener license">CC BY 4.0</a> and the code under the MIT licence, while every quote remains the work of its author and is reproduced for commentary. The type is a subset of Source Serif 4, designed by Frank Grießhammer for Adobe and used under the SIL Open Font License.</p>`)}
+${block('research', 'Sources', `<p>Every case is built from a catalogue of ${CATALOGUE} public statements he made between 1996 and 2026, and written from the primary sources on both sides.</p>
+<ul>
+<li>X, his website at IDSIA, papers, the Connectionists mailing list, Reddit, LinkedIn and interviews</li>
+<li>Each post, email, comment, interview answer or section of a web page counts as one statement, so a long report can contribute several</li>
+<li>Every quote links to where it was published</li>
+</ul>`)}
+${block('neutrality', 'Neutrality', '<p>The site takes no side: both accounts appear in their own words, agreed facts are kept apart from the argument, and no case ends in a verdict. Where nobody has replied in public, the case says so.</p>')}
+${block('voting', 'Voting', `<p>Each case has an <a href="${REPO_URL}/issues?q=label%3Acase" rel="noopener">issue on GitHub</a>, and a vote is a reaction on its first post, so each account counts once and can change its vote.</p>
+<ul class="legend">
+<li><span class="dot challenger"></span>👍 Valid, the claim holds</li>
+<li><span class="dot partly"></span>😕 Partly</li>
+<li><span class="dot credited"></span>👎 Not valid</li>
+</ul>
+<ul>
+<li>Counts load live from the GitHub API and are rebuilt into the pages every hour</li>
+<li>“Most contested” ranks cases by how widely votes spread between valid and not valid</li>
+</ul>`)}
+${block('limits', 'What a vote means', '<p>It is a poll of interested readers with GitHub accounts, which makes it neither expert consensus nor a ruling on what happened.</p>')}
+${block('new-posts', 'New posts', `<p>A daily job reads his posts on X and lists new ones on <a href="${r}latest/">Latest</a>, flagging a post when it names a year from 1960 to 2016 together with words such as invented, first, published, cite or old hat.</p>`)}
+${block('corrections', 'Corrections', `<p>If a quote is wrong or a case misstates either side, <a href="${REPO_URL}/issues/new" rel="noopener">open an issue</a> or a pull request against the case file.</p>`)}
+${block('licence', 'Licence', '<p>Case texts are CC BY 4.0 and the code is MIT, while quotes remain their authors’. The type is Archivo by Omnibus-Type, under the SIL Open Font License.</p>')}
 </div>`;
   return layout({ at: 'about/', title: 'About', nav: 'about', body, description: 'How the cases were researched from 1,126 public statements, the neutrality policy, how voting on GitHub works and how to suggest a correction.' });
 }
 
 function notFound() {
   const base = new URL(SITE_URL).pathname;
-  const body = `<div class="wrap prose-page"><header class="page-head"><h1>Not found</h1>
-<p class="lede">There is no page at this address, perhaps because a case was renamed, so the <a href="./">list of cases</a> is the best place to look for it.</p></header></div>`;
+  const body = `<div class="wrap page"><header class="page-head"><h1>Not found</h1>
+<p class="dek">There is no page here, perhaps because a case was renamed, so try the <a href="./">list of cases</a>.</p></header></div>`;
   return layout({ at: '', title: 'Not found', nav: '', body, base, description: 'Page not found.' });
 }
 
@@ -547,5 +559,6 @@ write('sitemap.xml', sitemap());
 write('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}sitemap.xml\n`);
 
 const cards = fs.existsSync(path.join(OUT, 'cards')) ? fs.readdirSync(path.join(OUT, 'cards')).length : 0;
-console.log(`built ${plural(cases.length, 'case')} into ${path.relative(ROOT, OUT)}/ (${plural(posts.length, 'tracked post')}, ${cards} case cards, votes ${votes.ok ? 'fetched' : 'unavailable'})`);
-if (problems.length) console.log(`${plural(problems.length, 'case file')} skipped; run npm run check for details`);
+const withCard = cases.filter((c) => c.card).length;
+console.log(`built ${plural(cases.length, 'case')} into ${path.relative(ROOT, OUT)}/ (${withCard} with cards, ${plural(posts.length, 'tracked post')}, ${cards} share images, votes ${votes.ok ? 'fetched' : 'unavailable'})`);
+if (problems.length) console.log(`${plural(problems.length, 'case file')} with problems; run npm run check for details`);
