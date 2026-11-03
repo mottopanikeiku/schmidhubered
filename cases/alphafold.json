@@ -1,0 +1,119 @@
+{
+  "id": "alphafold",
+  "title": "AlphaFold",
+  "matchup": "Jumper et al. (2021, AlphaFold 2) vs Baldi and Pollastri (2002), Hochreiter et al. (2007) and Golkov et al. (2016)",
+  "question": "Does the 2021 AlphaFold paper behind the 2024 Nobel Prize in Chemistry leave out earlier machine-learning work on protein structure that it builds on, as Schmidhuber says?",
+  "usual_credit": {
+    "summary": "The 2024 Nobel Prize in Chemistry went half to David Baker for computational protein design and half jointly to Demis Hassabis and John Jumper of Google DeepMind for protein structure prediction, which leaves a quarter of the prize to each of the two. The Nobel Committee describes AlphaFold 2, presented in the 2021 Nature paper by Jumper and colleagues, as an entirely redesigned successor to the earlier AlphaFold 1 that replaces convolutions with a Transformer-based network and produces atomic coordinates directly, and it calls the system the first real scientific breakthrough of artificial intelligence.",
+    "works": [
+      {
+        "who": "John Jumper et al. (DeepMind)",
+        "year": 2021,
+        "title": "Highly accurate protein structure prediction with AlphaFold",
+        "url": "https://www.nature.com/articles/s41586-021-03819-2"
+      },
+      {
+        "who": "Andrew W. Senior et al. (DeepMind)",
+        "year": 2020,
+        "title": "Improved protein structure prediction using potentials from deep learning",
+        "url": "https://www.nature.com/articles/s41586-019-1923-7"
+      },
+      {
+        "who": "Nobel Committee for Chemistry",
+        "year": 2024,
+        "title": "Scientific Background to the Nobel Prize in Chemistry 2024",
+        "url": "https://www.nobelprize.org/uploads/2024/10/advanced-chemistryprize2024.pdf"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says the 2021 AlphaFold 2 paper failed to cite important earlier work, and he states that a student from his lab co-founded DeepMind. He names Baldi and Pollastri (2002), who used multiple sequence alignments and profile matrices to predict secondary structure in a pipeline he calls very similar to AlphaFold 2's, Hochreiter, Heusel and Obermayer (2007), who applied an LSTM to protein homology detection, and Golkov et al. (2016), whose network predicted contact maps from co-evolution statistics and was tested on the CASP benchmark. He adds that DeepMind predicted a distance map instead of a contact map, used a Transformer instead of graph convolutions, and used more data and compute. He first wrote this in a July 2025 revision of his Nobel report, repeated it in a post on X in January 2026, and posted it again in replies on 29 July 2026 under news that DeepMind had reassigned the AlphaFold team.",
+    "prior_works": [
+      {
+        "who": "Pierre Baldi and Gianluca Pollastri",
+        "year": 2002,
+        "title": "A machine learning strategy for protein analysis",
+        "url": "https://doi.org/10.1109/MIS.2002.999217"
+      },
+      {
+        "who": "Sepp Hochreiter, Martin Heusel and Klaus Obermayer",
+        "year": 2007,
+        "title": "Fast model-based protein homology detection without alignment",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17488755/"
+      },
+      {
+        "who": "Vladimir Golkov et al.",
+        "year": 2016,
+        "title": "Protein contact prediction from amino acid co-evolution using convolutional networks for graph-valued images",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2016/hash/2cad8fa47bbef282badbb8de5374b894-Abstract.html"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "The 2021 paper [1] failed to cite important prior work [2] by Baldi and Pollastri (2002)",
+        "date": "2026-01-15",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2011830777101574264"
+      },
+      {
+        "text": "They failed to cite important prior work by Baldi and Pollastri (2002)",
+        "date": "2025-07-31",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#more:~:text=Two%20authors%20of%20a%20DeepMind%20team"
+      },
+      {
+        "text": "Unfortunately, the Aplhafold paper was based on earlier work that was not cited",
+        "date": "2026-07-29",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2082570194329772526"
+      }
+    ],
+    "times_made": 8,
+    "first_made": "2025-07",
+    "last_made": "2026-07"
+  },
+  "response": {
+    "summary": "I found no public reply from John Jumper, Demis Hassabis or DeepMind to this citation claim. A report by the Chinese outlet Xinzhiyuan, republished in English by 36Kr in July 2025, says that Daniel Cremers, the supervisor of Golkov et al., asked why DeepMind did not cite the 2016 paper, that Hugo Penedones, a former member of the first AlphaFold team, recalled DeepMind starting on contact-map prediction in 2016 and said it may have arrived at the idea independently, and that Yann LeCun and Pierre Baldi also commented on the long history of neural networks in this field. Those statements are reported second-hand and I could not open the original posts. The Nobel Committee's own background text notes that neural networks had entered secondary structure prediction by 1988 and describes AlphaFold 2 as a redesign of AlphaFold 1 with many new inventions.",
+    "quotes": [
+      {
+        "who": "Nobel Committee for Chemistry",
+        "text": "artificial neural networks had entered into secondary structure prediction as early as 1988",
+        "date": "2024-10-09",
+        "url": "https://www.nobelprize.org/uploads/2024/10/advanced-chemistryprize2024.pdf"
+      },
+      {
+        "who": "Nobel Committee for Chemistry",
+        "text": "the neural network model of AF2 had been entirely redesigned compared to that of AF1",
+        "date": "2024-10-09",
+        "url": "https://www.nobelprize.org/uploads/2024/10/advanced-chemistryprize2024.pdf"
+      },
+      {
+        "who": "Nobel Committee for Chemistry",
+        "text": "an ingenious piece of neural network engineering by Jumper, Hassabis and their coworkers, with a multitude of new inventions",
+        "date": "2024-10-09",
+        "url": "https://www.nobelprize.org/uploads/2024/10/advanced-chemistryprize2024.pdf"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Jumper et al. published \"Highly accurate protein structure prediction with AlphaFold\" in Nature in 2021, and the 2024 Nobel Prize in Chemistry gave a quarter each to Hassabis and Jumper.",
+    "Baldi and Pollastri published \"A machine learning strategy for protein analysis\" in IEEE Intelligent Systems in 2002, and Golkov et al. presented their contact prediction paper at NeurIPS in 2016.",
+    "The reference list of the 2021 AlphaFold paper includes Qian and Sejnowski (1988) and Fariselli et al. (2001) on neural networks for protein structure, and it does not include Baldi and Pollastri (2002), Hochreiter et al. (2007) or Golkov et al. (2016).",
+    "The Nobel Committee's background text says that neural networks had entered secondary structure prediction as early as 1988 and that AlphaFold 2 abandoned the convolutional design of AlphaFold 1 for a Transformer architecture."
+  ],
+  "crux": "The sources differ on whether the earlier pipelines, which fed alignment-derived profiles or co-evolution statistics into neural networks, contain the ideas that AlphaFold 2 rests on, or whether its end-to-end Evoformer and structure module are a new design for which that earlier work is background. They also differ on whether the 2021 authors should have cited it.",
+  "related": [
+    "nobel2024",
+    "transformers"
+  ],
+  "instance_urls": [
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#more:~:text=Two%20authors%20of%20a%20DeepMind%20team",
+    "https://x.com/SchmidhuberAI/status/2011830777101574264",
+    "https://x.com/SchmidhuberAI/status/2082441418186875326",
+    "https://x.com/SchmidhuberAI/status/2082441790766960752",
+    "https://x.com/SchmidhuberAI/status/2082570194329772526",
+    "https://x.com/SchmidhuberAI/status/2082575178177843373",
+    "https://web.archive.org/web/20260729204920/https://twitter.com/SchmidhuberAI/status/2082569186048369068",
+    "https://web.archive.org/web/20260729205056/https://twitter.com/SchmidhuberAI/status/2082569587439067508"
+  ]
+}

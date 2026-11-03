@@ -1,0 +1,84 @@
+{
+  "id": "synthetic-gradients",
+  "title": "Synthetic gradients",
+  "matchup": "Jaderberg et al. (2016) vs Schmidhuber (1990)",
+  "question": "Should DeepMind's synthetic gradients be seen as similar to the 1990 'Networks adjusting networks' proposal, as Schmidhuber says?",
+  "usual_credit": {
+    "summary": "Synthetic gradients are credited to Max Jaderberg and colleagues at DeepMind, whose paper 'Decoupled Neural Interfaces using Synthetic Gradients' proposed letting each module of a network predict the gradient it would receive from backpropagation, so that modules can be updated without waiting for the rest of the network. The paper, posted in 2016 and presented at ICML 2017, states its goal as removing update locking for neural networks, which it achieves by removing backpropagation between modules.",
+    "works": [
+      {
+        "who": "Jaderberg, Czarnecki, Osindero, Vinyals, Graves, Silver, Kavukcuoglu",
+        "year": 2016,
+        "title": "Decoupled neural interfaces using synthetic gradients",
+        "url": "https://arxiv.org/abs/1608.05343"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says that in 1990 he proposed neural networks that learn to adjust other networks, and that the section of that work on local supervised learning in recurrent networks introduced a second adaptive network that learns to associate the states of a recurrent net with corresponding error vectors. These locally estimated gradients, rather than the true gradients, are used to adjust the recurrent net, which makes the method local in space and time. He says that DeepMind called this synthetic gradients a quarter century later and that its work is similar to his 1990 proposals.",
+    "prior_works": [
+      {
+        "who": "Schmidhuber",
+        "year": 1990,
+        "title": "Networks adjusting networks (workshop proceedings, with extended technical report FKI-125-90, TU Munich)",
+        "url": "https://people.idsia.ch/~juergen/FKI-125-90ocr.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "A quarter century later, DeepMind called this \"Synthetic Gradients.\"[NAN5]",
+        "date": "2026-02-23",
+        "venue": "paper",
+        "url": "https://arxiv.org/pdf/2005.05744v5#page=21"
+      },
+      {
+        "text": "This work of DeepMind is similar to [NAN1-2].",
+        "date": "2023-12-14",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#NAN5:~:text=This%20work%20of%20DeepMind%20is%20similar%20to"
+      },
+      {
+        "text": "These locally estimated error gradients (rather than the true gradients) are used to adjust the RNN.",
+        "date": "2026-02-23",
+        "venue": "paper",
+        "url": "https://arxiv.org/pdf/2005.05744v5#page=21"
+      }
+    ],
+    "times_made": 3,
+    "first_made": "2021-05",
+    "last_made": "2026-02"
+  },
+  "response": {
+    "summary": "No public reply from the synthetic-gradients authors to the similarity claim was found. Their paper cites Schmidhuber's 1990 'Networks adjusting networks' in its related-work discussion, where it says the synthetic gradient model is most analogous to a value function used for gradient ascent or to critics for training neural networks, and it frames its own goal as removing update locking by removing backpropagation between modules.",
+    "quotes": [
+      {
+        "who": "Jaderberg et al. (2016 paper)",
+        "text": "or critics for training neural networks (Schmidhuber, 1990)",
+        "date": "2016-08-18",
+        "url": "https://arxiv.org/pdf/1608.05343"
+      },
+      {
+        "who": "Jaderberg et al. (2016 paper)",
+        "text": "The goal of this work is to remove update locking for neural networks. This is achieved by removing backpropagation.",
+        "date": "2016-08-18",
+        "url": "https://arxiv.org/pdf/1608.05343"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Schmidhuber's 'Networks adjusting networks' was presented at a workshop in St. Augustin on 24 and 25 May 1989 and appeared in its proceedings in 1990, with an extended technical report FKI-125-90.",
+    "Jaderberg and colleagues posted 'Decoupled Neural Interfaces using Synthetic Gradients' to arXiv on 18 August 2016 and presented it at ICML 2017.",
+    "The 2016 paper cites Schmidhuber's 'Networks adjusting networks' (1990).",
+    "Both the 1990 proposal and the 2016 paper use a second learned model to estimate error gradients for a first network."
+  ],
+  "crux": "The dispute is how closely a learned estimator of error gradients for a recurrent network, proposed in 1990 for local learning in space and time, corresponds to predicting gradients so that modules can be updated without waiting for backpropagation, proposed in 2016 to remove update locking. The 2016 paper cites the 1990 work as an example of critics for training networks, while Schmidhuber describes the two as similar.",
+  "related": [
+    "forward-forward",
+    "metalearning"
+  ],
+  "instance_urls": [
+    "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%2015:~:text=A%20quarter%20century%20later%2C%20DeepMind%20called%20this%20%22Synthetic%20Gradients.%22",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#NAN5:~:text=This%20work%20of%20DeepMind%20is%20similar%20to",
+    "https://arxiv.org/pdf/2005.05744v5#page=21"
+  ]
+}

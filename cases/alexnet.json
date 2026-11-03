@@ -1,0 +1,149 @@
+{
+  "id": "alexnet",
+  "title": "AlexNet",
+  "matchup": "Krizhevsky, Sutskever & Hinton (2012) vs Ciresan, Meier, Masci, Gambardella & Schmidhuber (2011)",
+  "question": "Should AlexNet's 2012 ImageNet win be seen as following the 2011 DanNet, which won four vision contests with a similar GPU-trained convolutional network, as Schmidhuber says?",
+  "usual_credit": {
+    "summary": "Alex Krizhevsky, Ilya Sutskever and Geoffrey Hinton trained a large convolutional network on two GPUs, using ReLU units and dropout, and won the ILSVRC 2012 ImageNet classification contest by a wide margin. The result is widely seen as the start of the deep learning boom in computer vision, and the ACM's 2019 Turing Award announcement says Hinton and his students almost halved the error rate for object recognition.",
+    "works": [
+      {
+        "who": "A. Krizhevsky, I. Sutskever, G. Hinton",
+        "year": 2012,
+        "title": "ImageNet Classification with Deep Convolutional Neural Networks (NIPS 2012)",
+        "url": "https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says his group's DanNet, a max-pooling convolutional network trained on GPUs by Dan Ciresan and colleagues, won four image recognition contests between 2011 and 2012, including the IJCNN 2011 traffic sign contest with superhuman accuracy, before AlexNet won ImageNet, and that AlexNet is similar to DanNet. He adds that AlexNet used rectified linear units and a variant of the stochastic delta rule, later called dropout, without citing their earlier sources, Fukushima (1969) and Hanson (1990).",
+    "prior_works": [
+      {
+        "who": "D. Ciresan, U. Meier, J. Masci, L. M. Gambardella, J. Schmidhuber",
+        "year": 2011,
+        "title": "Flexible, High Performance Convolutional Neural Networks for Image Classification (IJCAI 2011)",
+        "url": "https://people.idsia.ch/~juergen/ijcai2011.pdf"
+      },
+      {
+        "who": "D. Ciresan, U. Meier, J. Masci, L. M. Gambardella, J. Schmidhuber",
+        "year": 2011,
+        "title": "High-Performance Neural Networks for Visual Object Classification (arXiv)",
+        "url": "https://arxiv.org/abs/1102.0183"
+      },
+      {
+        "who": "D. Ciresan, U. Meier, J. Schmidhuber",
+        "year": 2012,
+        "title": "Multi-column Deep Neural Networks for Image Classification (CVPR 2012)",
+        "url": "https://arxiv.org/abs/1202.2745"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "In 2011, DanNet was the first pure deep convolutional neural network (CNN) to win computer vision contests.",
+        "date": "2021-02-04",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/DanNet-triggers-deep-CNN-revolution-2011.html"
+      },
+      {
+        "text": "In fact, the later system (Krizhevsky et al. 2012) was very similar to the earlier 2011 system.",
+        "date": "2015-06",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/deep-learning-conspiracy.html#:~:text=In%20fact%2C%20the%20later%20system%20%28Krizhevsky%20et%20al.%202012%29%20was%20very%20similar"
+      },
+      {
+        "text": "AlexNet (2012) was similar to DanNet (2011) which won 4 image recognition contests before AlexNet (first superhuman performance in 2011)",
+        "date": "2025-09-25",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1971206813057274015"
+      },
+      {
+        "text": "In July 2012, the CVPR paper on DanNet[GPUCNN3] hit the computer vision community. 5 months later, the similar GPU-accelerated AlexNet won the ImageNet[IM09] 2012 contest.",
+        "date": "2025-12-29",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/deep-learning-history.html#cnn:~:text=In%20July%202012%2C%20the%20CVPR%20paper%20on%20DanNet"
+      },
+      {
+        "text": "AlexNet used Kunihiko Fukushima's rectified linear neurons (ReLUs) [RELU1-2] (1969) and a variant of Stephen J. Hanson's stochastic delta rule (1990)",
+        "date": "2021-02",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/DanNet-triggers-deep-CNN-revolution-2011.html#:~:text=Unlike%20DanNet%2C%20AlexNet%20used%20Kunihiko%20Fukushima%27s%20rectified%20linear"
+      }
+    ],
+    "times_made": 35,
+    "first_made": "2011-08",
+    "last_made": "2026-08"
+  },
+  "response": {
+    "summary": "The AlexNet paper cites two IDSIA papers by Ciresan et al., one for the record MNIST result and one to call its two-GPU design somewhat similar to Ciresan's columnar CNN. It describes its own contributions as the size of the network, a fast GPU implementation and its regularization methods. The ACM's 2019 announcement credits Hinton and his students with almost halving the ImageNet error rate, and the English Wikipedia article on AlexNet records the earlier IDSIA GPU networks and their four contest wins while noting the authors' own 'somewhat similar'. No public reply from Krizhevsky, Sutskever or Hinton to the DanNet priority claim was found in the sources reviewed.",
+    "quotes": [
+      {
+        "who": "Krizhevsky, Sutskever and Hinton, AlexNet paper",
+        "text": "The resultant architecture is somewhat similar to that of the \"columnar\" CNN employed by Cire¸ san et al. [5], except that our columns are not independent",
+        "date": "2012-12",
+        "url": "https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf"
+      },
+      {
+        "who": "ACM announcement of the 2018 Turing Award",
+        "text": "Hinton and his students almost halved the error rate for object recognition and reshaped the computer vision field.",
+        "date": "2019-03-27",
+        "url": "https://awards.acm.org/binaries/content/assets/press-releases/2019/march/turing-award-2018.pdf"
+      },
+      {
+        "who": "Wikipedia, 'AlexNet', text as retrieved on 2026-11-03",
+        "text": "Cireșan's earlier net is \"somewhat similar\"",
+        "date": "2026-11-03",
+        "url": "https://en.wikipedia.org/wiki/AlexNet"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "The IDSIA paper 'Flexible, High Performance Convolutional Neural Networks for Image Classification' appeared at IJCAI 2011, and the AlexNet paper appeared at NIPS 2012.",
+    "Both DanNet and AlexNet were convolutional networks trained on GPUs, and the AlexNet paper calls its two-GPU design 'somewhat similar' to the columnar CNN of Ciresan et al.",
+    "AlexNet won the ILSVRC 2012 ImageNet classification contest.",
+    "The AlexNet paper cites Ciresan, Meier and Schmidhuber (2012) and Ciresan et al. (2011), and it credits Nair and Hinton (2010) for rectified linear units, without citing Fukushima (1969) or Hanson (1990)."
+  ],
+  "crux": "Whether AlexNet's 2012 ImageNet result continues the 2011-12 IDSIA GPU network results, which it cites as 'somewhat similar', or is a distinct advance through a larger network, ImageNet-scale training, ReLUs and dropout. The sides also weigh differently the first contest wins at smaller scale against the first win on ImageNet.",
+  "related": [
+    "cnn",
+    "dropout-relu",
+    "resnet",
+    "turingaward",
+    "honda"
+  ],
+  "instance_urls": [
+    "https://people.idsia.ch/~juergen/superhumanpatternrecognition.html#:~:text=The%20already%20impressive%20runner%2Dup%20NN%20by%20Yann%20LeCun%27s%20team",
+    "https://arxiv.org/pdf/1312.5548",
+    "https://arxiv.org/pdf/1404.7828v4#page=23",
+    "https://people.idsia.ch/~juergen/deep-learning-conspiracy.html#:~:text=In%20fact%2C%20the%20later%20system%20%28Krizhevsky%20et%20al.%202012%29%20was%20very%20similar",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#IV:~:text=However%2C%20the%20first%20superior%20award%2Dwinning%20GPU%2Dbased%20CNN%20was%20created",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#IV:~:text=A%20success%20of%20Hinton%27s%20team%20%28ImageNet%2C%20Dec%202012%29",
+    "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%2019:~:text=%28All%20of%20this%20happened%20before%20a%20similar%20GPU%2DCNN%20by%20others%20won%20ImageNet",
+    "https://arxiv.org/pdf/2005.05744v1#page=19",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XVIII:~:text=The%20first%20team%20to%20win%20a%20relevant%20international%20contest%20through%20deep",
+    "https://people.idsia.ch/~juergen/computer-vision-contests-won-by-gpu-cnns.html#:~:text=However%2C%20the%20ImageNet%202012%20winner%20AlexNet",
+    "https://x.com/SchmidhuberAI/status/1349623978684461056",
+    "https://people.idsia.ch/~juergen/DanNet-triggers-deep-CNN-revolution-2011.html#:~:text=After%20DanNet%20had%20won%204%20image%20recognition%20competitions%2C%20the%20similar",
+    "https://people.idsia.ch/~juergen/DanNet-triggers-deep-CNN-revolution-2011.html#:~:text=Unlike%20DanNet%2C%20AlexNet%20used%20Kunihiko%20Fukushima%27s%20rectified%20linear",
+    "https://people.idsia.ch/~juergen/DanNet-triggers-deep-CNN-revolution-2011.html#:~:text=DanNet%20performed%20twice%20as%20good%20as%20human%20test%20subjects%20and%20three%20times",
+    "https://people.idsia.ch/~juergen/DanNet-triggers-deep-CNN-revolution-2011.html",
+    "https://people.idsia.ch/~juergen/whatsnew.html#:~:text=Sep%202021%3A%20The%20most%20cited%20neural%20networks%20all%20build%20on%20work%20done%20in%20my",
+    "https://x.com/SchmidhuberAI/status/1435499479306809346",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20claim%20ReLUs%20enabled%20deep%20learning%20to%20outperform%20previous%20methods",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#D:~:text=All%20of%20this%20happened%20before%20the%20similar%20GPU%2Daccelerated%20AlexNet%20%28Dec",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#VII",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XVIII:~:text=The%20first%20team%20to%20win%20a%20relevant%20international%20contest%20through%20deep",
+    "https://x.com/SchmidhuberAI/status/1526095113058930688",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#highway:~:text=In%20their%202021%20Turing%20lecture%2C",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#GPUCNN4",
+    "https://people.idsia.ch/~juergen/2010s-our-decade-of-deep-learning.html#:~:text=before%20a%20similar%20GPU%2Daccelerated%20CNN%20of%20the%20University%20of%20Toronto%20won",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_congrats-to-nvidia-the-first-public-4t-activity-7349695669969788928-ZoSh",
+    "https://people.idsia.ch/~juergen/who-invented-convolutional-neural-networks.html#:~:text=%E2%98%85%202011%3A%20Many%20years%20after%20the%20original%20work%20on%20max%2Dpooling%20CNNs%2C",
+    "https://x.com/SchmidhuberAI/status/1971206813057274015",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#backprop",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#cnn:~:text=In%20July%202012%2C%20the%20CVPR%20paper%20on%20DanNet",
+    "https://arxiv.org/pdf/2212.11279v3#page=15",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#highway:~:text=Hinton%27s%20team%20followed%20in%20our%20foot%20steps%2C%20first%20by%20discarding",
+    "https://people.idsia.ch/~juergen/most-cited-neural-nets.html#:~:text=AlexNet%20cited%20DanNet%20but%20also%20used%20ReLUs%20%281969%29",
+    "https://people.idsia.ch/~juergen/most-cited-neural-nets.html#:~:text=Another%20of%20the%20most%20cited%20NNs%20of%20the%2021st%20century%E2%80%94the%20VGG%20network",
+    "https://x.com/SchmidhuberAI/status/2092745936426393955"
+  ]
+}

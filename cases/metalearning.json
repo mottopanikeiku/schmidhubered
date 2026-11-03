@@ -1,0 +1,146 @@
+{
+  "id": "metalearning",
+  "title": "Meta-learning and recursive self-improvement",
+  "matchup": "Bengio et al. (1991) and current meta-learning and self-improvement research vs Schmidhuber (1987, 1992, 2003)",
+  "question": "Should meta-learning and recursive self-improvement be traced to Schmidhuber's 1987 diploma thesis, as he says, and does later work owe credit to it?",
+  "usual_credit": {
+    "summary": "Bengio said in a December 2019 IEEE Spectrum interview that he wrote an early paper on learning to learn in 1991, and Bengio, Bengio and Cloutier published \"Learning a synaptic learning rule\" at IJCNN that year. The idea that machines could improve themselves in an intelligence explosion is traced by Schmidhuber, and by commenters under his posts, to I. J. Good's \"Speculations concerning the first ultraintelligent machine\", published in Advances in Computers in 1966.",
+    "works": [
+      {
+        "who": "Yoshua Bengio, Samy Bengio and Jocelyn Cloutier",
+        "year": 1991,
+        "title": "Learning a synaptic learning rule",
+        "url": "https://doi.org/10.1109/IJCNN.1991.155621"
+      },
+      {
+        "who": "I. J. Good",
+        "year": 1966,
+        "title": "Speculations concerning the first ultraintelligent machine (Advances in Computers, vol. 6)",
+        "url": "https://exhibits.stanford.edu/feigenbaum/catalog/gz727rg3869"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says he began work on learning to learn in his 1987 diploma thesis, which applied genetic programming to itself so that better genetic programming methods evolved at a meta level, a meta-meta level and further levels, and that this thesis contains the first concrete algorithm for recursive self-improvement. He adds gradient-descent-based neural meta-learning from 1992, meta-reinforcement learning with self-modifying policies from 1994 and the mathematically optimal, self-referential Gödel Machine of 2003. He disputes Bengio's 2019 remark that Bengio had worked on the topic earlier, calling Bengio's 1991 paper much later than his thesis. Since 2025 he has linked the thesis in replies to posts about in-context learning, test-time training and recursive self-improvement at AI companies, and in September 2026 he published a technical note (IDSIA-9-26) arguing that recursive self-improvement is much older than the 2026 wave of interest in it.",
+    "prior_works": [
+      {
+        "who": "Jürgen Schmidhuber",
+        "year": 1987,
+        "title": "Evolutionary principles in self-referential learning, or on learning how to learn: the meta-meta-... hook (diploma thesis)",
+        "url": "https://people.idsia.ch/~juergen/diploma1987ocr.pdf"
+      },
+      {
+        "who": "Jürgen Schmidhuber",
+        "year": 1992,
+        "title": "Learning to control fast-weight memories: an alternative to recurrent nets",
+        "url": "https://sferics.idsia.ch/pub/juergen/fastweights.pdf"
+      },
+      {
+        "who": "Jürgen Schmidhuber",
+        "year": 2003,
+        "title": "Goedel machines: self-referential universal problem solvers making provably optimal self-improvements",
+        "url": "https://arxiv.org/abs/cs/0309048"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "Bengio, however, suggested in public at N(eur)IPS 2019 that he did it before me, citing his much later 1991 paper.",
+        "date": "2023-12-14",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiometa:~:text=Bengio%2C%20however%2C%20suggested%20in%20public%20at%20N%28eur%29IPS%202019%20that%20he%20did%20it"
+      },
+      {
+        "text": "In 1987, when compute was 100,000,000 x more expensive, I published the 1st concrete RSI algorithms.",
+        "date": "2026-09-16",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2100347054127976637"
+      },
+      {
+        "text": "My 1987 diploma thesis [META1], however, applied \"genetic programming\" (GP) to itself, to recursively evolve better GP methods.",
+        "date": "2026-09-17",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2100462037084053976"
+      },
+      {
+        "text": "(Good did not have any concrete RSI algorithms)",
+        "date": "2026-09-17",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2100410077207318982"
+      },
+      {
+        "text": "My first work on metalearning or learning to learn came out in 1987 [1][2]. Back then nobody was interested.",
+        "date": "2025-04-16",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1912521435261915151"
+      }
+    ],
+    "times_made": 33,
+    "first_made": "1998-07",
+    "last_made": "2026-10"
+  },
+  "response": {
+    "summary": "I found no public reply from Bengio, Hinton or the companies named in Schmidhuber's 2026 posts to the claim that his 1987 thesis began meta-learning or recursive self-improvement. Bengio's own account, given in an IEEE Spectrum interview on the eve of his NeurIPS 2019 keynote, is that he wrote an early paper on learning to learn in 1991. A Reddit discussion from December 2019 reports that a slide in that keynote cited \"Bengio et al 1991; Schmidhuber 1992\" for the topic; I read this in an archived copy of the thread and could not open the slide itself. Hinton wrote on X in October 2026 that the idea of an intelligence explosion through recursive self improvement has been around for a long time, and a user replying to Schmidhuber's September 2026 post pointed to I. J. Good (1965) and von Neumann (1956), to which Schmidhuber answered that Good had no concrete algorithms.",
+    "quotes": [
+      {
+        "who": "Yoshua Bengio (IEEE Spectrum interview)",
+        "text": "I wrote an early paper on this in 1991, but only recently did we get the computational power to implement this kind of thing.",
+        "date": "2019-12-10",
+        "url": "https://spectrum.ieee.org/yoshua-bengio-revered-architect-of-ai-has-some-ideas-about-what-to-build-next"
+      },
+      {
+        "who": "Geoffrey Hinton (X, not addressed to Schmidhuber's claim)",
+        "text": "The idea of an intelligence explosion caused by recursive self improvement has been around for a long time",
+        "date": "2026-10-02",
+        "url": "https://x.com/geoffreyhinton/status/2106122709285368061"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Schmidhuber's diploma thesis on learning how to learn is dated 1987 and was written at the Technical University of Munich.",
+    "Bengio, Bengio and Cloutier published \"Learning a synaptic learning rule\" at IJCNN in 1991, and Bengio dated his early paper on learning to learn to 1991 in a December 2019 interview.",
+    "I. J. Good wrote about an intelligence explosion through self-improving machines in 1965 to 1966, and Schmidhuber's own text says Good had no concrete recursive self-improvement algorithm.",
+    "Schmidhuber published the Gödel Machine in 2003, and he published the technical note \"Recursive self-improvement since 1987\" in September 2026."
+  ],
+  "crux": "The sources differ on whether learning to learn and recursive self-improvement are best credited to the first concrete algorithm, which Schmidhuber places in 1987, or to later formulations, and on whether today's meta-learning, which trains across task distributions or works in context, is the same thing as the evolutionary system of the thesis. They also differ on whether Bengio's 1991 paper deserves to be named alongside the thesis.",
+  "related": [
+    "transformers",
+    "chatgpt",
+    "reasoning",
+    "turingaward"
+  ],
+  "instance_urls": [
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/1998-July/018492.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2017-April/030021.html",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XVII:~:text=Another%20dispute%20was%20on%20meta%2Dlearning%20%28learning%20to%20learn%E2%80%94now%20a%20hot",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XVII-1:~:text=%28B4%29%20Another%20dispute%20was%20on%20metalearning%20%28learning%20to%20learn%E2%80%94now%20a%20hot",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiometa:~:text=Bengio%2C%20however%2C%20suggested%20in%20public%20at%20N%28eur%29IPS%202019%20that%20he%20did%20it",
+    "https://x.com/SchmidhuberAI/status/1912521435261915151",
+    "https://x.com/SchmidhuberAI/status/1930625677205631233",
+    "https://x.com/SchmidhuberAI/status/1948773926978408497",
+    "https://x.com/SchmidhuberAI/status/1949107513892257933",
+    "https://x.com/SchmidhuberAI/status/1949107473815613590",
+    "https://people.idsia.ch/~juergen/metalearning.html#abstract:~:text=The%20%22in%2Dcontext%20learning%22%20and%20%22test%20time%20training%22%20of%20recent%20Large",
+    "https://x.com/SchmidhuberAI/status/2031397968511717584",
+    "https://x.com/SchmidhuberAI/status/2079576596483022963",
+    "https://people.idsia.ch/~juergen/blog.html#:~:text=%E2%98%85%20Sept%202026%3A%20Recursive%20Self%2DImprovement%20%28RSI%29%20since%201987%20%28Technical",
+    "https://people.idsia.ch/~juergen/recursive-self-improvement.html#abstract:~:text=As%20of%202026%2C%20everyone%E2%80%94including%20Anthropic%2FOpenAI%2FSakana%20AI%2FSpaceX%E2%80%94is",
+    "https://people.idsia.ch/~juergen/recursive-self-improvement.html#abstract:~:text=In%201987%2C%20when%20compute%20was%20about%20108%20times%20more%20expensive%20than%20today%2C",
+    "https://people.idsia.ch/~juergen/recursive-self-improvement.html#secllm:~:text=This%20so%2Dcalled%20%22In%2DContext%20Learning%22%20and%20%22Test%20Time%20Training%22%20of%20LLMs",
+    "https://people.idsia.ch/~juergen/recursive-self-improvement.html#secLouis:~:text=Recent%20work%20on%20meta%20learning%20and%20RSI%20focused%20on%20LLM%2Dbased%20approaches",
+    "https://x.com/SchmidhuberAI/status/2096870875513459027",
+    "https://x.com/SchmidhuberAI/status/2099047348810740182",
+    "https://x.com/SchmidhuberAI/status/2099049558781178111",
+    "https://x.com/SchmidhuberAI/status/2100265638233092174",
+    "https://x.com/SchmidhuberAI/status/2100347054127976637",
+    "https://x.com/SchmidhuberAI/status/2100410077207318982",
+    "https://x.com/SchmidhuberAI/status/2100462037084053976",
+    "https://x.com/SchmidhuberAI/status/2100468110327165435",
+    "https://x.com/SchmidhuberAI/status/2100878565545742596",
+    "https://x.com/SchmidhuberAI/status/2100879805465960809",
+    "https://x.com/SchmidhuberAI/status/2105197776300822592",
+    "https://x.com/SchmidhuberAI/status/2106128780095881341",
+    "https://x.com/SchmidhuberAI/status/2106136361950642547",
+    "https://x.com/SchmidhuberAI/status/2106269218182246756",
+    "https://x.com/SchmidhuberAI/status/2108886379912675796"
+  ]
+}

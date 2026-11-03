@@ -1,0 +1,115 @@
+{
+  "id": "vanishing",
+  "title": "The vanishing gradient problem",
+  "matchup": "Bengio, Simard and Frasconi (1994) vs Hochreiter (1991)",
+  "question": "Should the analysis of vanishing gradients in recurrent networks be credited first to Hochreiter's 1991 diploma thesis, and should Bengio's later papers have cited it, as Schmidhuber says?",
+  "usual_credit": {
+    "summary": "The 1994 paper by Yoshua Bengio, Patrice Simard and Paolo Frasconi in IEEE Transactions on Neural Networks analysed why gradient-based learning struggles with dependencies that span long intervals in recurrent networks, a difficulty now usually called the vanishing gradient problem. Its abstract reports a trade-off between efficient learning by gradient descent and latching on to information for long periods, and an earlier version was presented at the 1993 International Conference on Neural Networks.",
+    "works": [
+      {
+        "who": "Bengio, Simard, Frasconi",
+        "year": 1994,
+        "title": "Learning long-term dependencies with gradient descent is difficult",
+        "url": "https://doi.org/10.1109/72.279181"
+      },
+      {
+        "who": "Bengio, Frasconi, Simard",
+        "year": 1993,
+        "title": "The problem of learning long-term dependencies in recurrent networks",
+        "url": "https://doi.org/10.1109/ICNN.1993.298725"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says that his student Sepp Hochreiter identified and analysed the problem of vanishing and exploding gradients in his 1991 diploma thesis at the Technical University of Munich, and that the 1994 paper by Bengio and colleagues published essentially identical results three years later without citing the thesis. He adds that even after Hochreiter, Bengio, Frasconi and Schmidhuber co-authored a chapter on the topic in 2001, Bengio's later papers cited only the 1994 paper. He regards the thesis, which is written in German, as one of the most important documents in the history of machine learning and as the starting point of the LSTM network.",
+    "prior_works": [
+      {
+        "who": "Hochreiter",
+        "year": 1991,
+        "title": "Untersuchungen zu dynamischen neuronalen Netzen (diploma thesis, TU Munich, in German)",
+        "url": "https://people.idsia.ch/~juergen/SeppHochreiter1991ThesisAdvisorSchmidhuber.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "3 years later, Bengio published another vanishing gradient analysis,[VAN2] without citing Hochreiter.",
+        "date": "2023-12-14",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiovan:~:text=3%20years%20later%2C%20Bengio%20published%20another%20vanishing%20gradient%20analysis%2C"
+      },
+      {
+        "text": "In 1994, others published results[VAN2] essentially identical to the 1991 vanishing gradient results of Sepp.[VAN1]",
+        "date": "2026-02-23",
+        "venue": "paper",
+        "url": "https://arxiv.org/pdf/2005.05744v5#page=7"
+      },
+      {
+        "text": "cited only his own 1994 paper but not Sepp's original work (1991)",
+        "date": "2020-06-25",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html"
+      },
+      {
+        "text": "Deep learning is hard because of the Fundamental Deep Learning Problem identified and analyzed in 1991 by Sepp Hochreiter in a diploma thesis (June 1991)[VAN1]",
+        "date": "2025-12-29",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/deep-learning-history.html#vanish:~:text=Deep%20learning%20is%20hard%20because%20of%20the%20Fundamental%20Deep%20Learning"
+      }
+    ],
+    "times_made": 8,
+    "first_made": "2020-06",
+    "last_made": "2026-02"
+  },
+  "response": {
+    "summary": "No public reply from Bengio to the citation complaint was found. He co-authored the 2001 chapter 'Gradient flow in recurrent nets' with Hochreiter, Frasconi and Schmidhuber, which says its main result follows the approach first proposed in Hochreiter's thesis and that Bengio and colleagues' paper generalised the analysis to parameterised dynamical systems. The 2016 textbook by Goodfellow, Bengio and Courville says that Hochreiter (1991) and Bengio et al. (1994) identified some of the fundamental difficulties in modelling long sequences, and that the problem was independently discovered by separate researchers.",
+    "quotes": [
+      {
+        "who": "Hochreiter, Bengio, Frasconi and Schmidhuber (2001 chapter, where [12] is the 1991 thesis)",
+        "text": "derive the main result using the approach first proposed in [12]",
+        "date": "2001",
+        "url": "https://ml.jku.at/publications/older/ch7.pdf"
+      },
+      {
+        "who": "Hochreiter, Bengio, Frasconi and Schmidhuber (2001 chapter)",
+        "text": "the analysis of the problem of gradient decays is generalized to parameterized dynamical systems",
+        "date": "2001",
+        "url": "https://ml.jku.at/publications/older/ch7.pdf"
+      },
+      {
+        "who": "Goodfellow, Bengio and Courville (textbook)",
+        "text": "The vanishing and exploding gradient problem for RNNs was independently discovered by separate researchers (Hochreiter, 1991; Bengio et al., 1993, 1994).",
+        "date": "2016",
+        "url": "https://www.deeplearningbook.org/contents/rnn.html"
+      },
+      {
+        "who": "Goodfellow, Bengio and Courville (textbook)",
+        "text": "Hochreiter (1991) and Bengio et al. (1994) identified some of the fundamental mathematical difficulties in modeling long sequences",
+        "date": "2016",
+        "url": "https://www.deeplearningbook.org/contents/intro.html"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Hochreiter submitted the diploma thesis 'Untersuchungen zu dynamischen neuronalen Netzen' at the Technical University of Munich in 1991, and it is written in German.",
+    "Bengio, Frasconi and Simard presented 'The problem of learning long-term dependencies in recurrent networks' at the 1993 International Conference on Neural Networks, and Bengio, Simard and Frasconi published their IEEE Transactions on Neural Networks paper in March 1994.",
+    "Hochreiter, Bengio, Frasconi and Schmidhuber co-authored the chapter 'Gradient flow in recurrent nets: the difficulty of learning long-term dependencies' in 2001, and it cites the 1991 thesis.",
+    "Crossref's record of the 1994 paper lists 23 references, none of them by Hochreiter."
+  ],
+  "crux": "The dispute is whether the 1994 analysis, which also covers general parameterised dynamical systems and the trade-off between reliable memory and gradient decay, is an independent discovery or a later publication of results already contained in the 1991 thesis. It also asks whether later papers that cited only the 1994 paper should have cited the thesis too, although the 2016 textbook by Bengio and co-authors does cite both.",
+  "related": [
+    "lstm",
+    "resnet",
+    "pretraining",
+    "turingaward"
+  ],
+  "instance_urls": [
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XVII-1:~:text=%28B2%29%203%20years%20after%20my%20student%20Sepp%20Hochreiter%20had%20published%20his",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiovan:~:text=3%20years%20later%2C%20Bengio%20published%20another%20vanishing%20gradient%20analysis%2C",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiovan:~:text=However%2C%20even%20after%20a%20common%20publication%2C",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#vanish:~:text=Deep%20learning%20is%20hard%20because%20of%20the%20Fundamental%20Deep%20Learning",
+    "https://arxiv.org/pdf/2212.11279v3#page=22",
+    "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%203:~:text=In%201994%2C%20others%20published%20results",
+    "https://arxiv.org/pdf/2005.05744v5#page=7"
+  ]
+}

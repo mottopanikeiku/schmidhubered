@@ -1,0 +1,1267 @@
+[
+ {
+  "date": "1995-01-11",
+  "venue": "other",
+  "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/1995-January/016022.html",
+  "quote": "Mark Ring has been working on this subject for many\nyears now,",
+  "targets": [
+   "Contemporary transfer-learning / incremental-learning discussion (unnamed authors)"
+  ],
+  "topic": "Continual learning / hierarchical skill transfer",
+  "claimed_prior": "Mark Ring1991sensory-motor hierarchies,1993networks,1994continual-learning thesis",
+  "kind": "third-party priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "1995-12-03",
+  "venue": "other",
+  "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/1995-December/016768.html",
+  "quote": "this is related\nto what has been (re)discovered in NFL",
+  "targets": [
+   "No Free Lunch results",
+   "David Wolpert",
+   "Eric Baum"
+  ],
+  "topic": "No Free Lunch / learning generalization limits",
+  "claimed_prior": "Older incompressibility counting argument and Solomonoff induction (no year specified in post)",
+  "kind": "third-party priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "1996-05-20",
+  "venue": "other",
+  "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/1996-May/017166.html",
+  "quote": "Apparently, Kolmogorov was the first to show the impossibility of finding\nthe minimal algorithm in the general case",
+  "targets": [
+   "Gregory Chaitin",
+   "Richard Long"
+  ],
+  "topic": "Uncomputability of minimal program / algorithmic complexity",
+  "claimed_prior": "Andrey Kolmogorov; also earlier Solomonoff work (no year specified in post)",
+  "kind": "third-party priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2007-05-04",
+  "venue": "letter",
+  "url": "https://people.idsia.ch/~juergen/resilientscience.html#:~:text=Neither%20the%20Report%20nor%20the%20Perspective%20mention%20that%20the%20first",
+  "quote": "Neither the Report nor the Perspective mention that the first resilient, self-modeling machines of this type were built by Alexander Gloye-Foerster (now at IDSIA) et al.,",
+  "targets": [
+   "Josh Bongard, Victor Zykov, Hod Lipson (Resilient machines through continuous self-modeling, Science 2006)",
+   "Christoph Adami (Perspective)"
+  ],
+  "topic": "Resilient self-modeling robots",
+  "claimed_prior": "Gloye-Förster et al., RoboCup 2004 small-size league robots with NN self-models",
+  "kind": "third-party priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2008-03-28",
+  "venue": "letter",
+  "url": "https://people.idsia.ch/~juergen/telephone.html#:~:text=In%20fact%2C%20neither%20of%20them%20was%20first.",
+  "quote": "In fact, neither of them was first.",
+  "targets": [
+   "Alexander Graham Bell",
+   "Elisha Gray"
+  ],
+  "topic": "Invention of the telephone",
+  "claimed_prior": "Bourseul 1854, Meucci 1857, Reis 1860",
+  "kind": "third-party priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2009-12-14",
+  "venue": "other",
+  "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2009-December/023871.html",
+  "quote": "Ray Solomonoff was the first to describe the fundamental concept of\nAlgorithmic Information or Kolmogorov Complexity.",
+  "targets": [
+   "Andrey Kolmogorov (eponymous complexity terminology)"
+  ],
+  "topic": "Algorithmic information / Kolmogorov complexity",
+  "claimed_prior": "Ray Solomonoff original work (year not specified in obituary)",
+  "kind": "third-party priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2014-09-12",
+  "venue": "talk",
+  "url": "https://vimeo.com/105972440",
+  "quote": "We also built the first artificial RNN-based agent that learns from scratch complex control based on high-dimensional vision.",
+  "targets": [
+   "DeepMind",
+   "Contemporary visual deep-RL / competition narratives"
+  ],
+  "topic": "First vision-based RL / first competition-winning deep networks",
+  "claimed_prior": "IDSIAcompressed-RNN vision-based RL2013; contest-winning recurrent and feedforward systems2009–2012",
+  "kind": "own-lab priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2015-02-26",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/naturedeepmind.html",
+  "quote": "The article [2] also claims \"the first artificial agent that is capable of learning to excel at a diverse array of challenging tasks\". Since other learning systems also can solve quite diverse tasks, this claim seems debatable at least.",
+  "targets": [
+   "DeepMind (Mnih et al.)"
+  ],
+  "topic": "\"First artificial agent ... diverse array of challenging tasks\"",
+  "claimed_prior": "Other learning systems",
+  "kind": "citation complaint",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2015-03-04",
+  "venue": "Reddit",
+  "url": "https://web.archive.org/web/20150305162349/http://www.reddit.com/r/MachineLearning/comments/2xcyrl/i_am_j%C3%BCrgen_schmidhuber_ama/cp465f7",
+  "quote": "Current typical SF movie plots are usually far behind the SF front line, re-packaging old ideas from many decades ago.",
+  "targets": [
+   "Contemporary futurists / philosophers / science-fiction movies"
+  ],
+  "topic": "Singularity / AI / mind-uploading originality",
+  "claimed_prior": "Galouye (1964), Ulam (1950s), Vernor Vinge (1980s), Golden Age SF writers",
+  "kind": "third-party priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2015-06",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/deep-learning-conspiracy.html#:~:text=They%20cite%20Bengio%20et%20al.%27s%20post%2D2006%20papers%20on%20unsupervised%20stacks%20of",
+  "quote": "They cite Bengio et al.'s post-2006 papers on unsupervised stacks of autoencoders, but omit the original work on this (Ballard, 1987).",
+  "targets": [
+   "Yoshua Bengio"
+  ],
+  "topic": "Stacked autoencoders",
+  "claimed_prior": "Ballard 1987",
+  "kind": "third-party priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2015-06",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/deep-learning-conspiracy.html#:~:text=While%20LBH%20mention%20the%20significance%20of%20fast%20GPU%2Dbased%20NN",
+  "quote": "While LBH mention the significance of fast GPU-based NN implementations, they fail to cite the originators of this approach (Oh and Jung, 2004).",
+  "targets": [
+   "LeCun, Bengio, Hinton (Nature 2015 \"Deep Learning\" review)"
+  ],
+  "topic": "GPU-based NNs",
+  "claimed_prior": "Oh & Jung 2004; Ciresan et al. 2010 (record on MNIST with plain deep GPU nets)",
+  "kind": "third-party priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2015-06",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/deep-learning-conspiracy.html#:~:text=LBH%20may%20be%20backed%20by%20the%20best%20PR%20machines%20of%20the%20Western%20world",
+  "quote": "LBH may be backed by the best PR machines of the Western world (Google hired Hinton; Facebook hired LeCun).",
+  "targets": [
+   "LeCun, Bengio, Hinton (Nature 2015 \"Deep Learning\" review)",
+   "Google",
+   "Facebook"
+  ],
+  "topic": "PR vs historical record",
+  "claimed_prior": "n/a",
+  "kind": "mixed",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2019-10",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%201:~:text=A%20few%20years%20later%2C%20others%20also%20started%20publishing%20on%20multi%2Dtime%20scale",
+  "quote": "A few years later, others also started publishing on multi-time scale RNNs[HB96][DLP]",
+  "targets": [
+   "El Hihi & Bengio (1996)",
+   "Yoshua Bengio"
+  ],
+  "topic": "Multi-time-scale RNNs",
+  "claimed_prior": "Neural sequence chunker (1991)",
+  "kind": "own-lab priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2020-05-12",
+  "venue": "paper",
+  "url": "https://arxiv.org/pdf/2005.05744v1#page=4",
+  "quote": "A few years later, others also started publishing on multi-time scale RNNs",
+  "targets": [
+   "El Hihi & Bengio (1996)",
+   "Yoshua Bengio"
+  ],
+  "topic": "Multi-time-scale RNNs",
+  "claimed_prior": "Neural sequence chunker (1991)",
+  "kind": "own-lab priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2020-10",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/first-learn-deep-2005.html#:~:text=Soon%20after%20its%20publication%2C%20everybody%20started%20talking%20about%20%22deep",
+  "quote": "Soon after its publication, everybody started talking about \"deep learning.\" Causality or correlation?",
+  "targets": [
+   "Hinton, Bengio, LeCun (popularisers of the term \"deep learning\")"
+  ],
+  "topic": "Origin of the \"deep learning\" label",
+  "claimed_prior": "2005 \"learn deep\" paper (Gomez & Schmidhuber); Dechter 1986; Aizenberg et al. 2000",
+  "kind": "own-lab priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2021-05",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/leibniz-father-computer-science-375.html#abstract:~:text=Not%20only%20was%20he%20the%20first%20to%20publish%20infinitesimal%20calculus%20%281684%29%2C",
+  "quote": "Not only was he the first to publish infinitesimal calculus (1684),[L84]",
+  "targets": [
+   "Isaac Newton (calculus)"
+  ],
+  "topic": "Calculus",
+  "claimed_prior": "Leibniz 1684",
+  "kind": "third-party priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2021-05-20",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/1395262092316381184",
+  "quote": "375th birthday of Leibniz, founder of computer science",
+  "targets": [
+   "Alan Turing / conventional founders-of-CS narrative (implicit)"
+  ],
+  "topic": "Founder of computer science",
+  "claimed_prior": "Leibniz: 1st machine with memory (1673), binary computer principles (1679)",
+  "kind": "third-party priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2022-02-28",
+  "venue": "other",
+  "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-February/037578.html",
+  "quote": "Steve, surely you can agree with me that plagiarism cannot win here?",
+  "targets": [
+   "Stephen José Hanson",
+   "Self-aggrandizing psychologists and neuroscientists (unnamed)"
+  ],
+  "topic": "Deep-learning history / plagiarism",
+  "claimed_prior": "Deep learning mid-1960s; shallow learning1800s",
+  "kind": "mixed",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2022-07-07",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#:~:text=In%20fact%2C%20unfortunately%2C%20much%20of%20the%20paper%20reads%20like%20a%20d%C3%A9j%C3%A0%20vu%20of%20our",
+  "quote": "In fact, unfortunately, much of the paper reads like a déjà vu of our papers since 1990, without citation. Years ago we have already published most of what LeCun calls his \"main original contributions\" [LEC22a].",
+  "targets": [
+   "Yann LeCun (A Path Towards Autonomous Machine Intelligence, 2022)"
+  ],
+  "topic": "Autonomous machine intelligence / world-model architecture",
+  "claimed_prior": "Schmidhuber papers since 1990",
+  "kind": "own-lab priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2022-07-07",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#:~:text=Given%20my%20comments%20above%2C%20I%20cannot%20see%20any%20significant%20novelty%20here.",
+  "quote": "Given my comments above, I cannot see any significant novelty here.",
+  "targets": [
+   "Yann LeCun (A Path Towards Autonomous Machine Intelligence, 2022)"
+  ],
+  "topic": "\"Main original contributions\" of LeCun paper",
+  "claimed_prior": "All four of LeCun's \"main original contributions\" already in Schmidhuber lab work 1990-2015",
+  "kind": "own-lab priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2022-07-07",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/blog.html#:~:text=%E2%98%85%20LeCun%27s%202022%20paper%20on%20autonomous%20machine%20intelligence%20rehashes%20but",
+  "quote": "★ LeCun's 2022 paper on autonomous machine intelligence rehashes but does not cite essential work of 1990-2015. Years ago we published most of what he calls his \"main original contributions:\"",
+  "targets": [
+   "Yann LeCun"
+  ],
+  "topic": "LeCun 2022 position paper",
+  "claimed_prior": "Schmidhuber 1990-2015",
+  "kind": "own-lab priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2022-08-24",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#addendum:~:text=This%20straw%20man%20reply%20seems%20designed%20to%20distract%20from%20the%20problems",
+  "quote": "This straw man reply seems designed to distract from the problems with what LeCun calls his \"main original contributions.\"",
+  "targets": [
+   "Yann LeCun (A Path Towards Autonomous Machine Intelligence, 2022)"
+  ],
+  "topic": "LeCun reply of 14 Jul 2022 on OpenReview",
+  "claimed_prior": "Schmidhuber 1990-2015",
+  "kind": "own-lab priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2022-11-22",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#addendum2:~:text=In%20ad%20hominem%20style%2C%20LeCun%20stated%20in%20the%20NY%20Times%20that%20%22J%C3%BCrgen%20...",
+  "quote": "In ad hominem style, LeCun stated in the NY Times that \"Jürgen ... keeps claiming credit he doesn't deserve for many, many things\" [NYT1], without any justification, without providing a single example [T22].",
+  "targets": [
+   "Yann LeCun (A Path Towards Autonomous Machine Intelligence, 2022)"
+  ],
+  "topic": "LeCun NYT quote",
+  "claimed_prior": "n/a",
+  "kind": "mixed",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2022-12-21",
+  "venue": "paper",
+  "url": "https://arxiv.org/pdf/2212.11279v1#page=10",
+  "quote": "Blatant misattribution and unintentional[PLAG1][CONN21] or intentional[FAKE2] plagiarism are still tainting the entire field of deep learning.[T22]",
+  "targets": [
+   "Deep learning field leaders (LBH, Sejnowski)"
+  ],
+  "topic": "Plagiarism in deep learning",
+  "claimed_prior": "various",
+  "kind": "citation complaint",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2022-12-22",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/deep-learning-history.html#footnote5:~:text=Blatant%20misattribution%20and%20unintentional",
+  "quote": "Blatant misattribution and unintentional[PLAG1][CONN21] or intentional[FAKE2] plagiarism are still tainting the entire field of deep learning.[DLP][NOB]",
+  "targets": [
+   "Deep learning field leaders (LBH, Sejnowski)"
+  ],
+  "topic": "Plagiarism in deep learning",
+  "claimed_prior": "various",
+  "kind": "citation complaint",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2022-12-23",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/1606333832956973060",
+  "quote": "Machine learning is the science of credit assignment. My new survey (also under arXiv:2212.11279) credits the pioneers of deep learning and modern AI",
+  "targets": [
+   "Deep-learning credit narrative / awardees (implicit)"
+  ],
+  "topic": "Credit assignment in AI history",
+  "claimed_prior": "Annotated History of Modern AI and Deep Learning (arXiv:2212.11279)",
+  "kind": "citation complaint",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2023-02-09",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/1623728556806230023",
+  "quote": "@ylecun made misleading statements about me in popular science venues.",
+  "targets": [
+   "Yann LeCun"
+  ],
+  "topic": "LeCun's 2022 autonomous machine intelligence paper",
+  "claimed_prior": "See LeCun rehash page",
+  "kind": "citation complaint",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2023-02-09",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#addendum3:~:text=Instead%20he%20gave%20an%20interview%20to%20the%20popular%20science%20venue%20ZDNet",
+  "quote": "Instead he gave an interview to the popular science venue ZDNet [LEC22c] where my critique was mentioned and said: \"I'm not claiming any priority on most of what I wrote in that paper, essentially.\"",
+  "targets": [
+   "Yann LeCun (A Path Towards Autonomous Machine Intelligence, 2022)"
+  ],
+  "topic": "ZDNet interview",
+  "claimed_prior": "n/a",
+  "kind": "mixed",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2023-12-14",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#highway:~:text=In%202022%2C%20LeCun%20listed%20the%205%20best%20ideas%202012%2D2022%20without%20mentioning",
+  "quote": "In 2022, LeCun listed the 5 best ideas 2012-2022 without mentioning that most of them are from my lab, and much older.",
+  "targets": [
+   "Yann LeCun"
+  ],
+  "topic": "LeCun's 5 best ideas 2012-2022",
+  "claimed_prior": "Schmidhuber-lab ideas (see Addendum II of lecun-rehash-1990-2022)",
+  "kind": "own-lab priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2023-12-14",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#adhominem:~:text=In%20conjunction%20with%20previous%20work%2C",
+  "quote": "In conjunction with previous work,[T22][LEC] the present piece makes clear that it is actually LBH themselves who \"keep claiming credit they doesn't deserve for many, many things,\" providing numerous examples, plus the references to back them up.",
+  "targets": [
+   "Yann LeCun",
+   "LeCun, Bengio, Hinton"
+  ],
+  "topic": "LeCun NYT quote that Schmidhuber claims undeserved credit",
+  "claimed_prior": "n/a (reversal of accusation)",
+  "kind": "mixed",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2023-12-14",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html",
+  "quote": "In particular, LeCun stated in the NY Times that \"Jürgen ... keeps claiming credit he doesn't deserve for many, many things,\"[NYT1] without any evidence, without providing a single example.[T22]",
+  "targets": [
+   "Yann LeCun"
+  ],
+  "topic": "LeCun ad hominem statement to NYT (2016)",
+  "claimed_prior": "n/a",
+  "kind": "mixed",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2025-11",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/who-invented-transformer-neural-networks.html#2021:~:text=Of%20course%2C%20plain%20outer%20products%20in%20NNs%20go%20back%20at%20least%20to%20Konorski%27s",
+  "quote": "Of course, plain outer products in NNs go back at least to Konorski's informal 1948 rule[HEB48]",
+  "targets": [
+   "Donald Hebb (Hebb rule)"
+  ],
+  "topic": "Outer-product learning / Hebb rule",
+  "claimed_prior": "Konorski 1948 (before Hebb 1949); Steinbuch Learning Matrix c. 1960",
+  "kind": "third-party priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2025-11-15",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/1989690934980759716",
+  "quote": "once he learns to predict or compress the data in a better way, thus making it subjectively simpler and more beautiful.",
+  "targets": [
+   "Elon Musk (\"AI is compression and correlation\")"
+  ],
+  "topic": "AI as compression",
+  "claimed_prior": "\"Driven by Compression Progress\" (arXiv:0812.4360, 2008): curiosity/interestingness as compression progress, \"since 1990\"",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2025-11-15",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/1989691158650294498",
+  "quote": "once he learns to predict or compress the data in a better way, thus making it subjectively simpler and more beautiful.",
+  "targets": [
+   "Francois Chollet (\"all the great breakthroughs in science are ... compression\")"
+  ],
+  "topic": "Science / AI as compression",
+  "claimed_prior": "Compression-progress theory of curiosity (2008, arXiv:0812.4360), artificial systems since 1990",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2025-11-15",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/1989691960324469150",
+  "quote": "once he learns to predict or compress the data in a better way, thus making it subjectively simpler and more beautiful.",
+  "targets": [
+   "Elon Musk (\"AI is compression and correlation\")"
+  ],
+  "topic": "AI as compression",
+  "claimed_prior": "Compression-progress theory of curiosity (arXiv:0812.4360)",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2025-11-15",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/1989786501983474015",
+  "quote": "@fchollet https://x.com/SchmidhuberAI/status/1989691960324469150",
+  "targets": [
+   "Francois Chollet"
+  ],
+  "topic": "AI / science as compression",
+  "claimed_prior": "Compression-progress theory of curiosity (2008)",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2025-11-26",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/1993657256663986642",
+  "quote": "Turing (1948) essentially proposed a variant of evolutionary programming. This wasn't modern deep learning.",
+  "targets": [
+   "Alan Turing"
+  ],
+  "topic": "Turing's role in AI/deep learning",
+  "claimed_prior": "Evolutionary computation since 1954; deep learning 1965; Turing unpublished 1948",
+  "kind": "third-party priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2025-12-04",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/1996595613387866285",
+  "quote": "Galushkin was the pupil of Tsypkin whom I cite in the \nAnnotated History of Modern AI and Deep Learning",
+  "targets": [
+   "Critics claiming he overlooked Galushkin (@predict_addict)"
+  ],
+  "topic": "Soviet-era gradient-descent learning priority",
+  "claimed_prior": "Tsypkin 1966/1971 on-line gradient-descent learning",
+  "kind": "citation complaint",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2025-12-04",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/1996619186248794188",
+  "quote": "Galushkin was the pupil of Tsypkin whom I cite in the  Annotated History of Modern AI and Deep Learning",
+  "targets": [
+   "Critics claiming he overlooked Galushkin (@predict_addict)"
+  ],
+  "topic": "Soviet-era gradient-descent learning priority",
+  "claimed_prior": "Tsypkin 1966/1971",
+  "kind": "citation complaint",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2025-12-11",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/1999244459700256769",
+  "quote": "@PopBase https://x.com/njmarko/status/1999112016787624317",
+  "targets": [
+   "TIME (Person of the Year 2025: \"The Architects of AI\")"
+  ],
+  "topic": "Credit for the AI boom",
+  "claimed_prior": "(implied) his lab and other pioneers",
+  "kind": "award/prize critique",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2025-12-12",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/1999315611789459626",
+  "quote": "Marko Njegomir's response https://x.com/njmarko/status/1999112016787624317 to TIME person of the year 😊",
+  "targets": [
+   "TIME (Person of the Year 2025)"
+  ],
+  "topic": "Credit for the AI boom",
+  "claimed_prior": "(implied) his lab",
+  "kind": "award/prize critique",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2025-12-17",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2001238896915701786",
+  "quote": "@PopBase https://x.com/tak3sh8/status/2001193509437456388",
+  "targets": [
+   "TIME (Person of the Year 2025)"
+  ],
+  "topic": "Credit for the AI boom",
+  "claimed_prior": "(implied) his lab",
+  "kind": "award/prize critique",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2025-12-21",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2002779330967994746",
+  "quote": "[2] JS, AI Blog (2022). LeCun's 2022 paper on autonomous machine intelligence rehashes but does not cite essential work of 1990-2015.",
+  "targets": [
+   "Yann LeCun"
+  ],
+  "topic": "Autonomous machine intelligence",
+  "claimed_prior": "1990-2015 work from his lab",
+  "kind": "citation complaint",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2025-12-29",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/deep-learning-history.html#future:~:text=They%20will%20revise%20current%20prevalent%20but%20misleading%20narratives%20created",
+  "quote": "They will revise current prevalent but misleading narratives created by self-serving AI influencers,[S20][DLP][NOB]",
+  "targets": [
+   "AI influencers",
+   "Terrence Sejnowski"
+  ],
+  "topic": "Narratives about AI history",
+  "claimed_prior": "n/a",
+  "kind": "mixed",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2025-12-29",
+  "venue": "paper",
+  "url": "https://arxiv.org/pdf/2212.11279v3#page=39",
+  "quote": "They will revise current prevalent but misleading narratives created by self- serving AI influencers,[S20][DLP][NOB]",
+  "targets": [
+   "AI influencers",
+   "Terrence Sejnowski"
+  ],
+  "topic": "Narratives about AI history",
+  "claimed_prior": "n/a",
+  "kind": "mixed",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2025-12-31",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2006395047479005565",
+  "quote": "Machine learning (ML) is the science of credit assignment.",
+  "targets": [
+   "Deep-learning credit narrative (implicit)"
+  ],
+  "topic": "Annotated History of Modern AI and Deep Learning (2025 update)",
+  "claimed_prior": "n/a",
+  "kind": "citation complaint",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-01-01",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2006672109787906467",
+  "quote": "They will revise current prevalent but misleading narratives created by self-serving AI influencers",
+  "targets": [
+   "\"AI influencers\" (unnamed)"
+  ],
+  "topic": "AI history narratives",
+  "claimed_prior": "n/a",
+  "kind": "citation complaint",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-01-07",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2008861557904842981",
+  "quote": "Galushkin is cited in the \"Annotated History of Modern AI and Deep Learning,\" together with his teacher Iakov Zalmanovich Tsypkin's even earlier work",
+  "targets": [
+   "@predict_addict (critic)"
+  ],
+  "topic": "Soviet-era gradient-descent learning",
+  "claimed_prior": "Tsypkin 1966/71; Galushkin",
+  "kind": "citation complaint",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-01-07",
+  "venue": "X",
+  "url": "https://web.archive.org/web/20260107161022/https://twitter.com/SchmidhuberAI/status/2008934243682890209",
+  "quote": "The deontology of science requires that unintentional plagiarists correct their publications through errata and then credit the original sources properly in the future. The 3 awardees didn't [DLP].",
+  "targets": [
+   "Yoshua Bengio",
+   "Geoffrey Hinton",
+   "Yann LeCun"
+  ],
+  "topic": "3 awardees' plagiarism (intentional vs unintentional)",
+  "claimed_prior": "the originals as documented in IDSIA-23-23 and IDSIA-24-24",
+  "kind": "citation complaint",
+  "weak": false,
+  "deleted": true
+ },
+ {
+  "date": "2026-02-16",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2023428182754423261",
+  "quote": "@nvidia @Google @Apple @Meta @Tesla are making extensive use of the AI techniques that were developed in my AI lab at @TU_Muenchen in the 1990s",
+  "targets": [
+   "NVIDIA",
+   "Google",
+   "Apple",
+   "Meta",
+   "Tesla",
+   "Nvidia, Google, Apple, Meta, Tesla"
+  ],
+  "topic": "Industry AI techniques",
+  "claimed_prior": "Techniques from his TU Munich lab in the 1990s",
+  "kind": "own-lab priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2026-02-20",
+  "venue": "X",
+  "url": "https://web.archive.org/web/20260220080003/https://twitter.com/SchmidhuberAI/status/2024755916873113933",
+  "quote": "the $1000+ billion US AI investments are largely about scaling up the neural AI techniques published by my AI lab in 1991 at @TU_Muenchen [1][2]",
+  "targets": [],
+  "topic": "Origin of today's US AI investments",
+  "claimed_prior": "neural AI techniques published by his lab in 1991 at TU Munich",
+  "kind": "own-lab priority",
+  "weak": false,
+  "deleted": true
+ },
+ {
+  "date": "2026-03-07",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2030373010171994369",
+  "quote": "That's exactly what I have told the Europeans for decades.",
+  "targets": [
+   "Jensen Huang / NVIDIA (advice on physical AI)"
+  ],
+  "topic": "Physical AI / robotics for Europe",
+  "claimed_prior": "His FAZ article 2018 \"KI ist eine Riesenchance fuer Deutschland\"",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-03-10",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2031405776070205869",
+  "quote": "https://x.com/SchmidhuberAI/status/2002778835843187099",
+  "targets": [
+   "Yann LeCun (AMI Labs)"
+  ],
+  "topic": "World-model / physical-AI company",
+  "claimed_prior": "NNAISENSE 2014",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-03-10",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2031406145928126826",
+  "quote": "https://x.com/SchmidhuberAI/status/2002778835843187099",
+  "targets": [
+   "Yann LeCun (AMI Labs)"
+  ],
+  "topic": "World-model / physical-AI company",
+  "claimed_prior": "NNAISENSE 2014",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-03-18",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2034306285206712413",
+  "quote": "A Computer Scientist's View of Life, the Universe, and Everything. LNCS 201-288, Springer, 1997.",
+  "targets": [
+   "Elon Musk (implicit)"
+  ],
+  "topic": "Simulated universe / computable physics ideas",
+  "claimed_prior": "\"A Computer Scientist's View of Life, the Universe, and Everything\" (1997)",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-03-21",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2035441383742587361",
+  "quote": "Belated reply: check out the Speed Prior on all logically possible universes",
+  "targets": [
+   "Elon Musk (implicit; simulation-hypothesis discussion)"
+  ],
+  "topic": "Simulation hypothesis",
+  "claimed_prior": "Speed Prior (1997) on computable universes",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-03-22",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2035815113664655447",
+  "quote": "Mercury beats the moon! See Sec. 20 of [1]:",
+  "targets": [
+   "Elon Musk (moon mass drivers; implicit)"
+  ],
+  "topic": "Space colonisation / mass drivers",
+  "claimed_prior": "Sec. 20 of his own earlier paper (the tweet quotes a passage on Mercury as better than the moon for coilguns/solar factories)",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-04-02",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2039729285557023076",
+  "quote": "What? Galushkin [GAL07] is mentioned there [DLH]. More prominently mentioned is his advisor Iakov Zalmanovich Tsypkin [GDa][GDb].",
+  "targets": [
+   "@predict_addict (critic)"
+  ],
+  "topic": "Soviet-era gradient-descent learning",
+  "claimed_prior": "Tsypkin 1966/71; Galushkin",
+  "kind": "citation complaint",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-06-04",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2062641603424981442",
+  "quote": "\"AI For All\" or AI∀ - the old motto of our AI company NNAISENSE, founded in 2014!",
+  "targets": [
+   "Mark Carney / Government of Canada (national AI strategy slogan)"
+  ],
+  "topic": "'AI For All' slogan",
+  "claimed_prior": "NNAISENSE motto 'AI For All' / AI∀ (company founded 2014)",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-06-05",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2062792146260816217",
+  "quote": "Canada adopted the old motto \"AI For All\" or \"AI∀\" of our AI company NNAISENSE, founded in 2014",
+  "targets": [
+   "Mark Carney / Government of Canada (national AI strategy slogan)"
+  ],
+  "topic": "'AI For All' slogan",
+  "claimed_prior": "NNAISENSE motto 'AI For All' / AI∀ (company founded 2014)",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-06-18",
+  "venue": "website",
+  "url": "https://people.idsia.ch/~juergen/ai-boom-roots-munich-1991.html#:~:text=Around%20the%20same%20time%2C%20Munich%20also%20was%20the%20origin%20of%20the%20first",
+  "quote": "Around the same time, Munich also was the origin of the first self-driving cars in traffic [AUT] (by Ernst Dickmanns's team), going up to 175 km/h.",
+  "targets": [
+   "Autonomous-driving narratives (Waymo/Tesla/Stanley, DARPA)"
+  ],
+  "topic": "First self-driving cars",
+  "claimed_prior": "Dickmanns team, Munich (1980s-1994)",
+  "kind": "third-party priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2026-06-18",
+  "venue": "X",
+  "url": "https://web.archive.org/web/20260618211218/https://twitter.com/SchmidhuberAI/status/2067717060591833181",
+  "quote": "I see LeCun is up to his old tricks again.",
+  "targets": [
+   "Yann LeCun"
+  ],
+  "topic": "LeCun 'old tricks'",
+  "claimed_prior": "unspecified (the linked item is not in the text)",
+  "kind": "citation complaint",
+  "weak": true,
+  "deleted": true
+ },
+ {
+  "date": "2026-06-24",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2069857627849551898",
+  "quote": "perhaps the first \"modern\" programmers who wrote the world's first industrial software",
+  "targets": [
+   "Ada Lovelace (first programmer)"
+  ],
+  "topic": "first programmers / programmable machines",
+  "claimed_prior": "Joseph-Marie Jacquard's punch-card looms (~1800) and others, from the Turing Oversold report",
+  "kind": "third-party priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2026-06-25",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2070163844572250411",
+  "quote": "Sure, but you can express any program in an axiomatic system, and the proof search will deduce its consequences (simulate its behavior).",
+  "targets": [
+   "Alan Turing (universal machine)"
+  ],
+  "topic": "universality of Goedel's formalism",
+  "claimed_prior": "Goedel 1931-34",
+  "kind": "third-party priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-06-28",
+  "venue": "X",
+  "url": "https://web.archive.org/web/20260628143928/https://twitter.com/SchmidhuberAI/status/2071242081582850287",
+  "quote": "Professor @maier_ak has written a thoughtful substack article on the roots of today’s trillion-dollar AI boom in 1991 when Munich was the epicentre of AI:",
+  "targets": [],
+  "topic": "Roots of the AI boom in 1991 Munich",
+  "claimed_prior": "roots of today's trillion-dollar AI boom in his 1991 Munich lab",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": true
+ },
+ {
+  "date": "2026-06-28",
+  "venue": "X",
+  "url": "https://web.archive.org/web/20260628145356/https://twitter.com/SchmidhuberAI/status/2071245722062598479",
+  "quote": "Professor @maier_ak has written a thoughtful substack article on the origins of today’s AI boom in the early 1990s in Munich:",
+  "targets": [],
+  "topic": "Roots of the AI boom in 1991 Munich",
+  "claimed_prior": "roots of today's trillion-dollar AI boom in his 1991 Munich lab",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": true
+ },
+ {
+  "date": "2026-07-08",
+  "venue": "X",
+  "url": "https://web.archive.org/web/20260708144338/https://twitter.com/SchmidhuberAI/status/2074867008743596078",
+  "quote": "We talked about everything including the roots of today's AI boom which go back to 1991 in Munich :-)",
+  "targets": [
+   "Yann LeCun"
+  ],
+  "topic": "Roots of the AI boom in 1991 Munich",
+  "claimed_prior": "roots of today's AI boom in 1991 Munich (his lab)",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": true
+ },
+ {
+  "date": "2026-07-09",
+  "venue": "X",
+  "url": "https://web.archive.org/web/20260709084015/https://twitter.com/SchmidhuberAI/status/2075137946634600816",
+  "quote": "We talked about everything including the roots of today's AI boom in 1991 in Munich.",
+  "targets": [
+   "Yann LeCun"
+  ],
+  "topic": "Roots of the AI boom in 1991 Munich",
+  "claimed_prior": "roots of today's AI boom in 1991 Munich (his lab)",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": true
+ },
+ {
+  "date": "2026-07-09",
+  "venue": "X",
+  "url": "https://web.archive.org/web/20260709163104/https://twitter.com/SchmidhuberAI/status/2075256432451006499",
+  "quote": "See also the previous well-known tweet on LeCun's 2022 paper on autonomous machine intelligence which rehashes but does not cite essential work of 1990-2015",
+  "targets": [
+   "Yann LeCun"
+  ],
+  "topic": "LeCun's 2022 paper on autonomous machine intelligence",
+  "claimed_prior": "essential work of 1990-2015 by his lab",
+  "kind": "citation complaint",
+  "weak": false,
+  "deleted": true
+ },
+ {
+  "date": "2026-08-06",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2085379908860100838",
+  "quote": "All of Google's AI is based on ours:",
+  "targets": [
+   "Google / Alphabet (company-wide)"
+  ],
+  "topic": "Google's AI in general",
+  "claimed_prior": "Work of his labs (links his AI blog index)",
+  "kind": "own-lab priority",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2026-08-28",
+  "venue": "X",
+  "url": "https://web.archive.org/web/20260828140722/https://twitter.com/SchmidhuberAI/status/2093339662722974123",
+  "quote": "Marko Njegomir's response https://t.co/UTYnebXkKW to TIME 100 AI",
+  "targets": [
+   "TIME (TIME100 AI list)"
+  ],
+  "topic": "TIME100 AI list omits Schmidhuber",
+  "claimed_prior": "that he (the 'master who pushed AI from 0 to 1') was left off TIME 100 AI (per the quoted post in live post 2093334338158965092)",
+  "kind": "award/prize critique",
+  "weak": true,
+  "deleted": true
+ },
+ {
+  "date": "2026-08-28",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2093334338158965092",
+  "quote": "Time picked 100 pupils who had a role in pushing AI from 1 to 100, but forgot to include the master who pushed AI from 0 to 1, @SchmidhuberAI",
+  "targets": [
+   "TIME (TIME100 AI list)"
+  ],
+  "topic": "TIME100 AI list omits Schmidhuber",
+  "claimed_prior": "that he is the 'master who pushed AI from 0 to 1' omitted from TIME 100 AI",
+  "kind": "award/prize critique",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-09-02",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2095187897330573648",
+  "quote": "Wait until each agent in the collective tries to maximise money in a reinforcement learning (RL) \"Economy Of Minds\" (EOM)!",
+  "targets": [
+   "OpenAI (secret-AI-civilization story quoted from @dwarkesh_sp)"
+  ],
+  "topic": "agent economies / societies of AI minds",
+  "claimed_prior": "'Mindstorms in Natural Language-Based Societies of Mind' (Zhuge et al. 2023), Economy of Minds proposal",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-09-02",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2095190074115657921",
+  "quote": "Belated reply: wait until each agent in the collective tries to maximise money in a reinforcement learning (RL) \"Economy Of Minds\" (EOM)!",
+  "targets": [
+   "OpenAI (secret-AI-civilization story quoted from @dwarkesh_sp)"
+  ],
+  "topic": "agent economies / societies of AI minds",
+  "claimed_prior": "'Mindstorms in Natural Language-Based Societies of Mind' (2023), Economy of Minds proposal",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-09-09",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2097696733706797245",
+  "quote": "Galushkin and his advisor Iakov Zalmanovich Tsypkin's even earlier work are mentioned in the Annotated History of Modern AI and Deep Learning",
+  "targets": [
+   "(Early deep learning credit: Galushkin, Tsypkin)"
+  ],
+  "topic": "early deep learning / neural network history",
+  "claimed_prior": "Galushkin and Tsypkin (even earlier, 1960s-70s)",
+  "kind": "third-party priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-09-10",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2098054518416040391",
+  "quote": "Human AI researchers have plagiarised other human AI researchers for decades (some even got awards for this - examples in the reply). Are certain AI companies now automating plagiarism?",
+  "targets": [
+   "OpenAI (Astra, per quoted Capraro post)",
+   "award-winning AI researchers (Hinton et al.)"
+  ],
+  "topic": "AI plagiarism",
+  "claimed_prior": "n/a",
+  "kind": "citation complaint",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2026-09-10",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2098059974001799197",
+  "quote": "Human AI researchers have plagiarised other human AI researchers for decades (some even got awards for this - examples in the reply). Are certain AI companies now automating plagiarism?",
+  "targets": [
+   "unnamed AI researchers (who 'got awards')",
+   "unnamed AI companies"
+  ],
+  "topic": "Plagiarism by AI researchers, awards for it, and automation by AI companies",
+  "claimed_prior": "other AI researchers' work (examples in the reply to his own quoted post)",
+  "kind": "mixed",
+  "weak": false,
+  "deleted": false
+ },
+ {
+  "date": "2026-09-11",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2098416308387733737",
+  "quote": "Indeed, I solved neural self-reference (NS) in 1993 [1][2].",
+  "targets": [
+   "(none; likely joke about 'NS')"
+  ],
+  "topic": "neural self-reference",
+  "claimed_prior": "Self-referential weight matrix (Schmidhuber, ICANN 1993); Irie et al. ICML 2022",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-09-17",
+  "venue": "X",
+  "url": "https://web.archive.org/web/20260917022625/https://twitter.com/SchmidhuberAI/status/2100411017981202809",
+  "quote": "It's all addressed in the papers on meta learning with self-referential neural networks since 1992",
+  "targets": [],
+  "topic": "Self-referential meta learning",
+  "claimed_prior": "meta learning with self-referential neural networks since 1992 (his lab)",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": true
+ },
+ {
+  "date": "2026-09-19",
+  "venue": "X",
+  "url": "https://web.archive.org/web/20260919122603/https://twitter.com/SchmidhuberAI/status/2101286697740677226",
+  "quote": "Three \"AI stepfathers\" (Bengio, LeCun, Hinton) republished basic AI techniques created by \"AI fathers\" whom they failed to cite",
+  "targets": [
+   "Yoshua Bengio",
+   "Geoffrey Hinton",
+   "Yann LeCun"
+  ],
+  "topic": "Three 'AI stepfathers' (Bengio, LeCun, Hinton)",
+  "claimed_prior": "basic AI techniques created by 'AI fathers'",
+  "kind": "citation complaint",
+  "weak": false,
+  "deleted": true
+ },
+ {
+  "date": "2026-09-19",
+  "venue": "X",
+  "url": "https://web.archive.org/web/20260919130143/https://twitter.com/SchmidhuberAI/status/2101295675128373330",
+  "quote": "Earlier tweet on 3 “AI stepfathers” who republished the work of others whom they did not cite",
+  "targets": [
+   "Yoshua Bengio",
+   "Geoffrey Hinton",
+   "Yann LeCun"
+  ],
+  "topic": "3 'AI stepfathers' republished the work of others without citing",
+  "claimed_prior": "work of others (per IDSIA-23-23)",
+  "kind": "citation complaint",
+  "weak": false,
+  "deleted": true
+ },
+ {
+  "date": "2026-09-19",
+  "venue": "X",
+  "url": "https://web.archive.org/web/20260919141329/https://twitter.com/SchmidhuberAI/status/2101313736195571951",
+  "quote": "Another relevant tweet on 3 “AI stepfathers” who republished the work of others whom they did not cite",
+  "targets": [
+   "Yoshua Bengio",
+   "Geoffrey Hinton",
+   "Yann LeCun"
+  ],
+  "topic": "3 'AI stepfathers' republished the work of others without citing",
+  "claimed_prior": "work of others (per IDSIA-23-23)",
+  "kind": "citation complaint",
+  "weak": false,
+  "deleted": true
+ },
+ {
+  "date": "2026-09-19",
+  "venue": "X",
+  "url": "https://web.archive.org/web/20260919141407/https://twitter.com/SchmidhuberAI/status/2101313895210045471",
+  "quote": "Another relevant tweet on 3 “AI stepfathers” who republished the work of others whom they did not cite",
+  "targets": [
+   "Yoshua Bengio",
+   "Geoffrey Hinton",
+   "Yann LeCun"
+  ],
+  "topic": "3 'AI stepfathers' republished the work of others without citing",
+  "claimed_prior": "work of others (per IDSIA-23-23)",
+  "kind": "citation complaint",
+  "weak": false,
+  "deleted": true
+ },
+ {
+  "date": "2026-09-19",
+  "venue": "X",
+  "url": "https://web.archive.org/web/20260919141444/https://twitter.com/SchmidhuberAI/status/2101314050038571342",
+  "quote": "Another relevant tweet on 3 “AI stepfathers” who republished the work of others whom they did not cite",
+  "targets": [
+   "Yoshua Bengio",
+   "Geoffrey Hinton",
+   "Yann LeCun"
+  ],
+  "topic": "3 'AI stepfathers' republished the work of others without citing",
+  "claimed_prior": "work of others (per IDSIA-23-23)",
+  "kind": "citation complaint",
+  "weak": false,
+  "deleted": true
+ },
+ {
+  "date": "2026-09-22",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2102496133746503890",
+  "quote": "Dickmanns had the first truly self-driving cars in traffic in 1994.",
+  "targets": [
+   "Tesla FSD / robotaxis (implicit, via @Silver_nz's counterpoint)"
+  ],
+  "topic": "self-driving cars",
+  "claimed_prior": "Ernst Dickmanns (Munich), video-driven cars in traffic 1994, up to 175 km/h",
+  "kind": "third-party priority",
+  "weak": true,
+  "deleted": false
+ },
+ {
+  "date": "2026-10-04",
+  "venue": "X",
+  "url": "https://web.archive.org/web/20261004093624/https://twitter.com/SchmidhuberAI/status/2106679820700495905",
+  "quote": "Artificial Intelligence Gained Consciousness in 1991. Why A.I. pioneer Jürgen Schmidhuber is convinced the ultimate breakthrough already happened.",
+  "targets": [],
+  "topic": "AI consciousness already achieved in 1991 (Inverse 2016)",
+  "claimed_prior": "AI 'gained consciousness' in 1991 (his world-model work)",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": true
+ },
+ {
+  "date": "2026-10-04",
+  "venue": "X",
+  "url": "https://web.archive.org/web/20261004093735/https://twitter.com/SchmidhuberAI/status/2106680120459038957",
+  "quote": "Artificial Intelligence Gained Consciousness in 1991. Why A.I. pioneer Jürgen Schmidhuber is convinced the ultimate breakthrough already happened.",
+  "targets": [],
+  "topic": "AI consciousness already achieved in 1991 (Inverse 2016)",
+  "claimed_prior": "AI 'gained consciousness' in 1991 (his world-model work)",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": true
+ },
+ {
+  "date": "2026-10-04",
+  "venue": "X",
+  "url": "https://web.archive.org/web/20261004093803/https://twitter.com/SchmidhuberAI/status/2106680236993642701",
+  "quote": "Artificial Intelligence Gained Consciousness in 1991. Why A.I. pioneer Jürgen Schmidhuber is convinced the ultimate breakthrough already happened.",
+  "targets": [],
+  "topic": "AI consciousness already achieved in 1991 (Inverse 2016)",
+  "claimed_prior": "AI 'gained consciousness' in 1991 (his world-model work)",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": true
+ },
+ {
+  "date": "2026-10-06",
+  "venue": "X",
+  "url": "https://x.com/SchmidhuberAI/status/2107337126828458270",
+  "quote": "Fortunately that was settled many years ago",
+  "targets": [
+   "(Hard-problem-of-consciousness debate; @EneaszWrites)"
+  ],
+  "topic": "AI consciousness",
+  "claimed_prior": "1990/1991 world-model and chunker/automatiser explanation of consciousness (Schmidhuber)",
+  "kind": "own-lab priority",
+  "weak": true,
+  "deleted": false
+ }
+]

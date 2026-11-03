@@ -1,0 +1,113 @@
+{
+  "id": "dropout",
+  "title": "Dropout",
+  "matchup": "Hinton et al. (2012) and Srivastava et al. (2014) vs Hanson (1990)",
+  "question": "Is dropout a variant of Hanson's 1990 stochastic delta rule that the 2012 dropout papers should have cited, as Schmidhuber says?",
+  "usual_credit": {
+    "summary": "Dropout, which randomly omits hidden units during training to reduce overfitting, is usually credited to Geoffrey Hinton and his co-authors Nitish Srivastava, Alex Krizhevsky, Ilya Sutskever and Ruslan Salakhutdinov, in a 2012 preprint and a 2014 paper in the Journal of Machine Learning Research. It was used in the AlexNet system that won the 2012 ImageNet competition, and Hinton's 2025 Nobel lecture credits the 2014 paper with the method.",
+    "works": [
+      {
+        "who": "Hinton, Srivastava, Krizhevsky, Sutskever, Salakhutdinov",
+        "year": 2012,
+        "title": "Improving neural networks by preventing co-adaptation of feature detectors",
+        "url": "https://arxiv.org/abs/1207.0580"
+      },
+      {
+        "who": "Srivastava, Hinton, Krizhevsky, Sutskever, Salakhutdinov",
+        "year": 2014,
+        "title": "Dropout: a simple way to prevent neural networks from overfitting",
+        "url": "https://jmlr.org/papers/v15/srivastava14a.html"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says that dropout is a variant of the stochastic delta rule that Stephen José Hanson published in 1990, a stochastic way of training networks by backpropagation, and that Hinton's 2012 papers and a later patent did not cite it. He makes the same point about the 2021 Turing Lecture by LeCun, Bengio and Hinton, which cites Hinton (2012) for dropout without mentioning Hanson.",
+    "prior_works": [
+      {
+        "who": "Hanson",
+        "year": 1990,
+        "title": "A stochastic version of the delta rule",
+        "url": "https://doi.org/10.1016/0167-2789(90)90081-Y"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "However, \"dropout\" is actually a variant of Hanson's much earlier stochastic delta rule (1990) [Drop1]. Hinton's 2012 paper [GPUCNN4] did not cite this.",
+        "date": "2020-04-21",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#V:~:text=However%2C%20%22dropout%22%20is%20actually%20a%20variant%20of%20Hanson%27s%20much%20earlier"
+      },
+      {
+        "text": "In 1990, Hanson introduced the Stochastic Delta Rule, a stochastic way of training NNs by backpropagation.",
+        "date": "2025-12-29",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/deep-learning-history.html#graph:~:text=In%201990%2C%20Hanson%20introduced%20the%20Stochastic%20Delta%20Rule%2C%20a%20stochastic"
+      },
+      {
+        "text": "LBH cite Hinton (2012) for \"dropout\" without mentioning that dropout is just a variant of Hanson's 1990 stochastic delta rule",
+        "date": "2021-09-24",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20cite%20Hinton%20%282012%29%20for%20%22dropout%22%20without%20mentioning%20that%20dropout"
+      },
+      {
+        "text": "a variant of Stephen J. Hanson's stochastic delta rule (1990) called \"dropout\" without citing the original work",
+        "date": "2021-02",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/DanNet-triggers-deep-CNN-revolution-2011.html#:~:text=Unlike%20DanNet%2C%20AlexNet%20used%20Kunihiko%20Fukushima%27s%20rectified%20linear"
+      }
+    ],
+    "times_made": 11,
+    "first_made": "2020-04",
+    "last_made": "2026-03"
+  },
+  "response": {
+    "summary": "No public reply from Hinton or his co-authors to the stochastic delta rule claim was found. The 2012 preprint and the 2014 journal paper do not cite Hanson (1990), and the journal paper's related-work section credits denoising autoencoders for the idea of adding noise to the states of units while its motivation section cites a theory of the role of sex in evolution. Frazier-Logue and Hanson argued in a 2018 preprint, later published in Neural Computation, that dropout is a special case of the stochastic delta rule, in which every weight is a random variable with its own mean and standard deviation.",
+    "quotes": [
+      {
+        "who": "Noah Frazier-Logue and Stephen José Hanson (preprint)",
+        "text": "Dropout is a special case of a more general model published originally in 1990 called the Stochastic Delta Rule",
+        "date": "2018-08",
+        "url": "https://arxiv.org/pdf/1808.03578"
+      },
+      {
+        "who": "Srivastava, Hinton, Krizhevsky, Sutskever and Salakhutdinov (2014 paper)",
+        "text": "The idea of adding noise to the states of units has previously been used in the context of Denoising Autoencoders",
+        "date": "2014-06",
+        "url": "http://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf"
+      },
+      {
+        "who": "Srivastava, Hinton, Krizhevsky, Sutskever and Salakhutdinov (2014 paper)",
+        "text": "A motivation for dropout comes from a theory of the role of sex in evolution",
+        "date": "2014-06",
+        "url": "http://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Hanson published 'A stochastic version of the delta rule' in Physica D in 1990.",
+    "Hinton and co-authors posted 'Improving neural networks by preventing co-adaptation of feature detectors' to arXiv on 3 July 2012, and Srivastava and colleagues published their dropout paper in the Journal of Machine Learning Research in 2014.",
+    "Neither the 2012 preprint nor the 2014 journal paper lists Hanson (1990) among its references.",
+    "Krizhevsky, Sutskever and Hinton used dropout in their 2012 ImageNet paper and cited the 2012 preprint for it.",
+    "Frazier-Logue and Hanson's 2018 preprint states that dropout is a special case of the stochastic delta rule."
+  ],
+  "crux": "The dispute is whether dropout, which silences each hidden unit at random with a fixed probability and rescales at test time, is a special case of the stochastic delta rule, in which each weight is a random variable with a learned mean and standard deviation, or a separate technique with a different motivation. It also asks whether the 2012 authors owed a citation to the 1990 paper.",
+  "related": [
+    "relu",
+    "alexnet",
+    "turingaward",
+    "honda"
+  ],
+  "instance_urls": [
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#IV:~:text=A%20success%20of%20Hinton%27s%20team%20%28ImageNet%2C%20Dec%202012%29",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#V:~:text=However%2C%20%22dropout%22%20is%20actually%20a%20variant%20of%20Hanson%27s%20much%20earlier",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XIV:~:text=Dropout%20is%20actually%20a%20variant%20of%20Hanson%27s%20much%20earlier%20stochastic",
+    "https://people.idsia.ch/~juergen/DanNet-triggers-deep-CNN-revolution-2011.html#:~:text=Unlike%20DanNet%2C%20AlexNet%20used%20Kunihiko%20Fukushima%27s%20rectified%20linear",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20cite%20Hinton%20%282012%29%20for%20%22dropout%22%20without%20mentioning%20that%20dropout",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XIV:~:text=Dropout%20is%20actually%20a%20variant%20of%20Hanson%27s%20much%20earlier%20stochastic",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lbhothers",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#GPUCNN4",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#graph:~:text=In%201990%2C%20Hanson%20introduced%20the%20Stochastic%20Delta%20Rule%2C%20a%20stochastic",
+    "https://arxiv.org/pdf/2212.11279v3#page=16",
+    "https://people.idsia.ch/~juergen/most-cited-neural-nets.html#:~:text=AlexNet%20cited%20DanNet%20but%20also%20used%20ReLUs%20%281969%29"
+  ]
+}

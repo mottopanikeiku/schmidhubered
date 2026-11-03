@@ -1,0 +1,105 @@
+{
+  "id": "turing-computation",
+  "title": "The foundations of computability",
+  "matchup": "Turing (1936) vs Gödel (1931–1934) and Church (1935–1936)",
+  "question": "Was Turing's 1936 contribution essentially a reformulation of earlier work by Gödel and Church, as Schmidhuber argues, rather than a distinct foundation for computability?",
+  "usual_credit": {
+    "summary": "Turing is credited with an explicit abstract model of mechanical computation, a universal machine, and an independent demonstration of limits on effective procedures. The [Stanford Encyclopedia of Philosophy](https://plato.stanford.edu/archives/win2023/entries/church-turing/) credits Church and Turing with independent formulations of effective computability and explains their relationship to the earlier recursive-function work. This standard account recognizes Gödel's incompleteness results as foundational while distinguishing them from an analysis of what any mechanical calculation can do.",
+    "works": [
+      {
+        "who": "Alan M. Turing",
+        "year": 1936,
+        "title": "On Computable Numbers, with an Application to the Entscheidungsproblem",
+        "url": "https://www.cs.unibo.it/~martini/CS/Turing_Paper_1936.pdf"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber argues that Gödel's encoding of formal procedures and Church's work already supplied universal models and established the essential limits later associated with Turing. He points to Church's earlier announcement and to Turing's citations as reasons not to treat Turing as the first founder of theoretical computer science. His later account acknowledges the simplicity of Turing's model but disputes that it was fundamentally novel, and separately distinguishes Turing's original problems from later formulations called the halting problem.",
+    "prior_works": [
+      {
+        "who": "Kurt Gödel",
+        "year": 1931,
+        "title": "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I",
+        "url": "https://link.springer.com/article/10.1007/BF01700692"
+      },
+      {
+        "who": "Alonzo Church",
+        "year": 1936,
+        "title": "An Unsolvable Problem of Elementary Number Theory (presented in April 1935)",
+        "url": "https://people.csail.mit.edu/brooks/idocs/church.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "Turing's famous 1936 paper on incomputability was merely an elegant rephrasing and reuse of mathematician Kurt Gödel's 1931 results and techniques.",
+        "date": "2012-03-28",
+        "venue": "letter",
+        "url": "https://www.nature.com/articles/483541b"
+      },
+      {
+        "text": "his paper essentially just elegantly rephrased Kurt Gödel's 1931 results and Alonzo Church's extension thereof.",
+        "date": "2004-06-03",
+        "venue": "letter",
+        "url": "https://people.idsia.ch/~juergen/turing.html"
+      },
+      {
+        "text": "Gödel's model (1931) was universal, too! So was Church's (1935).",
+        "date": "2026-06-24",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2069846426008330511"
+      }
+    ],
+    "times_made": 23,
+    "first_made": "2004-06",
+    "last_made": "2026-06"
+  },
+  "response": {
+    "summary": "B. Jack Copeland and Zhao Fan [explicitly discuss Schmidhuber's characterization](https://link.springer.com/article/10.1007/s00283-022-10177-y) and argue that Turing's central ideas should not be treated as merely imported from Gödel. They distinguish the mathematical results and encoding techniques, examine Turing's draft and borrowing records, and argue that the evidence for the claimed dependence is weaker than often assumed. Their article does not deny Gödel's earlier work or Church's independent result, and its historical conclusion is about evidence for influence as well as conceptual novelty. The Stanford reference also explains that Gödel came to accept Turing's analysis as a satisfactory characterization of effective computation, which gives the later model a role beyond its publication date.",
+    "quotes": [
+      {
+        "who": "B. Jack Copeland and Zhao Fan",
+        "text": "there is very little evidence for this contention.",
+        "date": "2022-06-04",
+        "url": "https://link.springer.com/article/10.1007/s00283-022-10177-y"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Gödel's incompleteness paper appeared in 1931: https://link.springer.com/article/10.1007/BF01700692",
+    "Church's 1936 article records presentation to the American Mathematical Society on 19 April 1935: https://people.csail.mit.edu/brooks/idocs/church.pdf",
+    "Church and Turing proposed equivalent formal characterizations of effective computation through different approaches: https://plato.stanford.edu/archives/win2023/entries/church-turing/",
+    "Turing's 1936 paper discusses Gödel and Church, although the significance and timing of those connections are disputed: https://link.springer.com/article/10.1007/s00283-022-10177-y"
+  ],
+  "crux": "Equivalent computational power, priority for particular undecidability results, originality of a machine model and historical influence are not interchangeable claims. The dispute is whether those earlier achievements leave Turing with mainly a change of presentation, or whether his analysis of mechanical computation warrants distinct foundational credit.",
+  "related": [
+    "computers",
+    "turing-test",
+    "ai-origins"
+  ],
+  "instance_urls": [
+    "https://www.nature.com/articles/429501c",
+    "https://people.idsia.ch/~juergen/turing.html#:~:text=In%201935%2C%20Turing%27s%20advisor%20Alonzo%20Church%20had%20already%20extended%20G%C3%B6del%27s",
+    "https://www.nature.com/articles/483541b",
+    "https://web.archive.org/web/20150319215639/http://www.reddit.com/r/MachineLearning/comments/2xcyrl/i_am_j%C3%BCrgen_schmidhuber_ama/cp98w6z",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#reply:~:text=Both%20G%C3%B6del%20and%20the%20American%20computer%20science%20pioneer%20Alonzo%20Church",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#IV:~:text=Who%20did%20it%20first%3F%20It%20wasn%27t%20Turing.%20Both%20the%20Austrian%20mathematician",
+    "https://people.idsia.ch/~juergen/goedel-1931-founder-theoretical-computer-science-AI.html#abstract:~:text=It%20is%20funny%E2%80%94and%20at%20the%20same%20time%20embarrassing%E2%80%94that%20G%C3%B6del%20%281906%2D1978%29",
+    "https://people.idsia.ch/~juergen/goedel-1931-founder-theoretical-computer-science-AI.html#abstract:~:text=In%201936%2C%20Alan%20Turing%20introduced%20yet%20another%20universal%20model%20which%20has",
+    "https://x.com/SchmidhuberAI/status/1405405022591111170",
+    "https://people.idsia.ch/~juergen/turing-oversold.html#abstract:~:text=Alan%20M.%20Turing%20made%20certain%20significant%20contributions%20to%20computer",
+    "https://people.idsia.ch/~juergen/turing-oversold.html#:~:text=Although%20ACM%27s%20statement%20on%20Turing%20is%20not%20plain%20wrong%2C%20it%20is%20greatly",
+    "https://people.idsia.ch/~juergen/blog.html#:~:text=Alan%20M.%20Turing%20made%20certain%20significant%20contributions%20to%20computer",
+    "https://x.com/SchmidhuberAI/status/1437672892091838476",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#IV:~:text=ACM%27s%20statement%20on%20Turing%20is%20greatly%20misleading%2C%20like%20some%20of%20its",
+    "https://people.idsia.ch/~juergen/turing-oversold.html#abstract:~:text=None%20of%20these%20claims%20is%20compatible%20with%20the%20historical%20facts%2C%20and",
+    "https://people.idsia.ch/~juergen/turing-oversold.html#abstract:~:text=G%C3%B6del%27s%201931%20work%20was%20extended%20by%20Church%2C%20whose%201935%20result",
+    "https://people.idsia.ch/~juergen/turing-oversold.html#abstract:~:text=the%20famous%20halting%20problem%20%28often%20attributed%20to%20him%29%20was%20actually",
+    "https://arxiv.org/pdf/2212.11279v1#page=26",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#theory:~:text=In%201936%2C%20Alan%20M.%20Turing%20introduced%20yet%20another%20universal%20model%3A%20the",
+    "https://x.com/SchmidhuberAI/status/2069464361677037851",
+    "https://x.com/SchmidhuberAI/status/2069680876611334211",
+    "https://x.com/SchmidhuberAI/status/2069846426008330511",
+    "https://x.com/SchmidhuberAI/status/2070146541809975740"
+  ]
+}

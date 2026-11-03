@@ -1,0 +1,109 @@
+{
+  "id": "language-models",
+  "title": "Neural language models",
+  "matchup": "Bengio et al. (2000, 2003) vs Schmidhuber and Heil (1995-96)",
+  "question": "Should the 2003 neural probabilistic language model be seen as building on Schmidhuber and Heil's 1995-96 neural text compression, as he says?",
+  "usual_credit": {
+    "summary": "Yoshua Bengio, Réjean Ducharme, Pascal Vincent and Christian Jauvin introduced the neural probabilistic language model (NIPS 2000, JMLR 2003), which learns distributed word representations together with a neural network that predicts the next word and so avoids the curse of dimensionality of n-gram models. The ACM's 2019 Turing Award announcement calls it a landmark paper that introduced high-dimension word embeddings and cites its impact on translation and question answering.",
+    "works": [
+      {
+        "who": "Y. Bengio, R. Ducharme, P. Vincent, C. Jauvin",
+        "year": 2003,
+        "title": "A Neural Probabilistic Language Model (Journal of Machine Learning Research 3)",
+        "url": "https://jmlr.org/papers/v3/bengio03a.html"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says that in 1995 he and Stefan Heil already had an auto-regressive neural probabilistic text model, used for text compression, and that Bengio's 2003 paper only briefly called it related. He also objects to Bengio's statement that a 1999 paper introduced auto-regressive neural networks for density estimation for the first time, and he adds earlier work on word embeddings and word-category prediction by Pollack (1987-90) and by Nakamura and Shikano (1989).",
+    "prior_works": [
+      {
+        "who": "J. Schmidhuber, S. Heil",
+        "year": 1996,
+        "title": "Sequential neural text compression (IEEE Trans. Neural Networks 7(1); an earlier version appeared at NIPS 1995)",
+        "url": "https://sferics.idsia.ch/pub/juergen/textcompression.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "in 1995, we already had a similar, excellent, auto-regressive, neural probabilistic text model.[SNT]",
+        "date": "2023-12-14",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiodensity:~:text=However%2C%20several%20years%20earlier%2C%20in%201995%2C%20we%20already%20had%20a%20similar%2C"
+      },
+      {
+        "text": "In 1995, Schmidhuber & Heil already had a neural probabilistic text model for excellent text compression[SNT] whose basic concepts were reused in 2003[NPM][T22]",
+        "date": "2025-12-29",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/deep-learning-history.html#text:~:text=In%201995%2C%20Schmidhuber%20%26%20Heil%20already%20had%20a%20neural%20probabilistic%20text"
+      },
+      {
+        "text": "Bengio wrote[YB20] that in 1999 he \"introduced, for the first time, auto-regressive neural networks for density estimation.\"",
+        "date": "2023-12-14",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#B6"
+      },
+      {
+        "text": "However, this was shown on real sentences already in 1995 in the context of text compression[SNT]",
+        "date": "2021-09-24",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20claim%20that%20Bengio%27s%20team"
+      }
+    ],
+    "times_made": 8,
+    "first_made": "2021-09",
+    "last_made": "2025-12"
+  },
+  "response": {
+    "summary": "The 2003 paper itself cites Schmidhuber (1996) as a related proposal for character-based text compression with neural networks that predict the next character, and it says that using neural networks for language modelling is not new either. It presents its own contribution as pushing the idea to a large scale and learning a statistical model of word sequences. Bengio's research page, as copied in May 2020 on Schmidhuber's site, claims the first learning of word embeddings as part of a neural language model and the first auto-regressive neural networks for density estimation, and his current page speaks of 'the first neural net language models'. No public reply from Bengio to Schmidhuber's claim about the 1995 model was found.",
+    "quotes": [
+      {
+        "who": "Bengio et al., JMLR 2003",
+        "text": "related to previous proposals of character-based text compression using neural networks to predict the probability of the next character (Schmidhuber, 1996)",
+        "date": "2003",
+        "url": "https://jmlr.org/papers/volume3/bengio03a/bengio03a.pdf"
+      },
+      {
+        "who": "Bengio et al., JMLR 2003",
+        "text": "here we push this idea to a large scale, and concentrate on learning a statistical model of the distribution of word sequences",
+        "date": "2003",
+        "url": "https://jmlr.org/papers/volume3/bengio03a/bengio03a.pdf"
+      },
+      {
+        "who": "Yoshua Bengio, research page as retrieved on 15 May 2020 (copy on Schmidhuber's site)",
+        "text": "The NIPS 2000 paper introduces for the first time the learning of word embeddings as part of a neural network which models language data.",
+        "date": "2020-05-15",
+        "url": "https://people.idsia.ch/~juergen/ResearchYoshuaBengioMay2020text.html"
+      },
+      {
+        "who": "Yoshua Bengio, research page, text as retrieved on 2026-11-03",
+        "text": "autoregressive models (including the first neural net language models)",
+        "date": "2026-11-03",
+        "url": "https://yoshuabengio.org/research/"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Schmidhuber and Heil's 'Sequential neural text compression' appeared in IEEE Transactions on Neural Networks 7(1) in 1996, with an earlier version at NIPS 1995.",
+    "The JMLR 2003 paper by Bengio et al. cites Schmidhuber (1996) in its related-work discussion and cites Miikkulainen and Dyer (1991) as earlier work on neural language modelling.",
+    "The ACM's 2019 announcement says Bengio's 'A Neural Probabilistic Language Model' 'introduced high-dimension word embeddings as a representation of word meaning'.",
+    "Bengio's research page of May 2020 states that a NIPS 1999 paper introduced auto-regressive neural networks for density estimation for the first time."
+  ],
+  "crux": "Whether Schmidhuber and Heil's character-level predictive model for compression is the same kind of model as a word-level neural probabilistic language model that learns distributed word embeddings, and whether one sentence calling it related was an adequate acknowledgement. The sides agree on what each paper did and differ on how close the two are.",
+  "related": [
+    "turingaward",
+    "attention",
+    "gru",
+    "pretraining"
+  ],
+  "instance_urls": [
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20claim%20that%20Bengio%27s%20team",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XVI:~:text=5%20years%20earlier%2C%20in%201995%2C%20we%20already%20had%20a%20similar%2C%20excellent%20neural",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiodensity:~:text=However%2C%20several%20years%20earlier%2C%20in%201995%2C%20we%20already%20had%20a%20similar%2C",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#SNT:~:text=Much%20later%20this%20was%20called%20a%20probabilistic%20language%20model.",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#NPM:~:text=Based%20on%20Schmidhuber%20%26%20Heil%27s%20excellent%201995%20neural%20probabilistic",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#B6",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#text:~:text=In%201995%2C%20Schmidhuber%20%26%20Heil%20already%20had%20a%20neural%20probabilistic%20text",
+    "https://arxiv.org/pdf/2212.11279v3#page=24"
+  ]
+}

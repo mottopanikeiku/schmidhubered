@@ -1,0 +1,177 @@
+{
+  "id": "nobel2024",
+  "title": "2024 Nobel Prize in Physics",
+  "matchup": "Hopfield and Hinton (2024 Nobel Prize in Physics) vs Amari (1972), Ivakhnenko and Lapa (1965) and others",
+  "question": "Does the 2024 Nobel Prize in Physics for Hopfield and Hinton reward work that republished earlier methods without credit, as Schmidhuber says?",
+  "usual_credit": {
+    "summary": "The Royal Swedish Academy of Sciences awarded the 2024 Nobel Prize in Physics to John Hopfield and Geoffrey Hinton \"for foundational discoveries and inventions that enable machine learning with artificial neural networks\". The Nobel Committee credits Hopfield with the associative memory network of 1982, whose energy function ties neural networks to models from statistical physics, and it credits Hinton with the Boltzmann machine, developed with Terrence Sejnowski and other coworkers in 1983 to 1985, and with the restricted Boltzmann machines and layer-by-layer pre-training that helped make deep networks trainable in the 2000s.",
+    "works": [
+      {
+        "who": "John J. Hopfield",
+        "year": 1982,
+        "title": "Neural networks and physical systems with emergent collective computational abilities",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC346238/"
+      },
+      {
+        "who": "David H. Ackley, Geoffrey E. Hinton and Terrence J. Sejnowski",
+        "year": 1985,
+        "title": "A learning algorithm for Boltzmann machines",
+        "url": "https://www.cs.toronto.edu/~hinton/csc321/readings/boltz321.pdf"
+      },
+      {
+        "who": "Geoffrey E. Hinton, Simon Osindero and Yee-Whye Teh",
+        "year": 2006,
+        "title": "A fast learning algorithm for deep belief nets",
+        "url": "https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf"
+      },
+      {
+        "who": "Nobel Committee for Physics",
+        "year": 2024,
+        "title": "Scientific Background to the Nobel Prize in Physics 2024",
+        "url": "https://www.nobelprize.org/uploads/2024/09/advanced-physicsprize2024.pdf"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says the prize rewards work that earlier researchers had published and that the laureates did not cite. He holds that Hopfield's 1982 network uses the same basic equations as Amari's adaptive recurrent network of 1972, that the 1985 Boltzmann machine paper did not cite Ivakhnenko and Lapa's deep networks of 1965, Amari's work on stochastic gradient descent for multilayer networks in 1967 and 1968, or the Sherrington-Kirkpatrick spin-glass model of 1975, and that later surveys and 2025 articles by the laureates still leave these sources out. He first made the argument on X on 9 October 2024, the day after the announcement, and set it out on 7 December 2024 in a technical report, \"A Nobel Prize for Plagiarism\" (IDSIA-24-24), which he revised in July and October 2025. The report allows that the omissions may have been unintentional at first and argues that continuing to omit the sources after the issue became known makes them deliberate.",
+    "prior_works": [
+      {
+        "who": "Shun'ichi Amari",
+        "year": 1972,
+        "title": "Learning patterns and pattern sequences by self-organizing nets of threshold elements",
+        "url": "https://doi.org/10.1109/T-C.1972.223477"
+      },
+      {
+        "who": "Shun'ichi Amari",
+        "year": 1967,
+        "title": "A theory of adaptive pattern classifiers",
+        "url": "https://doi.org/10.1109/PGEC.1967.264666"
+      },
+      {
+        "who": "Alexey G. Ivakhnenko",
+        "year": 1971,
+        "title": "Polynomial theory of complex systems",
+        "url": "https://doi.org/10.1109/TSMC.1971.4308320"
+      },
+      {
+        "who": "Seppo Linnainmaa",
+        "year": 1970,
+        "title": "The representation of the cumulative rounding error of an algorithm as a Taylor expansion of the local rounding errors (master's thesis, in Finnish)",
+        "url": "https://people.idsia.ch/~juergen/linnainmaa1970thesis.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "The #NobelPrizeinPhysics2024 for Hopfield & Hinton rewards plagiarism and incorrect attribution in computer science.",
+        "date": "2024-10-09",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1844022724328394780"
+      },
+      {
+        "text": "Instead they republished methodologies developed in Ukraine and Japan in the 1960s and 1970s, as well as other techniques, without citing the original inventors.",
+        "date": "2024-12-07",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#:~:text=Unfortunately%2C%20however%2C%20the%20awardees%20did%20not%20make%20any%20such"
+      },
+      {
+        "text": "Even in their subsequent surveys and recent 2025 articles, they failed to acknowledge the original inventors.",
+        "date": "2025-10-07",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#:~:text=Sadly%2C%20the%202024%20Nobel%20Prize%20in%20Physics%20awarded%20to%20Hopfield%20%26%20Hinton"
+      },
+      {
+        "text": "The awardees have not tried to defend themselves. They can't - the facts are the facts.",
+        "date": "2025-10-09",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1976349479444836724"
+      }
+    ],
+    "times_made": 28,
+    "first_made": "2024-10",
+    "last_made": "2026-09"
+  },
+  "response": {
+    "summary": "As far as I could find, neither Hopfield nor Hinton has replied publicly to the plagiarism claim, and Schmidhuber says the awardees have not tried to defend themselves. The Nobel Committee's scientific background cites both Amari's and Nakano's papers of 1972 among earlier magnetically inspired network models, describes the Boltzmann machine as a stochastic extension of Hopfield's model, and states that Rumelhart, Hinton and Williams reinvented a scheme that others had applied before. Shun'ichi Amari congratulated both laureates and said that the origins of neural network theory lie in part in Japan; in a 2025 interview he said that an identical associative memory model had been published in Japan, that Hopfield cited a different paper of his, and that the laureates had rediscovered and advanced the ideas. Hansun Hsiung of Durham University, who leads an oral history project on Japanese neural network research, wrote in The Conversation that the Japanese and North American groups worked separately and reached their conclusions independently.",
+    "quotes": [
+      {
+        "who": "Nobel Committee for Physics",
+        "text": "Rumelhart, Hinton and Williams reinvented a scheme for this, which had previously been applied to related problems by others",
+        "date": "2024-10-08",
+        "url": "https://www.nobelprize.org/uploads/2024/09/advanced-physicsprize2024.pdf"
+      },
+      {
+        "who": "Shun'ichi Amari (RIKEN)",
+        "text": "The origins of research into artificial intelligence and neural network theory can in part be traced to Japan",
+        "date": "2024-10-10",
+        "url": "https://cbs.riken.jp/en/news/2024/20241010.html"
+      },
+      {
+        "who": "Shun'ichi Amari (Science Japan interview)",
+        "text": "an identical model to the Hopfield's associative memory model was already published in Japan",
+        "date": "2025-03-27",
+        "url": "https://sj.jst.go.jp/stories/2025/s0327-01p.html"
+      },
+      {
+        "who": "Shun'ichi Amari (Science Japan interview)",
+        "text": "they re-discovered our ideas and advanced them, thereby developing AI today",
+        "date": "2025-03-27",
+        "url": "https://sj.jst.go.jp/stories/2025/s0327-01p.html"
+      },
+      {
+        "who": "Hansun Hsiung (Durham University)",
+        "text": "The North American researchers were working separately to groups in Japan, coming to their conclusions independently",
+        "date": "2024-11-27",
+        "url": "https://theconversation.com/japanese-scientists-were-pioneers-of-ai-yet-theyre-being-written-out-of-its-history-243762"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "The Royal Swedish Academy of Sciences announced the 2024 Nobel Prize in Physics for Hopfield and Hinton on 8 October 2024.",
+    "Amari published a recurrent network of threshold elements that learns patterns in IEEE Transactions on Computers in 1972, ten years before Hopfield's 1982 paper in the Proceedings of the National Academy of Sciences.",
+    "The Nobel Committee's scientific background cites both Amari (1972) and Nakano (1972) among earlier models inspired by magnetic systems.",
+    "Schmidhuber and Amari both say that Hopfield's 1982 paper cites a later Amari paper on self-organization but not Amari's 1972 paper on associative memory.",
+    "The Committee's scientific background says that Rumelhart, Hinton and Williams reinvented a scheme for computing gradients that others had applied before, and it cites Werbos (1982) and Linnainmaa (1970) for that earlier use.",
+    "Schmidhuber published \"A Nobel Prize for Plagiarism\" on 7 December 2024 and issued revised versions on 31 July 2025 and 7 October 2025."
+  ],
+  "crux": "The sources differ on whether Hopfield's network and the Boltzmann machine are the same methods as the earlier work (Amari's 1972 network, the Ivakhnenko and Amari learning procedures, the Sherrington-Kirkpatrick model) or new contributions with those works as precursors. They also differ on whether failing to cite earlier work that the authors may not have known is plagiarism, as Schmidhuber argues, or independent rediscovery, as Amari's own comments suggest.",
+  "related": [
+    "hopfield",
+    "boltzmann",
+    "backprop",
+    "pretraining",
+    "deeplearning-origins",
+    "honda",
+    "turingaward",
+    "alphafold"
+  ],
+  "instance_urls": [
+    "https://x.com/SchmidhuberAI/status/1844022724328394780",
+    "https://x.com/SchmidhuberAI/status/1849095954428784986",
+    "https://people.idsia.ch/~juergen/blog.html#:~:text=%E2%98%85%20Dec%202024%20%28updated%20Oct%202025%29%3A%20Sadly%2C%20the%20Nobel%20Prize%20in%20Physics%202024",
+    "https://x.com/SchmidhuberAI/status/1865310820856393929",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#:~:text=Unfortunately%2C%20however%2C%20the%20awardees%20did%20not%20make%20any%20such",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#:~:text=This%20award%20directly%20rewards%20plagiarism%20and%20misattribution%2C%20which%20is",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#:~:text=Is%20it%20now%20acceptable%20for%20me%20to%20direct%20young%20Ph.D.%20students%20to%20read",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#hopfield:~:text=The%20Nobel%20Committee%20for%20Physics",
+    "https://x.com/SchmidhuberAI/status/1865687218234307014",
+    "https://x.com/SchmidhuberAI/status/1866500424024621170",
+    "https://x.com/SchmidhuberAI/status/1866517208509091997",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_sadly-the-nobel-prize-in-physics-2024-for-activity-7272407451272974336-zN8h",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#:~:text=Sadly%2C%20the%202024%20Nobel%20Prize%20in%20Physics%20awarded%20to%20Hopfield%20%26%20Hinton",
+    "https://x.com/SchmidhuberAI/status/1975924226977894517",
+    "https://x.com/SchmidhuberAI/status/1976349479444836724",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_2025-update-a-nobel-prize-for-plagiarism-activity-7384144825064947712-I60j",
+    "https://x.com/SchmidhuberAI/status/1996986118487658972",
+    "https://x.com/SchmidhuberAI/status/1997327032531767527",
+    "https://x.com/SchmidhuberAI/status/1997990532522635374",
+    "https://x.com/SchmidhuberAI/status/2026323901903511624",
+    "https://x.com/SchmidhuberAI/status/2028921733785502103",
+    "https://x.com/SchmidhuberAI/status/2034855059301810294",
+    "https://x.com/SchmidhuberAI/status/2075116099843088679",
+    "https://x.com/SchmidhuberAI/status/2089928601281892390",
+    "https://web.archive.org/web/20260819041030/https://twitter.com/SchmidhuberAI/status/2089927965261898192",
+    "https://x.com/SchmidhuberAI/status/2095555531947520485",
+    "https://x.com/SchmidhuberAI/status/2095560111452217460",
+    "https://x.com/SchmidhuberAI/status/2095783405166244348"
+  ]
+}

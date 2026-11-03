@@ -1,0 +1,155 @@
+{
+  "id": "distillation",
+  "title": "Knowledge distillation",
+  "matchup": "Hinton, Vinyals and Dean (2015) vs Schmidhuber (1991, 1992)",
+  "question": "Should the 2015 'distillation' of neural networks be seen as a republication of the 1991 'collapsing' of a chunker network into an automatizer network, as Schmidhuber says?",
+  "usual_credit": {
+    "summary": "Knowledge distillation is usually credited to Geoffrey Hinton, Oriol Vinyals and Jeff Dean, whose 2015 preprint 'Distilling the Knowledge in a Neural Network' showed how to transfer what a large model or an ensemble has learned into a single smaller model by training it on the large model's softened output probabilities. The preprint credits Rich Caruana and his collaborators with having pioneered a version of this strategy, and distillation is now widely used to produce smaller models, including from large language models.",
+    "works": [
+      {
+        "who": "Hinton, Vinyals, Dean",
+        "year": 2015,
+        "title": "Distilling the Knowledge in a Neural Network",
+        "url": "https://arxiv.org/abs/1503.02531"
+      },
+      {
+        "who": "Buciluǎ, Caruana, Niculescu-Mizil",
+        "year": 2006,
+        "title": "Model compression",
+        "url": "https://doi.org/10.1145/1150402.1150464"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says that Section 4 of his 1992 Neural Computation paper, based on a technical report of April 1991, already described transferring the knowledge of a teacher network into a student network, which he then called collapsing or compressing and which is now called distilling. In that work a 'conscious' chunker network and a 'subconscious' automatizer network operate on different time scales, and the chunker's behaviour is compressed into the automatizer. He says the 2015 authors did not cite this work, nor did their later patent application (US20150356461A1), and since 2025 he has applied the same claim to distillation in DeepSeek and other language models.",
+    "prior_works": [
+      {
+        "who": "Schmidhuber",
+        "year": 1991,
+        "title": "Neural sequence chunkers (technical report FKI-148-91, TU Munich)",
+        "url": "https://people.idsia.ch/~juergen/FKI-148-91ocr.pdf"
+      },
+      {
+        "who": "Schmidhuber",
+        "year": 1992,
+        "title": "Learning complex, extended sequences using the principle of history compression",
+        "url": "https://doi.org/10.1162/neco.1992.4.2.234"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "NN distillation was published by Juergen Schmidhuber in 1991.",
+        "date": "2025-11",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/who-invented-knowledge-distillation-with-neural-networks.html#:~:text=NN%20distillation%20was%20published%20by%20Juergen%20Schmidhuber%20in%201991."
+      },
+      {
+        "text": "I called this \"collapsing\" or \"compressing\" the behavior of one net into another.",
+        "date": "2019-10",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%202:~:text=I%20called%20this%20%22collapsing%22%20or%20%22compressing%22%20the%20behavior%20of%20one%20net"
+      },
+      {
+        "text": "The authors did not cite the original 1991 NN distillation procedure",
+        "date": "2025-11",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/who-invented-knowledge-distillation-with-neural-networks.html#DIST2:~:text=The%20authors%20did%20not%20cite%20the%20original%201991%20NN%20distillation%20procedure%2C"
+      },
+      {
+        "text": "Not true! I published the technique in 1991 [3]. [2] failed to cite [3].",
+        "date": "2026-07-07",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2074396689880822254"
+      },
+      {
+        "text": "also introduced the concept of \"compressing\" or \"collapsing\" or \"distilling\" one NN into another",
+        "date": "2020-04-21",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#II"
+      }
+    ],
+    "times_made": 35,
+    "first_made": "2019-10",
+    "last_made": "2026-09"
+  },
+  "response": {
+    "summary": "No public reply from Hinton, Vinyals or Dean to the 1991 claim was found. Their 2015 preprint says that a version of the strategy was pioneered by Rich Caruana and his collaborators, and it does not cite Schmidhuber's work. In July 2026 Vinay Prabhu answered one of Schmidhuber's posts by arguing that the 1991 chunker and automatizer are trained concurrently, unlike standard distillation, while Pedro Domingos replied to another by writing that he had invented distillation and linking a 1997 paper of his own. Schmidhuber answered Prabhu that distillation is a general technique that also works when teacher and student run on different time scales.",
+    "quotes": [
+      {
+        "who": "Hinton, Vinyals and Dean (2015 preprint)",
+        "text": "A version of this strategy has already been pioneered by Rich Caruana and his collaborators",
+        "date": "2015-03-09",
+        "url": "https://arxiv.org/pdf/1503.02531"
+      },
+      {
+        "who": "Vinay Prabhu (on X)",
+        "text": "the key novelty is that your (chunker, automatizer) pair are both trained dynamically and concurrently (Unlike KD).",
+        "date": "2026-07-23",
+        "url": "https://x.com/vinayprabhu/status/2080202223133605997"
+      },
+      {
+        "who": "Pedro Domingos (on X)",
+        "text": "It never occurred to me when I invented distillation that its killer app would be theft.",
+        "date": "2026-07-21",
+        "url": "https://x.com/pmddomingos/status/2079426494825484534"
+      },
+      {
+        "who": "Wikipedia, article 'Knowledge distillation'",
+        "text": "An early example of neural network distillation was published by Jürgen Schmidhuber in 1991",
+        "date": "2026-11-03 (accessed)",
+        "url": "https://en.wikipedia.org/wiki/Knowledge_distillation"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Schmidhuber's technical report 'Neural sequence chunkers' (FKI-148-91) appeared at TU Munich in April 1991, and his paper 'Learning complex, extended sequences using the principle of history compression' appeared in Neural Computation 4(2) in 1992.",
+    "Buciluǎ, Caruana and Niculescu-Mizil published 'Model compression' at the ACM SIGKDD conference in 2006.",
+    "Hinton, Vinyals and Dean posted 'Distilling the Knowledge in a Neural Network' to arXiv on 9 March 2015.",
+    "The 2015 preprint cites Buciluǎ et al. (2006) and does not cite Schmidhuber's 1991 or 1992 work.",
+    "Schmidhuber's own distillation page lists Buciluǎ et al. (2006) and Ba and Caruana (2014) as related work."
+  ],
+  "crux": "The dispute is whether collapsing a chunker network into an automatizer network in 1991, a transfer of knowledge between two recurrent nets, is the same technique as the 2015 training of a smaller model on a larger model's softened output distribution. It also turns on whether the 2015 authors owed a citation to the 1991 work, given that they credited the 2006 model compression paper as the earlier version of their strategy.",
+  "related": [
+    "pretraining",
+    "reasoning",
+    "chatgpt",
+    "turingaward"
+  ],
+  "instance_urls": [
+    "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%202:~:text=I%20called%20this%20%22collapsing%22%20or%20%22compressing%22%20the%20behavior%20of%20one%20net",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#II",
+    "https://arxiv.org/pdf/2005.05744v1#page=5",
+    "https://people.idsia.ch/~juergen/very-deep-learning-1991.html#:~:text=I%20called%20this%20collapsing%20or%20compressing%20the%20behavior%20of%20one%20net%20into",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XVII-2:~:text=%28H2%29%20The%20dispute%20on%20compressing%20or%20distilling%20one%20NN%20into%20another.",
+    "https://x.com/SchmidhuberAI/status/1608870559609421831",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintondistill:~:text=Hinton%20republished%20NN%20distillation%20many%20years%20later%20in%202015.",
+    "https://x.com/SchmidhuberAI/status/1899475671958929453",
+    "https://x.com/SchmidhuberAI/status/1934627063958471058",
+    "https://x.com/SchmidhuberAI/status/1975947200808288372",
+    "https://people.idsia.ch/~juergen/who-invented-knowledge-distillation-with-neural-networks.html#:~:text=NN%20distillation%20was%20published%20by%20Juergen%20Schmidhuber%20in%201991.",
+    "https://people.idsia.ch/~juergen/who-invented-knowledge-distillation-with-neural-networks.html#DIST2:~:text=The%20authors%20did%20not%20cite%20the%20original%201991%20NN%20distillation%20procedure%2C",
+    "https://people.idsia.ch/~juergen/blog.html#:~:text=NN%20distillation%20was%20published%20by%20J.%20Schmidhuber%20in%201991.",
+    "https://x.com/SchmidhuberAI/status/1988992765141614831",
+    "https://x.com/SchmidhuberAI/status/1989026767684923399",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_in-2025-the-deepseek-sputnik-shocked-the-activity-7395015175105421312-5NT-",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#distill:~:text=NN%20distillation%20was%20published%20by%20Schmidhuber%20in%201991.",
+    "https://arxiv.org/pdf/2212.11279v3#page=21",
+    "https://people.idsia.ch/~juergen/ai-boom-roots-munich-1991.html#:~:text=%E2%98%85%2030%20April%201991%3A%20Neural%20network%20distillation%E2%80%94central%20to%20the%20famous",
+    "https://x.com/SchmidhuberAI/status/2073391523018805320",
+    "https://x.com/SchmidhuberAI/status/2074396689880822254",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_the-nyt-claims-1-that-neural-network-distillation-activity-7480163824113840128-ipI0",
+    "https://x.com/SchmidhuberAI/status/2079976781356962102",
+    "https://x.com/SchmidhuberAI/status/2079981691314069953",
+    "https://x.com/SchmidhuberAI/status/2079982622751502777",
+    "https://web.archive.org/web/20260722172948/https://twitter.com/SchmidhuberAI/status/2079982257276666318",
+    "https://web.archive.org/web/20260722180519/https://twitter.com/SchmidhuberAI/status/2079991194457723384",
+    "https://x.com/SchmidhuberAI/status/2080170779606429846",
+    "https://x.com/SchmidhuberAI/status/2080183821182341630",
+    "https://x.com/SchmidhuberAI/status/2080284349186900162",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_i-support-open-source-models-distilling-what-activity-7486045417449619456-pHtP",
+    "https://x.com/SchmidhuberAI/status/2080629100603986256",
+    "https://x.com/SchmidhuberAI/status/2080704707526377562",
+    "https://web.archive.org/web/20260926055830/https://twitter.com/SchmidhuberAI/status/2103725881902399730",
+    "https://x.com/SchmidhuberAI/status/2104217072486007169"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "id": "transistor",
+  "title": "The transistor",
+  "matchup": "Bardeen, Brattain and Shockley (1947–1948) vs Lilienfeld (1925–1928)",
+  "question": "Should Lilienfeld's field-effect patents receive the invention credit commonly associated with the Bell Labs transistor, as Schmidhuber argues?",
+  "usual_credit": {
+    "summary": "Standard accounts credit John Bardeen and Walter Brattain with the working point-contact transistor demonstrated at Bell Labs in December 1947, while William Shockley developed the junction-transistor approach. The [Computer History Museum](https://www.computerhistory.org/siliconengine/invention-of-the-point-contact-transistor/) describes their achievement as a successful semiconductor amplifier, rather than the first proposal to control semiconductor current with an electric field. The [1956 Nobel citation](https://www.nobelprize.org/prizes/physics/1956/summary/) recognizes semiconductor research and discovery of the transistor effect, and the museum separately credits Atalla and Kahng with the successful insulated-gate field-effect device developed in 1959 and demonstrated in 1960.",
+    "works": [
+      {
+        "who": "John Bardeen and Walter H. Brattain",
+        "year": 1948,
+        "title": "Three-electrode circuit element utilizing semiconductive materials (US2524035A, filed 1948; granted 1950)",
+        "url": "https://patents.google.com/patent/US2524035A/en"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber argues that Julius Edgar Lilienfeld's earlier field-effect designs justify calling him the transistor's inventor, and that the Nobel award should have recognized him. He cites Robert Arns's historical account, later reconstructions of Lilienfeld devices, and Bell Labs' knowledge of the patents to argue that these were workable inventions rather than unimplemented suggestions. His broader argument also stresses the importance of field-effect transistors in later electronics, which is a different issue from priority for the point-contact transistor.",
+    "prior_works": [
+      {
+        "who": "Julius Edgar Lilienfeld",
+        "year": 1925,
+        "title": "Method and apparatus for controlling electric currents (1925 priority; US1745175A filed 1926, granted 1930)",
+        "url": "https://patents.google.com/patent/US1745175A/en"
+      },
+      {
+        "who": "Julius Edgar Lilienfeld",
+        "year": 1928,
+        "title": "Device for controlling electric current (US1900018A, filed 1928; granted 1933)",
+        "url": "https://patents.google.com/patent/US1900018A/en"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "the inventor of the transistor is Julius Edgar Lilienfeld.",
+        "date": "2025-10",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/who-invented-the-transistor.html#prio:~:text=As%20of%202025%2C%20there%20is%20no%20reasonable%20doubt%20that%20the%20inventor%20of%20the"
+      },
+      {
+        "text": "Lilienfeld's designs worked as described and gave substantial gain.",
+        "date": "2025-10-22",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/1925-first-transistor-2025-centennial-lilienfeld.html#id1:~:text=Lilienfeld%27s%20designs%20worked%20as%20described%20and%20gave%20substantial%20gain."
+      },
+      {
+        "text": "which should have been awarded to Lilienfeld.",
+        "date": "2025-10-23",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1981261819932016926"
+      }
+    ],
+    "times_made": 17,
+    "first_made": "2025-10",
+    "last_made": "2025-12"
+  },
+  "response": {
+    "summary": "No public reply specifically addressing Schmidhuber's 2025 article was located in the sources reviewed. The [Computer History Museum's account](https://www.computerhistory.org/siliconengine/field-effect-semiconductor-device-concepts-patented/) acknowledges Lilienfeld's field-effect concept but says that records establishing functioning contemporary devices are absent, and it distinguishes those patents from the later point-contact breakthrough. Its [MOSFET history](https://www.computerhistory.org/siliconengine/metal-oxide-semiconductor-mos-transistor-demonstrated/) also credits Atalla and Kahng with overcoming semiconductor surface-state problems, so it does not treat an early patent as equivalent to the later practical technology. Schmidhuber reports contrary historical evidence from Arns and a Bardeen letter, but the original letter and Arns's full article were not opened, so those statements remain attributed reports here.",
+    "quotes": [
+      {
+        "who": "Computer History Museum",
+        "text": "no records exist to prove that Heil or Lilienfeld actually constructed functioning devices.",
+        "date": "undated",
+        "url": "https://www.computerhistory.org/siliconengine/field-effect-semiconductor-device-concepts-patented/"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Lilienfeld's US1745175A records priority on 22 October 1925, a US filing in 1926, and a grant in 1930: https://patents.google.com/patent/US1745175A/en",
+    "Bardeen and Brattain demonstrated a working point-contact semiconductor amplifier in December 1947: https://www.computerhistory.org/siliconengine/invention-of-the-point-contact-transistor/",
+    "Shockley, Bardeen and Brattain shared the 1956 Physics Nobel Prize: https://www.nobelprize.org/prizes/physics/1956/summary/"
+  ],
+  "crux": "The dispute concerns whether invention credit should follow an early field-effect design, evidence that the design could work, or the later demonstrated transistor effect and practical devices. Priority for a field-effect concept, priority for a point-contact transistor, and the merits of a Nobel citation are related but do not have identical criteria.",
+  "related": [
+    "computers"
+  ],
+  "instance_urls": [
+    "https://people.idsia.ch/~juergen/who-invented-the-transistor.html#id1:~:text=The%20much%20later%20point%2Dcontact%20transistor%20%28Bell%20Labs%2C%201948%29%20was%20a%20dead",
+    "https://people.idsia.ch/~juergen/who-invented-the-transistor.html#prio:~:text=According%20to%20legal%20files%20%281948%29%20examined%20by%20American%20physicist%20Robert",
+    "https://people.idsia.ch/~juergen/who-invented-the-transistor.html#prio:~:text=Before%20the%20above%20issues%20became%20widely%20known%2C%20three%20Bell%20Labs",
+    "https://people.idsia.ch/~juergen/who-invented-the-transistor.html#prio:~:text=As%20of%202025%2C%20there%20is%20no%20reasonable%20doubt%20that%20the%20inventor%20of%20the",
+    "https://people.idsia.ch/~juergen/1925-first-transistor-2025-centennial-lilienfeld.html#id1:~:text=Lilienfeld%27s%20designs%20worked%20as%20described%20and%20gave%20substantial%20gain.",
+    "https://people.idsia.ch/~juergen/1925-first-transistor-2025-centennial-lilienfeld.html#prio:~:text=According%20to%20legal%20files%20%281948%29%20examined%20by%20American%20physicist%20Robert",
+    "https://people.idsia.ch/~juergen/1925-first-transistor-2025-centennial-lilienfeld.html#prio:~:text=Before%20the%20above%20issues%20became%20widely%20known%2C%20three%20Bell%20Labs",
+    "https://web.archive.org/web/20251022140015/https://twitter.com/SchmidhuberAI/status/1980997634232930498",
+    "https://web.archive.org/web/20251022140225/https://twitter.com/SchmidhuberAI/status/1980998179408535589",
+    "https://web.archive.org/web/20251022150008/https://twitter.com/SchmidhuberAI/status/1981012701846327591",
+    "https://x.com/SchmidhuberAI/status/1981254266405765297",
+    "https://x.com/SchmidhuberAI/status/1981261819932016926",
+    "https://x.com/SchmidhuberAI/status/1995767044453646649",
+    "https://x.com/SchmidhuberAI/status/1995780715695284581",
+    "https://x.com/SchmidhuberAI/status/2000234358381101432",
+    "https://web.archive.org/web/20251227083019/https://twitter.com/SchmidhuberAI/status/2004832202006122512",
+    "https://x.com/SchmidhuberAI/status/2005307785605452066"
+  ]
+}

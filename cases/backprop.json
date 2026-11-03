@@ -1,0 +1,186 @@
+{
+  "id": "backprop",
+  "title": "Backpropagation",
+  "matchup": "Rumelhart, Hinton and Williams (1986) vs Linnainmaa (1970) and Werbos (1982)",
+  "question": "Should the origin of backpropagation be credited to Linnainmaa's 1970 reverse-mode algorithm, with the 1986 paper by Rumelhart, Hinton and Williams seen as the popularisation of a known method, as Schmidhuber says?",
+  "usual_credit": {
+    "summary": "Backpropagation for neural networks is usually credited to David Rumelhart, Geoffrey Hinton and Ronald Williams, whose 1986 Nature paper describes the procedure and reports that the hidden units of a trained network come to represent important features of the task. Hinton has described that demonstration of useful internal representations as the reason the method became popular, and he has also said that press reports crediting him with inventing backpropagation are wrong.",
+    "works": [
+      {
+        "who": "Rumelhart, Hinton, Williams",
+        "year": 1986,
+        "title": "Learning representations by back-propagating errors",
+        "url": "https://www.nature.com/articles/323533a0"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says that the modern, efficient form of backpropagation was first published in 1970 by the Finnish master's student Seppo Linnainmaa as the reverse mode of automatic differentiation, that Henry Kelley (1960) and others published precursors, and that Paul Werbos first applied the method to neural networks in 1982. He argues that the 1986 paper was an experimental analysis of a known method which did not cite Linnainmaa or Werbos, and that later surveys by Hinton, LeCun and Bengio did not cite them either. He also holds that credit for an invention belongs to the person who published it first and not to those who popularised it, while describing the 1986 paper as the work that showed backpropagation can yield useful internal representations.",
+    "prior_works": [
+      {
+        "who": "Kelley",
+        "year": 1960,
+        "title": "Gradient theory of optimal flight paths",
+        "url": "https://doi.org/10.2514/8.5282"
+      },
+      {
+        "who": "Linnainmaa",
+        "year": 1970,
+        "title": "The representation of the cumulative rounding error of an algorithm as a Taylor expansion of the local rounding errors (master's thesis, University of Helsinki, in Finnish)",
+        "url": "http://www.idsia.ch/~juergen/linnainmaa1970thesis.pdf"
+      },
+      {
+        "who": "Linnainmaa",
+        "year": 1976,
+        "title": "Taylor expansion of the accumulated rounding error (BIT Numerical Mathematics 16)",
+        "url": "https://doi.org/10.1007/BF01931367"
+      },
+      {
+        "who": "Werbos",
+        "year": 1982,
+        "title": "Applications of advances in nonlinear sensitivity analysis",
+        "url": "http://werbos.com/Neural/SensitivityIFIPSeptember1981.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "Its modern version (also called the reverse mode of automatic differentiation) was first published in 1970 by Finnish master student Seppo Linnainmaa.",
+        "date": "2025-07-29",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1950194864940835159"
+      },
+      {
+        "text": "the article [RUM] even failed to mention Seppo Linnainmaa, the inventor of this famous algorithm for credit assignment in networks",
+        "date": "2020-04-21",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#I:~:text=And%20the%20article"
+      },
+      {
+        "text": "It wasn't created by \"lots of different people\" but by exactly one person who published first [BP1] and therefore should get the credit.",
+        "date": "2020-04-24",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#reply:~:text=It%20wasn%27t%20created%20by%20%22lots%20of%20different%20people%22%20but%20by%20exactly%20one"
+      },
+      {
+        "text": "Explicit, efficient error backpropagation (BP) in arbitrary, discrete, possibly sparsely connected, NN-like networks apparently was first described in a 1970 master’s thesis (Linnainmaa, 1970, 1976)",
+        "date": "2014-04-30",
+        "venue": "paper",
+        "url": "https://arxiv.org/pdf/1404.7828v1#page=8"
+      },
+      {
+        "text": "then demonstrated that backpropagation can yield useful internal representations in hidden layers of NNs",
+        "date": "2022-12-21",
+        "venue": "paper",
+        "url": "https://arxiv.org/pdf/2212.11279v1#page=9"
+      }
+    ],
+    "times_made": 40,
+    "first_made": "2014-04",
+    "last_made": "2026-08"
+  },
+  "response": {
+    "summary": "Hinton replied on Reddit in April 2020 that he has never claimed to have invented backpropagation, that Rumelhart invented it independently, and that the authors did not know the earlier history when they published. He says his own contribution was to show that the method could learn useful internal representations, and his 2025 Nobel lecture says the algorithm was invented many times and lists Linnainmaa among its inventors. In a 2015 comment LeCun argued that earlier uses of the chain rule were not shown to work for machine learning until the mid 1980s, while Paul Werbos holds that his 1974 Harvard thesis first described the method. Griewank's history of the reverse mode of differentiation, written by a mathematician, describes many incarnations of the technique from the late 1960s onward, and the 2016 textbook by Goodfellow, Bengio and Courville speaks of the popularization of backpropagation by Rumelhart et al. (1986) and LeCun (1987).",
+    "quotes": [
+      {
+        "who": "Geoffrey Hinton (Reddit comment, archived copy)",
+        "text": "I have never claimed that I invented backpropagation. David Rumelhart invented it independently long after people in other fields had invented it.",
+        "date": "2020-04-23",
+        "url": "https://web.archive.org/web/20200423210300/https://www.reddit.com/r/MachineLearning/comments/g5ali0/d_schmidhuber_critique_of_honda_prize_for_dr/fo8rew9/"
+      },
+      {
+        "who": "Geoffrey Hinton (Reddit comment, archived copy)",
+        "text": "when we first published we did not know the history so there were previous inventors that we failed to cite",
+        "date": "2020-04-23",
+        "url": "https://web.archive.org/web/20200423210300/https://www.reddit.com/r/MachineLearning/comments/g5ali0/d_schmidhuber_critique_of_honda_prize_for_dr/fo8rew9/"
+      },
+      {
+        "who": "Geoffrey Hinton (Nobel Lecture)",
+        "text": "The backpropagation algorithm was invented many times (Linnainmaa, 1970; Werbos, 1974; LeCun, 1985; Parker, 1985; Rumelhart, Hinton, and Williams, 1986; Amari, 1993).",
+        "date": "2025-08-25",
+        "url": "https://www.cs.toronto.edu/~hinton/absps/nobelboltzmann.pdf"
+      },
+      {
+        "who": "Yann LeCun (comment on a Google+ post, archived copy)",
+        "text": "The point is that no one managed to demonstrate a working instantiation until the mid 80s.",
+        "date": "2015-06-30 to 2015-07-03",
+        "url": "https://web.archive.org/web/20160308032017/https://plus.google.com/100849856540000067209/posts/9BDtGwCDL7D"
+      },
+      {
+        "who": "Paul Werbos",
+        "text": "backpropagation was first spelled out explicitly (and implemented) in my 1974 Harvard PhD thesis",
+        "date": "c. 2004",
+        "url": "https://www.werbos.com/AD2004.pdf"
+      },
+      {
+        "who": "Andreas Griewank (mathematician)",
+        "text": "there have been many incarnations of this reversal technique, which has been suggested by several people from various fields since the late 1960s",
+        "date": "2012",
+        "url": "https://ftp.gwdg.de/pub/misc/EMIS/journals/DMJDMV/vol-ismp/52_griewank-andreas-b.pdf"
+      },
+      {
+        "who": "Goodfellow, Bengio and Courville (textbook)",
+        "text": "the popularization of the back-propagation algorithm (Rumelhart et al., 1986a; LeCun, 1987)",
+        "date": "2016",
+        "url": "https://www.deeplearningbook.org/contents/intro.html"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Seppo Linnainmaa described the reverse mode of automatic differentiation in a 1970 master's thesis at the University of Helsinki and published an English-language account in BIT in 1976.",
+    "Paul Werbos published 'Applications of advances in nonlinear sensitivity analysis', which discusses backpropagation for neural networks, in 1982.",
+    "Rumelhart, Hinton and Williams published 'Learning representations by back-propagating errors' in Nature on 9 October 1986.",
+    "Hinton wrote in April 2020 that the authors did not know the earlier history when they first published and that previous inventors went uncited.",
+    "Hinton's 2025 Nobel lecture lists Linnainmaa (1970), Werbos (1974), LeCun (1985), Parker (1985), Rumelhart, Hinton and Williams (1986) and Amari (1993) as inventors of the algorithm.",
+    "Both Schmidhuber and Hinton describe the 1986 paper's contribution as showing that backpropagation can learn useful internal representations in hidden layers."
+  ],
+  "crux": "The dispute is partly about whether Linnainmaa's 1970 reverse mode, published without reference to neural networks, counts as the invention of backpropagation or only as its mathematical precursor, and whether Werbos's 1974 thesis or his 1982 paper is the first description for neural networks. It is also about whether authors who reinvented a method without knowing the earlier work should credit it in their later surveys, a point on which Hinton's 2025 lecture now lists Linnainmaa among several inventors while Schmidhuber says it downplays him.",
+  "related": [
+    "deeplearning-origins",
+    "honda",
+    "turingaward",
+    "nobel2024",
+    "cnn"
+  ],
+  "instance_urls": [
+    "https://arxiv.org/pdf/1404.7828v1#page=8",
+    "https://people.idsia.ch/~juergen/who-invented-backpropagation-2014.html#:~:text=It%20is%20easy%20to%20find%20misleading%20accounts%20of%20BP%27s%20history%20%28as%20of%20July",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2014-July/027186.html",
+    "https://web.archive.org/web/20190329215039/https://plus.google.com/100849856540000067209/posts/gT8HuUSo9Uh",
+    "https://arxiv.org/pdf/1404.7828v4#page=11",
+    "https://web.archive.org/web/20150319215639/http://www.reddit.com/r/MachineLearning/comments/2xcyrl/i_am_j%C3%BCrgen_schmidhuber_ama/cp7gcdd",
+    "https://people.idsia.ch/~juergen/deep-learning-conspiracy.html#:~:text=LBH%20discuss%20the%20importance%20and%20problems%20of%20gradient%20descent%2Dbased",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#I:~:text=the%20claim%20above%20is%20plain%20wrong.%20He%20was%202nd%20of%203%20authors%20of%20an%20article",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#I:~:text=And%20the%20article",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#reply:~:text=It%20wasn%27t%20created%20by%20%22lots%20of%20different%20people%22%20but%20by%20exactly%20one",
+    "https://x.com/SchmidhuberAI/status/1253617620177301505",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XII:~:text=In%20fact%2C%20Hinton%20was%20co%2Dauthor%20of%20an%20article%20on%20backpropagation%20by",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XII:~:text=Nevertheless%2C%20he%20accepted%20the%20Honda%20Prize%20for%20%22creating%22%20the%20method",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XII:~:text=It%20wasn%27t%20created%20by%20%22lots%20of%20different%20people%22%20as%20Hinton%20suggested",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XXI:~:text=LeCun%20et%20al.%20neither%20cited%20the%20origins",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XIX:~:text=LeCun%20has%20never%20cited%20this%2C%20not%20even%20in%20recent%20work",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=Several%20times%2C%20LBH%20mention%20backpropagation%E2%80%94and%20LBH%27s%20papers%20on",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XII:~:text=In%20fact%2C%20Hinton%20was%20co%2Dauthor%20of%20an%20article%20on%20backpropagation%20by",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XII:~:text=Nevertheless%2C%20he%20accepted%20the%20Honda%20Prize%20for%20%22creating%22%20the%20method",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XII:~:text=It%20wasn%27t%20created%20by%20%22lots%20of%20different%20people%22%20as%20Hinton%20suggested",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XIX:~:text=LeCun%20has%20never%20cited%20this%E2%80%94not%20even%20in%20recent%20work.",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XXI:~:text=LeCun%20et%20al.%20neither%20cited%20the%20origins",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2021-November/036872.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2021-November/036893.html",
+    "https://arxiv.org/pdf/2212.11279v1#page=9",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#backprop:~:text=An%20experimental%20analysis%20of%20the%20known%20method",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lbhothers:~:text=Several%20times%2C%20LBH",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_who-invented-backpropagation-bp-its-modern-activity-7354090939369283585-PnG2",
+    "https://x.com/SchmidhuberAI/status/1950194864940835159",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#backprop:~:text=Unlike%20his%20pre%2D2025%20surveys%2C%20Hinton%27s%20very%20recent%202025%20paper",
+    "https://x.com/SchmidhuberAI/status/1975947200808288372",
+    "https://people.idsia.ch/~juergen/who-invented-deep-learning.html#backprop:~:text=In%201970%2C%20Seppo%20Linnainmaa%20was%20the%20first%20to%20publish%20what%27s%20now%20known",
+    "https://people.idsia.ch/~juergen/who-invented-backpropagation.html#:~:text=In%20the%202020s%2C%20it%20was%20still%20easy%20to%20find%20misleading%20accounts%20of%20BP%27s",
+    "https://people.idsia.ch/~juergen/who-invented-backpropagation.html#:~:text=An%20experimental%20analysis%20of%20the%20known%20method",
+    "https://people.idsia.ch/~juergen/who-invented-backpropagation.html#RUM:~:text=This%20experimental%20analysis%20of%20backpropagation%20did%20not%20cite%20the%20origin",
+    "https://people.idsia.ch/~juergen/who-invented-backpropagation.html#RUM:~:text=Even%20later%20surveys%20by%20the%20authors",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#footnote5:~:text=Unfortunately%2C%20several%20authors%20who%20republished%20backpropagation%20in%20the",
+    "https://arxiv.org/pdf/2212.11279v3#page=12",
+    "https://x.com/SchmidhuberAI/status/2065525109528330510",
+    "https://x.com/SchmidhuberAI/status/2087924087653814614"
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "id": "hopfield",
+  "title": "Hopfield networks",
+  "matchup": "Hopfield (1982) vs Amari (1972)",
+  "question": "Should the network now called the Hopfield network be credited to Amari's 1972 adaptive network of threshold elements, whose basic equations Schmidhuber says Hopfield republished in 1982?",
+  "usual_credit": {
+    "summary": "The Hopfield network, a recurrent network of binary threshold units with symmetric weights whose dynamics settle into stored patterns, is credited to John Hopfield's 1982 paper in the Proceedings of the National Academy of Sciences. Hopfield shared the 2024 Nobel Prize in Physics with Geoffrey Hinton, the committee's scientific background describes the 1982 paper as a dynamical model for an associative memory based on a simple recurrent neural network, and Hinton's Nobel lecture says Hopfield made the weights symmetric so that networks settle to a stable state.",
+    "works": [
+      {
+        "who": "Hopfield",
+        "year": 1982,
+        "title": "Neural networks and physical systems with emergent collective computational abilities",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC346238/"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says that Shun-Ichi Amari made the Lenz-Ising recurrent architecture adaptive in 1972, so that it could learn to associate input patterns with output patterns through weights that are correlations of the stored patterns, and that Hopfield republished the same basic equations in 1982 without citing that paper. He points out that Hopfield did cite two later Amari papers on self-organisation, that Kaoru Nakano (1972) and William Little (1974) had related models, and that Hopfield's own additions were an analysis of storage capacity and a Lyapunov function for sequential updates. He also says that Hopfield's 1984 analog version did not cite Cohen and Grossberg (1983).",
+    "prior_works": [
+      {
+        "who": "Amari",
+        "year": 1972,
+        "title": "Learning patterns and pattern sequences by self-organizing nets of threshold elements",
+        "url": "https://people.idsia.ch/~juergen/amari1972hopfield.pdf"
+      },
+      {
+        "who": "Nakano",
+        "year": 1972,
+        "title": "Associatron: a model of associative memory",
+        "url": "https://doi.org/10.1109/TSMC.1972.4309133"
+      },
+      {
+        "who": "Little",
+        "year": 1974,
+        "title": "The existence of persistent states in the brain",
+        "url": "https://doi.org/10.1016/0025-5564(74)90031-5"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "Shun-Ichi Amari published a learning recurrent neural network (1972) much later called the Hopfield network",
+        "date": "2022-12-31",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1609172536113127424"
+      },
+      {
+        "text": "Amari's approach was republished much later by Hopfield who used the same basic equations but failed to cite the prior work.",
+        "date": "2025-07-31",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#hopfield:~:text=Amari%27s%20approach%20was%20republished%20much%20later%20by%20Hopfield%20who%20used%20the"
+      },
+      {
+        "text": "he cites Amari's later papers on the separate topic of self-organisation in NNs (1977, 1978)",
+        "date": "2024-12-07",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#hopfield:~:text=Remarkably%2C%20Hopfield"
+      },
+      {
+        "text": "Look at Amari's 1972 paper: he had the same basic equations!",
+        "date": "2025-12-05",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1996985129009287530"
+      },
+      {
+        "text": "who did not cite Amari's 1972 work, not even in later papers",
+        "date": "2025-12-30",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#pillory:~:text=Case%202.%20In%201972%2C%20Shun%2DIchi%20Amari%20made%20the%20original%20Lenz%2DIsing"
+      }
+    ],
+    "times_made": 11,
+    "first_made": "2022-12",
+    "last_made": "2025-12"
+  },
+  "response": {
+    "summary": "Amari congratulated Hopfield and Hinton on 10 October 2024 and credited Hopfield with proposing the idea of associative memory in neural networks and assessing its capacity by computer simulation. In a March 2025 interview he said that Hopfield's paper cites a later paper of his on self-organisation but not his associative-memory paper, that he did not know why, and that an identical model had already been published in Japan. The Nobel committee's scientific background cites Nakano (1972), Amari (1972) and Little (1974) together as a parallel development inspired by magnetic systems. No public reply from Hopfield to Schmidhuber's claim was found, and Hopfield's Nobel lecture in Reviews of Modern Physics could not be opened.",
+    "quotes": [
+      {
+        "who": "Shun-ichi Amari (RIKEN statement)",
+        "text": "Dr. Hopfield proposed the idea of associative memory in neural networks, and led this field by using computer simulations to assess its capacity",
+        "date": "2024-10-10",
+        "url": "https://cbs.riken.jp/en/news/2024/20241010.html"
+      },
+      {
+        "who": "Shun-ichi Amari (interview, Science Japan)",
+        "text": "My paper on associative memory was not directly cited, but a subsequent paper I wrote on self-organization was cited.",
+        "date": "2025-03-27",
+        "url": "https://sj.jst.go.jp/stories/2025/s0327-01p.html"
+      },
+      {
+        "who": "Shun-ichi Amari (interview, Science Japan)",
+        "text": "an identical model to the Hopfield's associative memory model was already published in Japan",
+        "date": "2025-03-27",
+        "url": "https://sj.jst.go.jp/stories/2025/s0327-01p.html"
+      },
+      {
+        "who": "Nobel Committee for Physics (scientific background, Nobel Prize in Physics 2024)",
+        "text": "A parallel development took inspiration from magnetic systems, which were to create models for recurrent neural networks and investigate their collective properties [5-10].",
+        "date": "2024-10-08",
+        "url": "https://www.kva.se/app/uploads/2024/11/sciback_fy_en_24.pdf"
+      },
+      {
+        "who": "William Bialek (Princeton physicist, appreciation of Hopfield)",
+        "text": "Despite these and other precursors, Hopfield’s papers in 1982 and 1984 came as a surprise.",
+        "date": "2024-12-26",
+        "url": "https://arxiv.org/pdf/2412.18030"
+      },
+      {
+        "who": "Wikipedia, article 'Hopfield network' (on William Little's 1974 paper)",
+        "text": "who was acknowledged by Hopfield in his 1982 paper",
+        "date": "2026-11-03 (accessed)",
+        "url": "https://en.wikipedia.org/wiki/Hopfield_network"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Amari published 'Learning patterns and pattern sequences by self-organizing nets of threshold elements' in IEEE Transactions on Computers in 1972, and Hopfield published his paper in the Proceedings of the National Academy of Sciences in April 1982.",
+    "Hopfield's 1982 reference list includes two Amari papers on self-organisation, from 1977 and 1978, and not the 1972 paper, a point that Amari himself makes.",
+    "The 2024 Nobel committee's scientific background cites Nakano (1972), Amari (1972) and Little (1974) as earlier work on recurrent network models inspired by magnetic systems.",
+    "Schmidhuber's report credits Hopfield with an analysis of storage capacity and with a Lyapunov function for sequential neuron updates, in place of Amari's parallel updates."
+  ],
+  "crux": "The dispute is whether Amari's 1972 network and Hopfield's 1982 network are essentially the same model, differing mainly in parallel versus sequential updates, or whether Hopfield's energy function and capacity analysis make the 1982 paper an independent contribution. It also asks whether Hopfield, who cited two other Amari papers, owed a citation to the 1972 paper.",
+  "related": [
+    "nobel2024",
+    "boltzmann",
+    "nn-origins",
+    "elm"
+  ],
+  "instance_urls": [
+    "https://x.com/SchmidhuberAI/status/1609172536113127424",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2023-January/039216.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2023-January/039221.html",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#hopfield:~:text=Remarkably%2C%20Hopfield",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#hopfield:~:text=In%201984%2C%20Hopfield%20published%20an%20analog%20version",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#hopfield:~:text=The%20Nobel%20Committee%20for%20Physics",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#hopfield:~:text=Amari%27s%20approach%20was%20republished%20much%20later%20by%20Hopfield%20who%20used%20the",
+    "https://x.com/SchmidhuberAI/status/1996985129009287530",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#learningRNN:~:text=10%20years%20later%2C%20the%20basic%20equations%20of%20the%20Amari%20network%20were",
+    "https://arxiv.org/pdf/2212.11279v3#page=8",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#pillory:~:text=Case%202.%20In%201972%2C%20Shun%2DIchi%20Amari%20made%20the%20original%20Lenz%2DIsing"
+  ]
+}

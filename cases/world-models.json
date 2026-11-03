@@ -1,0 +1,157 @@
+{
+  "id": "world-models",
+  "title": "World models",
+  "matchup": "LeCun (2022) and earlier neural control work (Werbos, Nguyen and Widrow) vs Schmidhuber (1990)",
+  "question": "Did Schmidhuber's 1990 recurrent world models and curiosity-driven planning anticipate the approach to world models that LeCun now promotes, and does LeCun's work owe him credit, as he says?",
+  "usual_credit": {
+    "summary": "Learned world models for planning are currently associated with Yann LeCun's 2022 proposal and his 2025 company AMI Labs, with Ha and Schmidhuber's 2018 paper 'World Models', and with model-based reinforcement learning such as Sutton's Dyna. LeCun himself traces the concept to optimal control theory of the late 1950s and 1960s and to the neural-network system identification work of Werbos, Nguyen and Widrow in the late 1980s.",
+    "works": [
+      {
+        "who": "Y. LeCun",
+        "year": 2022,
+        "title": "A Path Towards Autonomous Machine Intelligence (OpenReview)",
+        "url": "https://openreview.net/forum?id=BZ5a1r-kVsf"
+      },
+      {
+        "who": "D. Ha, J. Schmidhuber",
+        "year": 2018,
+        "title": "World Models",
+        "url": "https://arxiv.org/abs/1803.10122"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says his February 1990 report 'Making the world differentiable' introduced a recurrent network that learns to predict all of an agent's sensory inputs, including reward and pain signals. A controller plans through this model and is intrinsically motivated to improve it, and he says the report was the first of its kind to call the predictor a 'world model'. He says LeCun's 2022 paper, 2015 slides and 2025 company repeat his 1990-1997 work on hierarchical world models, intrinsic motivation and planning without citation. He credits earlier feedforward-network work by Werbos, Munro and Nguyen and Widrow and calls the basic concept much older.",
+    "prior_works": [
+      {
+        "who": "J. Schmidhuber",
+        "year": 1990,
+        "title": "Making the world differentiable: On using fully recurrent self-supervised neural networks for dynamic reinforcement learning and planning in non-stationary environments (TR FKI-126-90)",
+        "url": "https://people.idsia.ch/~juergen/FKI-126-90ocr.pdf"
+      },
+      {
+        "who": "J. Schmidhuber",
+        "year": 1991,
+        "title": "A possibility for implementing curiosity and boredom in model-building neural controllers (SAB 1990 proceedings)",
+        "url": "https://sferics.idsia.ch/pub/juergen/curiositysab.pdf"
+      },
+      {
+        "who": "J. Schmidhuber",
+        "year": 2015,
+        "title": "On Learning to Think: Algorithmic Information Theory for Novel Combinations of Reinforcement Learning Controllers and Recurrent Neural World Models",
+        "url": "https://arxiv.org/abs/1511.09249"
+      },
+      {
+        "who": "J. Schmidhuber",
+        "year": 2026,
+        "title": "The Neural World Model Boom (Technical Note IDSIA-2-26)",
+        "url": "https://people.idsia.ch/~juergen/world-model-boom.html"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "I used the term world model for a recurrent NN (RNN) that learns to predict the agent's sensory inputs (including pain and reward signals)",
+        "date": "2026-02-05",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2019440903044436111"
+      },
+      {
+        "text": "Much of this goes back to 1990, when I introduced RNNs as general purpose world models.",
+        "date": "2026",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%2011:~:text=Much%20of%20this%20goes%20back%20to%201990%2C%20when%20I%20introduced%20RNNs%20as%20general"
+      },
+      {
+        "text": "This integrated architecture for learning, planning, and reacting was apparently published [AC90][PLAN2] before the important, related RL DYNA planner [DYNA90-91] cited by LeCun.",
+        "date": "2022-07-07",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#:~:text=This%20integrated%20architecture%20for%20learning%2C%20planning%2C%20and%20reacting%20was"
+      },
+      {
+        "text": "He did not cite my differentiable 1990 neural architecture for online learning & planning (through what's now called \"rollouts\")",
+        "date": "2023-12-14",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lecunintrinsic:~:text=He%20did%20not%20cite%20my%20differentiable%201990%20neural%20architecture%20for%20online"
+      }
+    ],
+    "times_made": 30,
+    "first_made": "2020-12",
+    "last_made": "2026-10"
+  },
+  "response": {
+    "summary": "LeCun wrote on LinkedIn in April 2026 that he did not invent world models and neither did Schmidhuber, and that the concept of a world model for planning comes from optimal control theory. He says that using a differentiable neural network model of a system to train a controller by backpropagation goes back at least to a 1990 IJCNN paper by Nguyen and Widrow, which he says predates Schmidhuber's work on the topic. He calls the 2018 Ha and Schmidhuber paper fine but without a new concept beyond Nguyen and Widrow other than the name, and says that showing ideas work matters more than who proposed them. Schmidhuber replied that he has always cited the earlier feedforward-network work, which LeCun's 2022 paper did not, and the 2022 OpenReview exchange between the two is known here from Schmidhuber's page.",
+    "quotes": [
+      {
+        "who": "Yann LeCun, LinkedIn post",
+        "text": "I did not \"invent\" world models, and neither did Jürgen.",
+        "date": "2026-04-17",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7451033888723894272/"
+      },
+      {
+        "who": "Yann LeCun, LinkedIn post",
+        "text": "goes back (at least) to an IJCNN 1990 paper by Nguyen and Widrow. This predates any work Jürgen did on the topic.",
+        "date": "2026-04-17",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7451033888723894272/"
+      },
+      {
+        "who": "Yann LeCun, LinkedIn post",
+        "text": "does not introduce any new concept beyond [Nguyen and Widrow 1990), other than the name \"world model\" in the title.",
+        "date": "2026-04-17",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7451033888723894272/"
+      },
+      {
+        "who": "Yann LeCun, OpenReview reply of 2022-07-14, as quoted on Schmidhuber's page",
+        "text": "the concept of differentiable world model goes back to early work in optimal control.",
+        "date": "2022-07-14",
+        "url": "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#addendum"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Schmidhuber's technical report FKI-126-90 is dated February 1990 and revised in November 1990, its planning part appeared at IJCNN 1990, and its curiosity part appeared in the SAB conference volume of 1991.",
+    "Werbos (1987-89) and Nguyen and Widrow (1989-90) published neural-network models of systems used to train controllers, and both sides cite this earlier work.",
+    "Ha and Schmidhuber's 'World Models' was posted on arXiv on 27 March 2018, and LeCun's 'A Path Towards Autonomous Machine Intelligence' on OpenReview on 27 June 2022.",
+    "LeCun gave a lecture on world models at Brown University on 1 April 2026, and his LinkedIn post of 17-18 April 2026 followed a post by Abdelaziz Testas about that lecture."
+  ],
+  "crux": "Whether Schmidhuber's 1990 report, which used a recurrent network as a model of the environment together with a controller and intrinsic motivation, adds something to the earlier feedforward-network modelling and control work that both sides cite. A second question is whether LeCun's later writing on world models and hierarchical planning needed to credit it. LeCun cites a 1990 Nguyen and Widrow paper while Schmidhuber's page cites their 1989 IJCNN paper, and which one LeCun means is not stated.",
+  "related": [
+    "jepa",
+    "gans",
+    "hierarchical-rl",
+    "deeprl",
+    "metalearning",
+    "reasoning"
+  ],
+  "instance_urls": [
+    "https://x.com/SchmidhuberAI/status/1344558333181702144",
+    "https://x.com/SchmidhuberAI/status/1544939700099710976",
+    "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#:~:text=This%20integrated%20architecture%20for%20learning%2C%20planning%2C%20and%20reacting%20was",
+    "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#:~:text=This%20is%20what%20I%20published%20in%20the%20context%20of%20control%20in%201997%2D2002",
+    "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#:~:text=The%20science%20tabloid%20article",
+    "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html",
+    "https://x.com/SchmidhuberAI/status/1732430359969571014",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lecunintrinsic:~:text=He%20did%20not%20cite%20my%20differentiable%201990%20neural%20architecture%20for%20online",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lecunmultiple:~:text=He%20did%20not%20mention%20that%20I%20implemented%20such%20an%20architecture%203%20decades",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lecunobserve:~:text=In%202022%2C%20LeCun%20emphasized%20NNs%20that%20%22learn%20to%20act%20largely%20by",
+    "https://people.idsia.ch/~juergen/world-models-planning-curiosity-fki-1990.html#abstract:~:text=This%20integrated%20architecture%20for%20learning%2C%20planning%2C%20and%20reacting%20was",
+    "https://people.idsia.ch/~juergen/blog.html#:~:text=%E2%98%85%202025%20update%3A%2035th%20anniversary%20of%20planning%20%26%20reinforcement%20learning",
+    "https://x.com/SchmidhuberAI/status/1991602243037196670",
+    "https://x.com/SchmidhuberAI/status/1991603632718913911",
+    "https://x.com/SchmidhuberAI/status/1991605057989521758",
+    "https://x.com/SchmidhuberAI/status/1991781863346827717",
+    "https://x.com/SchmidhuberAI/status/1991811917934133404",
+    "https://x.com/SchmidhuberAI/status/2002778835843187099",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_lecuns-2025-company-on-physical-ai-with-activity-7408790322610073600-xVZT",
+    "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%2011:~:text=Much%20of%20this%20goes%20back%20to%201990%2C%20when%20I%20introduced%20RNNs%20as%20general",
+    "https://people.idsia.ch/~juergen/world-model-boom.html#:~:text=%E2%98%85%201990%3A%20recurrent%20NNs%20as%20general%20purpose%20world%20models.%20In%201990%2C%20I",
+    "https://people.idsia.ch/~juergen/world-model-boom.html",
+    "https://x.com/SchmidhuberAI/status/2019440903044436111",
+    "https://arxiv.org/pdf/2005.05744v5#page=18",
+    "https://people.idsia.ch/~juergen/who-invented-jepa.html#:~:text=2.%20Neural%20AIs%20need%20what%20I%20baptized%20a%20neural%20world%20model%20in%201990",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_replying-9-hours-later-this-post-contains-activity-7451181237345574912-tPQg",
+    "https://people.idsia.ch/~juergen/who-invented-jepa.html#addendum1:~:text=LeCun%20keeps%20mentioning%20his%20%22NIPS%202016%20keynote%22%20on%20%22world%20models.%22%20It",
+    "https://people.idsia.ch/~juergen/who-invented-jepa.html#addendum1:~:text=LeCun%20spread%20additional%20falsehoods%20on%20social%20media%3A%20on%2018%20April%202026%2C",
+    "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#addendum4:~:text=then%20boldly%20claimed%20that%20my%201990%20world%20model%20paper",
+    "https://x.com/SchmidhuberAI/status/2109914111400370244"
+  ]
+}

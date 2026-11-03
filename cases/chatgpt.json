@@ -1,0 +1,139 @@
+{
+  "id": "chatgpt",
+  "title": "ChatGPT and its \"G\", \"P\" and \"T\"",
+  "matchup": "OpenAI (GPT and ChatGPT, 2018 to 2022) vs Schmidhuber's group at TU Munich (1990, 1991)",
+  "question": "Do the \"G\", \"P\" and \"T\" in ChatGPT have their roots in the 1990 and 1991 work of Schmidhuber's Munich group, as he says?",
+  "usual_credit": {
+    "summary": "OpenAI introduced ChatGPT on 30 November 2022, trained with reinforcement learning from human feedback on top of a GPT language model. GPT stands for generative pre-trained Transformer: the 2018 paper by Radford, Narasimhan, Salimans and Sutskever showed that generative pre-training of a language model on unlabeled text, followed by fine-tuning on each task, improved results on many language understanding tasks, using the Transformer architecture of Vaswani et al. (2017). Its related-work section names Dai and Le (2015) and Howard and Ruder (2018) as the closest earlier line of work.",
+    "works": [
+      {
+        "who": "OpenAI",
+        "year": 2022,
+        "title": "Introducing ChatGPT",
+        "url": "http://web.archive.org/web/20261028235044/https://openai.com/index/chatgpt/"
+      },
+      {
+        "who": "Alec Radford, Karthik Narasimhan, Tim Salimans and Ilya Sutskever",
+        "year": 2018,
+        "title": "Improving language understanding by generative pre-training",
+        "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf"
+      },
+      {
+        "who": "Ashish Vaswani et al.",
+        "year": 2017,
+        "title": "Attention is all you need",
+        "url": "https://arxiv.org/abs/1706.03762"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says the current boom in generative AI has its roots in the early 1990s at the Technical University of Munich, especially the \"G\", the \"P\" and the \"T\" in ChatGPT. He ties the \"T\" to his report of 26 March 1991 on fast weight controllers, which he describes as the first kind of Transformer, now called the unnormalized linear Transformer. He ties the \"P\" to his report of April 1991 on neural sequence chunkers, which used unsupervised pre-training in a hierarchy of recurrent networks, and the \"G\" to his 1990 principle of adversarial artificial curiosity, which he sees as the basis of generative adversarial networks. In a 2023 interview he put it more mildly, saying that ChatGPT is driven by the Transformer that Google described in 2017 and that he had a particular Transformer variant in 1991. He has repeated the three-part claim since January 2025, including in a June 2026 timeline on his site that carries a preface by David Ha of Sakana AI.",
+    "prior_works": [
+      {
+        "who": "Jürgen Schmidhuber",
+        "year": 1991,
+        "title": "Learning to control fast-weight memories: an alternative to recurrent nets (technical report FKI-147-91)",
+        "url": "https://people.idsia.ch/~juergen/FKI-147-91ocr.pdf"
+      },
+      {
+        "who": "Jürgen Schmidhuber",
+        "year": 1991,
+        "title": "Neural sequence chunkers (technical report FKI-148-91)",
+        "url": "https://people.idsia.ch/~juergen/FKI-148-91ocr.pdf"
+      },
+      {
+        "who": "Jürgen Schmidhuber",
+        "year": 1990,
+        "title": "Making the world differentiable (technical report FKI-126-90)",
+        "url": "https://people.idsia.ch/~juergen/FKI-126-90_(revised)bw_ocr.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "my TUM research group published principles of (1) the P in ChatGPT, (2) the T in ChatGPT, (3) GANs",
+        "date": "2026-02-27",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2027402110866784475"
+      },
+      {
+        "text": "has its roots in the early nineties at the Technical University of Munich, especially the \"G\" and the \"P\" and the \"T\" in \"ChatGPT.\"",
+        "date": "2025-01-23",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1882337549190123724"
+      },
+      {
+        "text": "It did not cite the 1991 publication on what's now called unnormalized \"linear Transformers\" with \"linearized self-attention.\"",
+        "date": "2025-11-09",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/who-invented-transformer-neural-networks.html"
+      },
+      {
+        "text": "in 1991, I had a particular Transformer variant",
+        "date": "2023-05-23",
+        "venue": "interview",
+        "url": "http://web.archive.org/web/20260925161613/https://www.forbes.com/sites/hessiejones/2023/05/23/juergen-schmidhuber-renowned-father-of-modern-ai-says-his-lifes-work-wont-lead-to-dystopia/"
+      }
+    ],
+    "times_made": 23,
+    "first_made": "2023-05",
+    "last_made": "2026-10"
+  },
+  "response": {
+    "summary": "I found no public reply from OpenAI to this claim. The 2018 GPT paper cites Hinton et al. (2006), Bengio et al. (2007) and others for unsupervised pre-training, names Dai and Le (2015) and Howard and Ruder (2018) as its closest line of work, adopts the Transformer of Vaswani et al., and has no reference to Schmidhuber's 1991 reports. It uses \"generative\" to describe pre-training of a language model, and it describes no adversarial training, which is the 1990 principle Schmidhuber links to that letter. Schlag, Irie and Schmidhuber (2021) showed a formal equivalence between linearised self-attention and the fast weight controllers of the early 1990s, after Katharopoulos et al. (2020) had published linear attention for Transformers; the Transformers used in GPT apply a softmax, which Schmidhuber's own account describes as the step from the linear to the quadratic variant.",
+    "quotes": [
+      {
+        "who": "Radford et al. (OpenAI GPT paper)",
+        "text": "The closest line of work to ours involves pre-training a neural network using a language modeling objective",
+        "date": "2018-06-11",
+        "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf"
+      },
+      {
+        "who": "Radford et al. (OpenAI GPT paper)",
+        "text": "generative pre-training of a language model on a diverse corpus of unlabeled text",
+        "date": "2018-06-11",
+        "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "OpenAI released ChatGPT on 30 November 2022 and says it was trained with reinforcement learning from human feedback, using the same methods as InstructGPT.",
+    "Vaswani et al. published \"Attention is all you need\" in 2017, and the 2018 GPT paper adopts the Transformer architecture from it.",
+    "Schmidhuber's technical report FKI-147-91 of 26 March 1991 describes a slow network that learns by gradient descent to program the fast weights of another network, and his report FKI-148-91 of April 1991 describes a hierarchy of recurrent networks trained without labels.",
+    "Schlag, Irie and Schmidhuber showed in 2021 that linearised self-attention is formally equivalent to the fast weight programmers of the early 1990s.",
+    "The reference list of the 2018 GPT paper does not include any work by Schmidhuber."
+  ],
+  "crux": "The sources differ on whether \"principles of\" a method published in 1990 or 1991 is a fair description of what the three letters stand for, given that GPT uses softmax attention, a language-modeling objective and an unrelated sense of \"generative\", and that its authors cite other predecessors. They also differ on how much weight the later authors' knowledge of the earlier reports carries.",
+  "related": [
+    "transformers",
+    "gans",
+    "pretraining",
+    "distillation",
+    "attention",
+    "reasoning"
+  ],
+  "instance_urls": [
+    "https://www.forbes.com/sites/hessiejones/2023/05/23/juergen-schmidhuber-renowned-father-of-modern-ai-says-his-lifes-work-wont-lead-to-dystopia",
+    "https://x.com/SchmidhuberAI/status/1761057748962124205",
+    "https://www.jazzyear.com/article_info.html?id=1352#:~:text=Something%20better%20than%20the%20Transformer",
+    "https://people.idsia.ch/~juergen/fast-weight-programmer-1991-transformer.html#tldr:~:text=Already%20in%201991%2C%20when%20compute%20was%20a%20million%20times%20more%20expensive%20than",
+    "https://people.idsia.ch/~juergen/GerJapUsaChiRobots.html#:~:text=What%20many%20people%20don%27t%20know%3A%20The%20current%20boom%20in%20%22Generative%20AI%22",
+    "https://x.com/SchmidhuberAI/status/1882337549190123724",
+    "https://x.com/SchmidhuberAI/status/1943965142745489533",
+    "https://x.com/SchmidhuberAI/status/1987550761916457218",
+    "https://people.idsia.ch/~juergen/who-invented-transformer-neural-networks.html",
+    "https://people.idsia.ch/~juergen/very-deep-learning-1991.html#:~:text=The%201991%20paper",
+    "https://web.archive.org/web/20260224155835/https://twitter.com/SchmidhuberAI/status/2026325896722813247",
+    "https://web.archive.org/web/20260224160029/https://twitter.com/SchmidhuberAI/status/2026326374085013955",
+    "https://web.archive.org/web/20260225080019/https://twitter.com/SchmidhuberAI/status/2026567924383887579",
+    "https://web.archive.org/web/20260225160003/https://twitter.com/SchmidhuberAI/status/2026688653431365931",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_1990-1991-has-become-really-important-in-activity-7432696250225045504-ysoa",
+    "https://x.com/SchmidhuberAI/status/2027402110866784475",
+    "https://x.com/SchmidhuberAI/status/2038127545950855529",
+    "https://people.idsia.ch/~juergen/ai-boom-roots-munich-1991.html#:~:text=%E2%98%85%2026%20March%201991%3A%20the%20first%20kind%20of%20Transformer%20%28see%20the%20T%20in",
+    "https://people.idsia.ch/~juergen/ai-boom-roots-munich-1991.html#:~:text=%E2%98%85%2030%20April%201991%3A%20Pre%2DTraining%20for%20deep%20neural%20networks%20%28NNs%29%E2%80%94the%20P%20in",
+    "https://x.com/SchmidhuberAI/status/2067872295150854165",
+    "https://people.idsia.ch/~juergen/ai-boom-roots-munich-1991.html",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_i-am-proud-of-the-work-my-team-did-in-munich-activity-7473642473047719937-KM6W",
+    "https://x.com/SchmidhuberAI/status/2107505357115314237"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "turing-test",
+  "title": "The Turing test",
+  "matchup": "Turing (1950) vs Descartes (1637)",
+  "question": "Should Descartes's earlier language test receive invention credit for what is now called the Turing test, as Schmidhuber suggests?",
+  "usual_credit": {
+    "summary": "Turing is credited with the imitation-game proposal in his 1950 paper Computing Machinery and Intelligence. The [Stanford Encyclopedia of Philosophy](https://plato.stanford.edu/archives/fall2024/entries/turing-test/) distinguishes this specific proposal from the broader idea of using behavior or language to judge intelligence. Its historical account already recognizes earlier anticipations, including Descartes and the Cartesian thinker Géraud de Cordemoy, without treating those antecedents as identical to every feature of Turing's game.",
+    "works": [
+      {
+        "who": "Alan M. Turing",
+        "year": 1950,
+        "title": "Computing Machinery and Intelligence",
+        "url": "https://courses.cs.umbc.edu/471/papers/turing_computing_machinery_and_intelligence.pdf"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says the test was anticipated or predefined by Descartes and suggests that Descartes test would be a more appropriate name. He cites a scholarly discussion of Descartes's influence and the Stanford encyclopedia's account of earlier language tests. This is a claim about priority for a criterion of intelligence, rather than a claim that Descartes described a twentieth-century digital computer or Turing's complete experimental arrangement.",
+    "prior_works": [
+      {
+        "who": "René Descartes",
+        "year": 1637,
+        "title": "Discourse on Method, Part Five (English selection)",
+        "url": "https://assets.donaldjenkins.com/documents/descartes-discourse-on-method-part-5.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "was actually predefined by Descartes.",
+        "date": "2022",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/turing-oversold.html#abstract:~:text=The%20famous%20so%2Dcalled%20%22Turing%20Test%22%20was%20actually%20predefined%20by"
+      },
+      {
+        "text": "should actually be called the \"Descartes Test.\"",
+        "date": "2022-12-22",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/deep-learning-history.html#learningRNN:~:text=%28Margin%20note%3A%20it%20has%20been%20pointed%20out%20that%20the%20famous%20%22Turing%20Test%22"
+      },
+      {
+        "text": "should actually be called the \"Descartes Test.\"",
+        "date": "2025-12-29",
+        "venue": "paper",
+        "url": "https://arxiv.org/pdf/2212.11279v3#page=8"
+      }
+    ],
+    "times_made": 3,
+    "first_made": "2022",
+    "last_made": "2025-12"
+  },
+  "response": {
+    "summary": "No direct public reply to Schmidhuber's renaming proposal was located in the sources reviewed. Graham Oppy and David Dowe's [standard reference account](https://plato.stanford.edu/archives/fall2024/entries/turing-test/) acknowledges Descartes's anticipation but reserves the most specific use of Turing test for Turing's 1950 proposal. Descartes's own [text](https://assets.donaldjenkins.com/documents/descartes-discourse-on-method-part-5.pdf) argues that machines could not use language flexibly as humans do, whereas Turing proposes a game for evaluating machine performance. Those differences leave a distinction between anticipating a criterion and originating the particular procedure named after Turing.",
+    "quotes": [
+      {
+        "who": "Graham Oppy and David Dowe",
+        "text": "a proposal made by Turing (1950) as a way of dealing with the question whether machines can think.",
+        "date": "2021-10-04",
+        "url": "https://plato.stanford.edu/archives/fall2024/entries/turing-test/"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Descartes discussed language and general behavior as ways to distinguish humans from machines in Discourse on Method, published in 1637: https://assets.donaldjenkins.com/documents/descartes-discourse-on-method-part-5.pdf",
+    "Turing's Computing Machinery and Intelligence appeared in Mind in October 1950: https://courses.cs.umbc.edu/471/papers/turing_computing_machinery_and_intelligence.pdf",
+    "The Stanford encyclopedia recognizes Descartes as an anticipation and reports scholarship on Turing's awareness of his language test: https://plato.stanford.edu/archives/fall2024/entries/turing-test/"
+  ],
+  "crux": "The dispute is whether an earlier language-based distinction between humans and machines should transfer invention credit for Turing's later imitation game. Priority for the broad idea, evidence of influence and originality of the specific test need to be judged separately.",
+  "related": [
+    "turing-computation",
+    "ai-origins"
+  ],
+  "instance_urls": [
+    "https://people.idsia.ch/~juergen/turing-oversold.html#abstract:~:text=The%20famous%20so%2Dcalled%20%22Turing%20Test%22%20was%20actually%20predefined%20by",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#learningRNN:~:text=%28Margin%20note%3A%20it%20has%20been%20pointed%20out%20that%20the%20famous%20%22Turing%20Test%22",
+    "https://arxiv.org/pdf/2212.11279v3#page=8"
+  ]
+}

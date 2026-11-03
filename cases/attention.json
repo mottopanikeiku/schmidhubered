@@ -1,0 +1,150 @@
+{
+  "id": "attention",
+  "title": "Neural attention",
+  "matchup": "Bahdanau, Cho & Bengio (2014) and Larochelle & Hinton (2010) vs Schmidhuber & Huber (1990-91) and Schmidhuber (1991-93)",
+  "question": "Should the learned glimpses of 2010 and the soft attention of 2014 be seen as building on Schmidhuber's 1990-93 neural attention systems, as he says?",
+  "usual_credit": {
+    "summary": "Bahdanau, Cho and Bengio (2014) are usually credited with attention for neural machine translation, in which a decoder learns a soft alignment over the encoder's states instead of relying on one fixed vector. The ACM's 2019 Turing Award announcement says Bengio's group introduced an attention mechanism that led to breakthroughs in machine translation. For glimpse-based visual attention, Larochelle and Hinton (2010) and Mnih et al. (2014) are the commonly cited systems.",
+    "works": [
+      {
+        "who": "D. Bahdanau, K. Cho, Y. Bengio",
+        "year": 2014,
+        "title": "Neural Machine Translation by Jointly Learning to Align and Translate",
+        "url": "https://arxiv.org/abs/1409.0473"
+      },
+      {
+        "who": "H. Larochelle, G. Hinton",
+        "year": 2010,
+        "title": "Learning to combine foveal glimpses with a third-order Boltzmann machine",
+        "url": "https://papers.nips.cc/paper_files/paper/2010/hash/677e09724f0e2df9b6c000b75b5da10d-Abstract.html"
+      },
+      {
+        "who": "V. Mnih, N. Heess, A. Graves, K. Kavukcuoglu",
+        "year": 2014,
+        "title": "Recurrent Models of Visual Attention",
+        "url": "https://arxiv.org/abs/1406.6247"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says two forms of neural attention already existed in his lab by 1990-93. The first was 'hard' attention in observation space, where a reinforcement-learning controller steers an artificial fovea (Schmidhuber and Huber, 1990-91), and the second was 'soft' attention in the latent space of fast weight programmers, whose 1993 recurrent extension spoke of learning 'internal spotlights of attention'. He says the 2010 and 2014 papers did not cite this work, and that Hinton, whom he describes as the reviewer of his 1990 paper, later called his own 2010 system the first of its kind. The soft-attention part of the claim overlaps with the Transformer dispute.",
+    "prior_works": [
+      {
+        "who": "J. Schmidhuber, R. Huber",
+        "year": 1990,
+        "title": "Learning to generate focus trajectories for attentive vision (TR FKI-128-90, TU Munich)",
+        "url": "https://people.idsia.ch/~juergen/FKI-128-90ocr.pdf"
+      },
+      {
+        "who": "J. Schmidhuber, R. Huber",
+        "year": 1991,
+        "title": "Learning to generate artificial fovea trajectories for target detection (Int. J. Neural Systems 2)",
+        "url": "https://sferics.idsia.ch/pub/juergen/attention.pdf"
+      },
+      {
+        "who": "J. Schmidhuber",
+        "year": 1991,
+        "title": "Learning to control fast-weight memories: An alternative to recurrent nets (TR FKI-147-91)",
+        "url": "https://people.idsia.ch/~juergen/FKI-147-91ocr.pdf"
+      },
+      {
+        "who": "J. Schmidhuber",
+        "year": 1993,
+        "title": "Reducing the ratio between learning complexity and number of time-varying variables in fully recurrent nets (ICANN 1993)",
+        "url": "https://sferics.idsia.ch/pub/juergen/ratio.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "Bengio's work on soft \"attention\"[ATT14] failed to cite my much earlier original work of 1991-1993 on soft attention",
+        "date": "2023-12-14",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengioatt:~:text=However%2C%20Bengio%27s%20work%20on%20soft%20%22attention%22"
+      },
+      {
+        "text": "a quarter-century ago we had the first neural network trained with reinforcement learning (RL) to sequentially attend to relevant regions of an input image,",
+        "date": "2015-03-04",
+        "venue": "Reddit",
+        "url": "https://web.archive.org/web/20150305162349/http://www.reddit.com/r/MachineLearning/comments/2xcyrl/i_am_j%C3%BCrgen_schmidhuber_ama/cp43am1"
+      },
+      {
+        "text": "LBH mention \"RNNs that use reinforcement learning to decide where to look\" but not that they were introduced a quarter-century ago (Schmidhuber & Huber, 1991).",
+        "date": "2015-06",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/deep-learning-conspiracy.html#:~:text=In%20their%20outlook%2C%20LBH%20mention%20%22RNNs%20that%20use%20reinforcement%20learning"
+      },
+      {
+        "text": "an attention mechanism[ATT14] that isn't linearized like the 1991-93 attention[FWP0-2] but includes a nonlinear softmax operation",
+        "date": "2025-11",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/who-invented-transformer-neural-networks.html#2014:~:text=In%202014%2C%20this%20approach%20was%20combined%20with%20an%20attention%20mechanism"
+      },
+      {
+        "text": "The nomenclature has changed, but in 1991, there was already what is now called an unnormalized linear Transformer with \"linearized self-attention\"",
+        "date": "2024-12-05",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1864701357107634390"
+      }
+    ],
+    "times_made": 18,
+    "first_made": "1996-02",
+    "last_made": "2026-02"
+  },
+  "response": {
+    "summary": "No reply from Bahdanau, Cho, Bengio or Larochelle to the specific 1990-93 claims was found. Bahdanau described the origin of the 2014 mechanism in an email that Andrej Karpathy published in December 2024 (read here from a screenshot). He says the idea arose independently of Neural Turing Machines, Memory Networks and some relevant cog-sci papers from the 1990s, without naming Schmidhuber, and Karpathy added that similar ideas were in the air at the time. The 2010 paper by Larochelle and Hinton calls its system the first implemented one that jointly trains a recognition component and a fixation controller, and Schmidhuber replied under Karpathy's post that the 1991 linear Transformer already contained what is now called linearized self-attention.",
+    "quotes": [
+      {
+        "who": "Dzmitry Bahdanau, in an email of 2022-09-01 published by Andrej Karpathy (read from a screenshot)",
+        "text": "was independent from Neural Turing Machines, Memory Networks, as well as some relevant cog-sci papers from the 90s",
+        "date": "2024-12-03",
+        "url": "https://x.com/karpathy/status/1864023344435380613"
+      },
+      {
+        "who": "Andrej Karpathy, on X",
+        "text": "similar ideas and formulations \"in the air\"",
+        "date": "2024-12-03",
+        "url": "https://x.com/karpathy/status/1864023344435380613"
+      },
+      {
+        "who": "H. Larochelle and G. Hinton, NIPS 2010",
+        "text": "this is the first implemented system for combining glimpses that jointly trains a recognition component (the RBM) with an attentional component",
+        "date": "2010-12",
+        "url": "https://papers.nips.cc/paper_files/paper/2010/file/677e09724f0e2df9b6c000b75b5da10d-Paper.pdf"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Bahdanau, Cho and Bengio posted 'Neural Machine Translation by Jointly Learning to Align and Translate' on arXiv on 1 September 2014, and the paper cites Hochreiter and Schmidhuber's 1997 LSTM paper but not Schmidhuber's 1991-93 attention work.",
+    "Schmidhuber and Huber's 'Learning to generate artificial fovea trajectories for target detection' appeared in the International Journal of Neural Systems in 1991, based on a 1990 technical report.",
+    "Larochelle and Hinton presented 'Learning to combine foveal glimpses with a third-order Boltzmann machine' at NIPS 2010, and its reference list does not include Schmidhuber and Huber.",
+    "Mnih et al. posted 'Recurrent Models of Visual Attention' on arXiv in June 2014, citing Larochelle and Hinton (2010) and Hochreiter and Schmidhuber (1997).",
+    "The ACM's announcement of 27 March 2019 says Bengio's group 'introduced a form of attention mechanism which led to breakthroughs in machine translation'."
+  ],
+  "crux": "Whether sequential, learned focusing of a network on selected parts of its input, as in the 1990-93 systems, is the same idea as the 2010 glimpse model and the 2014 alignment mechanism. The alternative is that the later systems differ enough in what is learned and how, for example in the softmax alignment over encoder states. A related question is whether the later authors knew of the earlier work, which the sources reviewed do not settle.",
+  "related": [
+    "transformers",
+    "speech-lstm",
+    "turingaward",
+    "honda"
+  ],
+  "instance_urls": [
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/1996-February/016952.html",
+    "https://web.archive.org/web/20150305162349/http://www.reddit.com/r/MachineLearning/comments/2xcyrl/i_am_j%C3%BCrgen_schmidhuber_ama/cp43am1",
+    "https://people.idsia.ch/~juergen/deep-learning-conspiracy.html#:~:text=In%20their%20outlook%2C%20LBH%20mention%20%22RNNs%20that%20use%20reinforcement%20learning",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XVI:~:text=Two%20decades%20later%20Hinton%20wrote%20about%20his%20own%20work",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XVI:~:text=Nevertheless%2C%20already%20in%201990%2D93%2C%20we%20had%20both%20of%20the%20now%20common%20types",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=dedicate%20an%20extra%20section%20to%20attention%2Dbased%20Transformers%2C",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#B:~:text=It%20should%20be%20mentioned%20that%20further%20improvements%20were%20due%20to%20an",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XVI:~:text=However%2C%20already%20in%201990%2D93%2C%20we%20had%20both%20of%20the%20now%20common%20types%20of",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XVI:~:text=Two%20decades%20later%20Hinton%20wrote%20about%20his%20own%20work%3A",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengioatt:~:text=However%2C%20Bengio%27s%20work%20on%20soft%20%22attention%22",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonatt:~:text=Astonishingly%2C%2020%20years%20later%2C%20Hinton%20republished%20very%20similar%20work",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#B4",
+    "https://x.com/SchmidhuberAI/status/1864701357107634390",
+    "https://people.idsia.ch/~juergen/neural-attention-1990-1993.html#abstract:~:text=That%20is%2C%20back%20then%20we%20already%20had%20both%20of%20the%20now%20common%20types%20of",
+    "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%209:~:text=As%20with%20the%20work%20of%20Sepp%20%28see%20Sec.%203%29%2C%20this%20has%20often%20been",
+    "https://people.idsia.ch/~juergen/who-invented-transformer-neural-networks.html#2014:~:text=In%202014%2C%20this%20approach%20was%20combined%20with%20an%20attention%20mechanism",
+    "https://people.idsia.ch/~juergen/who-invented-transformer-neural-networks.html#ATT14:~:text=This%20work%20on%20soft%20%22attention%22%20did%20not%20cite%20the%20much%20earlier%20original",
+    "https://arxiv.org/pdf/2005.05744v5#page=17"
+  ]
+}

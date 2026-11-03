@@ -1,0 +1,94 @@
+{
+  "id": "elm",
+  "title": "Extreme Learning Machines",
+  "matchup": "Huang, Zhu and Siew (2004–2006) vs Rosenblatt (1958–1962) and earlier random-feature networks",
+  "question": "Should the basic Extreme Learning Machine architecture be credited as a continuation of Rosenblatt's random-hidden-layer networks rather than as a new learning scheme, as Schmidhuber argues?",
+  "usual_credit": {
+    "summary": "Guang-Bin Huang, Qin-Yu Zhu and Chee-Kheong Siew introduced the Extreme Learning Machine name for a feedforward-network scheme with randomly chosen hidden-layer parameters and analytically fitted output weights. Their 2004 conference paper and 2006 journal paper emphasized training speed and gave mathematical arguments for this approach. The relevant credit is for that named algorithm and its claimed theory, rather than an uncontested claim that these authors were the first people ever to use random features.",
+    "works": [
+      {
+        "who": "Guang-Bin Huang, Qin-Yu Zhu and Chee-Kheong Siew",
+        "year": 2004,
+        "title": "Extreme Learning Machine: A New Learning Scheme of Feedforward Neural Networks",
+        "url": "https://5325c351-3003-48a6-8c0c-064bc9dfa4bd.filesusr.com/ugd/5256f1_59db5e1e0320496b848f13013f31cf39.pdf"
+      },
+      {
+        "who": "Guang-Bin Huang, Qin-Yu Zhu and Chee-Kheong Siew",
+        "year": 2006,
+        "title": "Extreme learning machine: Theory and applications",
+        "url": "http://elm2014.extreme-learning-machines.org/pdf/ELM-NC-2006.pdf"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says Rosenblatt already described multilayer perceptrons with a fixed randomized first layer and an adaptive output layer, which he regards as the essential ELM arrangement. He therefore argues that the later name obscures an earlier invention and that the original work deserved citation. He links a broader criticism of ELM's relationship to random-vector functional-link and other networks, but his own distinctive priority claim reaches back to Rosenblatt rather than only to the 1980s and 1990s.",
+    "prior_works": [
+      {
+        "who": "Frank Rosenblatt",
+        "year": 1962,
+        "title": "Principles of Neurodynamics: Perceptrons and the Theory of Brain Mechanisms",
+        "url": "https://archive.org/details/principles-of-neurodynamics"
+      },
+      {
+        "who": "Wouter F. Schmidt, Martin A. Kraaijveld and Robert P. W. Duin",
+        "year": 1992,
+        "title": "Feed forward neural networks with random weights",
+        "url": "https://5325c351-3003-48a6-8c0c-064bc9dfa4bd.filesusr.com/ugd/5256f1_854821ba446049919148523585039bcb.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "So Rosenblatt basically had what much later was rebranded as \"Extreme Learning Machines (ELMs).\"",
+        "date": "2022-01-31",
+        "venue": "other",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-January/037265.html"
+      },
+      {
+        "text": "This was much later rebranded as “Extreme Learning Machines.\"",
+        "date": "2022-06-28",
+        "venue": "other",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-June/038286.html"
+      },
+      {
+        "text": "Rosenblatt basically had what much later was rebranded as Extreme Learning Machines (ELMs) without proper attribution.",
+        "date": "2025-11",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/who-invented-deep-learning.html#1stdl:~:text=However%2C%20Rosenblatt%20basically%20had%20what%20much%20later%20was%20rebranded%20as"
+      }
+    ],
+    "times_made": 8,
+    "first_made": "2022-01",
+    "last_made": "2025-11"
+  },
+  "response": {
+    "summary": "Huang's [2015 paper on the origins dispute](http://elm2013.extreme-learning-machines.org/pdf/ELM-Rosenblatt-Neumann.pdf) predates Schmidhuber's catalogued statements but directly addresses the broader claim that ELM simply duplicates earlier networks. It acknowledges Rosenblatt and several earlier random-network approaches, while claiming broader approximation theory, generalized hidden nodes and additional learning settings as substantive extensions. Huang also says earlier work was cited in subsequent ELM publications and distinguishes that later citation record from what the first papers contained. This is a defense of technical novelty and attribution in the wider controversy, not a located point-by-point reply to Schmidhuber's 2022 message.",
+    "quotes": [
+      {
+        "who": "Guang-Bin Huang",
+        "text": "ELM actually provides a unifying learning platform for wide types of neural networks and machine learning techniques",
+        "date": "2015-05-15",
+        "url": "http://elm2013.extreme-learning-machines.org/pdf/ELM-Rosenblatt-Neumann.pdf"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "The 2004 ELM paper selects input weights and hidden-layer biases without iterative fitting and solves for output weights with a generalized inverse: https://5325c351-3003-48a6-8c0c-064bc9dfa4bd.filesusr.com/ugd/5256f1_59db5e1e0320496b848f13013f31cf39.pdf",
+    "Rosenblatt published Principles of Neurodynamics in 1962: https://archive.org/details/principles-of-neurodynamics",
+    "Huang's 2015 origins paper explicitly discusses Rosenblatt, Schmidt and colleagues, and RVFL networks: http://elm2013.extreme-learning-machines.org/pdf/ELM-Rosenblatt-Neumann.pdf"
+  ],
+  "crux": "The dispute is whether the shared fixed-random-hidden-layer and learned-output structure is enough to establish priority for the basic ELM method, or whether the later solver, theory and extensions justify separate invention credit. That technical question should be distinguished from whether a particular paper adequately cited earlier work.",
+  "related": [
+    "nn-origins",
+    "minsky"
+  ],
+  "instance_urls": [
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-January/037265.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-February/037272.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-June/038286.html",
+    "https://arxiv.org/pdf/2212.11279v1#page=7",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#mlp:~:text=Rosenblatt%20basically%20had%20what%20much%20later%20was%20rebranded%20as%20Extreme",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#pillory:~:text=Case%201.%20Around%201960%2C%20Frank%20Rosenblatt%20not%20only%20had%20linear%20NNs%20plus",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#ELM1:~:text=This%20paper%20does%20not%20mention%20that%20the%20%22ELM%22%20concept%20goes%20back%20to",
+    "https://people.idsia.ch/~juergen/who-invented-deep-learning.html#1stdl:~:text=However%2C%20Rosenblatt%20basically%20had%20what%20much%20later%20was%20rebranded%20as"
+  ]
+}

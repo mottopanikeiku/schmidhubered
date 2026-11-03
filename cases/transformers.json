@@ -1,0 +1,170 @@
+{
+  "id": "transformers",
+  "title": "Transformers",
+  "matchup": "Vaswani et al. (2017) vs Schmidhuber (1991, 1992)",
+  "question": "Should the 2017 Transformer be seen as a descendant of Schmidhuber's 1991 fast weight programmers, as he says?",
+  "usual_credit": {
+    "summary": "Ashish Vaswani and seven co-authors, most of them at Google, introduced the Transformer in 'Attention Is All You Need' at NIPS 2017, a sequence model built from stacked multi-head softmax self-attention layers with positional encodings and no recurrence. The architecture is the basis of BERT, the GPT models and most large language models since, and Katharopoulos et al. (2020) later described a linear-attention variant under the name 'linear Transformer'.",
+    "works": [
+      {
+        "who": "A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, L. Kaiser, I. Polosukhin",
+        "year": 2017,
+        "title": "Attention Is All You Need",
+        "url": "https://arxiv.org/abs/1706.03762"
+      },
+      {
+        "who": "A. Katharopoulos, A. Vyas, N. Pappas, F. Fleuret",
+        "year": 2020,
+        "title": "Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention",
+        "url": "https://arxiv.org/abs/2006.16236"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says his 26 March 1991 report on 'fast weight controllers' described a slow network that learns by gradient descent to generate key-like and value-like patterns whose outer products program the weights of a fast network. He says this is mathematically what is now called an unnormalized linear Transformer, apart from the normalization. He adds that a 1993 follow-up used the word 'attention', that the 2017 quadratic Transformer combines the 1991 additive outer-product principle with a softmax, and that the 2017 paper did not cite the 1991 work. The 2021 ICML paper by Schlag, Irie and Schmidhuber states the formal equivalence.",
+    "prior_works": [
+      {
+        "who": "J. Schmidhuber",
+        "year": 1991,
+        "title": "Learning to control fast-weight memories: An alternative to recurrent nets (TR FKI-147-91, TU Munich, 26 March 1991)",
+        "url": "https://people.idsia.ch/~juergen/FKI-147-91ocr.pdf"
+      },
+      {
+        "who": "J. Schmidhuber",
+        "year": 1992,
+        "title": "Learning to control fast-weight memories: An alternative to recurrent nets (Neural Computation 4(1))",
+        "url": "https://sferics.idsia.ch/pub/juergen/fastweights.pdf"
+      },
+      {
+        "who": "J. Schmidhuber",
+        "year": 1993,
+        "title": "Reducing the ratio between learning complexity and number of time-varying variables in fully recurrent nets (ICANN 1993)",
+        "url": "https://sferics.idsia.ch/pub/juergen/ratio.pdf"
+      },
+      {
+        "who": "I. Schlag, K. Irie, J. Schmidhuber",
+        "year": 2021,
+        "title": "Linear Transformers Are Secretly Fast Weight Programmers (ICML 2021)",
+        "url": "https://arxiv.org/abs/2102.11174"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "30 years ago: Transformers with linearized self-attention in NECO 1992, equivalent to fast weight programmers (apart from normalization), separating storage and control.",
+        "date": "2022-10-03",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1576966129993797632"
+      },
+      {
+        "text": "This is mathematically equivalent (apart from normalization) to what was later called a Transformer with linearized self-attention",
+        "date": "2025",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/fast-weight-programmer-1991-transformer.html#sec2:~:text=This%20is%20mathematically%20equivalent%20%28apart%20from%20normalization%29%20to%20what"
+      },
+      {
+        "text": "It did not cite the 1991 publication on what's now called unnormalized \"linear Transformers\" with \"linearized self-attention.\"",
+        "date": "2025-11-09",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/who-invented-transformer-neural-networks.html"
+      },
+      {
+        "text": "The quadratic Transformer combines the 1991 additive outer product fast weight principle [FWP0-2] and softmax (see 2014 above)",
+        "date": "2026-06-19",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2067874367095116240"
+      }
+    ],
+    "times_made": 56,
+    "first_made": "2021-03",
+    "last_made": "2026-10"
+  },
+  "response": {
+    "summary": "No public reply to the 1991 claim from the authors of the 2017 paper was found. The paper presents the Transformer as the first transduction model relying entirely on self-attention, and its references include memory networks and Hochreiter and Schmidhuber's 1997 LSTM paper but no fast weight work. The English Wikipedia article on Transformers now describes the 1992 fast weight controller and says it was later shown to be equivalent to the unnormalized linear Transformer, citing the 2021 paper that Schmidhuber co-authored.",
+    "quotes": [
+      {
+        "who": "Vaswani et al., 'Attention Is All You Need'",
+        "text": "the Transformer is the first transduction model relying entirely on self-attention to compute representations of its input and output",
+        "date": "2017-06-12",
+        "url": "https://arxiv.org/pdf/1706.03762"
+      },
+      {
+        "who": "Wikipedia, 'Transformer (deep learning architecture)', text as retrieved on 2026-11-03",
+        "text": "This was later shown to be equivalent to the unnormalized linear transformer.",
+        "date": "2026-11-03",
+        "url": "https://en.wikipedia.org/wiki/Transformer_%28deep_learning_architecture%29"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Schmidhuber's technical report FKI-147-91, 'Learning to control fast-weight memories: An alternative to recurrent nets', is dated 26 March 1991, and the journal version appeared in Neural Computation 4(1) in 1992.",
+    "Vaswani et al. posted 'Attention Is All You Need' on arXiv on 12 June 2017 and presented it at NIPS 2017.",
+    "The 2017 paper cites Hochreiter and Schmidhuber's 1997 LSTM paper and a 2001 gradient-flow paper co-authored by Schmidhuber, and it does not cite the 1991 or 1992 fast weight papers.",
+    "Katharopoulos et al. introduced the term 'linear Transformer' at ICML 2020 and do not cite the fast weight papers, and Schlag, Irie and Schmidhuber published 'Linear Transformers Are Secretly Fast Weight Programmers' at ICML 2021.",
+    "Softmax attention in the 2017 Transformer has costs that grow quadratically with sequence length, while linearized attention scales linearly, and Schmidhuber's own page makes the same distinction."
+  ],
+  "crux": "Whether a system with softmax attention, as in the 2017 Transformer, counts as a variant of a 1991 system with additive outer-product memory and no softmax, which Schmidhuber's group has shown equivalent to linear attention only 'apart from normalization'. A second question is whether leaving the 1991 report out of the 2017 reference list, and out of later linear-attention papers, was a failure to credit earlier work or a reasonable reading of what was new.",
+  "related": [
+    "attention",
+    "chatgpt",
+    "pretraining",
+    "metalearning"
+  ],
+  "instance_urls": [
+    "https://x.com/SchmidhuberAI/status/1375345693758521345",
+    "https://people.idsia.ch/~juergen/fast-weight-programmer-1991-transformer.html",
+    "https://x.com/SchmidhuberAI/status/1576966129993797632",
+    "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#addendum2:~:text=We%20published%20Transformers%20with%20linearized%20self%2Dattention%20in%201991",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2023-January/039134.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2023-March/039524.html",
+    "https://www.forbes.com/sites/hessiejones/2023/05/23/juergen-schmidhuber-renowned-father-of-modern-ai-says-his-lifes-work-wont-lead-to-dystopia",
+    "https://www.jazzyear.com/article_info.html?id=1352#:~:text=Something%20better%20than%20the%20Transformer",
+    "https://x.com/SchmidhuberAI/status/1864701357107634390",
+    "https://people.idsia.ch/~juergen/fast-weight-programmer-1991-transformer.html#tldr:~:text=Already%20in%201991%2C%20when%20compute%20was%20a%20million%20times%20more%20expensive%20than",
+    "https://people.idsia.ch/~juergen/fast-weight-programmer-1991-transformer.html#sec2:~:text=This%20is%20mathematically%20equivalent%20%28apart%20from%20normalization%29%20to%20what",
+    "https://people.idsia.ch/~juergen/1991-unnormalized-linear-transformer.html#:~:text=In%20March%201991%2C%20when%20compute%20was%20millions%20of%20times%20more%20expensive%20than",
+    "https://people.idsia.ch/~juergen/1991-unnormalized-linear-transformer.html#:~:text=It%20had%20to%20be%20more%20efficient%20than%20Google%27s%202017%20quadratic%20Transformer%3A",
+    "https://people.idsia.ch/~juergen/1991-unnormalized-linear-transformer.html#:~:text=This%20is%20mathematically%20equivalent%20to%20what%20was%20later%20called%20an",
+    "https://people.idsia.ch/~juergen/2010s-our-decade-of-deep-learning.html#:~:text=In%20March%201991%2C%20when%20compute%20was%20a%20million%20times%20more%20expensive%20than",
+    "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%208:~:text=In%20March%201991%2C%20when%20compute%20was%20a%20million%20times%20more%20expensive%20than",
+    "https://people.idsia.ch/~juergen/who-invented-transformer-neural-networks.html#1991:~:text=%E2%98%85%201991.%20Original%20tech%20report%20on%20what%27s%20now%20called%20the%20unnormalized",
+    "https://people.idsia.ch/~juergen/who-invented-transformer-neural-networks.html#2017:~:text=Modern%20quadratic%20Transformer%20%28%22attention%20is%20all%20you%20need%22%29%2C%20scaling",
+    "https://people.idsia.ch/~juergen/who-invented-transformer-neural-networks.html#2020",
+    "https://people.idsia.ch/~juergen/who-invented-transformer-neural-networks.html#2021",
+    "https://people.idsia.ch/~juergen/who-invented-transformer-neural-networks.html#TR1:~:text=This%20paper%20introduced%20the%20name%20%22Transformers%22%20for%20a%20now%20widely%20used",
+    "https://people.idsia.ch/~juergen/who-invented-transformer-neural-networks.html#LT25:~:text=%22Mamba2%22%20is%20the%201991%20ULTRA%20with%20a%20scalar%20time%2Ddecay%20factor%20on%20the",
+    "https://people.idsia.ch/~juergen/blog.html#:~:text=%E2%98%85%20Nov%202025.%20Who%20Invented%20Transformer%20Neural%20Networks%3F%20The%20T%20in",
+    "https://x.com/SchmidhuberAI/status/1987550761916457218",
+    "https://people.idsia.ch/~juergen/who-invented-transformer-neural-networks.html",
+    "https://x.com/SchmidhuberAI/status/1987843731613995183",
+    "https://x.com/SchmidhuberAI/status/1987848980890312820",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_who-invented-transformer-neural-networks-activity-7393920732793262081-rSaL",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#transformer:~:text=In%201991%2C%20Schmidhuber%20published%20the%20original%20tech%20report%20on%20what%27s%20now",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#transformer:~:text=In%202021%2C%20it%20was%20pointed%20out%20that%20the%20unnormalised%20linear%20Transformer",
+    "https://arxiv.org/pdf/2212.11279v3#page=19",
+    "https://arxiv.org/pdf/2212.11279v3#page=20",
+    "https://people.idsia.ch/~juergen/very-deep-learning-1991.html#:~:text=The%201991%20paper",
+    "https://x.com/SchmidhuberAI/status/2011684335779549289",
+    "https://people.idsia.ch/~juergen/most-cited-papers-of-all-time.html#:~:text=It%27s%20a%20type%20of%20Fast%20Weight%20Programmer%20based%20on%20principles%20of",
+    "https://arxiv.org/pdf/2005.05744v5#page=14",
+    "https://people.idsia.ch/~juergen/most-cited-neural-nets.html#:~:text=The%20third%20most%2Dcited%20AI%20paper%20of%20the%2021st%20century",
+    "https://www.linkedin.com/posts/dr-gabriel-seiberth-09245b12_recurrence-strikes-back-attention-is-not-activity-7465727673483464704-AGVB",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#effect:~:text=An%20international%20team%20at%20Google%20published%20a%20famous%202017%20paper%20on",
+    "https://people.idsia.ch/~juergen/ai-boom-roots-munich-1991.html#:~:text=%E2%98%85%2026%20March%201991%3A%20the%20first%20kind%20of%20Transformer%20%28see%20the%20T%20in",
+    "https://x.com/SchmidhuberAI/status/2067872295150854165",
+    "https://x.com/SchmidhuberAI/status/2067874367095116240",
+    "https://x.com/SchmidhuberAI/status/2067986578182390035",
+    "https://people.idsia.ch/~juergen/ai-boom-roots-munich-1991.html",
+    "https://x.com/SchmidhuberAI/status/2068702715555754059",
+    "https://x.com/SchmidhuberAI/status/2071457958542606723",
+    "https://people.idsia.ch/~juergen/1991-unnormalized-linear-transformer.html",
+    "https://people.idsia.ch/~juergen/recursive-self-improvement.html#secFAST:~:text=Transformers%20with%20linearized%20self%2Dattention",
+    "https://x.com/SchmidhuberAI/status/2095065007834689975",
+    "https://x.com/SchmidhuberAI/status/2101001603197079745",
+    "https://x.com/SchmidhuberAI/status/2107032702222262496",
+    "https://x.com/SchmidhuberAI/status/2107033169413251136",
+    "https://x.com/SchmidhuberAI/status/2107042604177084570",
+    "https://x.com/SchmidhuberAI/status/2107481338974462170",
+    "https://x.com/SchmidhuberAI/status/2107505357115314237",
+    "https://x.com/SchmidhuberAI/status/2113615666972619047"
+  ]
+}

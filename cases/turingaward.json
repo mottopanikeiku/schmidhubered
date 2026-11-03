@@ -1,0 +1,247 @@
+{
+  "id": "turingaward",
+  "title": "2018 Turing Award and 2021 Turing Lecture",
+  "matchup": "Bengio, Hinton and LeCun (2018 ACM Turing Award, 2021 Turing Lecture) vs Ivakhnenko, Amari, Linnainmaa, Fukushima and Schmidhuber's own group",
+  "question": "Do ACM's 2018 Turing Award citation and the 2021 Turing Lecture credit Bengio, Hinton and LeCun for work that earlier researchers published first, as Schmidhuber says?",
+  "usual_credit": {
+    "summary": "On 27 March 2019 ACM named Yoshua Bengio, Geoffrey Hinton and Yann LeCun recipients of the 2018 A.M. Turing Award for conceptual and engineering breakthroughs that have made deep neural networks an important component of computing. The announcement says that, working independently and together, the three developed conceptual foundations for the field, identified surprising phenomena through experiments, and contributed engineering advances, and it links their work to progress in computer vision, speech recognition and natural language processing. In 2021 the three gave a Turing Lecture on deep learning that was published in Communications of the ACM.",
+    "works": [
+      {
+        "who": "ACM",
+        "year": 2019,
+        "title": "Fathers of the Deep Learning Revolution Receive ACM A.M. Turing Award (announcement)",
+        "url": "https://web.archive.org/web/20260106075225/https://www.acm.org/media-center/2019/march/turing-award-2018"
+      },
+      {
+        "who": "Yoshua Bengio, Yann LeCun and Geoffrey Hinton",
+        "year": 2021,
+        "title": "Deep learning for AI (Turing Lecture)",
+        "url": "http://web.archive.org/web/20251023111636/https://cacm.acm.org/research/deep-learning-for-ai/"
+      },
+      {
+        "who": "Yann LeCun, Yoshua Bengio and Geoffrey Hinton",
+        "year": 2015,
+        "title": "Deep learning",
+        "url": "https://www.nature.com/articles/nature14539"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber argues that ACM's justification and the Turing Lecture credit the three laureates for methods first published by others, among them Ivakhnenko and Lapa's deep networks (1965), Amari's stochastic gradient descent for multilayer networks (1967 to 1968), Linnainmaa's backpropagation (1970), Fukushima's convolutional architecture and rectified linear units (1969 to 1979), and results from his own group on LSTM, attention, GANs and related methods. He says the laureates did not cite these works, even in later surveys, and that they credited each other instead. He published a critique of the ACM statement on 25 June 2020, expanded it on 24 September 2021 (IDSIA-77-21) after the lecture appeared, and collected more than a dozen concrete priority disputes in a report of 14 December 2023 (IDSIA-23-23).",
+    "prior_works": [
+      {
+        "who": "Alexey G. Ivakhnenko",
+        "year": 1971,
+        "title": "Polynomial theory of complex systems",
+        "url": "https://doi.org/10.1109/TSMC.1971.4308320"
+      },
+      {
+        "who": "Shun'ichi Amari",
+        "year": 1967,
+        "title": "A theory of adaptive pattern classifiers",
+        "url": "https://doi.org/10.1109/PGEC.1967.264666"
+      },
+      {
+        "who": "Seppo Linnainmaa",
+        "year": 1970,
+        "title": "The representation of the cumulative rounding error of an algorithm as a Taylor expansion of the local rounding errors (master's thesis, in Finnish)",
+        "url": "https://people.idsia.ch/~juergen/linnainmaa1970thesis.pdf"
+      },
+      {
+        "who": "Kunihiko Fukushima",
+        "year": 1980,
+        "title": "Neocognitron: a self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position",
+        "url": "https://link.springer.com/article/10.1007/BF00344251"
+      },
+      {
+        "who": "Rupesh K. Srivastava, Klaus Greff and Jürgen Schmidhuber",
+        "year": 2015,
+        "title": "Highway networks",
+        "url": "https://arxiv.org/abs/1505.00387"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "ACM lauds the awardees for work based on algorithms and conceptual foundations first published by other researchers whom the awardees failed to cite",
+        "date": "2020-06-25",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html"
+      },
+      {
+        "text": "three Europeans went to North America, where they republished methods and concepts first published by others whom they did not cite",
+        "date": "2021-09-24",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html"
+      },
+      {
+        "text": "the essential \"conceptual foundations\" of deep learning (mentioned by ACM) were laid by others",
+        "date": "2020-06-25",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#I:~:text=However%2C%20the%20essential%20%22conceptual%20foundations%22%20of%20deep%20learning"
+      },
+      {
+        "text": "How 3 Turing awardees republished key methods and ideas whose creators they failed to credit.",
+        "date": "2023-12-14",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1735313711240253567"
+      },
+      {
+        "text": "So I guess they should be stripped of their awards.",
+        "date": "2024-07-18",
+        "venue": "interview",
+        "url": "https://www.jazzyear.com/article_info.html?id=1352#:~:text=They%20should%20be%20stripped%20of%20their%20awards"
+      }
+    ],
+    "times_made": 89,
+    "first_made": "2020-06",
+    "last_made": "2026-09"
+  },
+  "response": {
+    "summary": "I found no point-by-point reply from ACM or from the three laureates, so the statements below address parts of the dispute. Hinton's Reddit reply of April 2020, written about the Honda Prize, says he has not claimed to have invented backpropagation and that he and his co-authors did not know the history in 1986 and failed to cite earlier inventors. LeCun told Analytics India Magazine in December 2022 that Schmidhuber has an unusual idea of how credit should be attributed, namely that whoever has the germ of an idea gets all the credit for what follows, and that making ideas work at scale is a separate contribution. On the Connectionists mailing list in November 2021, Randall O'Reilly argued that plagiarism implies willful stealing and that many of the cases involve reinvention, while Stephen José Hanson, whose 1990 stochastic delta rule is one of the works Schmidhuber cites, wrote that to popularize is not to invent.",
+    "quotes": [
+      {
+        "who": "Geoffrey Hinton (Reddit)",
+        "text": "It is true that when we first published we did not know the history so there were previous inventors that we failed to cite",
+        "date": "2020-04-23",
+        "url": "https://web.archive.org/web/20210824042207/https://www.reddit.com/r/MachineLearning/comments/g5ali0/d_schmidhuber_critique_of_honda_prize_for_dr/"
+      },
+      {
+        "who": "Yann LeCun (interview with Analytics India Magazine)",
+        "text": "He has an unusual idea about how credit should be attributed.",
+        "date": "2022-12-13",
+        "url": "https://analyticsindiamag.com/ai-features/angels-demons-of-ai"
+      },
+      {
+        "who": "Yann LeCun (interview with Analytics India Magazine)",
+        "text": "if someone has the germ of an idea, they should get all the credit for what comes after.",
+        "date": "2022-12-13",
+        "url": "https://analyticsindiamag.com/ai-features/angels-demons-of-ai"
+      },
+      {
+        "who": "Randall O'Reilly (Connectionists mailing list)",
+        "text": "Using the term plagiarize here implies a willful stealing of other people's ideas, and is a very serious allegation as I'm sure you are aware.",
+        "date": "2021-11-14",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2021-November/036874.html"
+      },
+      {
+        "who": "Stephen José Hanson (Connectionists mailing list)",
+        "text": "to popularize is not to invent. Many of Juergen's concerns could be solved with some scholarship",
+        "date": "2021-10-28",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2021-October/036742.html"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "ACM announced the 2018 A.M. Turing Award for Bengio, Hinton and LeCun on 27 March 2019, and the three published a Turing Lecture on deep learning in Communications of the ACM in July 2021.",
+    "Schmidhuber published his critique of the ACM statement on 25 June 2020, his report on the Turing Lecture (IDSIA-77-21) on 24 September 2021 and his report on more than a dozen priority disputes (IDSIA-23-23) on 14 December 2023.",
+    "Linnainmaa's 1970 thesis, Ivakhnenko's work of 1965 to 1971 and Fukushima's neocognitron of 1979 to 1980 were published before the laureates' papers on the same topics.",
+    "Hinton wrote in 2020 that earlier inventors of backpropagation existed whom the authors of the 1986 paper did not cite.",
+    "ACM's announcement dates the introduction of neural networks as a tool for pattern recognition to the 1980s, a statement that Schmidhuber's reports dispute."
+  ],
+  "crux": "The sources differ on whether the ACM citation and the Turing Lecture misstate the origins of deep learning by leaving out earlier work, or fairly describe the laureates' own contributions in experiments, engineering and popularization. They also differ on whether a missing citation in a particular paper amounts to failing to credit the earlier author or to independent reinvention.",
+  "related": [
+    "honda",
+    "nobel2024",
+    "backprop",
+    "cnn",
+    "gans",
+    "attention",
+    "resnet",
+    "pretraining",
+    "vanishing",
+    "metalearning",
+    "deeplearning-origins",
+    "speech-lstm",
+    "gru"
+  ],
+  "instance_urls": [
+    "https://people.idsia.ch/~juergen/blog.html#:~:text=%E2%98%85%20Apr%2FJun%202020%3A%20Critique%20of%20ACM%27s%20justification%20of%20the%202018%20Turing",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#I:~:text=However%2C%20the%20essential%20%22conceptual%20foundations%22%20of%20deep%20learning",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#B:~:text=The%20first%20superior%20end%2Dto%2Dend%20neural%20machine%20translation%20was%20also",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#II:~:text=Perhaps%20ACM%27s%20lack%20of%20knowledge%20about%20NN%20history%20is%20the%20reason%20why",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#X:~:text=The%20ancient%20term%20%22deep%20learning%22%20%28explicitly%20mentioned%20by%20ACM%29%20was",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XVIII:~:text=However%2C%20the%20basic%20CNN%20architecture%20with%20convolutional%20and",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#I:~:text=In%20particular%2C%20ACM%20does%20not%20mention%20that%20these%20breakthroughs%20were",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#VI:~:text=However%2C%20those%20%22advances%20in%20natural%20language%20processing%22%20and%20in",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XVI:~:text=Nevertheless%2C%20already%20in%201990%2D93%2C%20we%20had%20both%20of%20the%20now%20common%20types",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XVII",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#exec:~:text=Sec.%20XX%3A%20ACM%20credits%20LeCun%20for%20work%20on%20hierarchical%20feature",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html",
+    "https://x.com/SchmidhuberAI/status/1276058162974666753",
+    "http://web.archive.org/web/20211031080252/https://people.idsia.ch//~juergen/blog.html#:~:text=In%20brief%2C%20three%20Europeans%20went%20to%20North%20America%2C%20where%20they",
+    "https://people.idsia.ch/~juergen/blog.html#:~:text=In%20brief%2C%20three%20Europeans%20went%20to%20North%20America%2C%20where%20they",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20claim%20to%20%22briefly%20describe%20the%20origins%20of%20deep%20learning%22",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=dedicate%20an%20extra%20section%20to%20their%20unsupervised%20pre%2Dtraining%20of%20deep",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20mention%20the%20%22most%20popular%20class%20of%20convolutional%20net%20architecture",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=In%20this%20context%2C%20LBH%20devote%20an%20extra%20section%20to%20the%20importance%20of%20NN",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20cite%20Hinton%20et%20al.%27s%20work%20on%20speech%20recognition%20since%202009",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20cite%20Hinton%20%282012%29%20for%20%22dropout%22%20without%20mentioning%20that%20dropout",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=Several%20times%2C%20LBH%20mention%20backpropagation%E2%80%94and%20LBH%27s%20papers%20on",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20also%20fail%20to%20cite%20Amari%27s%201967%2D68%20work%E2%80%94which%20included%20computer",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20devote%20an%20extra%20section%20to%20rectified%20linear%20units%20%28ReLUs%29%2C%20citing",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20claim%20ReLUs%20enabled%20deep%20learning%20to%20outperform%20previous%20methods",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20refer%20to%20LeCun%27s%20work%20on%20CNNs%2C%20citing%20neither%20Fukushima%E2%80%94who",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20cite%20Hinton%20%281981%29%20for%20multiplicative%20gating%2C%20without%20mentioning",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20refer%20to%20Hinton%27s%202014%20paper%20on%20%22a%20high%2Dcapacity%2C%20short%2Dterm",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=dedicate%20an%20extra%20section%20to%20attention%2Dbased%20Transformers%2C",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20claim%20that%20Bengio%27s%20team",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20cite%20Bengio%27s%202014%20paper%20on%20Generative%20Adversarial%20Networks",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#I:~:text=However%2C%20the%20essential%20%22conceptual%20foundations%22%20of%20deep%20learning",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#I:~:text=In%20particular%2C%20ACM%20does%20not%20mention%20that%20these%20breakthroughs%20were",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#B:~:text=The%20first%20superior%20end%2Dto%2Dend%20neural%20machine%20translation%20was%20also",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#II:~:text=Perhaps%20ACM%27s%20lack%20of%20knowledge%20about%20NN%20history",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#VI:~:text=However%2C%20those%20%22advances%20in%20natural%20language%20processing%22%20and%20in",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#VII",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#X:~:text=The%20ancient%20term%20%22deep%20learning%22%20%28explicitly%20mentioned%20by%20ACM%29%20was",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XV:~:text=It%20is%20not%20true%20that%20%22modern%20deep%20learning%20speech%20recognition%20systems",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XVI:~:text=5%20years%20earlier%2C%20in%201995%2C%20we%20already%20had%20a%20similar%2C%20excellent%20neural",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XVI:~:text=However%2C%20already%20in%201990%2D93%2C%20we%20had%20both%20of%20the%20now%20common%20types%20of",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XVII",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XVIII:~:text=However%2C%20the%20basic%20CNN%20architecture%20with%20convolutional%20and",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XX:~:text=However%2C%20%22hierarchical%20feature%20representation%22%20in%20deep%20learning",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XXI:~:text=And%20%22deep%20learning%20architectures%20that%20can%20manipulate%20structured%20data%2C",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning-24sep2021.html#:~:text=In%20brief%2C%20three%20Europeans%20went%20to%20North%20America%2C%20where%20they",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning-24sep2021.html#lbhacm:~:text=LBH%20devote%20an%20extra%20section%20to%20rectified%20linear%20units%20%28ReLUs%29%2C%20citing",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning-24sep2021.html#:~:text=But%20their%20most%20visible%20work%20%28praised%20by%20ACM%29%20mainly%20helped%20to",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html",
+    "https://web.archive.org/web/20210924085823/https://twitter.com/SchmidhuberAI/status/1441296380623040512",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2021-October/036730.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2021-November/036872.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2021-November/036893.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2021-November/036922.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2021-December/037086.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-January/037103.html",
+    "https://arxiv.org/pdf/2212.11279v1#page=4",
+    "https://arxiv.org/pdf/2212.11279v1#page=12",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#intro:~:text=The%20present%20piece%20also%20debunks%20a%20frequently%20repeated%2C%20misleading",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#intro:~:text=The%20title%20image%20of%20the%20present%20article%20is%20a%20reaction%20to%20an%20erroneous",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#graph:~:text=Deep%20learning%20architectures%20that%20can%20manipulate%20structured%20data%20such",
+    "https://people.idsia.ch/~juergen/blog.html#:~:text=%E2%98%85%20Dec%202023%20%28updated%20May%202026%29%3A%20How%203%20Turing%20awardees%20republished%20key",
+    "https://x.com/SchmidhuberAI/status/1735313711240253567",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiogan:~:text=However%2C%20GANs",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiogan:~:text=Even%20in%20their%20much%20more%20recent%202021%20Turing%20lecture%2C",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengioatt:~:text=However%2C%20Bengio%27s%20work%20on%20soft%20%22attention%22",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengioatt:~:text=Furthermore%2C%20in%20the%202010s%2C%20what%20the%20ACM%20called%20the%20key%20%22breakthrough",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiodensity:~:text=However%2C%20several%20years%20earlier%2C%20in%201995%2C%20we%20already%20had%20a%20similar%2C",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonunsup:~:text=Even%20LBH%27s%202021%20Turing%20Lecture",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#highway:~:text=In%20their%202021%20Turing%20lecture%2C",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lbhothers:~:text=LBH%20claim%20to%20%22briefly%20describe%20the%20origins%20of%20deep%20learning%22",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lbhothers:~:text=However%2C%20such%20architectures%20were%20proposed%20by%20Sperduti%2C%20Goller%2C%20and",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#DL3a:~:text=Another%20%22survey%22%20of%20deep%20learning%20that%20does%20not%20mention%20the",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#B4",
+    "http://www.jazzyear.com/article_info.html?id=1352",
+    "https://www.jazzyear.com/article_info.html?id=1352#:~:text=They%20should%20be%20stripped%20of%20their%20awards",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_plagiarism-in-ai-how-3-turing-awardees-republished-activity-7272843516337180672-xln2",
+    "https://x.com/SchmidhuberAI/status/1993347872511660458",
+    "https://x.com/SchmidhuberAI/status/1995913663497097300",
+    "https://x.com/SchmidhuberAI/status/2006036021868388761",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lbhdown:~:text=For%20example%2C%20in%20their%202021%20Turing%20lecture%2C",
+    "https://web.archive.org/web/20251230160018/https://twitter.com/SchmidhuberAI/status/2006032605288829122",
+    "https://people.idsia.ch/~juergen/who-invented-jepa.html#:~:text=While%20he%20got%20awards%20for%20the%20inventions%20of%20other%20researchers%20whom%20he",
+    "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#addendum4:~:text=While%20LeCun%20got%20awards%20for%20the%20inventions%20of%20other%20researchers%20whom",
+    "https://x.com/SchmidhuberAI/status/2101268421048520809",
+    "https://x.com/SchmidhuberAI/status/2101275869071171879",
+    "https://x.com/SchmidhuberAI/status/2101315260082712831"
+  ]
+}

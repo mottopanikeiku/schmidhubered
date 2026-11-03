@@ -1,0 +1,181 @@
+{
+  "id": "cnn",
+  "title": "Convolutional neural networks",
+  "matchup": "LeCun et al. (1989) vs Fukushima (1979-80), Waibel et al. (1987-89) and Zhang et al. (1988)",
+  "question": "Should the invention of the convolutional neural network be credited to Fukushima's neocognitron and to the backpropagation-trained networks of Waibel and Zhang, rather than to LeCun's 1989 network, as Schmidhuber says?",
+  "usual_credit": {
+    "summary": "Yann LeCun and colleagues at Bell Labs are usually credited with convolutional neural networks. Their 1989 paper trained a network with shared convolutional weights by backpropagation to read handwritten zip code digits, and the 1998 LeNet-5 paper spread the approach widely. The ACM's 2019 Turing Award announcement says LeCun developed convolutional networks in the 1980s and was the first to train one on images of handwritten digits.",
+    "works": [
+      {
+        "who": "Y. LeCun, B. Boser, J. S. Denker, D. Henderson, R. E. Howard, W. Hubbard, L. D. Jackel",
+        "year": 1989,
+        "title": "Backpropagation Applied to Handwritten Zip Code Recognition (Neural Computation 1(4))",
+        "url": "http://yann.lecun.com/exdb/publis/pdf/lecun-89e.pdf"
+      },
+      {
+        "who": "Y. LeCun, L. Bottou, Y. Bengio, P. Haffner",
+        "year": 1998,
+        "title": "Gradient-based learning applied to document recognition (Proceedings of the IEEE)",
+        "url": "http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says the basic convolutional architecture with alternating convolution and downsampling layers is due to Fukushima's neocognitron of 1979-80, that Waibel combined convolutions, weight sharing and backpropagation in time-delay networks for speech in 1987, and that Zhang and colleagues trained a two-dimensional convolutional network by backpropagation to recognize characters in 1988. He says all of this came before LeCun's 1989 paper, that LeCun's papers and later surveys did not cite it, and that making CNNs work on a task should not outweigh inventing them.",
+    "prior_works": [
+      {
+        "who": "K. Fukushima",
+        "year": 1980,
+        "title": "Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position (Biological Cybernetics 36; Japanese version 1979)",
+        "url": "https://www.cs.princeton.edu/courses/archive/spr08/cos598B/Readings/Fukushima1980.pdf"
+      },
+      {
+        "who": "A. Waibel, T. Hanazawa, G. Hinton, K. Shikano, K. J. Lang",
+        "year": 1989,
+        "title": "Phoneme recognition using time-delay neural networks (IEEE Trans. ASSP 37(3); based on a 1987 report)",
+        "url": "https://www.cs.toronto.edu/~hinton/absps/waibelTDNN.pdf"
+      },
+      {
+        "who": "W. Zhang, J. Tanida, K. Itoh, Y. Ichioka",
+        "year": 1988,
+        "title": "Shift-invariant pattern recognition neural network and its optical architecture (Japan Society of Applied Physics; scan with English translation)",
+        "url": "https://people.idsia.ch/~juergen/Zhang-1988-shift-invariant-NN-JSAP-WithEnglishTranslation.pdf"
+      },
+      {
+        "who": "W. Zhang, J. Tanida, K. Itoh, Y. Ichioka",
+        "year": 1990,
+        "title": "Parallel distributed processing model with local space-invariant interconnections and its optical architecture (Applied Optics 29(32); received April 1989)",
+        "url": "https://people.idsia.ch/~juergen/Zhang-April1989-AppliedOptics-SIANN.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "However, the basic CNN architecture with convolutional and downsampling layers is actually due to Fukushima (1979) [CNN1].",
+        "date": "2020-06-25",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XVIII:~:text=However%2C%20the%20basic%20CNN%20architecture%20with%20convolutional%20and"
+      },
+      {
+        "text": "In 1988, Wei Zhang et al. had \"modern\" backprop-trained 2-dimensional CNNs [5], with applications to English character recognition.",
+        "date": "2025-07-30",
+        "venue": "LinkedIn",
+        "url": "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_who-invented-convolutional-neural-networks-activity-7356247795525160963-o5Ck"
+      },
+      {
+        "text": "trained supervised weight sharing NNs with 1-dimensional convolutions (TDNNs) by Linnainmaa's 1970 backpropagation algorithm[BP1-5] to recognise speech.",
+        "date": "2025-08",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/who-invented-convolutional-neural-networks.html#:~:text=%E2%98%85%201987%3A%20Alex%20Waibel%20%28a%20German%20researcher%20working%20in%20Japan%29%20trained"
+      },
+      {
+        "text": "Yann LeCun et al. at Bell Labs had the second journal submission on backpropagation-trained CNNs for character recognition (zip codes)",
+        "date": "2025-08",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/who-invented-convolutional-neural-networks.html#:~:text=%E2%98%85%20July%201989%3A%20Yann%20LeCun%20et%20al.%20at%20Bell%20Labs%20had%20the%20second%20journal"
+      },
+      {
+        "text": "Fukushima's video (1986) shows a CNN that recognises handwritten digits [3], three years before LeCun's video (1989).",
+        "date": "2026-10-08",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2108116820700053713"
+      }
+    ],
+    "times_made": 41,
+    "first_made": "2020-06",
+    "last_made": "2026-10"
+  },
+  "response": {
+    "summary": "LeCun has said on X that the original Cognitron and Neocognitron did not use backpropagation because it had not yet been popularized, and that his 1989 network used strided convolutions where the neocognitron used separate simple-cell and complex-cell layers. He adds that Fukushima told him around 1991 that the 1989 paper had been a shock, and Nando de Freitas of DeepMind wrote that Fukushima avoided backpropagation on grounds of biological plausibility while LeCun trained neocognitron-style architectures with it. Jean-François Puget, who says he did his PhD in the same lab as a co-author of some early LeCun papers, replied to Schmidhuber that LeCun's work looked like an independent parallel track. The LeCun replies found for this case do not address the Zhang et al. paper specifically.",
+    "quotes": [
+      {
+        "who": "Yann LeCun, on X",
+        "text": "The original Cognitron and Neocognitron didn't use backprop because backprop hadn't been popularized nor demonstrated as a learning mechanism yet",
+        "date": "2024-09-28",
+        "url": "https://x.com/ylecun/status/1840123570338599361"
+      },
+      {
+        "who": "Yann LeCun, on X",
+        "text": "Our 1989 paper didn't use separate simple cell and complex cell layers as in the Neocognitron but used strided convolutions.",
+        "date": "2024-09-28",
+        "url": "https://x.com/ylecun/status/1840123570338599361"
+      },
+      {
+        "who": "Nando de Freitas, on X",
+        "text": "It was up to one of the greatest engineers of our times, @ylecun, to train neocognitron architectures with backprop",
+        "date": "2024-09-28",
+        "url": "https://x.com/NandoDF/status/1839996259886633232"
+      },
+      {
+        "who": "Jean-François Puget, on X, replying to Schmidhuber",
+        "text": "Look more like an independent parallel track to me.",
+        "date": "2026-07-09",
+        "url": "https://x.com/JFPuget/status/2075175823615705544"
+      },
+      {
+        "who": "Wikipedia, 'Convolutional neural network', on Wei Zhang et al. (1988), text as retrieved on 2026-11-03",
+        "text": "used back-propagation to train the convolution kernels of a CNN for alphabets recognition.",
+        "date": "2026-11-03",
+        "url": "https://en.wikipedia.org/wiki/Convolutional_neural_network"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Fukushima published the neocognitron in Biological Cybernetics in April 1980, after a Japanese version in 1979, and it was trained without backpropagation.",
+    "Waibel et al. published time-delay neural networks, one-dimensional convolutional networks trained by backpropagation for phoneme recognition, in IEEE Transactions on Acoustics, Speech, and Signal Processing in March 1989, following a 1987 report.",
+    "Zhang, Tanida, Itoh and Ichioka presented a backpropagation-trained shift-invariant network for character recognition in 1988 and published it in Applied Optics in 1990, with the manuscript received in April 1989.",
+    "LeCun et al. published 'Backpropagation Applied to Handwritten Zip Code Recognition' in Neural Computation 1(4) in 1989.",
+    "The ACM's 2019 Turing Award announcement says LeCun 'was the first to train a convolutional neural network system on images of handwritten digits'."
+  ],
+  "crux": "Whether the 1989 LeCun et al. network counts as the invention of the CNN, or as the next step after Fukushima's architecture, Waibel's backpropagation-trained one-dimensional convolutions and Zhang et al.'s two-dimensional network, which the two sides weigh differently. A further question is whether LeCun knew of the Japanese work in 1988-89, which the sources reviewed do not establish.",
+  "related": [
+    "backprop",
+    "alexnet",
+    "deeplearning-origins",
+    "dropout-relu",
+    "turingaward",
+    "honda"
+  ],
+  "instance_urls": [
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XVIII:~:text=However%2C%20the%20basic%20CNN%20architecture%20with%20convolutional%20and",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20refer%20to%20LeCun%27s%20work%20on%20CNNs%2C%20citing%20neither%20Fukushima%E2%80%94who",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XVIII:~:text=However%2C%20the%20basic%20CNN%20architecture%20with%20convolutional%20and",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XX:~:text=However%2C%20%22hierarchical%20feature%20representation%22%20in%20deep%20learning",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2023-January/039200.html",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_who-invented-convolutional-neural-networks-activity-7356247795525160963-o5Ck",
+    "https://people.idsia.ch/~juergen/who-invented-convolutional-neural-networks.html#:~:text=%E2%98%85%201979%3A%20Kunihiko%20Fukushima%20published%20the%20basic%20CNN%20architecture%20with",
+    "https://people.idsia.ch/~juergen/who-invented-convolutional-neural-networks.html#:~:text=%E2%98%85%201987%3A%20Alex%20Waibel%20%28a%20German%20researcher%20working%20in%20Japan%29%20trained",
+    "https://people.idsia.ch/~juergen/who-invented-convolutional-neural-networks.html#:~:text=%E2%98%85%201988%3A%20Wei%20Zhang%20%28a%20Chinese%20researcher%20working%20in%20Japan%29%20and",
+    "https://people.idsia.ch/~juergen/who-invented-convolutional-neural-networks.html#:~:text=%E2%98%85%20July%201989%3A%20Yann%20LeCun%20et%20al.%20at%20Bell%20Labs%20had%20the%20second%20journal",
+    "https://people.idsia.ch/~juergen/who-invented-convolutional-neural-networks.html#:~:text=Some%20%22AI%20experts%22%20claim%20that%20%22making%20CNNs%20work%22%20%28e.g.%2C",
+    "https://x.com/SchmidhuberAI/status/1952007922721919219",
+    "https://x.com/SchmidhuberAI/status/1952105658574159941",
+    "https://x.com/SchmidhuberAI/status/1952117991715332270",
+    "https://x.com/SchmidhuberAI/status/1952121209228800217",
+    "https://x.com/SchmidhuberAI/status/1952006617710358877",
+    "https://x.com/SchmidhuberAI/status/1959893253765177663",
+    "https://x.com/SchmidhuberAI/status/1959892666176647417",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_convolutional-nns-cnns-are-widely-used-activity-7367490440830275586-AZPb",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#backprop",
+    "https://x.com/SchmidhuberAI/status/1991167082231144758",
+    "https://x.com/SchmidhuberAI/status/1991911481043275930",
+    "https://x.com/SchmidhuberAI/status/1994480498085667050",
+    "https://x.com/SchmidhuberAI/status/1994488830842605720",
+    "https://x.com/SchmidhuberAI/status/1995875626092315116",
+    "https://x.com/SchmidhuberAI/status/1995918625501221027",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_fukushimas-1986-video-2-shows-a-cnn-that-activity-7401691176698851329-x3NZ",
+    "https://x.com/SchmidhuberAI/status/1996567679587516742",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#cnn:~:text=Yann%20LeCun%20et%20al.%20at%20Bell%20Labs%20had%20the%20second%20journal%20submission%20on",
+    "https://arxiv.org/pdf/2212.11279v3#page=14",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lbhothers",
+    "https://www.linkedin.com/posts/william-wei-zhu_in-1978-a-17-year-old-yann-lecun-was-told-activity-7465021025055985664--aQm",
+    "https://www.linkedin.com/posts/association-for-computing-machinery_acmturingaward-ai-turingaward-activity-7480607624590336000-BQud",
+    "https://x.com/SchmidhuberAI/status/2074964004665979195",
+    "https://x.com/SchmidhuberAI/status/2076947490952094174",
+    "https://x.com/SchmidhuberAI/status/2077098043527041136",
+    "https://x.com/SchmidhuberAI/status/2087902009038938586",
+    "https://x.com/SchmidhuberAI/status/2087930593929544002",
+    "https://x.com/SchmidhuberAI/status/2088569445547446339",
+    "https://x.com/SchmidhuberAI/status/2093589881423266144",
+    "https://x.com/SchmidhuberAI/status/2108116820700053713"
+  ]
+}

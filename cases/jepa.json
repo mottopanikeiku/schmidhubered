@@ -1,0 +1,141 @@
+{
+  "id": "jepa",
+  "title": "JEPA",
+  "matchup": "LeCun (2022) vs Schmidhuber and Prelinger (1992)",
+  "question": "Is the Joint Embedding Predictive Architecture of 2022 essentially the same as Schmidhuber's 1992 Predictability Maximization, as he says?",
+  "usual_credit": {
+    "summary": "Yann LeCun proposed the Joint Embedding Predictive Architecture (JEPA) in his 2022 position paper 'A Path Towards Autonomous Machine Intelligence', in which two encoders map related inputs to representations and a predictor learns to predict one representation from the other instead of predicting raw pixels. Meta's I-JEPA (2023) implements the idea for images, and LeCun's company AMI Labs is built around world models.",
+    "works": [
+      {
+        "who": "Y. LeCun",
+        "year": 2022,
+        "title": "A Path Towards Autonomous Machine Intelligence (OpenReview, 27 June 2022)",
+        "url": "https://openreview.net/forum?id=BZ5a1r-kVsf"
+      },
+      {
+        "who": "M. Assran, Q. Duval, I. Misra, P. Bojanowski, P. Vincent, M. Rabbat, Y. LeCun, N. Ballas",
+        "year": 2023,
+        "title": "Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture (I-JEPA)",
+        "url": "https://arxiv.org/abs/2301.08243"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says JEPA is essentially identical to the Predictability Maximization (PMAX) family that he and his student Daniel Prelinger published in 1992-93. In PMAX, two non-generative networks interact so that one creates an informative latent representation of its input that the other network can predict from its own latent representation, with measures against what is now called collapse. He says the 1992 paper reported experiments, including a stereo task on which it outperformed Becker and Hinton's earlier IMAX, and that LeCun did not cite it. He adds that Michal Valko, who led the BYOL team, told him that later methods such as Barlow Twins and VICReg correspond to sections of the 1992 paper.",
+    "prior_works": [
+      {
+        "who": "J. Schmidhuber, D. Prelinger",
+        "year": 1993,
+        "title": "Discovering predictable classifications (Neural Computation 5(4); based on TR CU-CS-626-92, 1992)",
+        "url": "https://people.idsia.ch/~juergen/predmax1992.pdf"
+      },
+      {
+        "who": "J. Schmidhuber",
+        "year": 1993,
+        "title": "Network architectures, objective functions, and chain rule (habilitation thesis, TU Munich; Sec. 5.5 on Predictability Maximization)",
+        "url": "https://sferics.idsia.ch/pub/juergen/habilitation.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "JEPA is essentially identical to our 1992 Predictability Maximization system [PMAX][UN2].",
+        "date": "2026-03-31",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/who-invented-jepa.html#:~:text=However%2C%20the%20core%20ideas%20are%20not%20original%20to%20LeCun.%20Instead%2C%20JEPA%20is"
+      },
+      {
+        "text": "Michal Valko, leader of the BYOL team, praised PMAX, and listed numerous similarities to much later work (personal communication, March 2026, reprinted with permission)",
+        "date": "2026-04-01",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2039234975615099335"
+      },
+      {
+        "text": "However, [PMAX] had many experiments, while LeCun's JEPA paper[LEC22a] had none",
+        "date": "2026-05-31",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lecunpredictable:~:text=In%202026%2C%20LeCun%20claimed%20on%20Facebook%20%28see%20screenshot%204%29%20that%20the"
+      },
+      {
+        "text": "30 years later, Dr. LeCun called this \"JEPA\" without citing PMAX [LEC22a][LEC][WHO12].",
+        "date": "2026-02-04",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/world-model-boom.html#:~:text=30%20years%20later%2C%20Dr.%20LeCun%20called%20this%20%22JEPA%22%20without%20citing%20PMAX"
+      }
+    ],
+    "times_made": 27,
+    "first_made": "2026-02",
+    "last_made": "2026-09"
+  },
+  "response": {
+    "summary": "LeCun has answered in posts on X, Facebook and LinkedIn, saying that joint embedding architectures, including Siamese networks, were introduced decades ago, that no one is claiming they are new, and that for JEPA the question is how collapse is prevented. He also says Schmidhuber did not invent the idea either and traces it to a 1989 report by Becker and Hinton, which he describes in a comment quoted on Schmidhuber's page as the inspiration for PMAX. A Facebook post reported on the same page calls the experimental section of the PMAX paper essentially non-existent, and Schmidhuber replied point by point in an April 2026 addendum. LeCun's 6 April comment and his remark about the PMAX experiments are known here only from Schmidhuber's page, while his 17 April LinkedIn post and his X post were read at the source.",
+    "quotes": [
+      {
+        "who": "Yann LeCun, LinkedIn post",
+        "text": "Jürgen didn't invent that either. It goes back to a 1989 paper by Becker and Hinton.",
+        "date": "2026-04-17",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7451033888723894272/"
+      },
+      {
+        "who": "Yann LeCun, on X (posted a week before Schmidhuber's note)",
+        "text": "JEPA is a class of architectures, not a method. There were lots of JEPAs before I proposed the name as a unifying concept.",
+        "date": "2026-03-24",
+        "url": "https://x.com/ylecun/status/2036529737120497859"
+      },
+      {
+        "who": "Yann LeCun, LinkedIn comment of 2026-04-06, as quoted on Schmidhuber's page",
+        "text": "No one is claiming it's new. You didn't invent it either.",
+        "date": "2026-04-06",
+        "url": "https://people.idsia.ch/~juergen/who-invented-jepa.html#addendum1"
+      },
+      {
+        "who": "Yann LeCun, ZDNet interview about the 2022 paper",
+        "text": "I explicitly said this is not a scientific paper in the usual sense of the term. It’s more of a position paper",
+        "date": "2022-09-24",
+        "url": "https://www.zdnet.com/article/metas-ai-guru-lecun-most-of-todays-ai-approaches-will-never-lead-to-true-intelligence/"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Schmidhuber and Prelinger's 'Discovering predictable classifications' appeared in Neural Computation 5(4) in 1993, based on a 1992 technical report.",
+    "Becker and Hinton's work on maximizing mutual information between representations of related inputs, from a 1989 technical report, is an earlier joint-embedding method, and both sides cite it.",
+    "LeCun posted 'A Path Towards Autonomous Machine Intelligence' on OpenReview on 27 June 2022, and he describes it as a position paper.",
+    "The first image-based implementation, I-JEPA, was posted on arXiv on 19 January 2023.",
+    "Siamese networks were introduced at NIPS 1993 by Bromley, Guyon, LeCun, Säckinger and Shah."
+  ],
+  "crux": "Whether JEPA, as a class of architectures with a latent-space predictor and anti-collapse training, is the same as the 1992 PMAX family, as Schmidhuber argues, or an extension of earlier joint-embedding methods such as Becker and Hinton's, as LeCun argues. LeCun puts the weight on how collapse is prevented and on scaling. A further question is whether leaving PMAX out of the 2022 paper was a failure to credit, given that LeCun's own account names Becker and Hinton as the origin.",
+  "related": [
+    "world-models",
+    "gans",
+    "pretraining",
+    "cnn"
+  ],
+  "instance_urls": [
+    "https://people.idsia.ch/~juergen/world-model-boom.html#:~:text=30%20years%20later%2C%20Dr.%20LeCun%20called%20this%20%22JEPA%22%20without%20citing%20PMAX",
+    "https://people.idsia.ch/~juergen/blog.html#:~:text=The%20heavily%20promoted%20Joint%20Embedding%20Predictive%20Architecture%20%28JEPA%2C",
+    "https://x.com/SchmidhuberAI/status/2038989707917271210",
+    "https://x.com/SchmidhuberAI/status/2039031420757143609",
+    "https://people.idsia.ch/~juergen/who-invented-jepa.html#:~:text=However%2C%20the%20core%20ideas%20are%20not%20original%20to%20LeCun.%20Instead%2C%20JEPA%20is",
+    "https://people.idsia.ch/~juergen/who-invented-jepa.html#:~:text=but%20the%20fundamental%20insights%20of%20%22JEPA%22%20were%20present%2C%20and%20LeCun%20has",
+    "https://people.idsia.ch/~juergen/who-invented-jepa.html#:~:text=Astonishingly%2C%20PMAX%20or%20%22JEPA%22%20seems%20to%20be%20the%20unique%20selling",
+    "https://people.idsia.ch/~juergen/who-invented-jepa.html#:~:text=In%20short%2C%20little%20if%20anything%20in%20JEPA%20is%20new",
+    "https://x.com/SchmidhuberAI/status/2039219120256786930",
+    "https://x.com/SchmidhuberAI/status/2039234975615099335",
+    "https://x.com/SchmidhuberAI/status/2039732082935529828",
+    "https://x.com/SchmidhuberAI/status/2048775641999286694",
+    "https://people.idsia.ch/~juergen/who-invented-jepa.html#addendum1:~:text=LeCun%20concedes%20that%20%E2%80%9CJEA%E2%80%9D%20was%20introduced%20decades%20ago",
+    "https://people.idsia.ch/~juergen/who-invented-jepa.html#addendum1:~:text=LeCun%20refers%20to%20his%20%221993%20paper%20on%20Siamese%20nets%22%20which%20cited%20neither",
+    "https://x.com/SchmidhuberAI/status/2049137106778239200",
+    "https://x.com/SchmidhuberAI/status/2049413244041728353",
+    "https://people.idsia.ch/~juergen/who-invented-jepa.html",
+    "https://x.com/SchmidhuberAI/status/2061096595643384160",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lecunpredictable:~:text=However%2C%20the%20JEPA%20family%20of%20techniques%20is%20essentially%20identical%20to",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lecunpredictable:~:text=In%202026%2C%20LeCun%20claimed%20on%20Facebook%20%28see%20screenshot%204%29%20that%20the",
+    "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#addendum4:~:text=However%2C%20the%20JEPA%20family%20of%20techniques%20is%20essentially%20identical%20to",
+    "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#addendum4:~:text=The%20fundamental%20ingredients%20of%20%22JEPA%22%20were%20present%20in%201992%2C%20and%20LeCun",
+    "https://x.com/SchmidhuberAI/status/2073788826779074958",
+    "https://x.com/SchmidhuberAI/status/2075247913173684432",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_lecun-claims-7-that-my-1990-paper-on-world-activity-7481231432674320384-mvMa",
+    "https://x.com/SchmidhuberAI/status/2101707376201973917",
+    "https://x.com/SchmidhuberAI/status/2102009688766185749"
+  ]
+}

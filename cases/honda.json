@@ -1,0 +1,168 @@
+{
+  "id": "honda",
+  "title": "2019 Honda Prize",
+  "matchup": "Hinton (2019 Honda Prize) vs Linnainmaa (1970), Werbos (1982), Ivakhnenko (1965) and Hanson (1990)",
+  "question": "Did the Honda Foundation's 2019 press release credit Hinton with inventions that others made first, as Schmidhuber says?",
+  "usual_credit": {
+    "summary": "On 20 September 2019 the Honda Foundation announced that the 2019 Honda Prize would go to Geoffrey Hinton for pioneering research in deep learning and its practical application. The press release says that Hinton created technologies that enabled broader use of AI, including the backpropagation algorithm, and that in 1986 he and his collaborators introduced backpropagation and showed that networks could learn distributed representations. It also credits him with a fast learning algorithm for restricted Boltzmann machines in 2002, with a speech recognition breakthrough in 2009 and a computer vision result in 2012 achieved with students, and with inventing dropout and t-SNE.",
+    "works": [
+      {
+        "who": "Honda Foundation",
+        "year": 2019,
+        "title": "The Honda Prize 2019 awarded to Dr. Geoffrey Hinton (press release)",
+        "url": "https://people.idsia.ch/~juergen/HondaPrize2019en.pdf"
+      },
+      {
+        "who": "David E. Rumelhart, Geoffrey E. Hinton and Ronald J. Williams",
+        "year": 1986,
+        "title": "Learning representations by back-propagating errors",
+        "url": "https://www.nature.com/articles/323533a0"
+      },
+      {
+        "who": "Alex Krizhevsky, Ilya Sutskever and Geoffrey E. Hinton",
+        "year": 2012,
+        "title": "ImageNet classification with deep convolutional neural networks",
+        "url": "https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html"
+      },
+      {
+        "who": "Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever and Ruslan Salakhutdinov",
+        "year": 2014,
+        "title": "Dropout: a simple way to prevent neural networks from overfitting",
+        "url": "https://jmlr.org/papers/v15/srivastava14a.html"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber published a critique of the press release on 21 April 2020 and added a reply to Hinton on 24 April. It lists six statements in the release that he calls wrong or misleading, and it says the prize credits Hinton for inventions of others whom he did not cite. His main points are that backpropagation was published by Linnainmaa in 1970 and applied to neural networks by Werbos in 1982, before the 1985 and 1986 papers of Rumelhart, Hinton and Williams, that Ivakhnenko and Lapa trained deep networks with hidden layers in 1965, that Hinton's pre-training with restricted Boltzmann machines was not what drove the deep learning boom of the early 2010s, and that dropout is a variant of Hanson's stochastic delta rule of 1990. He also disputes the credit given for the 2009 speech and 2012 vision results, pointing to earlier results from his own group, and he writes that the critique is an implicit critique of other awards to Hinton.",
+    "prior_works": [
+      {
+        "who": "Seppo Linnainmaa",
+        "year": 1970,
+        "title": "The representation of the cumulative rounding error of an algorithm as a Taylor expansion of the local rounding errors (master's thesis, in Finnish)",
+        "url": "https://people.idsia.ch/~juergen/linnainmaa1970thesis.pdf"
+      },
+      {
+        "who": "Paul J. Werbos",
+        "year": 1982,
+        "title": "Applications of advances in nonlinear sensitivity analysis",
+        "url": "http://werbos.com/Neural/SensitivityIFIPSeptember1981.pdf"
+      },
+      {
+        "who": "Alexey G. Ivakhnenko",
+        "year": 1971,
+        "title": "Polynomial theory of complex systems",
+        "url": "https://doi.org/10.1109/TSMC.1971.4308320"
+      },
+      {
+        "who": "Stephen J. Hanson",
+        "year": 1990,
+        "title": "A stochastic version of the delta rule",
+        "url": "https://doi.org/10.1016/0167-2789(90)90081-Y"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "Honda credits him for fundamental inventions of others whom he did not cite.",
+        "date": "2020-04-21",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#:~:text=Honda%20credits%20him%20for%20fundamental%20inventions%20of%20others%20whom%20he%20did"
+      },
+      {
+        "text": "And the article [RUM] even failed to mention Seppo Linnainmaa, the inventor of this famous algorithm for credit assignment in networks [BP1] (1970)",
+        "date": "2020-04-21",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#I:~:text=And%20the%20article"
+      },
+      {
+        "text": "No, Hinton's interesting unsupervised [CDI] pre-training for deep NNs (e.g., [UN4]) was irrelevant for the current deep learning revolution.",
+        "date": "2020-04-21",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#II:~:text=No%2C%20Hinton%27s%20interesting%20unsupervised"
+      },
+      {
+        "text": "However, \"dropout\" is actually a variant of Hanson's much earlier stochastic delta rule (1990) [Drop1]. Hinton's 2012 paper [GPUCNN4] did not cite this.",
+        "date": "2020-04-21",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#V:~:text=However%2C%20%22dropout%22%20is%20actually%20a%20variant%20of%20Hanson%27s%20much%20earlier"
+      },
+      {
+        "text": "Yes, this critique is also an implicit critique of certain other awards to Dr. Hinton.",
+        "date": "2020-04-21",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#conclusion:~:text=Yes%2C%20this%20critique%20is%20also%20an%20implicit%20critique%20of%20certain%20other"
+      }
+    ],
+    "times_made": 19,
+    "first_made": "2020-04",
+    "last_made": "2021-09"
+  },
+  "response": {
+    "summary": "Hinton answered once on Reddit on 23 April 2020. He wrote that a public debate with Schmidhuber about credit was not advisable, that he had never claimed to have invented backpropagation, that Rumelhart invented it independently after people in other fields had done so, and that the authors did not know the history when they first published and so failed to cite earlier inventors. He said his own claim is that he showed backpropagation could learn interesting internal representations, which is what made it popular. Schmidhuber replied on 24 April that Hinton's comments do not challenge the facts in his six sections and that Hinton accepted the prize although he apparently agrees that its claims are false. Oriol Vinyals of Google DeepMind wrote on X that it would be great to credit ideas instead of people. I found no statement from the Honda Foundation responding to the critique.",
+    "quotes": [
+      {
+        "who": "Geoffrey Hinton (Reddit)",
+        "text": "I have never claimed that I invented backpropagation.",
+        "date": "2020-04-23",
+        "url": "https://web.archive.org/web/20210824042207/https://www.reddit.com/r/MachineLearning/comments/g5ali0/d_schmidhuber_critique_of_honda_prize_for_dr/"
+      },
+      {
+        "who": "Geoffrey Hinton (Reddit)",
+        "text": "It is true that when we first published we did not know the history so there were previous inventors that we failed to cite",
+        "date": "2020-04-23",
+        "url": "https://web.archive.org/web/20210824042207/https://www.reddit.com/r/MachineLearning/comments/g5ali0/d_schmidhuber_critique_of_honda_prize_for_dr/"
+      },
+      {
+        "who": "Geoffrey Hinton (Reddit)",
+        "text": "I was the person to clearly demonstrate that backpropagation could learn interesting internal representations and that this is what made it popular",
+        "date": "2020-04-23",
+        "url": "https://web.archive.org/web/20210824042207/https://www.reddit.com/r/MachineLearning/comments/g5ali0/d_schmidhuber_critique_of_honda_prize_for_dr/"
+      },
+      {
+        "who": "Oriol Vinyals (X)",
+        "text": "It would be great to credit ideas instead of people. Science should be unbiased & anonymous.",
+        "date": "2020-04-22",
+        "url": "https://x.com/oriolvinyalsml/status/1253050193521577986"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "The Honda Foundation announced on 20 September 2019 that Hinton would receive the 2019 Honda Prize, with a presentation ceremony scheduled for 18 November 2019 in Tokyo.",
+    "The press release says Hinton created technologies including the backpropagation algorithm, and it describes him as having invented dropout and t-SNE.",
+    "Rumelhart, Hinton and Williams issued the technical report \"Learning internal representations by error propagation\" in 1985 and published \"Learning representations by back-propagating errors\" in Nature in 1986.",
+    "Hinton wrote in 2020 that he has never claimed to have invented backpropagation and that earlier inventors existed whom the 1986 authors did not cite.",
+    "The Nobel Committee's 2024 scientific background also says that Rumelhart, Hinton and Williams reinvented a scheme that others had applied before, and it cites Werbos (1982) and Linnainmaa (1970)."
+  ],
+  "crux": "The sources differ on whether the press release's wording, which says Hinton created the backpropagation algorithm and invented dropout, credits him with inventing methods that others published first, or whether it describes his role in demonstrating and popularizing them. Hinton says he never claimed the invention of backpropagation, while Schmidhuber says the award text still misattributes it and that the omitted earlier work should have been cited.",
+  "related": [
+    "backprop",
+    "pretraining",
+    "alexnet",
+    "dropout-relu",
+    "speech-lstm",
+    "turingaward",
+    "nobel2024",
+    "deeplearning-origins",
+    "gru"
+  ],
+  "instance_urls": [
+    "https://x.com/SchmidhuberAI/status/1252494225880596480",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#:~:text=Honda%20credits%20him%20for%20fundamental%20inventions%20of%20others%20whom%20he%20did",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#I:~:text=the%20claim%20above%20is%20plain%20wrong.%20He%20was%202nd%20of%203%20authors%20of%20an%20article",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#I:~:text=And%20the%20article",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#I:~:text=In%201965%2C%20Ivakhnenko%20%26%20Lapa%20had%20the%20first%20general%2C%20working%20learning",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#II:~:text=No%2C%20Hinton%27s%20interesting%20unsupervised",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#III:~:text=Hinton%20et%20al.%20%282009%2D2012%29%20still%20used%20the%20old%20hybrid%20approach",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#IV:~:text=However%2C%20the%20first%20superior%20award%2Dwinning%20GPU%2Dbased%20CNN%20was%20created",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#V:~:text=However%2C%20%22dropout%22%20is%20actually%20a%20variant%20of%20Hanson%27s%20much%20earlier",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#VI:~:text=Name%20one%20that%20would%20NOT%20have%20been%20possible%21%20Most%20famous%20AI",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#VI:~:text=In%20the%20recent%20decade%20of%20deep%20learning%2C%20all%20of%202%2D6%20above%20depended%20on",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#conclusion:~:text=But%20his%20most%20visible%20work%20%28lauded%20by%20Honda%29%20popularized%20methods",
+    "https://people.idsia.ch/~juergen/blog.html#:~:text=%E2%98%85%20Apr%2FJun%202020%3A%20Critique%20of%20ACM%27s%20justification%20of%20the%202018%20Turing",
+    "https://people.idsia.ch/~juergen/whatsnew.html#:~:text=Critique%20of%20Honda%20Prize%20for%20Dr.%20Hinton.%20Science%20must%20not%20allow",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#reply:~:text=Dr.%20Hinton%20accepted%20the%20Honda%20Prize%20although%20he%20apparently%20agrees",
+    "https://x.com/SchmidhuberAI/status/1253617620177301505",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XII:~:text=Nevertheless%2C%20he%20accepted%20the%20Honda%20Prize%20for%20%22creating%22%20the%20method",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XII:~:text=Nevertheless%2C%20he%20accepted%20the%20Honda%20Prize%20for%20%22creating%22%20the%20method"
+  ]
+}

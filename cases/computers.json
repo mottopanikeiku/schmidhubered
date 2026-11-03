@@ -1,0 +1,113 @@
+{
+  "id": "computers",
+  "title": "The first programmable computers",
+  "matchup": "ENIAC (1945–1946) and Turing-related accounts vs Zuse’s Z3 (1941) and Flowers’s Colossus (1943–1944)",
+  "question": "Should accounts of the first computer give Zuse's Z3 priority over ENIAC, while crediting Colossus with an earlier electronic milestone, as Schmidhuber argues?",
+  "usual_credit": {
+    "summary": "Standard computing histories do not assign every first to one machine: they distinguish programmability, general-purpose operation, electronic construction and stored programs. The [Computer History Museum](https://www.computerhistory.org/revolution/birth-of-the-computer/4/78) credits the ENIAC project with a large-scale computer operating at electronic speed, while separately recording Zuse's earlier relay-based Z3. The [National Museum of Computing](https://www.tnmoc.org/colossus) credits Colossus with digital, programmable electronic operation but describes its purpose and programmability as limited; Turing's abstract machine is a separate theoretical contribution, not the same physical machine.",
+    "works": [
+      {
+        "who": "J. Presper Eckert, John Mauchly and the ENIAC team",
+        "year": 1945,
+        "title": "ENIAC (completed 1945; publicly announced 1946, historical exhibit)",
+        "url": "https://www.computerhistory.org/revolution/birth-of-the-computer/4/78"
+      },
+      {
+        "who": "Alan M. Turing",
+        "year": 1936,
+        "title": "On Computable Numbers, with an Application to the Entscheidungsproblem",
+        "url": "https://www.cs.unibo.it/~martini/CS/Turing_Paper_1936.pdf"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber credits Zuse with the first working programmable general-purpose computer and argues that Zuse's engineering did not depend on Turing's 1936 paper. He distinguishes the electromechanical Z3 from electronic special-purpose machines, and in a 2006 letter challenged a Nature timeline that began with ENIAC instead of Colossus. In later posts he also argues that Z3's missing conditional-jump instruction does not prevent universality when its arithmetic operations and an idealized memory model are considered.",
+    "prior_works": [
+      {
+        "who": "Konrad Zuse",
+        "year": 1941,
+        "title": "Z3 (Computer History Museum historical record)",
+        "url": "https://www.computerhistory.org/timeline/1941"
+      },
+      {
+        "who": "Tommy Flowers and the Colossus team",
+        "year": 1944,
+        "title": "Colossus (working at Bletchley Park in February 1944, historical record)",
+        "url": "https://www.tnmoc.org/colossus"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "Konrad Zuse created the world's first working programmable general-purpose computer: the Z3.",
+        "date": "2022-12-21",
+        "venue": "paper",
+        "url": "https://arxiv.org/pdf/2212.11279v1#page=23"
+      },
+      {
+        "text": "But that title should arguably be held by the British special-purpose computer Colossus (1943),",
+        "date": "2006-05-03",
+        "venue": "letter",
+        "url": "https://www.nature.com/articles/441025d"
+      },
+      {
+        "text": "The first general purpose computer was completed by Konrad Zuse in 1941",
+        "date": "2026-06-21",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2068670785812631936"
+      }
+    ],
+    "times_made": 19,
+    "first_made": "2003",
+    "last_made": "2026-06"
+  },
+  "response": {
+    "summary": "No public answer specifically to Schmidhuber's hardware-priority articles was located in the sources reviewed, but the institutional histories support a more qualified division of credit than a single first-computer label. The [German Patent and Trade Mark Office](https://dpma.de/english/our_office/publications/milestones/computerpioneers/konradzuse/index.html) credits Z3 as a functioning freely programmable binary computer while stressing that modern computers have several inventors. The [National Museum of Computing](https://www.tnmoc.org/colossus) distinguishes Colossus's limited programmability from a later stored-program machine, and the Computer History Museum places ENIAC's achievement specifically in large-scale electronic computation. These are historical comparisons rather than replies conceding or rejecting all of Schmidhuber's formulations.",
+    "quotes": [
+      {
+        "who": "German Patent and Trade Mark Office",
+        "text": "today's computers have several fathers.",
+        "date": "2025-12-08",
+        "url": "https://dpma.de/english/our_office/publications/milestones/computerpioneers/konradzuse/index.html"
+      },
+      {
+        "who": "The National Museum of Computing",
+        "text": "Colossus was preceded by several computers, many of them being a first in some category.",
+        "date": "undated",
+        "url": "https://www.tnmoc.org/colossus"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Zuse completed the relay-based Z3 in 1941: https://www.computerhistory.org/timeline/1941",
+    "ENIAC was built between 1943 and 1945 and initially programmed through configurations of wires and switches: https://www.computerhistory.org/revolution/birth-of-the-computer/4/78",
+    "Flowers's Colossus was working at Bletchley Park in February 1944 and had limited programmability for a cryptanalytic task: https://www.tnmoc.org/colossus",
+    "Z3, Colossus and ENIAC did not have identical hardware or programming arrangements, so chronological priority depends on the category being compared: https://www.tnmoc.org/colossus"
+  ],
+  "crux": "The question is which criteria a first-computer claim includes, rather than whether Z3 preceded ENIAC. A mathematical universality result for an idealized Z3, a working general-purpose calculator, an electronic special-purpose machine and a stored-program computer establish different kinds of priority.",
+  "related": [
+    "turing-computation",
+    "enigma",
+    "transistor"
+  ],
+  "instance_urls": [
+    "https://people.idsia.ch/~juergen/zuse.html#:~:text=Zuse%20completes%20Z3%2C%20world%27s%20first%20fully%20functional%20programmable",
+    "https://www.nature.com/articles/429501c",
+    "https://www.nature.com/articles/441025d",
+    "https://people.idsia.ch/~juergen/colossus.html#:~:text=But%20that%20title%20should%20arguably%20be%20held%20by%20the%20British%20special%2Dpurpose",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#IV:~:text=Likewise%2C%20Konrad%20Zuse%20%281910%2D1995%29%20never%20got%20a%20Turing%20award%20despite",
+    "https://people.idsia.ch/~juergen/zuse-1941-first-general-computer.html#abstract:~:text=Between%201935%20and%201941%2C%20Konrad%20Zuse%20%281910%2D1995%3B%20pronounce%3A%20%22Conrud",
+    "https://x.com/SchmidhuberAI/status/1428612780538712070",
+    "https://people.idsia.ch/~juergen/turing-oversold.html#:~:text=Turing%27s%201936%20paper%20provided%20the%20%22theoretical%20backbone%22%20for%20all",
+    "https://people.idsia.ch/~juergen/turing-oversold.html#:~:text=A%20popular%20British%20movie",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#IV:~:text=Likewise%2C%20Konrad%20Zuse%20%281910%2D1995%29%20never%20got%20a%20Turing%20award%20despite",
+    "https://people.idsia.ch/~juergen/turing-oversold.html#abstract:~:text=It%20was%20actually%20Zuse%27s%201936%20patent%20application",
+    "https://arxiv.org/pdf/2212.11279v1#page=23",
+    "https://arxiv.org/pdf/2212.11279v1#page=24",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#hardware:~:text=Between%201935%20and%201941%2C%20Konrad%20Zuse%20created%20the%20world%27s%20first%20working",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#hardware:~:text=But%20unlike%20Zuse%27s%20Z3%2C%20ABC%20was%20not%20freely%20programmable.",
+    "https://x.com/SchmidhuberAI/status/2025175449010082202",
+    "https://x.com/SchmidhuberAI/status/2068670785812631936",
+    "https://web.archive.org/web/20260621121718/https://twitter.com/SchmidhuberAI/status/2068669589521608802",
+    "https://x.com/SchmidhuberAI/status/2070576382023717069"
+  ]
+}

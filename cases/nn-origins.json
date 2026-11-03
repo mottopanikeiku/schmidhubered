@@ -1,0 +1,118 @@
+{
+  "id": "nn-origins",
+  "title": "Artificial neural networks",
+  "matchup": "McCulloch and Pitts (1943) and Rosenblatt (1958–1962) vs Gauss and Legendre (1795–1805)",
+  "question": "Should Gauss and Legendre's least-squares method count as the invention of a linear artificial neural network, as Schmidhuber argues?",
+  "usual_credit": {
+    "summary": "The [Computer History Museum](https://www.computerhistory.org/timeline/1943/) treats McCulloch and Pitts's 1943 logical model of nervous activity as a foundational neural-network paper, while histories of learning networks also credit Rosenblatt's perceptron. These are different contributions: McCulloch and Pitts modeled networks of simplified neurons, while Rosenblatt developed adaptive systems for learning classifications. Their original texts explicitly connect the models with brains, so the history includes neural modeling and learning rules as well as the algebra of linear prediction.",
+    "works": [
+      {
+        "who": "Warren S. McCulloch and Walter Pitts",
+        "year": 1943,
+        "title": "A Logical Calculus of the Ideas Immanent in Nervous Activity",
+        "url": "https://link.springer.com/article/10.1007/BF02478259"
+      },
+      {
+        "who": "Frank Rosenblatt",
+        "year": 1962,
+        "title": "Principles of Neurodynamics: Perceptrons and the Theory of Brain Mechanisms",
+        "url": "https://archive.org/details/principles-of-neurodynamics"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber regards least-squares linear regression as mathematically identical to a neural network with real-valued inputs, weighted connections and a linear output fitted to minimize squared error. On that definition, he assigns the first modern linear-network invention to Legendre's published method and Gauss's claimed earlier unpublished work. His argument uses mathematical equivalence and continued usefulness, rather than evidence that nineteenth-century mathematicians conceived biological neurons or influenced every later neural-network researcher.",
+    "prior_works": [
+      {
+        "who": "Adrien-Marie Legendre",
+        "year": 1805,
+        "title": "Nouvelles méthodes pour la détermination des orbites des comètes",
+        "url": "https://archive.org/details/nouvellesmthode00legegoog"
+      },
+      {
+        "who": "Stephen M. Stigler",
+        "year": 1981,
+        "title": "Gauss and the Invention of Least Squares (historical evidence concerning Gauss’s earlier claim)",
+        "url": "https://doi.org/10.1214/aos/1176345451"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "invented over 2 centuries ago (1795-1805) by Adrien-Marie Legendre (1805) and Johann Carl Friedrich Gauss (1795, unpublished)",
+        "date": "2025-11",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/who-invented-artificial-neural-networks.html#:~:text=the%20first%20%22modern%22%20NNs%20with%202%20layers%20of%20units%20were%20invented%20over%202"
+      },
+      {
+        "text": "It's formally equivalent, of course!",
+        "date": "2021-12-31",
+        "venue": "other",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2021-December/037088.html"
+      },
+      {
+        "text": "The most successful deep learners of today generalize the linear regressors of 1800.",
+        "date": "2022-01-02",
+        "venue": "other",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-January/037102.html"
+      }
+    ],
+    "times_made": 23,
+    "first_made": "2015-06",
+    "last_made": "2026-09"
+  },
+  "response": {
+    "summary": "Stephen José Hanson [directly challenged this framing](https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-January/037102.html), arguing that a neural model's biological motivation and threshold behavior distinguish its history from multiple linear regression. He also objected to a [history organized mainly around mathematical threads](https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2021-December/037088.html), rather than the wider conceptual development of neural models. Schmidhuber answered that modern engineering does not require a biological motivation and that a linear network trained with squared error is formally the same model. Independently, [Stigler's historical study](https://doi.org/10.1214/aos/1176345451) supports the possibility of Gauss's earlier possession of least squares but describes that conclusion as not conclusive; it does not itself call least squares a neural-network invention.",
+    "quotes": [
+      {
+        "who": "Stephen José Hanson, quoted in the public exchange",
+        "text": "Multiple regression is not such a model.",
+        "date": "2022-01-02",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-January/037102.html"
+      },
+      {
+        "who": "Stephen José Hanson, quoted in the public exchange",
+        "text": "a 1-dimensional exegesis of mathematical threads through various statistical algorithms.",
+        "date": "2021-12-31",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2021-December/037088.html"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Legendre published Nouvelles méthodes pour la détermination des orbites des comètes in 1805: https://archive.org/details/nouvellesmthode00legegoog",
+    "McCulloch and Pitts published their logical treatment of nervous activity in 1943: https://link.springer.com/article/10.1007/BF02478259",
+    "Rosenblatt's 1962 book is expressly about perceptrons and brain mechanisms: https://archive.org/details/principles-of-neurodynamics",
+    "A weighted linear output fitted by least squares can be written either as a regression model or as a linear network; the disagreement in the public exchange concerns the historical significance of this equivalence: https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-January/037102.html"
+  ],
+  "crux": "The issue is whether mathematical equivalence to one present-day linear neural model warrants retrospective neural-network invention credit, or whether that credit should follow the later neural conception, learning rules and research tradition. Priority for least squares itself is a separate dispute, and neither its early date nor its equivalence to a linear network makes it identical to every nonlinear neural model.",
+  "related": [
+    "minsky",
+    "elm",
+    "deeplearning-origins",
+    "ai-origins"
+  ],
+  "instance_urls": [
+    "https://people.idsia.ch/~juergen/deep-learning-conspiracy.html#:~:text=One%20more%20little%20quibble%3A%20While%20LBH%20suggest%20that%20%22the%20earliest%20days%20of",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2020-March/034010.html",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#II:~:text=Perhaps%20ACM%27s%20lack%20of%20knowledge%20about%20NN%20history%20is%20the%20reason%20why",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#II:~:text=Perhaps%20ACM%27s%20lack%20of%20knowledge%20about%20NN%20history",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2021-December/037088.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-January/037102.html",
+    "https://arxiv.org/pdf/2212.11279v1#page=4",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#intro:~:text=The%20title%20image%20of%20the%20present%20article%20is%20a%20reaction%20to%20an%20erroneous",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#backprop",
+    "https://people.idsia.ch/~juergen/who-invented-artificial-neural-networks.html#:~:text=the%20first%20%22modern%22%20NNs%20with%202%20layers%20of%20units%20were%20invented%20over%202",
+    "https://people.idsia.ch/~juergen/who-invented-artificial-neural-networks.html#:~:text=Astonishingly%2C%20the%20authors",
+    "https://people.idsia.ch/~juergen/who-invented-artificial-neural-networks.html#:~:text=Some%20people%20still%20believe%20that%20modern%20NNs%20were%20somehow%20inspired%20by",
+    "https://x.com/SchmidhuberAI/status/1995160903193374866",
+    "https://people.idsia.ch/~juergen/who-invented-artificial-neural-networks.html",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#firstnn:~:text=Astonishingly%2C%20NN%20authors%20of%20the%20mid%201900se.g.%2C",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#firstnn:~:text=Some%20people%20believe%20that%20modern%20NNs%20were%20somehow%20inspired%20by%20the",
+    "https://arxiv.org/pdf/2212.11279v3#page=7",
+    "https://arxiv.org/pdf/2212.11279v3#page=6",
+    "https://web.archive.org/web/20260624174341/https://twitter.com/SchmidhuberAI/status/2069838888437203059",
+    "https://x.com/SchmidhuberAI/status/2085688560355606539",
+    "https://x.com/SchmidhuberAI/status/2097656285202186740",
+    "https://x.com/SchmidhuberAI/status/2097697639496065226",
+    "https://x.com/SchmidhuberAI/status/2101681225911980465"
+  ]
+}

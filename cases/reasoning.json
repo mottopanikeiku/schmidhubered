@@ -1,0 +1,136 @@
+{
+  "id": "reasoning",
+  "title": "Reasoning models and chain of thought",
+  "matchup": "Wei et al. (2022), OpenAI o1 (2024) and DeepSeek-R1 (2025) vs Schmidhuber's \"On Learning to Think\" (2015)",
+  "question": "Should chain-of-thought prompting and reasoning models such as DeepSeek-R1 be seen as building on Schmidhuber's 2015 \"reinforcement learning prompt engineer\", as he says?",
+  "usual_credit": {
+    "summary": "Chain-of-thought prompting is usually credited to Wei et al. (2022), who showed that large language models solve arithmetic, commonsense and symbolic problems better when they write out intermediate reasoning steps, with closely related work on scratchpads by Nye et al. (2021). Models trained with reinforcement learning to produce a long chain of thought before answering were introduced by OpenAI with o1 in September 2024, and DeepSeek reported in January 2025 that reasoning abilities of language models can be incentivized through pure reinforcement learning without human-labeled reasoning examples.",
+    "works": [
+      {
+        "who": "Jason Wei et al. (Google Brain)",
+        "year": 2022,
+        "title": "Chain-of-thought prompting elicits reasoning in large language models",
+        "url": "https://arxiv.org/abs/2201.11903"
+      },
+      {
+        "who": "Maxwell Nye et al.",
+        "year": 2021,
+        "title": "Show your work: scratchpads for intermediate computation with language models",
+        "url": "https://arxiv.org/abs/2112.00114"
+      },
+      {
+        "who": "OpenAI",
+        "year": 2024,
+        "title": "Learning to reason with LLMs (OpenAI o1)",
+        "url": "http://web.archive.org/web/20261023170206/https://openai.com/index/learning-to-reason-with-llms/"
+      },
+      {
+        "who": "DeepSeek-AI",
+        "year": 2025,
+        "title": "DeepSeek-R1: incentivizing reasoning capability in LLMs via reinforcement learning",
+        "url": "https://arxiv.org/abs/2501.12948"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says his 2015 report \"On Learning to Think\" described a reinforcement learning controller that acts as a \"prompt engineer\" for a recurrent world model: the controller feeds sequences of activations into the model and reads answers out of it, and uses them for abstract reasoning and planning, which he calls an adaptive chain of thought. He notes that the prompts and answers in his system are internal vectors that need not represent natural language. He says a 2018 paper then collapsed the controller and the world model into one network using neural network distillation, a technique he published in 1991, and that DeepSeek-R1 \"uses elements of\" the 2015 and 2018 work. He first tied the 2015 report to the rumored OpenAI Q* project in November 2023, made the DeepSeek claim on 31 January 2025 and followed it on 3 February with a post saying he was very impressed by DeepSeek's achievement, and applied it in September 2026 to a news report about an OpenAI model using \"recurrent depth\" reasoning.",
+    "prior_works": [
+      {
+        "who": "Jürgen Schmidhuber",
+        "year": 2015,
+        "title": "On learning to think: algorithmic information theory for novel combinations of reinforcement learning controllers and recurrent neural world models",
+        "url": "https://arxiv.org/abs/1511.09249"
+      },
+      {
+        "who": "Jürgen Schmidhuber",
+        "year": 2018,
+        "title": "One big net for everything",
+        "url": "https://arxiv.org/abs/1802.08864"
+      },
+      {
+        "who": "Jürgen Schmidhuber",
+        "year": 1991,
+        "title": "Neural sequence chunkers (technical report FKI-148-91, source of the 1991 distillation claim)",
+        "url": "https://people.idsia.ch/~juergen/FKI-148-91ocr.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "DeepSeek [1] uses elements of the 2015 reinforcement learning prompt engineer [2] and its 2018 refinement [3]",
+        "date": "2025-01-31",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1885357355938046382"
+      },
+      {
+        "text": "an RL prompt engineer which learns to query its model for abstract reasoning and planning and decision making. Today this is called \"chain of thought.\"",
+        "date": "2025-05-21",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1925204946967801861"
+      },
+      {
+        "text": "Q*? 2015: reinforcement learning prompt engineer in Sec. 5.3 of “Learning to Think...”",
+        "date": "2023-11-30",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1730255400740483357"
+      },
+      {
+        "text": "This \"recurrent depth\" is essentially what's in Sec. 5.3 of the 2015 paper: On Learning to Think",
+        "date": "2026-09-02",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2095203142455410988"
+      }
+    ],
+    "times_made": 20,
+    "first_made": "2023-11",
+    "last_made": "2026-10"
+  },
+  "response": {
+    "summary": "I found no public reply to this claim from the authors of the chain-of-thought paper, from OpenAI or from DeepSeek. Neither the chain-of-thought paper of Wei et al. nor either arXiv version of the DeepSeek-R1 report cites \"On Learning to Think\", as far as I could check in their arXiv text. Yann LeCun's post of 20 September 2026, under which Schmidhuber replied that most of it rehashes the 2015 paper, describes current reasoning systems as searching in token space and does not mention Schmidhuber; it states LeCun's own view and is not a reply to the claim. The distinction that bears on the dispute is visible in the sources themselves, since the 2015 report trains a small controller that exchanges activations with a fixed recurrent world model, while chain-of-thought work has a language model write out its intermediate steps as text.",
+    "quotes": [
+      {
+        "who": "Yann LeCun (X, not addressed to Schmidhuber's claim)",
+        "text": "But AFAICT, they do it in token space, which is limited and inefficient.",
+        "date": "2026-09-20",
+        "url": "https://x.com/ylecun/status/2101674561930510740"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Schmidhuber's report \"On Learning to Think\" was posted to arXiv on 30 November 2015, and its abstract says the system learns to query its model for abstract reasoning and planning, \"essentially 'learning to think'\".",
+    "Wei et al. posted \"Chain-of-thought prompting elicits reasoning in large language models\" on arXiv on 28 January 2022, and the DeepSeek-R1 report appeared on 22 January 2025.",
+    "OpenAI introduced o1 on 12 September 2024 as a model trained with reinforcement learning that produces a long internal chain of thought before answering.",
+    "Neither the chain-of-thought paper nor the DeepSeek-R1 report lists \"On Learning to Think\" in its references.",
+    "In the 2015 report the controller's connections are trained by reinforcement learning while the connections of the world model stay fixed."
+  ],
+  "crux": "The sources differ on whether a reinforcement learning controller that queries a recurrent world model, as described in 2015, is the same idea as a language model that writes out reasoning steps in text, or only a loosely related precursor. They also differ on whether the authors of the 2022 to 2025 work knew of the 2015 report.",
+  "related": [
+    "distillation",
+    "chatgpt",
+    "jepa",
+    "world-models",
+    "hierarchical-rl",
+    "metalearning"
+  ],
+  "instance_urls": [
+    "https://x.com/SchmidhuberAI/status/1730255400740483357",
+    "https://people.idsia.ch/~juergen/artificial-curiosity-since-1990.html#sec9:~:text=In%20January%202025%2C%20the%20DeepSeek%20%22Sputnik%22",
+    "https://x.com/SchmidhuberAI/status/1885357355938046382",
+    "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7291372258533539840/",
+    "https://x.com/SchmidhuberAI/status/1925204946967801861",
+    "https://x.com/SchmidhuberAI/status/1944761313185370540",
+    "https://people.idsia.ch/~juergen/who-invented-knowledge-distillation-with-neural-networks.html#:~:text=DeepSeek%20also%20used%20elements%20of%20Schmidhuber%27s%202015%20reinforcement",
+    "https://x.com/SchmidhuberAI/status/1994438659161133293",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#distill:~:text=DeepSeek%20also%20used%20elements%20of%20Schmidhuber%27s%202015%20reinforcement",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#rl:~:text=A%20few%20years%20later%2C%20in%202025%2C%20the%20DeepSeek%20%22Sputnik%22",
+    "https://arxiv.org/pdf/2212.11279v3#page=22",
+    "https://arxiv.org/pdf/2212.11279v3#page=27",
+    "https://people.idsia.ch/~juergen/world-model-boom.html#:~:text=%E2%98%85%202018%3A%20The%20paper",
+    "https://people.idsia.ch/~juergen/most-cited-neural-nets.html",
+    "https://x.com/SchmidhuberAI/status/2095196380734140601",
+    "https://x.com/SchmidhuberAI/status/2095198440472866914",
+    "https://x.com/SchmidhuberAI/status/2095203142455410988",
+    "https://x.com/SchmidhuberAI/status/2101973610420183324",
+    "https://web.archive.org/web/20260921094857/https://twitter.com/SchmidhuberAI/status/2101971936871875021",
+    "https://x.com/SchmidhuberAI/status/2107523715248370152"
+  ]
+}

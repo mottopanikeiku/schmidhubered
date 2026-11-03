@@ -1,0 +1,198 @@
+{
+  "id": "deeplearning-origins",
+  "title": "Who started deep learning",
+  "matchup": "Hinton, LeCun and Bengio and the 'deep learning revolution' of 2006 vs Ivakhnenko and Lapa (1965)",
+  "question": "Should deep learning be traced to the 1965 learning algorithm for multilayer networks of Ivakhnenko and Lapa, rather than to the neural-network revivals of the 1980s and 2006, as Schmidhuber says?",
+  "usual_credit": {
+    "summary": "Deep learning is usually presented as a revival of neural-network research led by Geoffrey Hinton, Yann LeCun and Yoshua Bengio, who shared the 2018 ACM Turing Award. The 2016 textbook by Goodfellow, Bengio and Courville describes three waves, namely deep learning under the name cybernetics in the 1940s to 1960s, under the name connectionism in the 1980s and 1990s, and the current resurgence beginning in 2006, while Sejnowski's 2020 PNAS survey says that after Minsky and Papert's 1969 book the field was abandoned until a new generation of researchers took a fresh look in the 1980s.",
+    "works": [
+      {
+        "who": "LeCun, Bengio, Hinton",
+        "year": 2015,
+        "title": "Deep learning",
+        "url": "https://www.nature.com/articles/nature14539"
+      },
+      {
+        "who": "Hinton, Salakhutdinov",
+        "year": 2006,
+        "title": "Reducing the dimensionality of data with neural networks",
+        "url": "https://www.cs.toronto.edu/~rsalakhu/papers/science.pdf"
+      },
+      {
+        "who": "Sejnowski",
+        "year": 2020,
+        "title": "The unreasonable effectiveness of deep learning in artificial intelligence",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7720171/"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says that deep learning in feedforward networks began in Ukraine in 1965, when Alexey Ivakhnenko and Valentin Lapa published the first general working learning algorithm for multilayer perceptrons with arbitrarily many layers, and that a 1971 paper by Ivakhnenko described an eight-layer network trained layer by layer by regression and then pruned. He adds that Shun-Ichi Amari trained a five-layer network with two modifiable layers by stochastic gradient descent in 1967 and 1968. He argues that surveys and award citations by Hinton, LeCun and Bengio, and Sejnowski's account of the 1980s revival, leave these pioneers out, and that the techniques of the 1960s were renamed deep learning in the 2000s without correct attribution.",
+    "prior_works": [
+      {
+        "who": "Ivakhnenko, Lapa",
+        "year": 1965,
+        "title": "Cybernetic predicting devices (English translation, 1966)",
+        "url": "https://gwern.net/doc/ai/1966-ivakhnenko.pdf"
+      },
+      {
+        "who": "Ivakhnenko",
+        "year": 1971,
+        "title": "Polynomial theory of complex systems",
+        "url": "https://doi.org/10.1109/TSMC.1971.4308320"
+      },
+      {
+        "who": "Amari",
+        "year": 1967,
+        "title": "A theory of adaptive pattern classifiers",
+        "url": "https://people.idsia.ch/~juergen/amari1967.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "Who created the first Deep Learning networks? To my knowledge, this was done by Olexiy Hryhorovych (Alexey Grigoryevich) Ivakhnenko and colleagues in 1965.",
+        "date": "2014-07-08",
+        "venue": "Connectionists mailing list",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2014-July/027158.html"
+      },
+      {
+        "text": "the first working, general, deep learning algorithms for multilayer perceptrons are due to Ivakhnenko et al (1965-).",
+        "date": "2015-03-14",
+        "venue": "Connectionists mailing list",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2015-March/027867.html"
+      },
+      {
+        "text": "LBH's survey does not even mention the father of deep learning, Alexey Grigorevich Ivakhnenko",
+        "date": "2015-06",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/deep-learning-conspiracy.html#:~:text=LBH%27s%20survey%20does%20not%20even%20mention%20the%20father%20of%20deep%20learning%2C"
+      },
+      {
+        "text": "without even mentioning the world's first working deep learning nets by Ivakhnenko and Lapa in 1965",
+        "date": "2021-09-24",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20claim%20to%20%22briefly%20describe%20the%20origins%20of%20deep%20learning%22"
+      },
+      {
+        "text": "In the 2000s, AI techniques of the 1960s (Ivakhnenko & Lapa 1965, Amari 1967) were renamed “deep learning” without correct attribution.",
+        "date": "2026-09-09",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2097656285202186740"
+      }
+    ],
+    "times_made": 51,
+    "first_made": "2014-07",
+    "last_made": "2026-09"
+  },
+  "response": {
+    "summary": "Stephen José Hanson wrote on the Connectionists mailing list in January 2022 that, after reading Ivakhnenko's papers, he found them to be about function approximation with stacked polynomial functions rather than about internal representations in the sense used by Rumelhart, and that this lay outside the intellectual space of the group method of data handling. Sejnowski replied in the same discussion that historians would sort out these threads a century from now. The 2016 textbook by Goodfellow, Bengio and Courville dates the current wave of deep learning to 2006, while the English Wikipedia article on deep learning calls Ivakhnenko and Lapa's group method of data handling the first working deep learning algorithm.",
+    "quotes": [
+      {
+        "who": "Stephen José Hanson (Connectionists mailing list)",
+        "text": "The method proposes to use series of polynomial functions that are stacked in filtered sets.",
+        "date": "2022-01-27",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-January/037241.html"
+      },
+      {
+        "who": "Stephen José Hanson (Connectionists mailing list)",
+        "text": "This was not in the intellectual space of Ivakhnenko's Group Method of Handling Data.",
+        "date": "2022-01-27",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-January/037241.html"
+      },
+      {
+        "who": "Terrence Sejnowski (Connectionists mailing list)",
+        "text": "All these threads will be sorted out by historians one hundred years from now.",
+        "date": "2022-01-02",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-January/037101.html"
+      },
+      {
+        "who": "Terrence Sejnowski (PNAS survey)",
+        "text": "the field was abandoned until a new generation of neural network researchers took a fresh look at the problem in the 1980s",
+        "date": "2020-01-28",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7720171/"
+      },
+      {
+        "who": "Goodfellow, Bengio and Courville (textbook)",
+        "text": "Broadly speaking, there have been three waves of development: deep learning known as cybernetics in the 1940s–1960s",
+        "date": "2016",
+        "url": "https://www.deeplearningbook.org/contents/intro.html"
+      },
+      {
+        "who": "Wikipedia, article 'Deep learning'",
+        "text": "The first working deep learning algorithm was the Group method of data handling",
+        "date": "2026-11-03 (accessed)",
+        "url": "https://en.wikipedia.org/wiki/Deep_learning"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Ivakhnenko and Lapa described the group method of data handling in the 1965 book 'Cybernetic predicting devices', and Ivakhnenko published 'Polynomial theory of complex systems' in IEEE Transactions on Systems, Man and Cybernetics in 1971.",
+    "Amari published 'A theory of adaptive pattern classifiers' in IEEE Transactions on Electronic Computers in 1967.",
+    "Both Schmidhuber and Hanson read Ivakhnenko's papers as describing stacked layers of polynomial units, up to eight layers deep in the 1971 paper.",
+    "The reference list of the 2015 Nature review by LeCun, Bengio and Hinton does not include Ivakhnenko, and the introduction of the 2016 textbook by Goodfellow, Bengio and Courville does not mention him."
+  ],
+  "crux": "The dispute is whether the group method of data handling, which grew polynomial layers one at a time by regression and pruned them, counts as deep learning in the same sense as later gradient-trained multilayer networks that learn internal representations, and whether histories that start with the 1980s or 2006 revivals should therefore have named Ivakhnenko and Lapa. A smaller question is whether Amari's 1967 and 1968 stochastic gradient descent in a multilayer network, which was not yet backpropagation, belongs in that history.",
+  "related": [
+    "backprop",
+    "boltzmann",
+    "hopfield",
+    "pretraining",
+    "turingaward",
+    "nobel2024",
+    "nn-origins",
+    "minsky"
+  ],
+  "instance_urls": [
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2014-July/027158.html",
+    "https://arxiv.org/pdf/1404.7828v4#page=10",
+    "https://web.archive.org/web/20190329215040/https://plus.google.com/100849856540000067209/posts/fhLAFXyxBUf",
+    "https://web.archive.org/web/20150305162349/http://www.reddit.com/r/MachineLearning/comments/2xcyrl/i_am_j%C3%BCrgen_schmidhuber_ama/cp43zl1",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2015-March/027851.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2015-March/027853.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2015-March/027859.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2015-March/027867.html",
+    "https://web.archive.org/web/20150711183640/https://plus.google.com/100849856540000067209/posts/7N6z251w2Wd",
+    "https://people.idsia.ch/~juergen/deep-learning-conspiracy.html#:~:text=LBH%27s%20survey%20does%20not%20even%20mention%20the%20father%20of%20deep%20learning%2C",
+    "https://people.idsia.ch/~juergen/deep-learning-conspiracy.html#:~:text=LBH%20claim%3A%20%22Interest%20in%20deep%20feedforward%20networks",
+    "https://www.infoq.com/articles/interview-schmidhuber-deep-learning/",
+    "https://www.youtube.com/watch?v=3FIo6evmweo&t=3635s",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2020-March/034010.html",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#I:~:text=In%201965%2C%20Ivakhnenko%20%26%20Lapa%20had%20the%20first%20general%2C%20working%20learning",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#I:~:text=Note%20that%20there%20is%20a%20misleading%20%22history%20of%20deep%20learning%22%20propagated",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#I:~:text=However%2C%20the%20essential%20%22conceptual%20foundations%22%20of%20deep%20learning",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#II:~:text=ACM%20seems%20to%20be%20influenced%20by%20a%20misleading%20%22history%20of%20deep%20learning%22",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#exec:~:text=Sec.%20XX%3A%20ACM%20credits%20LeCun%20for%20work%20on%20hierarchical%20feature",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20claim%20to%20%22briefly%20describe%20the%20origins%20of%20deep%20learning%22",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20also%20fail%20to%20cite%20Amari%27s%201967%2D68%20work%E2%80%94which%20included%20computer",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20cite%20Hinton%20%281981%29%20for%20multiplicative%20gating%2C%20without%20mentioning",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XIII:~:text=Sejnowski%27s%20rather%20self%2Dserving%20%22history%20of%20deep%20learning%22",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XX:~:text=However%2C%20%22hierarchical%20feature%20representation%22%20in%20deep%20learning",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2021-November/036922.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2021-December/037093.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-January/037103.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-February/037270.html",
+    "https://arxiv.org/pdf/2212.11279v1#page=4",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#intro:~:text=The%20present%20piece%20also%20debunks%20a%20frequently%20repeated%2C%20misleading",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lbhothers:~:text=LBH%20claim%20to%20%22briefly%20describe%20the%20origins%20of%20deep%20learning%22",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lbhothers:~:text=Moreover%2C%20LBH%20fail%20to%20cite%20Amari%27s%201967%2D68%20work%E2%80%94which%20included",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lbhothers",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#godfathers:~:text=For%20example%2C%20LeCun%20%26%20Bengio%20%26%20Hinton%20%28LBH%29%20have%20been%20called",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#godfathers:~:text=The%20%22fathers%20of%20deep%20learning%22%20were%20Alexey%20Ivakhnenko%20and%20Valentin",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#S20:~:text=A%20misleading%20%22history%20of%20deep%20learning%22%20which%20goes%20more%20or%20less%20like",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#DL3:~:text=A%20%22survey%22%20of%20deep%20learning%20that%20does%20not%20mention%20the%20pioneering",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#DL3a:~:text=Another%20%22survey%22%20of%20deep%20learning%20that%20does%20not%20mention%20the",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#Hinton:~:text=Hinton%20and%20Sejnowski%20have%20never%20cited%20the%20origins%20of%20deep%20learning%20in",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#Hinton:~:text=However%2C%20this%20makes%20no%20sense%2C%20because%20the%201969%20book",
+    "https://people.idsia.ch/~juergen/who-invented-deep-learning.html#1stdl:~:text=His%20pioneering%20work%20was%20repeatedly%20plagiarized%20by%20researchers%20who",
+    "https://people.idsia.ch/~juergen/who-invented-deep-learning.html#1stdl:~:text=For%20example%2C%20the%20depth%20of%20Ivakhnenko%27s%201971%20layer%2Dwise%20training",
+    "https://x.com/SchmidhuberAI/status/1993347872511660458",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_modern-ai-is-based-on-deep-learning-why-activity-7399356262016028672-ZlSW",
+    "https://www.linkedin.com/posts/j%C3%BCrgen-schmidhuber-39226872_truth-instead-of-propaganda-hinton-just-activity-7405890807242805248-Sndi",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#1stdl:~:text=His%20pioneering%20work%20was%20repeatedly%20republished%20without%20attribution%20by",
+    "https://arxiv.org/pdf/2212.11279v3#page=9",
+    "https://people.idsia.ch/~juergen/who-invented-jepa.html#:~:text=This%20is%20hardly%20the%20first%20time%20LeCun%20%28or%20others%20writing%20about%20him%29",
+    "https://x.com/SchmidhuberAI/status/2077098043527041136",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2026-August/044798.html",
+    "https://x.com/SchmidhuberAI/status/2097656285202186740"
+  ]
+}

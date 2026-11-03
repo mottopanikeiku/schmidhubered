@@ -1,0 +1,139 @@
+{
+  "id": "pretraining",
+  "title": "Unsupervised pre-training of deep networks",
+  "matchup": "Hinton, Osindero and Teh; Hinton and Salakhutdinov (2006) vs Schmidhuber (1991, 1992)",
+  "question": "Should the 2006 method of training deep networks by unsupervised layer-by-layer pre-training be seen as following Schmidhuber's 1991 neural history compressor, as he says?",
+  "usual_credit": {
+    "summary": "Unsupervised layer-by-layer pre-training of deep networks is usually credited to Geoffrey Hinton and his collaborators, whose two 2006 papers trained a stack of restricted Boltzmann machines one layer at a time without labels and then fine-tuned the result with backpropagation, and to Yoshua Bengio's group, which generalised the method to other unsupervised learners in the same year. The 2015 Nature review by LeCun, Bengio and Hinton describes the Hinton paper as a new and effective way of training very deep networks, and the 2024 Nobel Prize in Physics background document notes that restricted Boltzmann machines can be used for layer-by-layer pre-training of deep networks.",
+    "works": [
+      {
+        "who": "Hinton, Osindero, Teh",
+        "year": 2006,
+        "title": "A fast learning algorithm for deep belief nets",
+        "url": "https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf"
+      },
+      {
+        "who": "Hinton, Salakhutdinov",
+        "year": 2006,
+        "title": "Reducing the dimensionality of data with neural networks",
+        "url": "https://www.cs.toronto.edu/~rsalakhu/papers/science.pdf"
+      },
+      {
+        "who": "Bengio, Lamblin, Popovici, Larochelle",
+        "year": 2006,
+        "title": "Greedy layer-wise training of deep networks",
+        "url": "https://papers.nips.cc/paper_files/paper/2006/file/5da713a690c067105aeb2fae32403405-Paper.pdf"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says that his 1991 neural sequence chunker, also called the neural history compressor, already trained a hierarchy of recurrent networks without labels, one level at a time, with each level predicting the unexpected inputs of the level below, and that this made supervised learning by backpropagation feasible on sequences more than a thousand steps deep by 1993. He describes the 2006 method for feedforward networks as a similar method with essentially the same justification, namely that each level tries to shorten the description of the data in the level below. He says that Hinton and Bengio did not mention the earlier work in 2006 or in later surveys, and he adds that unsupervised pre-training later proved unnecessary for many applications.",
+    "prior_works": [
+      {
+        "who": "Schmidhuber",
+        "year": 1991,
+        "title": "Neural sequence chunkers (technical report FKI-148-91, TU Munich)",
+        "url": "https://people.idsia.ch/~juergen/FKI-148-91ocr.pdf"
+      },
+      {
+        "who": "Schmidhuber",
+        "year": 1992,
+        "title": "Learning complex, extended sequences using the principle of history compression",
+        "url": "https://doi.org/10.1162/neco.1992.4.2.234"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "a similar method for more limited feedforward NNs (FNNs) was published, facilitating supervised learning by unsupervised pre-training of stacks of FNNs called Deep Belief Networks",
+        "date": "2019-10",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%201:~:text=More%20than%20a%20decade%20after%20this%20work%2C"
+      },
+      {
+        "text": "was conceptually a rehash of my unsupervised pre-training for deep recurrent NNs (RNNs) (1991)",
+        "date": "2020-04-21",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#II:~:text=Apart%20from%20this%2C%20Hinton%27s%20unsupervised%20pre%2Dtraining%20for%20deep%20FNNs"
+      },
+      {
+        "text": "Hinton & Bengio did not mention the prior work, not even in later surveys.",
+        "date": "2023-12-14",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonunsup:~:text=However%2C%20we%20had%20this%20type%20of%20deep%20learning%20already%20in%201991."
+      },
+      {
+        "text": "without mentioning that this class of methods was pioneered in 1991",
+        "date": "2021-09-24",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=dedicate%20an%20extra%20section%20to%20their%20unsupervised%20pre%2Dtraining%20of%20deep"
+      },
+      {
+        "text": "Let me re-advertise a much older, very similar, but more general, working Deep Learner of 1991.",
+        "date": "2014-02-06",
+        "venue": "Connectionists mailing list",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2014-February/026591.html"
+      }
+    ],
+    "times_made": 18,
+    "first_made": "2014-02",
+    "last_made": "2026-02"
+  },
+  "response": {
+    "summary": "No public reply from Hinton, Salakhutdinov or Bengio to the 1991 claim was found. Their 2006 papers do not cite Schmidhuber's work, and the 2016 textbook by Goodfellow, Bengio and Courville dates the deep learning renaissance of 2006 to the discovery that greedy layer-wise training could initialise joint training, while noting that greedy layer-wise training based on unsupervised criteria goes back at least to Fukushima's neocognitron. Hinton's 2025 Nobel lecture calls stacked restricted Boltzmann machines a useful tool for initialising feedforward nets and says that simpler ways of initialising the weights have since been found.",
+    "quotes": [
+      {
+        "who": "Goodfellow, Bengio and Courville (textbook)",
+        "text": "The deep learning renaissance of 2006 began with the discovery that this greedy learning procedure could be used to find a good initialization",
+        "date": "2016",
+        "url": "https://www.deeplearningbook.org/contents/representation.html"
+      },
+      {
+        "who": "Goodfellow, Bengio and Courville (textbook)",
+        "text": "This approach dates back at least as far as the neocognitron (Fukushima, 1975).",
+        "date": "2016",
+        "url": "https://www.deeplearningbook.org/contents/representation.html"
+      },
+      {
+        "who": "Geoffrey Hinton (Nobel Lecture)",
+        "text": "In the 2000s, initializing feedforward nets using stacked restricted Boltzmann machines made backpropagation work better, so RBMs were a useful tool",
+        "date": "2025-08-25",
+        "url": "https://www.cs.toronto.edu/~hinton/absps/nobelboltzmann.pdf"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Schmidhuber's technical report 'Neural sequence chunkers' (FKI-148-91) appeared at TU Munich in April 1991, and his history-compression paper appeared in Neural Computation 4(2) in 1992.",
+    "Hinton, Osindero and Teh published 'A fast learning algorithm for deep belief nets' in Neural Computation in 2006, and Hinton and Salakhutdinov published their autoencoder paper in Science on 28 July 2006.",
+    "Both sides describe the 2006 method as training a stack of unsupervised models one layer at a time and then fine-tuning with supervised backpropagation.",
+    "None of the three 2006 papers (Hinton and Salakhutdinov, Hinton, Osindero and Teh, and Bengio et al.) lists Schmidhuber's 1991 or 1992 work among its references.",
+    "Schmidhuber's reports and the 2016 textbook both say that unsupervised pre-training is not required to train deep feedforward networks."
+  ],
+  "crux": "The dispute is whether the 2006 method for stacks of restricted Boltzmann machines is a new method or a feedforward version of the 1991 history compressor, which stacks recurrent predictors and passes only unexpected inputs upward, and whether the 2006 papers owed a citation to the earlier work. The two methods share the idea of training a deep network level by level without labels before supervised learning, but they differ in architecture and in the unsupervised learning rule used at each level.",
+  "related": [
+    "distillation",
+    "vanishing",
+    "boltzmann",
+    "chatgpt",
+    "deeplearning-origins"
+  ],
+  "instance_urls": [
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2014-February/026591.html",
+    "https://arxiv.org/pdf/1404.7828v4#page=17",
+    "https://web.archive.org/web/20150305162349/http://www.reddit.com/r/MachineLearning/comments/2xcyrl/i_am_j%C3%BCrgen_schmidhuber_ama/cp45kxi",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2015-March/027861.html",
+    "https://people.idsia.ch/~juergen/deep-learning-conspiracy.html#:~:text=LBH%20point%20to%20their%20own%20work%20%28since%202006%29%20on%20unsupervised%20pre%2Dtraining",
+    "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%201:~:text=More%20than%20a%20decade%20after%20this%20work%2C",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#II:~:text=No%2C%20Hinton%27s%20interesting%20unsupervised",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#II:~:text=Apart%20from%20this%2C%20Hinton%27s%20unsupervised%20pre%2Dtraining%20for%20deep%20FNNs",
+    "https://arxiv.org/pdf/2005.05744v1#page=4",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=dedicate%20an%20extra%20section%20to%20their%20unsupervised%20pre%2Dtraining%20of%20deep",
+    "https://arxiv.org/pdf/2212.11279v1#page=17",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#unsupdl:~:text=More%20than%20a%20decade%20after%20this%20work%2C",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonunsup:~:text=However%2C%20we%20had%20this%20type%20of%20deep%20learning%20already%20in%201991.",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonunsup:~:text=Even%20LBH%27s%202021%20Turing%20Lecture",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#UN5:~:text=The%20comment%20under%20reference",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#Hinton:~:text=The%20Nobel%20Committee%20lauds%20Hinton%20et%20al.%27s%202006%20method%20for%20layer%2Dwise",
+    "https://people.idsia.ch/~juergen/who-invented-deep-learning.html#pre:~:text=Schmidhuber%20built%20an%20unsupervised%20or%20self%2Dsupervised%20RNN%20hierarchy",
+    "https://arxiv.org/pdf/2005.05744v5#page=5"
+  ]
+}

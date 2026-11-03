@@ -1,0 +1,105 @@
+{
+  "id": "minsky",
+  "title": "Perceptrons and the neural-network winter",
+  "matchup": "Sejnowski’s account of Minsky and Papert (1969) vs Ivakhnenko, Lapa and Amari (1965–1968)",
+  "question": "Does the earlier work cited by Schmidhuber make the familiar account of Perceptrons ending multilayer-network research until the 1980s historically misleading?",
+  "usual_credit": {
+    "summary": "Marvin Minsky and Seymour Papert's Perceptrons is credited with mathematical analysis of the limitations of particular perceptron architectures, not with proving that every multilayer neural network is incapable of learning. In his [2020 PNAS survey](https://pmc.ncbi.nlm.nih.gov/articles/PMC7720171/), Terrence Sejnowski says their doubts about training multilayer systems discouraged research until the 1980s revival. The [publisher's account of the reissued book](https://doi.org/10.7551/mitpress/11301.001.0001) likewise describes a turn away from perceptrons, while presenting the mathematical work as an enduring contribution.",
+    "works": [
+      {
+        "who": "Marvin Minsky and Seymour Papert",
+        "year": 1969,
+        "title": "Perceptrons: An Introduction to Computational Geometry (link to the 2017 reissue of the expanded edition)",
+        "url": "https://doi.org/10.7551/mitpress/11301.001.0001"
+      },
+      {
+        "who": "Terrence J. Sejnowski",
+        "year": 2020,
+        "title": "The unreasonable effectiveness of deep learning in artificial intelligence",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7720171/"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber argues that this narrative overlooks working multilayer learning methods developed by Ivakhnenko and Lapa and later by Amari before Perceptrons appeared. He says their continuing work makes a blanket claim that the field was abandoned inaccurate, especially outside English-speaking research communities. He also objects that Perceptrons and later histories did not discuss these earlier approaches, although he subsequently distinguished the book's own claims from other people's interpretations of it.",
+    "prior_works": [
+      {
+        "who": "Alexey G. Ivakhnenko",
+        "year": 1971,
+        "title": "Polynomial Theory of Complex Systems",
+        "url": "https://www.knowledgeminer.eu/pdf/Ivakhnenko_Polynomial.pdf"
+      },
+      {
+        "who": "Shun-Ichi Amari",
+        "year": 1967,
+        "title": "A Theory of Adaptive Pattern Classifiers",
+        "url": "https://people.idsia.ch/~juergen/amari1967.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "Deep learning research was not abandoned in the 1970s. It was alive and kicking, especially outside of the Anglosphere.",
+        "date": "2022-02-01",
+        "venue": "other",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-February/037270.html"
+      },
+      {
+        "text": "cited neither Amari’s SGD-based deep learning (1967-68) nor the original layer-by-layer deep learning",
+        "date": "2023-02-02",
+        "venue": "other",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2023-February/039275.html"
+      },
+      {
+        "text": "your article rehashes a misleading narrative from the 1980s",
+        "date": "2020-03-04",
+        "venue": "other",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2020-March/034010.html"
+      }
+    ],
+    "times_made": 11,
+    "first_made": "2020-03",
+    "last_made": "2025-10"
+  },
+  "response": {
+    "summary": "In a [direct public reply](https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-February/037269.html), Barak Pearlmutter objected that Perceptrons explicitly treats fixed nonlinear preprocessing, so describing its results as merely about linear networks misrepresents the book. Schmidhuber [answered](https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-February/037270.html) that he should have said others interpreted it that way, while maintaining his objection to Sejnowski's abandonment narrative. Sejnowski's published account is the statement being criticized, rather than a later answer, and acknowledges that the book discussed multilayer extensions. The existence of earlier multilayer methods and the extent of a later decline in support are separate historical questions.",
+    "quotes": [
+      {
+        "who": "Barak A. Pearlmutter",
+        "text": "All their theorems are for k>1.",
+        "date": "2022-02-01",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-February/037269.html"
+      },
+      {
+        "who": "Terrence J. Sejnowski",
+        "text": "the field was abandoned until a new generation of neural network researchers took a fresh look at the problem in the 1980s.",
+        "date": "2020-01-28",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7720171/"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Perceptrons was first published in 1969: https://doi.org/10.7551/mitpress/11301.001.0001",
+    "Ivakhnenko's 1971 paper describes a multilayer perceptron-like network trained using regression and selection on separate data: https://www.knowledgeminer.eu/pdf/Ivakhnenko_Polynomial.pdf",
+    "On 1 February 2022 Schmidhuber accepted that he should distinguish others' interpretations of Perceptrons from the book itself: https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-February/037270.html"
+  ],
+  "crux": "The question is whether a history of declining enthusiasm in one research community has been presented as the absence of working multilayer learning anywhere. It also matters whether the earlier polynomial and stochastic-gradient methods answered the same learning problems that the book and later connectionist researchers were discussing.",
+  "related": [
+    "deeplearning-origins",
+    "nn-origins",
+    "elm",
+    "boltzmann"
+  ],
+  "instance_urls": [
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2020-March/034010.html",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#I:~:text=Note%20that%20there%20is%20a%20misleading%20%22history%20of%20deep%20learning%22%20propagated",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#II:~:text=ACM%20seems%20to%20be%20influenced%20by%20a%20misleading%20%22history%20of%20deep%20learning%22",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#II:~:text=ACM%20seems%20to%20be%20influenced%20by%20a%20misleading%20%22history%20of%20deep%20learning%22",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2021-November/036922.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-January/037265.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-February/037270.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2023-February/039275.html",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2023-February/039284.html",
+    "https://x.com/SchmidhuberAI/status/1866875607767748965",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#Hinton:~:text=However%2C%20this%20makes%20no%20sense%2C%20because%20the%201969%20book"
+  ]
+}

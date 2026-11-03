@@ -1,0 +1,142 @@
+{
+  "id": "boltzmann",
+  "title": "Boltzmann machines",
+  "matchup": "Ackley, Hinton and Sejnowski (1985) vs Sherrington and Kirkpatrick (1975) and the 1960s deep-network work of Ivakhnenko and Lapa",
+  "question": "Did the 1985 Boltzmann machine paper omit earlier work that Schmidhuber describes as its precursors, namely the 1975 Sherrington-Kirkpatrick spin-glass model and the 1960s learning of internal representations in deep networks?",
+  "usual_credit": {
+    "summary": "The Boltzmann machine is credited to David Ackley, Geoffrey Hinton and Terrence Sejnowski, whose 1985 paper in Cognitive Science presented a learning algorithm for networks of stochastic binary units that include hidden units. The Nobel committee's scientific background describes it as a stochastic extension of Hopfield's 1982 model, and Sejnowski's 2020 PNAS survey says that he and Hinton introduced a learning algorithm for Boltzmann machines proving that, contrary to general belief, multilayer networks could be trained.",
+    "works": [
+      {
+        "who": "Ackley, Hinton, Sejnowski",
+        "year": 1985,
+        "title": "A learning algorithm for Boltzmann machines",
+        "url": "https://www.cs.toronto.edu/~hinton/absps/cogscibm.pdf"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber makes two related points. The first is that the Sherrington-Kirkpatrick spin-glass model of 1975, which rests on the Edwards-Anderson model, is Boltzmann-machine-like and learns interaction weights whose phase-diagram points correspond to internal representations, yet the 1985 paper and Hinton's later surveys do not cite it. The second is that the 1985 paper and Sejnowski's 2020 survey present the Boltzmann machine as a way to learn internal representations in hidden units without citing Ivakhnenko and Lapa (1965) or Amari (1967-68), and that Hinton's 2025 Nobel lecture describes learning without a backward pass in the 1980s without citing Ivakhnenko either.",
+    "prior_works": [
+      {
+        "who": "Sherrington, Kirkpatrick",
+        "year": 1975,
+        "title": "Solvable model of a spin-glass",
+        "url": "https://doi.org/10.1103/PhysRevLett.35.1792"
+      },
+      {
+        "who": "Edwards, Anderson",
+        "year": 1975,
+        "title": "Theory of spin glasses",
+        "url": "https://doi.org/10.1088/0305-4608/5/5/017"
+      },
+      {
+        "who": "Ivakhnenko, Lapa",
+        "year": 1965,
+        "title": "Cybernetic predicting devices (English translation, 1966)",
+        "url": "https://gwern.net/doc/ai/1966-ivakhnenko.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "The Boltzmann machine-like Sherrington-Kirkpatrick model (1975)[SK75][SK12] is based on the general Edwards-Anderson model (1975)[EA75][EA21] (with random connections driving the network dynamics)",
+        "date": "2025-10-07",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#Hinton:~:text=The%20Boltzmann%20machine%2Dlike%20Sherrington%2DKirkpatrick%20model%20%281975%29"
+      },
+      {
+        "text": "It didn't cite the first working algorithm for deep learning of internal representations by Ivakhnenko & Lapa (Ukraine, 1965).",
+        "date": "2024-12-07",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#Hinton:~:text=The%20related%20Boltzmann%20Machine%20paper%20by%20Ackley%2C%20Hinton%2C%20and%20Sejnowski"
+      },
+      {
+        "text": "already two decades earlier, in 1965, Ivakhnenko & Lapa published the first general, working learning algorithms for deep multilayer perceptrons",
+        "date": "2021-09-24",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XIII:~:text=The%20BM%20paper%20should%20also%20have%20mentioned%20that%20already%20two%20decades"
+      },
+      {
+        "text": "However, Ivakhnenko & Lapa had functional deep learning multilayer perceptrons back in 1965.",
+        "date": "2020-03-04",
+        "venue": "Connectionists mailing list",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2020-March/034010.html"
+      },
+      {
+        "text": "However, Ivakhnenko & Lapa had shown this 2 decades earlier in the 1960s.",
+        "date": "2025-10-07",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#Hinton:~:text=Incredibly%2C%20even%20Hinton%27s%20recent%202025%20article"
+      }
+    ],
+    "times_made": 11,
+    "first_made": "2020-03",
+    "last_made": "2025-12"
+  },
+  "response": {
+    "summary": "No public reply from Hinton, Ackley or Sejnowski to the Sherrington-Kirkpatrick point was found. In a January 2022 message to the Connectionists mailing list, Sejnowski wrote that the threads would be sorted out by historians a century from now and that time was better spent moving the field forward, and his 2020 survey, which Schmidhuber criticises, is quoted below. Hinton's 2025 Nobel lecture tells how Sejnowski had just read the 1983 simulated-annealing paper by Kirkpatrick, Gelatt and Vecchi when the two of them heard Hopfield speak in 1982, and the Nobel committee describes the Boltzmann machine as a stochastic extension of Hopfield's model.",
+    "quotes": [
+      {
+        "who": "Terrence Sejnowski (PNAS survey)",
+        "text": "Geoffrey Hinton and I introduced a learning algorithm for Boltzmann machines proving that contrary to general belief it was possible to train multilayer networks",
+        "date": "2020-01-28",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7720171/"
+      },
+      {
+        "who": "Terrence Sejnowski (Connectionists mailing list)",
+        "text": "All these threads will be sorted out by historians one hundred years from now. Our precious time is better spent moving the field forward.",
+        "date": "2022-01-02",
+        "url": "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-January/037101.html"
+      },
+      {
+        "who": "Geoffrey Hinton (Nobel Lecture)",
+        "text": "Terry had recently read a new paper by Kirkpatrick, Gelatt, and Vecchi (1983) on a technique called simulated annealing",
+        "date": "2025-08-25",
+        "url": "https://www.cs.toronto.edu/~hinton/absps/nobelboltzmann.pdf"
+      },
+      {
+        "who": "Geoffrey Hinton (Nobel Lecture)",
+        "text": "it was possible to learn appropriate weights for hidden neurons using only locally available information",
+        "date": "2025-08-25",
+        "url": "https://www.cs.toronto.edu/~hinton/absps/nobelboltzmann.pdf"
+      },
+      {
+        "who": "Nobel Committee for Physics (scientific background)",
+        "text": "developed a stochastic extension of Hopfield’s model from 1982, called the Boltzmann machine",
+        "date": "2024-10-08",
+        "url": "https://www.kva.se/app/uploads/2024/11/sciback_fy_en_24.pdf"
+      },
+      {
+        "who": "Wikipedia, article 'Boltzmann machine'",
+        "text": "A Boltzmann machine (also called Sherrington–Kirkpatrick model with external field or stochastic Ising model)",
+        "date": "2026-11-03 (accessed)",
+        "url": "https://en.wikipedia.org/wiki/Boltzmann_machine"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Sherrington and Kirkpatrick published 'Solvable model of a spin-glass' in Physical Review Letters in 1975, and Edwards and Anderson published 'Theory of spin glasses' in the same year.",
+    "Ackley, Hinton and Sejnowski published 'A learning algorithm for Boltzmann machines' in Cognitive Science in 1985.",
+    "Crossref's record of the 1985 paper lists 28 references, including Hopfield (1982) and the simulated-annealing paper of Kirkpatrick, Gelatt and Vecchi (1983), and none by Sherrington, Edwards or Anderson.",
+    "Hinton's 2025 Nobel lecture mentions Kirkpatrick, Gelatt and Vecchi (1983) but does not mention the Sherrington-Kirkpatrick model or Ivakhnenko."
+  ],
+  "crux": "The dispute is whether the Boltzmann machine, a stochastic Hopfield network with hidden units and a learning rule based on correlations, is a new model or the Sherrington-Kirkpatrick spin glass with an external field, which some encyclopedic sources equate. It also asks whether a paper that claims to show learning of internal representations in hidden units needed to acknowledge the 1960s deep-network work of Ivakhnenko and Lapa.",
+  "related": [
+    "hopfield",
+    "nobel2024",
+    "deeplearning-origins",
+    "pretraining"
+  ],
+  "instance_urls": [
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2020-March/034010.html",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XIII:~:text=The%20BM%20paper%20should%20also%20have%20mentioned%20that%20already%20two%20decades",
+    "https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2022-January/037235.html",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#Hinton:~:text=The%20related%20Boltzmann%20Machine%20paper%20by%20Ackley%2C%20Hinton%2C%20and%20Sejnowski",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#Hinton:~:text=The%20Boltzmann%20machine%2Dlike%20Sherrington%2DKirkpatrick%20model%20%281975%29",
+    "https://x.com/SchmidhuberAI/status/1996973278431268960",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lbhothers:~:text=The%20Boltzmann%20Machine%20paper%20by%20Ackley%2C%20Hinton%2C%20and%20Sejnowski%20%281985%29",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lbhothers:~:text=The%20Boltzmann%20machine%2Dlike%20Sherrington%2DKirkpatrick%20model%20%281975%29",
+    "https://people.idsia.ch/~juergen/physics-nobel-2024-plagiarism.html#Hinton:~:text=Incredibly%2C%20even%20Hinton%27s%20recent%202025%20article",
+    "https://people.idsia.ch/~juergen/who-invented-deep-learning.html#1stdl:~:text=Ivakhnenko%20%26%20Lapa%20also%20demonstrated%20that%20it%20is%20possible%20to%20learn",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonbio:~:text=Already%20in%20the%201960s%2C%20Ivakhnenko%20%26%20Lapa%20demonstrated%20that%20it%20is"
+  ]
+}

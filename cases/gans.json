@@ -1,0 +1,200 @@
+{
+  "id": "gans",
+  "title": "GANs",
+  "matchup": "Goodfellow et al. (2014) vs Schmidhuber (1990, 1991)",
+  "question": "Should the 2014 GAN paper be seen as building on Schmidhuber's 1990-91 adversarial curiosity and predictability minimization, as he says?",
+  "usual_credit": {
+    "summary": "Ian Goodfellow and co-authors, including Yoshua Bengio, introduced generative adversarial networks at NIPS 2014, where a generator network and a discriminator network are trained against each other in a minimax game until the generator's samples are hard to tell from real data. The method became widely used for image synthesis, the paper received the NeurIPS 2024 Test of Time Award, and the ACM's 2018 Turing Award announcement lists GANs among Bengio's contributions.",
+    "works": [
+      {
+        "who": "I. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair, A. Courville, Y. Bengio",
+        "year": 2014,
+        "title": "Generative Adversarial Nets (NIPS 2014)",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2014/hash/f033ed80deb0234979a61f95710dbe25-Abstract.html"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says the two-network adversarial setup was first published in his 1990 report and 1991 SAB paper on artificial curiosity, where a generative controller network produces outputs, a predictor network learns to anticipate their effects, and the controller tries to maximize the error the predictor minimizes. He describes GANs as the special case in which the environment returns 1 or 0 according to whether an output is in a given set, and he says the 2014 paper does not cite this work. He also says the 2014 paper wrongly states that his 1991 predictability minimization is not a minimax game, a point he argued in a peer-reviewed 2020 article.",
+    "prior_works": [
+      {
+        "who": "J. Schmidhuber",
+        "year": 1990,
+        "title": "Making the world differentiable: On using fully recurrent self-supervised neural networks for dynamic reinforcement learning and planning in non-stationary environments (TR FKI-126-90, TU Munich)",
+        "url": "https://people.idsia.ch/~juergen/FKI-126-90ocr.pdf"
+      },
+      {
+        "who": "J. Schmidhuber",
+        "year": 1991,
+        "title": "A possibility for implementing curiosity and boredom in model-building neural controllers (SAB 1990 proceedings)",
+        "url": "https://sferics.idsia.ch/pub/juergen/curiositysab.pdf"
+      },
+      {
+        "who": "J. Schmidhuber",
+        "year": 1992,
+        "title": "Learning factorial codes by predictability minimization (Neural Computation 4(6))",
+        "url": "https://sferics.idsia.ch/pub/juergen/factorial.pdf"
+      },
+      {
+        "who": "J. Schmidhuber",
+        "year": 2020,
+        "title": "Generative Adversarial Networks are Special Cases of Artificial Curiosity (1990) and also Closely Related to Predictability Minimization (1991) (his peer-reviewed argument, Neural Networks 127)",
+        "url": "https://arxiv.org/abs/1906.04493"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "GANs are special cases of Artificial Curiosity (1990) and also closely related to Predictability Minimization (1991).",
+        "date": "2020-04-30",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1255755680855793665"
+      },
+      {
+        "text": "The 2014 paper[GAN14] on generative adversarial neural networks (GANs) failed to cite the original 1990 work on generative and adversarial neural networks.",
+        "date": "2025-12",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/who-invented-generative-adversarial-networks.html#priority:~:text=The%202014%20paper"
+      },
+      {
+        "text": "However, good old PM is indeed a pure minimax game, too, e.g., [PM3], Equation 2 (there is no \"other task\").",
+        "date": "2018-11",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/unsupervised-neural-nets-fight-minimax-game.html#:~:text=However%2C%20good%20old%20PM%20is%20indeed%20a%20pure%20minimax%20game%2C%20too%2C%20e.g.%2C"
+      },
+      {
+        "text": "Goodfellow eventually admitted that PM is adversarial (his paper[GAN1] still claims the opposite), but emphasized that it's not generative.",
+        "date": "2021-09-24",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XVII:~:text=Subsequent%20efforts%20to%20correct%20these%20issues%20in%20a%20common%20paper%20didn%27t"
+      },
+      {
+        "text": "With GANs, there is an environment that provides binary responses to the actions (the images): real or fake, 1 or 0.",
+        "date": "2026-04-12",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/2043344732974096850"
+      }
+    ],
+    "times_made": 66,
+    "first_made": "2016-12",
+    "last_made": "2026-09"
+  },
+  "response": {
+    "summary": "The 2014 paper's related-work section discusses predictability minimization and lists three differences from it, and in their feedback to the NIPS reviewers the authors described the competition in predictability minimization as more qualitative than formal. In a 2017 Quora answer, reported here from a copy on Cross Validated because Quora could not be opened, Goodfellow wrote that he does not think there is any significant connection between predictability minimization and GANs. In December 2024 he wrote on X that Schmidhuber interrupted his 2016 talk while he was crediting noise-contrastive estimation. Yann LeCun said in a 2022 ZDNet interview that Schmidhuber's claims about GANs and other things \"didn't turn out to be true\". No public reply from the 2014 authors that addresses the 1990 artificial curiosity reports directly was found, and their replies concern predictability minimization.",
+    "quotes": [
+      {
+        "who": "Goodfellow et al., NIPS 2014 paper",
+        "text": "in this work, the competition between the networks is the sole training criterion, and is sufficient on its own to train the network.",
+        "date": "2014-12",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2014/file/f033ed80deb0234979a61f95710dbe25-Paper.pdf"
+      },
+      {
+        "who": "Goodfellow et al., author feedback to NIPS 2014 reviewers",
+        "text": "PM involves competition between two MLPs but the idea of competition is more qualitative than formal",
+        "date": "2014",
+        "url": "https://media.nips.cc/nipsbooks/nipspapers/paper_files/nips27/reviews/1384.html"
+      },
+      {
+        "who": "Ian Goodfellow, Quora answer of 2017-03-21 (as copied on Cross Validated)",
+        "text": "I personally don’t think that there is any significant connection between predictability minimization and GANs.",
+        "date": "2017-03-21",
+        "url": "https://stats.stackexchange.com/questions/251460/were-generative-adversarial-networks-introduced-by-j%C3%BCrgen-schmidhuber"
+      },
+      {
+        "who": "Ian Goodfellow, on X",
+        "text": "he did so at the time I was giving credit to relevant prior work: noise contrastive estimation.",
+        "date": "2024-12-14",
+        "url": "https://x.com/goodfellow_ian/status/1867767959864954955"
+      },
+      {
+        "who": "Yann LeCun, ZDNet interview",
+        "text": "He’s done this also with with GANs and other things, which didn’t turn out to be true.",
+        "date": "2022-09-24",
+        "url": "https://www.zdnet.com/article/metas-ai-guru-lecun-most-of-todays-ai-approaches-will-never-lead-to-true-intelligence/"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Schmidhuber published 'Learning factorial codes by predictability minimization' in Neural Computation in 1992, based on a 1991 technical report, and the 2014 GAN paper cites it.",
+    "The NIPS 2014 version of the GAN paper cites one Schmidhuber work, the 1992 predictability minimization paper, and does not cite his 1990 report or his 1991 SAB paper on artificial curiosity.",
+    "The NIPS 2014 reviews of the GAN submission include a reviewer comment asking how the work relates to predictability minimization, and the authors answered it in their feedback.",
+    "Schmidhuber spoke during Goodfellow's tutorial on GANs at NIPS in December 2016, and both of them have described the exchange.",
+    "Olli Niemitalo published a blog post on 2010-02-24 describing a generator network trained against a classifier network, and says he arrived at the idea independently.",
+    "Schmidhuber's article 'Generative Adversarial Networks are Special Cases of Artificial Curiosity (1990) and also Closely Related to Predictability Minimization (1991)' appeared in Neural Networks, volume 127, in 2020.",
+    "The 2014 GAN paper received the NeurIPS 2024 Test of Time Award, which was announced on 2024-11-27."
+  ],
+  "crux": "Whether artificial curiosity of 1990-91, in which a generative controller and a predictor have opposing objectives, is the same principle as GANs with a binary environment, or whether GANs differ in what is trained and how, as the 2014 paper argued for predictability minimization. A second question is whether the 2014 statement that predictability minimization is not a minimax game is correct.",
+  "related": [
+    "jepa",
+    "world-models",
+    "chatgpt",
+    "turingaward"
+  ],
+  "instance_urls": [
+    "https://www.youtube.com/watch?v=HGYYEUSm-0Q&t=3779s",
+    "https://people.idsia.ch/~juergen/unsupervised-neural-nets-fight-minimax-game.html#:~:text=The%20well%2Dknown%20NIPS%202014%20GAN%20paper",
+    "https://people.idsia.ch/~juergen/unsupervised-neural-nets-fight-minimax-game.html#:~:text=However%2C%20good%20old%20PM%20is%20indeed%20a%20pure%20minimax%20game%2C%20too%2C%20e.g.%2C",
+    "https://people.idsia.ch/~juergen/unsupervised-neural-nets-fight-minimax-game.html#:~:text=The%20GAN%20principle%20was%20first%20published%20in%201990",
+    "https://people.idsia.ch/~juergen/blog.html#:~:text=%E2%98%85%20Nov%202018%3A%20Unsupervised%20neural%20networks%20fight%20in%20a%20minimax%20game",
+    "https://people.idsia.ch/~juergen/unsupervised-neural-nets-fight-minimax-game.html",
+    "https://arxiv.org/abs/1906.04493",
+    "https://x.com/SchmidhuberAI/status/1255755680855793665",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#XVII",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html",
+    "https://people.idsia.ch/~juergen/artificial-curiosity-since-1990.html#sec1:~:text=The%20term%20generative%20adversarial%20networks%20%28GANs%29%20is%20actually%20a%20new",
+    "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%207:~:text=Contrary%20to%20later%20claims%2C",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20cite%20Bengio%27s%202014%20paper%20on%20Generative%20Adversarial%20Networks",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XVII",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XVII:~:text=Subsequent%20efforts%20to%20correct%20these%20issues%20in%20a%20common%20paper%20didn%27t",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning-24sep2021.html#:~:text=Bengio%27s%202nd%20most%20cited%20research%20paper%20is%20the%20one%20on%20GANs%20%282014%29%2C",
+    "https://people.idsia.ch/~juergen/most-cited-neural-nets.html#:~:text=In%20fact%2C%20GANs%20are%20a%20simple%20application%20of%20my%20even%20earlier%20popular",
+    "https://people.idsia.ch/~juergen/most-cited-neural-nets.html#:~:text=Another%20highly%20cited%20NN%20paper%20of%202014%20on%20Generative%20Adversarial",
+    "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#:~:text=the%202014%20generative%20adversarial%20NN",
+    "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#addendum2:~:text=The%20GAN%20principle%20was%20actually%20introduced%20in%201990",
+    "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#addendum3:~:text=This%20claim%20has%20no%20justification%2C%20no%20references%2C%20and%20is%20both%20false%20and",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiogan:~:text=However%2C%20GANs",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiogan:~:text=Remarkably%2C%20Bengio%20was%20backed%20by%20LeCun%20who%20called%20GANs%20%22the%20coolest",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiogan:~:text=Even%20in%20their%20much%20more%20recent%202021%20Turing%20lecture%2C",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiogan:~:text=As%20recently%20as%20of%20Dec%202022%2C%20LeCun%20said",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#effect:~:text=The%20first%20author%20of%20a%202014%20paper%20on%20GANs",
+    "https://x.com/SchmidhuberAI/status/1867621020808728875",
+    "https://x.com/SchmidhuberAI/status/1867784991888883926",
+    "https://x.com/SchmidhuberAI/status/1867787515710537781",
+    "https://x.com/SchmidhuberAI/status/1867865050720973103",
+    "https://x.com/SchmidhuberAI/status/1867889937393267042",
+    "https://x.com/SchmidhuberAI/status/1867800061679112583",
+    "https://x.com/SchmidhuberAI/status/1867851091389325666",
+    "https://x.com/SchmidhuberAI/status/1868574325311156620",
+    "https://x.com/SchmidhuberAI/status/1868687559884185833",
+    "https://people.idsia.ch/~juergen/artificial-curiosity-since-1990.html#sec1:~:text=There%20was%20a%20priority%20dispute%20on%20GANs%2C",
+    "https://people.idsia.ch/~juergen/2010s-our-decade-of-deep-learning.html#:~:text=Another%20concept%20that%20has%20become%20very%20popular%20in%20the%202010s%20are",
+    "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%205:~:text=The%20popular%20Generative%20Adversarial%20Networks%20%28GANs%29",
+    "https://people.idsia.ch/~juergen/who-invented-generative-adversarial-networks.html#:~:text=The%20most%20cited%20research%20paper%20from%20the%20lab%20of%20Turing%20awardee%20Dr.",
+    "https://people.idsia.ch/~juergen/who-invented-generative-adversarial-networks.html#priority:~:text=The%202014%20paper",
+    "https://people.idsia.ch/~juergen/who-invented-generative-adversarial-networks.html#priority:~:text=The%202014%20paper%20also%20made%20false%20claims%20about%20Schmidhuber%27s%20other",
+    "https://people.idsia.ch/~juergen/who-invented-generative-adversarial-networks.html#priority",
+    "https://people.idsia.ch/~juergen/who-invented-generative-adversarial-networks.html#priority",
+    "https://people.idsia.ch/~juergen/who-invented-generative-adversarial-networks.html#priority:~:text=The%20priority%20dispute%20was%20picked%20up%20by%20the%20popular%20press%2C%20e.g.%2C",
+    "https://people.idsia.ch/~juergen/blog.html#:~:text=%E2%98%85%20Dec%202025.%20Who%20invented%20generative%20adversarial%20networks%3F%20The%20most",
+    "https://x.com/SchmidhuberAI/status/1995764892763099313",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#gan:~:text=As%20of%202025%2C%20a%202014%20paper",
+    "https://arxiv.org/pdf/2212.11279v3#page=18",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengiogan:~:text=It%20fails%20to%20cite%20my%20original%20gradient%2Dbased%20NNs%20which%20were%20both",
+    "https://people.idsia.ch/~juergen/deep-learning-miraculous-year-1990-1991.html#Sec.%2011:~:text=Today%2C%20they%20call%20this%20a%20generative%20adversarial%20network%20%28GAN%29.",
+    "https://people.idsia.ch/~juergen/most-cited-papers-of-all-time.html#:~:text=February%3A%20first%20peer%2Dreviewed%20paper%20on%20generative%20adversarial",
+    "https://people.idsia.ch/~juergen/world-model-boom.html#:~:text=In%20the%20beginning%2C%20my%201990%20world%20model%20M%20knew%20nothing.%20That%27s%20why%20my",
+    "https://arxiv.org/pdf/2005.05744v5#page=12",
+    "https://arxiv.org/pdf/2005.05744v5#page=13",
+    "https://arxiv.org/pdf/2005.05744v5#page=19",
+    "https://x.com/SchmidhuberAI/status/2027412686313488692",
+    "https://x.com/SchmidhuberAI/status/2043323731242615108",
+    "https://x.com/SchmidhuberAI/status/2043333795298902300",
+    "https://x.com/SchmidhuberAI/status/2043337030625562688",
+    "https://x.com/SchmidhuberAI/status/2043338324773880090",
+    "https://x.com/SchmidhuberAI/status/2043344732974096850",
+    "https://x.com/SchmidhuberAI/status/2043351191480856718",
+    "https://people.idsia.ch/~juergen/ai-boom-roots-munich-1991.html#:~:text=%E2%98%85%2031%20August%201991%3A%20first%20peer%2Dreviewed%20publication",
+    "https://x.com/SchmidhuberAI/status/2072550822852927589",
+    "https://people.idsia.ch/~juergen/recursive-self-improvement.html#secAC:~:text=The%202014%20GAN%20variant%20is%20a%20special%20case%20of%20this%20where%20the%20environment"
+  ]
+}

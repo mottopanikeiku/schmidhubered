@@ -1,0 +1,124 @@
+{
+  "id": "speech-lstm",
+  "title": "LSTM, speech recognition and machine translation",
+  "matchup": "Hinton et al. (2012) and the Turing Award citation vs Hochreiter & Schmidhuber (1997) and Graves et al. (2006-07)",
+  "question": "Should the 2010s advances in speech recognition and machine translation be credited mainly to LSTM and CTC from Schmidhuber's group, rather than to the deep networks of Hinton's and Bengio's groups, as he says?",
+  "usual_credit": {
+    "summary": "Geoffrey Hinton and colleagues at Toronto, Microsoft, Google and IBM described in 2012 how deep neural networks had improved acoustic modelling for speech recognition. The ACM's 2019 Turing Award announcement credits Hinton, Bengio and LeCun with foundations for the advances in speech recognition and machine translation, and it names Bengio's group's attention mechanism for machine translation. Sutskever, Vinyals and Le's 2014 sequence-to-sequence model, which used LSTM networks, is also widely credited for neural machine translation and shared the NeurIPS 2024 Test of Time Award.",
+    "works": [
+      {
+        "who": "G. Hinton, L. Deng, D. Yu, G. E. Dahl, A. Mohamed, N. Jaitly, A. Senior, V. Vanhoucke, P. Nguyen, T. N. Sainath, B. Kingsbury",
+        "year": 2012,
+        "title": "Deep neural networks for acoustic modeling in speech recognition: The shared views of four research groups (IEEE Signal Processing Magazine)",
+        "url": "https://www.cs.toronto.edu/~hinton/absps/DNN-2012-proof.pdf"
+      },
+      {
+        "who": "I. Sutskever, O. Vinyals, Q. V. Le",
+        "year": 2014,
+        "title": "Sequence to Sequence Learning with Neural Networks",
+        "url": "https://arxiv.org/abs/1409.3215"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says the speech and translation advances that the ACM attributes to Hinton's and Bengio's groups came mainly through LSTM recurrent networks and connectionist temporal classification (CTC) from his group. He says the 2012 speech review by Hinton and colleagues still described hybrid neural network and hidden Markov model systems and did not cite or compare CTC-trained LSTM from 2006-07. He adds that Google's later speech recognition and Google Translate relied on LSTM, and that a New York Times article and a Bloomberg video credited Hinton for such systems without mentioning LSTM.",
+    "prior_works": [
+      {
+        "who": "S. Hochreiter, J. Schmidhuber",
+        "year": 1997,
+        "title": "Long Short-Term Memory (Neural Computation 9(8))",
+        "url": "https://sferics.idsia.ch/pub/juergen/lstm.pdf"
+      },
+      {
+        "who": "A. Graves, S. Fernández, F. Gomez, J. Schmidhuber",
+        "year": 2006,
+        "title": "Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks (ICML 2006)",
+        "url": "https://sferics.idsia.ch/pub/juergen/icml2006.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "Hinton et al. (2012) still used the old hybrid approach[HYB12] and did not compare it to CTC-LSTM.",
+        "date": "2021-09-24",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#A:~:text=Hinton%20et%20al.%20%282012%29%20still%20used%20the%20old%20hybrid%20approach"
+      },
+      {
+        "text": "Hinton's 2012 publication on speech recognition[HYB12] did not cite our much earlier LSTM[LSTM0-6] trained by our Connectionist Temporal Classification (CTC, 2006).[CTC]",
+        "date": "2023-12-14",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonspeech:~:text=Hinton%27s%202012%20publication%20on%20speech%20recognition"
+      },
+      {
+        "text": "the key \"breakthrough in machine translation\"[T19,T22] was not due to Bengio but to the LSTM of our team",
+        "date": "2023-12-14",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengioatt:~:text=Furthermore%2C%20in%20the%202010s%2C%20what%20the%20ACM%20called%20the%20key%20%22breakthrough"
+      },
+      {
+        "text": "the NY Times published an article[NYT3] about the new, greatly improved, LSTM-based Google Translate without even mentioning our LSTM",
+        "date": "2023-12-14",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#highway:~:text=Similarly%2C%20in%202016%2C%20the%20NY%20Times%20published%20an%20article"
+      }
+    ],
+    "times_made": 15,
+    "first_made": "2015-06",
+    "last_made": "2025-02"
+  },
+  "response": {
+    "summary": "No public reply from Hinton or Bengio to these specific claims was found. The 2012 paper presents itself as a review of the shared views of four research groups using deep networks, and the ACM announcement credits Bengio's group's attention mechanism rather than LSTM for machine translation. Independent evidence on the role of LSTM comes from Google itself, whose September 2015 voice search post says its new acoustic models used CTC-trained LSTM recurrent networks, and from the 2013 paper by Graves, Mohamed and Hinton, which used deep LSTM networks for speech.",
+    "quotes": [
+      {
+        "who": "ACM announcement of the 2018 Turing Award",
+        "text": "His group also introduced a form of attention mechanism which led to breakthroughs in machine translation",
+        "date": "2019-03-27",
+        "url": "https://awards.acm.org/binaries/content/assets/press-releases/2019/march/turing-award-2018.pdf"
+      },
+      {
+        "who": "Google Research blog, 'Google voice search: faster and more accurate'",
+        "text": "The type of RNN used here is a Long Short-Term Memory (LSTM) RNN",
+        "date": "2015-09-24",
+        "url": "https://research.googleblog.com/2015/09/google-voice-search-faster-and-more.html"
+      },
+      {
+        "who": "A. Graves, A. Mohamed, G. Hinton, 'Speech recognition with deep recurrent neural networks'",
+        "text": "deep bidirectional LSTM, the main architecture used in this paper",
+        "date": "2013-03-22",
+        "url": "https://arxiv.org/pdf/1303.5778"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Hochreiter and Schmidhuber published LSTM in Neural Computation in November 1997, and Graves, Fernández, Gomez and Schmidhuber presented CTC at ICML 2006.",
+    "Hinton and colleagues' review 'Deep neural networks for acoustic modeling in speech recognition: The shared views of four research groups' appeared in IEEE Signal Processing Magazine in 2012, and it does not cite CTC or LSTM.",
+    "Google announced on 24 September 2015 that its voice search acoustic models used CTC-trained LSTM recurrent networks.",
+    "Sutskever, Vinyals and Le's 2014 sequence-to-sequence model used LSTM networks, and Google's 2016 neural machine translation system uses a deep LSTM network with attention and residual connections.",
+    "Graves, Mohamed and Hinton's 2013 paper on speech recognition used deep bidirectional LSTM networks."
+  ],
+  "crux": "Whether the speech and translation advances that the ACM and the press attribute to Hinton's and Bengio's groups should instead be credited to LSTM and CTC from Schmidhuber's group, or whether the credit is shared among deep feedforward acoustic models, recurrent networks and attention. Both sides agree that LSTM networks were central to Google's systems and differ on how the Turing Award citation and press coverage should have described this.",
+  "related": [
+    "gru",
+    "attention",
+    "turingaward",
+    "honda",
+    "resnet"
+  ],
+  "instance_urls": [
+    "https://people.idsia.ch/~juergen/deep-learning-conspiracy.html#:~:text=LBH%20discuss%20their%20FNN%2Dbased%20speech%20recognition%20successes%20in%202009%20and",
+    "https://people.idsia.ch/~juergen/critique-honda-prize-hinton.html#III:~:text=Hinton%20et%20al.%20%282009%2D2012%29%20still%20used%20the%20old%20hybrid%20approach",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#B:~:text=The%20first%20superior%20end%2Dto%2Dend%20neural%20machine%20translation%20was%20also",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#A:~:text=Hinton%20et%20al.%20%282012%29%20did%20not%20compare%20it%20to%20our%20revolutionary%20CTC%2DLSTM",
+    "https://people.idsia.ch/~juergen/critique-turing-award-bengio-hinton-lecun.html#VI:~:text=However%2C%20those%20%22advances%20in%20natural%20language%20processing%22%20and%20in",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#lbhacm:~:text=LBH%20cite%20Hinton%20et%20al.%27s%20work%20on%20speech%20recognition%20since%202009",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#A:~:text=Hinton%20et%20al.%20%282012%29%20still%20used%20the%20old%20hybrid%20approach",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#B:~:text=The%20first%20superior%20end%2Dto%2Dend%20neural%20machine%20translation%20was%20also",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#VI:~:text=However%2C%20those%20%22advances%20in%20natural%20language%20processing%22%20and%20in",
+    "https://people.idsia.ch/~juergen/scientific-integrity-turing-award-deep-learning.html#XV:~:text=It%20is%20not%20true%20that%20%22modern%20deep%20learning%20speech%20recognition%20systems",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#bengioatt:~:text=Furthermore%2C%20in%20the%202010s%2C%20what%20the%20ACM%20called%20the%20key%20%22breakthrough",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#hintonspeech:~:text=Hinton%27s%202012%20publication%20on%20speech%20recognition",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#highway:~:text=LBH%20also%20have%20participated%20in%20other%20PR%20work%20that%20has%20misled%20many.%20For",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#highway:~:text=Similarly%2C%20in%202016%2C%20the%20NY%20Times%20published%20an%20article",
+    "https://x.com/SchmidhuberAI/status/1894779433955037284"
+  ]
+}

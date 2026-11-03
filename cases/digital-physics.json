@@ -1,0 +1,85 @@
+{
+  "id": "digital-physics",
+  "title": "The computational universe",
+  "matchup": "Wolfram (2002) vs Zuse (1967–1969)",
+  "question": "Does Wolfram's presentation of a computational universe give insufficient credit to Zuse's earlier proposal, as Schmidhuber argues?",
+  "usual_credit": {
+    "summary": "Stephen Wolfram's A New Kind of Science is associated with an extensive program studying simple computational rules and their possible relevance to fundamental physics. It should not be introduced as a standard historical consensus that Wolfram first proposed a computational universe, because his own historical notes mention both Zuse and Fredkin. [Independent commentary by Edwin Clark](http://shell.cas.usf.edu/~wclark/ANKOS_zuse_fredkin_thesis.html) also distinguishes the older cellular-automaton proposal from Wolfram's claimed approach. The credit disputed here concerns the novelty and presentation of the 2002 book, rather than an established physical discovery that the universe actually is a computer.",
+    "works": [
+      {
+        "who": "Stephen Wolfram",
+        "year": 2002,
+        "title": "A New Kind of Science, Chapter 9 and historical notes on mechanistic models",
+        "url": "https://www.wolframscience.com/reference/notes/1026b/"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber argues that Zuse had already proposed a discrete computational universe in 1967 and expanded the proposal in Rechnender Raum in 1969. He objects that Wolfram's historical note describes Zuse's idea as a continuous cellular automaton, which he considers a misleading distinction from Wolfram's own program. His criticism concerns attribution and novelty, not experimental proof that Zuse's physical hypothesis is correct.",
+    "prior_works": [
+      {
+        "who": "Konrad Zuse",
+        "year": 1969,
+        "title": "Rechnender Raum / Calculating Space (English technical translation, 1970)",
+        "url": "https://ncatlab.org/nlab/files/Zuse-CalculatingSpace.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "Konrad Zuse who was the first to suggest that the physical universe is being computed on a discrete computer",
+        "date": "2003-06",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/wolfram.html#:~:text=It%20was%20not%20Wolfram%20but%20Konrad%20Zuse%20who%20was%20the%20first%20to%20suggest%20that"
+      },
+      {
+        "text": "paradigm shift",
+        "date": "2003-06",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/wolfram.html#:~:text=Wolfram%20has%20repeatedly%20managed%20to%20convince%20unsuspecting%20journalists"
+      },
+      {
+        "text": "as first suggested by computer pioneer Konrad Zuse in 1967",
+        "date": "2006-01-26",
+        "venue": "letter",
+        "url": "https://people.idsia.ch/~juergen/randomness.html#:~:text=as%20first%20suggested%20by%20computer%20pioneer%20Konrad%20Zuse%20in%201967"
+      }
+    ],
+    "times_made": 5,
+    "first_made": "2003-06",
+    "last_made": "2025-11"
+  },
+  "response": {
+    "summary": "No direct public reply from Wolfram to this specific criticism was located in the sources reviewed. His [2002 historical note](https://www.wolframscience.com/reference/notes/1026b/) does acknowledge Zuse and Fredkin but argues that literal mechanistic models are not the ultimate approach developed in the book. In an [independent discussion](http://shell.cas.usf.edu/~wclark/ANKOS_zuse_fredkin_thesis.html), mathematician Edwin Clark agrees that the cellular-automaton-universe idea did not originate with Wolfram, while pointing out that Wolfram's proposed ultimate models need not be classical cellular automata. That is a substantive distinction about what is claimed as new, although it does not settle whether the description of Zuse is accurate.",
+    "quotes": [
+      {
+        "who": "Edwin Clark",
+        "text": "The idea that the universe may be a cellular automaton did not originate with Wolfram.",
+        "date": "undated",
+        "url": "http://shell.cas.usf.edu/~wclark/ANKOS_zuse_fredkin_thesis.html"
+      },
+      {
+        "who": "Stephen Wolfram",
+        "text": "no such literal mechanistic model can ever in the end realistically be expected to work.",
+        "date": "2002",
+        "url": "https://www.wolframscience.com/reference/notes/1026b/"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Zuse's Rechnender Raum appeared as a book in 1969 and has a 1970 English translation: https://ncatlab.org/nlab/files/Zuse-CalculatingSpace.pdf",
+    "Wolfram's A New Kind of Science was published in 2002 and its historical note names Zuse and Fredkin: https://www.wolframscience.com/reference/notes/1026b/",
+    "Schmidhuber's online criticism identifies itself as based on a CERN Courier letter from June 2003: https://people.idsia.ch/~juergen/wolfram.html"
+  ],
+  "crux": "The issue is whether the computational-universe proposal and the scientific program presented by Wolfram are the same contribution, and whether his brief historical note fairly represents Zuse. An earlier speculation and a later program can share a broad idea without every model, method or novelty claim being identical.",
+  "related": [
+    "computers",
+    "turing-computation"
+  ],
+  "instance_urls": [
+    "https://people.idsia.ch/~juergen/wolfram.html#:~:text=It%20was%20not%20Wolfram%20but%20Konrad%20Zuse%20who%20was%20the%20first%20to%20suggest%20that",
+    "https://people.idsia.ch/~juergen/wolfram.html#:~:text=Wolfram%20has%20repeatedly%20managed%20to%20convince%20unsuspecting%20journalists",
+    "https://people.idsia.ch/~juergen/randomness.html#:~:text=as%20first%20suggested%20by%20computer%20pioneer%20Konrad%20Zuse%20in%201967",
+    "https://people.idsia.ch/~juergen/zuse-1941-first-general-computer.html#abstract:~:text=In%201967%2C%20he%20also%20suggested%20what%27s%20known%20as%20Zuse%27s%20thesis%2C%20namely%2C",
+    "https://x.com/SchmidhuberAI/status/1989998451321360806"
+  ]
+}

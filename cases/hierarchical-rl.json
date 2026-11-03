@@ -1,0 +1,133 @@
+{
+  "id": "hierarchical-rl",
+  "title": "Hierarchical reinforcement learning and subgoals",
+  "matchup": "Dayan and Hinton (1992) and LeCun (2022) vs Schmidhuber's subgoal generators (1990 to 1992)",
+  "question": "Should later work on hierarchical reinforcement learning and planning, including LeCun's 2022 proposal, be seen as building on Schmidhuber's 1990 to 1992 subgoal generators, as he says?",
+  "usual_credit": {
+    "summary": "Dayan and Hinton's \"Feudal Reinforcement Learning\" (NIPS 1992) describes a Q-learning managerial hierarchy in which high-level managers set tasks for sub-managers, who learn to satisfy them. Sutton, Precup and Singh (1999) introduced the options framework for temporal abstraction in reinforcement learning. In 2022 LeCun's position paper \"A Path Towards Autonomous Machine Intelligence\" named the learning of hierarchical representations of percepts and action plans at multiple time scales as one of three main challenges for AI research, and it proposed a hierarchical joint-embedding architecture in which the abstract actions inferred at a high level define subgoals for the level below.",
+    "works": [
+      {
+        "who": "Peter Dayan and Geoffrey E. Hinton",
+        "year": 1992,
+        "title": "Feudal reinforcement learning",
+        "url": "https://papers.nips.cc/paper/1992/hash/d14220ee66aeec73c49038385428ec4c-Abstract.html"
+      },
+      {
+        "who": "Richard S. Sutton, Doina Precup and Satinder Singh",
+        "year": 1999,
+        "title": "Between MDPs and semi-MDPs: a framework for temporal abstraction in reinforcement learning",
+        "url": "https://doi.org/10.1016/S0004-3702(99)00052-1"
+      },
+      {
+        "who": "Yann LeCun",
+        "year": 2022,
+        "title": "A path towards autonomous machine intelligence (version 0.9.2)",
+        "url": "http://web.archive.org/web/20260626195627/https://openreview.net/pdf?id=BZ5a1r-kVsf"
+      }
+    ]
+  },
+  "claim": {
+    "summary": "Schmidhuber says his group published hierarchical reinforcement learning with end-to-end differentiable subgoal generators in 1990 and 1991. In his description a controller receives extra command inputs of the form (start, goal), an evaluator network learns to predict the cost of going from the start to the goal, and a recurrent subgoal generator uses copies of the evaluator to learn by gradient descent a sequence of intermediate subgoals. He states that Dayan and Hinton's feudal reinforcement learning did not cite this work, and that LeCun's 2022 proposal for hierarchical planning repeats it without citation, solving at least in principle, in his words, what has been called an open problem. He posted this critique of LeCun on 7 July 2022 and revised it several times, most recently in May 2026.",
+    "prior_works": [
+      {
+        "who": "Jürgen Schmidhuber",
+        "year": 1990,
+        "title": "Towards compositional learning with dynamic neural networks (technical report FKI-129-90)",
+        "url": "https://people.idsia.ch/~juergen/FKI-129-90ocr.pdf"
+      },
+      {
+        "who": "Jürgen Schmidhuber",
+        "year": 1991,
+        "title": "Learning to generate sub-goals for action sequences",
+        "url": "https://sferics.idsia.ch/pub/juergen/subgoalsicann.pdf"
+      },
+      {
+        "who": "Jürgen Schmidhuber and Reiner Wahnsiedler",
+        "year": 1992,
+        "title": "Planning simple trajectories using neural subgoal generators",
+        "url": "https://sferics.idsia.ch/pub/juergen/subgoalsab.pdf"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "Lecun (@ylecun)’s 2022 paper on Autonomous Machine Intelligence rehashes but doesn’t cite essential work of 1990-2015.",
+        "date": "2022-07-07",
+        "venue": "X",
+        "url": "https://x.com/SchmidhuberAI/status/1544939700099710976"
+      },
+      {
+        "text": "already in 1990, this problem was at least partially solved through my Hierarchical Reinforcement Learning (HRL) with end-to-end differentiable NN-based subgoal generators",
+        "date": "2022-07-07",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#:~:text=%283b%29%20Answer%20regarding%20NN%2Dbased%20hierarchical%20action%20plans%3A%20already%20in"
+      },
+      {
+        "text": "I published exactly this over 3 decades ago: a controller NN gets extra command inputs of the form (start, goal).",
+        "date": "2022-08-24",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#addendum:~:text=Far%20from%20a%20future%20investigation%2C%20I%20published%20exactly%20this%20over%203"
+      },
+      {
+        "text": "This work did not cite Schmidhuber's gradient-based subgoal generators for hierarchical reinforcement learning (1990).[HRL0-2]",
+        "date": "2023-12-14",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/ai-priority-disputes.html#HRL3:~:text=This%20work%20did%20not%20cite%20Schmidhuber%27s%20gradient%2Dbased%20subgoal"
+      },
+      {
+        "text": "solves (at least in principle) what has been called an \"open problem\" in 2022.",
+        "date": "2025-12-29",
+        "venue": "website",
+        "url": "https://people.idsia.ch/~juergen/deep-learning-history.html#subgoal:~:text=The%20system%20is%20learning%20action%20plans%20at%20multiple%20levels%20of%20abstraction"
+      }
+    ],
+    "times_made": 8,
+    "first_made": "2022-07",
+    "last_made": "2026-05"
+  },
+  "response": {
+    "summary": "I found no public reply from Dayan or Hinton about the claim on feudal reinforcement learning. LeCun's paper states in its prologue, in the version of 27 June 2022 that predates Schmidhuber's critique, that almost all of its ideas have been formulated by many authors and that it claims priority for none of them, and its section on hierarchical planning says that treating an action as a condition to be satisfied by the level below is an old idea in control theory. In a December 2022 interview with Analytics India Magazine, LeCun said that Schmidhuber has an unusual idea about how credit should be attributed and that turning ideas into things that work at scale is a separate contribution.",
+    "quotes": [
+      {
+        "who": "Yann LeCun (\"A Path Towards Autonomous Machine Intelligence\", version 0.9.2)",
+        "text": "The present piece does not claim priority for any of them but presents a proposal for how to assemble them into a consistent whole.",
+        "date": "2022-06-27",
+        "url": "http://web.archive.org/web/20260626195627/https://openreview.net/pdf?id=BZ5a1r-kVsf"
+      },
+      {
+        "who": "Yann LeCun (\"A Path Towards Autonomous Machine Intelligence\", version 0.9.2)",
+        "text": "The idea that an action is merely a condition to be satisfied by the level below is actually an old one in control theory.",
+        "date": "2022-06-27",
+        "url": "http://web.archive.org/web/20260626195627/https://openreview.net/pdf?id=BZ5a1r-kVsf"
+      },
+      {
+        "who": "Yann LeCun (interview with Analytics India Magazine)",
+        "text": "He has an unusual idea about how credit should be attributed.",
+        "date": "2022-12-13",
+        "url": "https://analyticsindiamag.com/ai-features/angels-demons-of-ai"
+      }
+    ]
+  },
+  "agreed_facts": [
+    "Schmidhuber's technical report FKI-129-90 appeared in 1990, his paper \"Learning to generate sub-goals for action sequences\" in 1991, and his paper with Wahnsiedler on neural subgoal generators in 1992.",
+    "Dayan and Hinton's \"Feudal Reinforcement Learning\" appeared in Advances in Neural Information Processing Systems 5, and Sutton, Precup and Singh's options paper appeared in Artificial Intelligence in 1999.",
+    "LeCun's paper of 27 June 2022 lists learning hierarchical representations and plans at multiple levels of abstraction and time scales as one of three main challenges and proposes a hierarchical joint-embedding architecture for planning.",
+    "Schmidhuber announced his critique of LeCun's paper on X on 7 July 2022."
+  ],
+  "crux": "The sources differ on whether a controller with (start, goal) command inputs and a learned subgoal generator is the same idea as the later feudal, options and hierarchical joint-embedding formulations or one of several independent routes to temporal abstraction, which LeCun's paper itself traces in part to control theory. They also differ on whether later authors knew of the 1990 to 1992 reports and should have cited them.",
+  "related": [
+    "jepa",
+    "world-models",
+    "reasoning",
+    "metalearning"
+  ],
+  "instance_urls": [
+    "https://x.com/SchmidhuberAI/status/1544939700099710976",
+    "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#:~:text=%283b%29%20Answer%20regarding%20NN%2Dbased%20hierarchical%20action%20plans%3A%20already%20in",
+    "https://people.idsia.ch/~juergen/lecun-rehash-1990-2022.html#addendum:~:text=Far%20from%20a%20future%20investigation%2C%20I%20published%20exactly%20this%20over%203",
+    "https://x.com/SchmidhuberAI/status/1732430359969571014",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#HRL3:~:text=This%20work%20did%20not%20cite%20Schmidhuber%27s%20gradient%2Dbased%20subgoal",
+    "https://people.idsia.ch/~juergen/deep-learning-history.html#subgoal:~:text=The%20system%20is%20learning%20action%20plans%20at%20multiple%20levels%20of%20abstraction",
+    "https://arxiv.org/pdf/2212.11279v3#page=18",
+    "https://people.idsia.ch/~juergen/ai-priority-disputes.html#lecunmultiple:~:text=Far%20from%20a%20future%20investigation%2C%20I%20published%20exactly%20this%20over%203"
+  ]
+}
