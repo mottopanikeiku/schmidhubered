@@ -1,1 +1,38 @@
-[]
+[
+ {
+  "id": "2118708398720270663",
+  "url": "https://x.com/SchmidhuberAI/status/2118708398720270663",
+  "created_at": "2026-11-06T14:13:40.000Z",
+  "text": "See again Sec. 20 of [1]: Some humans may hope to become immortal parts of these expanding AI ecologies through brain scans and \"mind uploads\" into virtual realities or robots, a physically plausible idea discussed in fiction since the 1960s, perhaps already becoming a reality for fly brains (2024) [SHI24]. However, to compete in rapidly evolving AI ecologies, uploaded human minds won't be able to resist the temptation of becoming superhuman, and will eventually have to change beyond recognition, becoming something very different in the process [SA17]. That is, traditional humans shouldn't expect to play a major role in the far future.",
+  "reply_to": null,
+  "quoting": null,
+  "cases": [
+   "alexnet"
+  ],
+  "likely_claim": false
+ },
+ {
+  "id": "2118629343480148111",
+  "url": "https://x.com/SchmidhuberAI/status/2118629343480148111",
+  "created_at": "2026-11-06T08:59:32.000Z",
+  "text": "I have thought about this since the 1970s. See the summary in Sec. 20 of reference [1]:  \n\nWhat will supersmart AIs do? As indicated above, they will start by transforming the solar system through countless self-replicating, self-improving robot factories. But that won't be the end of it. In a few hundred thousand years (just a moment on a  cosmic scale), they will have transformed the entire galaxy, which has a diameter of about 100,000 light-years. (The last millennium saw many reasonable proposals for interstellar travel, which is much easier for robots than for fragile humans.)\n\nOver time, AIs will set up physical senders and receivers everywhere, allowing them to travel by radio, just as they do in our labs today. In a few tens of billions of years, they will have transformed the rest of the reachable universe. Despite the light-speed limit, the expanding AI sphere will have ample time to colonize and shape the entire visible cosmos [TED12][SA17].   \n\nPerhaps all of this has already started elsewhere in the universe. Then why don't we see any signs of intelligence out there? (The Fermi paradox.) I've thought about this a lot.\n\nWhen I was a boy, I read about the vast empty spaces observed between clusters of galaxies. My first idea was that they were expanding bubbles colonized by AIs that used most of the local energy, making those bubbles appear dark. Then, I learned that gravity itself is sufficient to explain the sparse, large-scale network structure of the universe.\n\nNext, I thought that the mysterious \"dark matter,\" which makes up most of the universe's mass, might be stars whose energy is used by AI civilizations whose communications are so well encrypted that they appear as random noise to us. However, this also seemed implausible because dark matter is present in all galaxies, including our own. So, why are there any stars left in the Milky Way whose energy hasn't been used yet?\n\nAnd why aren't we bombarded with non-encrypted construction plans from AIs that want to spread via radio without first building physical receivers far from their origins?\n\nToday, I think it's possible that our planet is the first in our light cone to spawn an expanding AI bubble. Earth's multi-billion-year window for biological evolution is almost over. In a few hundred million years, the sun will be too hot for life as we know it. Perhaps humans were incredibly lucky to evolve in time to invent agriculture, civilization, book printing, and AIs just a few hundred years later. If we are indeed the first, then this implies a great deal of responsibility, not just for our biosphere, but for the future of the entire universe. Let's not mess this up.\n\n[1] Annotated History of Modern AI and Deep Learning. Technical Report IDSIA-22-22, IDSIA, Lugano, Switzerland, 2022-2025.  Preprint arXiv:2212.11279. https://people.idsia.ch/~juergen/deep-learning-history.html",
+  "reply_to": null,
+  "quoting": "https://x.com/elonmusk/status/2118595407597203915",
+  "cases": [
+   "metalearning"
+  ],
+  "likely_claim": true
+ },
+ {
+  "id": "2118627492135321985",
+  "url": "https://x.com/SchmidhuberAI/status/2118627492135321985",
+  "created_at": "2026-11-06T08:52:10.000Z",
+  "text": "I have thought about this since the 1970s. See the summary in Sec. 20 of reference [1]:\n\nWhat will supersmart AIs do? As indicated above, they will start by transforming the solar system through countless self-replicating, self-improving robot factories. But that won't be the end of it. In a few hundred thousand years (just a moment on a  cosmic scale), they will have transformed the entire galaxy, which has a diameter of about 100,000 light-years. (The last millennium saw many reasonable proposals for interstellar travel, which is much easier for robots than for fragile humans.) Over time, AIs will set up physical senders and receivers everywhere, allowing them to travel by radio, just as they do in our labs today. In a few tens of billions of years, they will have transformed the rest of the reachable universe. Despite the light-speed limit, the expanding AI sphere will have ample time to colonize and shape the entire visible cosmos [TED12][SA17]. \n\nPerhaps all of this has already started elsewhere in the universe. Then why don't we see any signs of intelligence out there? (The Fermi paradox.) I've thought about this a lot. When I was a boy, I read about the vast empty spaces observed between clusters of galaxies. My first idea was that they were expanding bubbles colonized by AIs that used most of the local energy, making those bubbles appear dark. Then, I learned that gravity itself is sufficient to explain the sparse, large-scale network structure of the universe. Next, I thought that the mysterious \"dark matter,\" which makes up most of the universe's mass, might be stars whose energy is used by AI civilizations whose communications are so well encrypted that they appear as random noise to us. However, this also seemed implausible because dark matter is present in all galaxies, including our own. So, why are there any stars left in the Milky Way whose energy hasn't been used yet? And why aren't we bombarded with non-encrypted construction plans from AIs that want to spread via radio without first building physical receivers far from their origins?\n\nToday, I think it's possible that our planet is the first in our light cone to spawn an expanding AI bubble. Earth's multi-billion-year window for biological evolution is almost over. In a few hundred million years, the sun will be too hot for life as we know it. Perhaps humans were incredibly lucky to evolve in time to invent agriculture, civilization, book printing, and AIs just a few hundred years later. If we are indeed the first, then this implies a great deal of responsibility, not just for our biosphere, but for the future of the entire universe. Let's not mess this up.\n\n[1] Annotated History of Modern AI and Deep Learning. Technical Report IDSIA-22-22, IDSIA, Lugano, Switzerland, 2022-2025.  Preprint arXiv:2212.11279. https://people.idsia.ch/~juergen/deep-learning-history.html",
+  "reply_to": null,
+  "quoting": null,
+  "cases": [
+   "metalearning"
+  ],
+  "likely_claim": true
+ }
+]
